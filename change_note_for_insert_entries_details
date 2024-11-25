@@ -1,0 +1,99 @@
+
+insert_entries_details_v01_05_08.sh
+
+Change:
+	1. rls-v01_05_05-19dc16c  ==> rls-v01_05_09-ff78838   x 27
+	
+	2. dbg-v01_05_05-19dc16c ==> dbg-v01_05_09-ff78838  x 22
+	
+	3. v01_05_05.txt  ==> v01_05_09.txt    x 40
+	
+	4. Upgrade and Downgrade 
+		O1_ota_prod_upgrade_results_v01_05_09.txt	
+		O1_ota_ext_ft_upgrade_results_v01_05_09.txt
+		O1_ota_int_ft_upgrade_results_v01_05_09.txt
+			
+		O2_ota_ext_ft_upgrade_results_v01_05_09.txt
+		O2_ota_int_ft_upgrade_results_v01_05_09.txt
+	
+	5. change those:
+		'qa3' 'MG52306A1US002C' 1 2 2 1 1 0 '~2hrs'
+		
+	6. If respin for failed:
+		'' false '' false '' false
+
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+# O1  Total = 23 ==> dgo(10) + ota(5) + lock(2) + startBin(2) + eeprom(1) + pairing(1) + lid(1) + safety(1)
+O1_child_lock_B_results_v01_05_05.txt
+O1_child_lock_stress_A_results_v01_05_05.txt
+O1_dgo_cooldown_mass_results_v01_05_05.txt
+O1_dgo_cooldown_op_results_v01_05_05.txt
+O1_dgo_fluff_mass_results_v01_05_05.txt
+O1_dgo_fluff_op_results_v01_05_05.txt
+O1_dgo_hip_mass_results_v01_05_05.txt
+O1_dgo_hip_op_results_v01_05_05.txt
+O1_dgo_Idle_mass_results_v01_05_05.txt
+O1_dgo_idle_op_results_v01_05_05.txt
+O1_dgo_lip_mass_results_v01_05_05.txt
+O1_dgo_lip_op_results_v01_05_05.txt
+O1_eeprom_stress_results_v01_05_05.txt
+O1_lid_open_close_results_v01_05_05.txt
+O1_ota_power_results_v01_05_05.txt
+O1_ota_prod_results_v01_05_05.txt
+O1_ota_ext_ft_results_v01_05_05.txt
+O1_ota_int_ft_results_v01_05_05.txt
+O1_ota_self_results_v01_05_05.txt
+O1_pairing_without_BLE_results_v01_05_05.txt
+O1_safety_test_results_v01_05_05.txt
+O1_start_via_bin_B_results_v01_05_05.txt
+O1_start_via_bin_stress_results_v01_05_05.txt
+
+
+
+
+
+
+# O2 Total = 20 ==> dgo(10) + ota(4) + lock(2) + startBin(2) + eeprom(1) + pairing(1) 
+O2_child_lock_B_results_v01_05_05.txt
+O2_child_lock_stress_A_results_v01_05_05.txt
+O2_dgo_cooldown_mass_results_v01_05_05.txt
+O2_dgo_cooldown_op_results_v01_05_05.txt
+O2_dgo_fluff_mass_results_v01_05_05.txt
+O2_dgo_fluff_op_results_v01_05_05.txt
+O2_dgo_hip_mass_results_v01_05_05.txt
+O2_dgo_hip_op_results_v01_05_05.txt
+O2_dgo_Idle_mass_results_v01_05_05.txt
+O2_dgo_idle_op_results_v01_05_05.txt
+O2_dgo_lip_mass_results_v01_05_05.txt
+O2_dgo_lip_op_results_v01_05_05.txt
+O2_eeprom_stress_results_v01_05_05.txt
+O2_ota_ext_ft_results_v01_05_05.txt
+O2_ota_int_ft_results_v01_05_05.txt
+O2_ota_power_results_v01_05_05.txt
+O2_ota_self_results_v01_05_05.txt
+O2_pairing_without_BLE_results_v01_05_05.txt
+O2_start_via_bin_B_results_v01_05_05.txt
+O2_start_via_bin_stress_results_v01_05_05.txt
+
+
+For v01_05_06  ota failed
+cat run_ota1702528549.log | egrep -a INFO > ../test_results/O1_ota_failed_v01_05_06.txt
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+There are 7 tables existing for Event Logging:
+
+	1. device
+	2. Event
+	3. oscar_events_l2_table
+	4. oscar_events_l2_table2
+	5. oscar_events_l2_table_backup
+	6. oscar_events_log_sent
+	7. tester   
+
+
+	
