@@ -12,11 +12,11 @@ if __name__ == "__main__":
     parser.add_argument('vRunr', type=str, nargs='?', help='', default=None)
     args = parser.parse_args()
 
-    db = "pi"
-    host = "100.117.244.108"      # host = "127.0.0.1"
-    user = "pi"       # user = "guo95132"
-    passwd = "Welc0me123"
-    port = "5432"
+    db = "??"
+    host = "??????????"     
+    user = "??"       
+    passwd = "??????"
+    port = "????"
     parseObj = ParseData(db, host, user, passwd, port, False)
     parseObj.connectToPostDB()
     parseObj.getCursor()   
