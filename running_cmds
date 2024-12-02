@@ -1,0 +1,254 @@
+
+
+&&&&&&&&&&&&&&&&&& QA1 &&&&&&&&&&&&&&&&&&&&&
+qa1: qa_ota_21
+
+	fitcheck: CLS32245A1US0002
+python run_ota_3D.py -t CLS32245A1US0002 -g qa_ota_21 -j dbg-v01_05_08-ba5f554 -f dbg-v01.05.08-ba5f554 -r 30
+
+in run_test.sh:
+--------------
+python run_ota_3D.py -t CLS32245A1US0002 -g qa_ota_21 -j dbg-v01_05_08-ba5f554 -f dbg-v01.05.08-ba5f554 -r 30 > test_results/O2_ota_self_results_v01_05_08.txt 2>&1
+sleep 5
+python run_ota_3D.py -t CLS32245A1US0002 -g qa_ota_21 -j dbg-v01_05_08-ba5f554 dbg-v01_05_05-19dc16c -f dbg-v01.05.08-ba5f554 dbg-v01.05.05-19dc16c -r 30 > test_results/O2_ota_ext_ft_results_v01_05_08_N_v01_05_05.txt 2>&1
+
+
+&&&&&&&&&&&&&&&&&& QA3 work2 &&&&&&&&&&&&&&&&&&&&&
+
+QA3:  work2
+python run_ota_3D.py -t MG52306A1US002C -g qa_ota_test5 -j rls-v01_05_08-ba5f554 -f rls-v01.05.08-ba5f554 -i 0 -r 30
+python run_ota_3D.py -t MG52306A1US002C -g qa_ota_test5 -j rls-v01_05_08-ba5f554 rls-v01_05_05-19dc16c -f rls-v01.05.08-ba5f554 rls-v01.05.05-19dc16c -i 0 -r 30
+python run_ota_3D.py -t MG52306A1US002C -g qa_ota_test5 -j rls-v01_05_08-ba5f554 rls-v01_04_07-6a5dcd4 -f rls-v01.05.08-ba5f554 rls-v01.04.07-6a5dcd4 -i 0 -r 30
+
+
+in run_test.sh:
+--------------
+python run_ota_3D.py -t MG52306A1US002C -g qa_ota_test5 -j rls-v01_05_08-ba5f554 -f rls-v01.05.08-ba5f554 -i 0 -r 1 > test_results/O1_ota_self_results_v01_05_08.txt 2>&1
+sleep 5
+python run_ota_3D.py -t MG52306A1US002C -g qa_ota_test5 -j rls-v01_05_08-ba5f554 rls-v01_04_07-6a5dcd4 -f rls-v01.05.08-ba5f554 rls-v01.04.07-6a5dcd4 -i 0 -r 1 > test_results/O1_ota_prod_results_v01_05_08_N_v01_04_07.txt 2>&1
+sleep 5
+python run_ota_3D.py -t MG52306A1US002C -g qa_ota_test5 -j rls-v01_05_08-ba5f554 rls-v01_05_05-19dc16c -f rls-v01.05.08-ba5f554 rls-v01.05.05-19dc16c -i 0 -r 1 > test_results/O1_ota_ext_ft_results_v01_05_08_N_v01_05_05.txt 2>&1
+
+&&&&&&&&&&&&&&&&&&& QA6 &&&&&&&&&&&&&&&&&&&&
+
+QA6:  (O1-with Power-Cycle)
+python run_ota_3D.py -t MGM2327A1US0030 -g qa_ota_test4 -j rls-v01_05_08-ba5f554 -f rls-v01.05.08-ba5f554 -u testsuites/ota_power_cycles.json
+
+QA6:  O2 Power_Cycle-OTA
+   work2:  guo_sn_14_o2
+python run_ota_3D.py -t guo_sn_14_o2 -g qa_ota_test11 -j dbg-v01_05_08-ba5f554 -f dbg-v01.05.08-ba5f554 -u testsuites/ota_power_cycles.json
+
+in run_test.sh:
+--------------
+python run_ota_3D.py -t MGM2327A1US0030 -g qa_ota_test4 -j rls-v01_05_08-ba5f554 -f rls-v01.05.08-ba5f554 -u testsuites/ota_power_cycles.json > test_results/O1_ota_power_results_v01_05_08.txt 2>&1
+sleep 5
+python run_ota_3D.py -t guo_sn_14_o2 -g qa_ota_test11 -j dbg-v01_05_08-ba5f554 -f dbg-v01.05.08-ba5f554 -u testsuites/ota_power_cycles.json > test_results/O2_ota_power_results_v01_05_08.txt 2>&1
+
+
+&&&&&&&&&&&&&&&&&&& DGO1 &&&&&&&&&&&&&&&&&&&&
+DGO1: O1
+	MGM2318A1US003D
+./run_dgo_tests.sh -s all -v 1_4_2 > test_results/12_14_2023_O1_dgo_test_results_v01_05_08
+
+in run_test.sh:
+--------------
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_IDLE_5hr.json -f ./dgo_test_IDLE_state2.py -n 1 -v 1_4_2 > test_results/O1_dgo_idle_op_results_v01_05_08.txt 
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_IDLE.json -f ./dgo_mass_add_5hr_min_runtime_IDLE.py -n 1 -v 1_4_2 > test_results/O1_dgo_Idle_mass_results_v01_05_05.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_LIP_5hr.json -f ./dgo_test_LIP_state2.py -n 1 -v 1_4_2 > test_results/O1_dgo_lip_op_results_v01_05_08.txt 
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_LIP.json -f ./dgo_mass_add_5hr_min_runtime_LIP.py -n 1 -v 1_4_2 > test_results/O1_dgo_lip_mass_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_HIP_5hr.json -f ./dgo_test_HIP_state2.py -n 1 -v 1_4_2 > test_results/O1_dgo_hip_op_results_v01_05_08.txt 
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_HIP.json -f ./dgo_mass_add_5hr_min_runtime_HIP.py -n 1 -v 1_4_2 > test_results/O1_dgo_hip_mass_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_COOLDOWN_5hr.json -f ./dgo_test_COOLDOWN_state2.py -n 1 -v 1_4_2 > test_results/O1_dgo_cooldown_op_results_v01_05_08.txt 
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_COOLDOWN.json -f ./dgo_mass_add_5hr_min_runtime_COOLDOWN.py -n 1 -v 1_4_2 > test_results/O1_dgo_cooldown_mass_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/safety_test.json -f ./safety_test.py -n 1 -v 1_4_2 > test_results/O1_safety_test_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_FLUFF_5hr.json -f ./dgo_test_FLUFF_state2.py -n 1 -v 1_4_2 > test_results/O1_dgo_fluff_op_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_FLUFF.json -f ./dgo_mass_add_5hr_min_runtime_FLUFF.py -n 1 -v 1_4_2 > test_results/O1_dgo_fluff_mass_results_v01_05_08.txt
+
+
+&&&&&&&&&&&&&&&&&&& QA5 &&&&&&&&&&&&&&&&&&&&
+QA5:
+	MG62311A1US0028:
+time ./run_dgo_tests.sh -s other -c ./testsuites/lid_open_close_stress.json -f ./lid_open_close_stress.py -n 30 -v 1_4_2 | tee test_results/lid_open_close_O1_results_v01_05_08
+time ./run_dgo_tests.sh -s other -c ./testsuites/eeprom_stress_test.json -f ./eeprom_stress_test.py -n 100 -v 1_4_2 > test_results/eeprom_O1_results_v01_05_08
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_start_via_bin_stress_A.json -f ./dgo_start_via_bin_stress_A.py -n 30 -v 1_4_2 > test_results/start_via_bin_stress_O1_v01_05_08
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_start_via_bin_B.json -f ./dgo_start_via_bin_B.py -n 2 -v 1_4_2 > test_results/start_via_bin_B_O1_v01_05_08
+time ./run_pairing_tests.sh -s other -c ./testsuites/pairing.json -f ./pairing.py -n 2 -v 1_4_2 > test_results/pairing_O1_v01_05_08
+
+
+in run_test.sh:
+--------------
+time ./run_dgo_tests.sh -s other -c ./testsuites/lid_open_close_stress.json -f ./lid_open_close_stress.py -n 30 -v 1_4_2 > test_results/O1_lid_open_close_results_v01_05_08.txt
+sleep 5
+time ./run_dgo_tests.sh -s other -c ./testsuites/eeprom_stress_test.json -f ./eeprom_stress_test.py -n 100 -v 1_4_2 > test_results/O1_eeprom_stress_results_v01_05_08.txt
+sleep 5
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_start_via_bin_stress_A.json -f ./dgo_start_via_bin_stress_A.py -n 30 -v 1_4_2 > test_results/O1_start_via_bin_stress_results_v01_05_08.txt
+sleep 5
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_start_via_bin_B.json -f ./dgo_start_via_bin_B.py -n 1 -v 1_4_2 > test_results/O1_start_via_bin_B_results_v01_05_08.txt
+sleep 1
+cd ../pairing/
+sleep 1
+time ./run_pairing_tests.sh -s other -c ./testsuites/pairing.json -f ./pairing.py -n 1 -v 1_4_2 > test_results/O1_pairing_without_BLE_results_v01_05_08.txt
+
+
+&&&&&&&&&&&&&&&&&&& QA7 O2 &&&&&&&&&&&&&&&&&&&&
+QA7: O2
+	MG22332A2US0019
+./run_dgo_tests.sh -s all -v O2_1_4_2 > test_results/12_14_2023_O2_dgo_test_results_v01_05_08
+
+
+in run_test.sh:
+--------------
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_IDLE_5hr_O2.json -f ./dgo_test_IDLE_state2_O2.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_idle_op_results_v01_05_08.txt 
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_IDLE_O2.json -f ./dgo_mass_add_5hr_min_runtime_IDLE.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_Idle_mass_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_LIP_5hr_O2.json -f ./dgo_test_LIP_state2_O2.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_lip_op_results_v01_05_08.txt 
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_LIP_O2.json -f ./dgo_mass_add_5hr_min_runtime_LIP.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_lip_mass_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_HIP_5hr_O2.json -f ./dgo_test_HIP_state2_O2.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_hip_op_results_v01_05_08.txt 
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_HIP_O2.json -f ./dgo_mass_add_5hr_min_runtime_HIP.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_hip_mass_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_COOLDOWN_5hr_O2.json -f ./dgo_test_COOLDOWN_state2_O2.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_cooldown_op_results_v01_05_08.txt 
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_COOLDOWN_O2.json -f ./dgo_mass_add_5hr_min_runtime_COOLDOWN.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_cooldown_mass_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_testsuite_FLUFF_5hr_O2.json -f ./dgo_test_FLUFF_state2_O2.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_fluff_op_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_mass_add_5hr_min_runtime_FLUFF_O2.json -f ./dgo_mass_add_5hr_min_runtime_FLUFF.py -n 1 -v O2_1_4_2 > test_results/O2_dgo_fluff_mass_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/eeprom_stress_test.json -f ./eeprom_stress_test.py -n 100 -v O2_1_4_2 > test_results/O2_eeprom_stress_results_v01_05_08.txt 
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_start_via_bin_stress_A_O2.json -f ./dgo_start_via_bin_stress_A_O2.py -n 30 -v O2_1_4_2 > test_results/O2_start_via_bin_stress_results_v01_05_08.txt
+sleep 3
+time ./run_dgo_tests.sh -s other -c ./testsuites/dgo_start_via_bin_B_O2.json -f ./dgo_start_via_bin_B_O2.py -n 1 -v O2_1_4_2 > test_results/O2_start_via_bin_B_results_v01_05_08.txt
+sleep 1
+cd ../pairing/
+sleep 1
+time ./run_pairing_tests.sh -s other -c ./testsuites/pairing_O2.json -f ./pairing_O2.py -n 1 -v O2_1_4_2 > test_results/O2_pairing_without_BLE_results_v01_05_08.txt
+
+
+
+TODO:
+1. add time in front
+
+2. setup O1 child-lock  - DOME
+3. Add O1 child-lock in QA5 - DONE
+
+4. setup O2 child-lock 
+5. Add O2 child-lock in QA7
+
+
+"SN": "MG52306A1US002E",  =>   MG62311A1US0028   x 12
+
+	sed -i 's/MG52306A1US002E/MG62311A1US0028/g' child_lock_stress_A.json
+	cat child_lock_stress_A.json | grep MG62311A1US0028
+
+	sed -i 's/MG52306A1US002E/MG62311A1US0028/g' child_lock_B.json
+	cat child_lock_B.json | grep MG62311A1US0028
+
+time ./run_dgo_tests.sh -s other -c ./testsuites/child_lock_stress_A.json -f ./child_lock_stress_A.py -n 30 -v 1_4_2 > test_results/O1_child_lock_stress_A_results_v01_05_08.txt
+
+time ./run_dgo_tests.sh -s other -c ./testsuites/child_lock_B.json -f ./child_lock_B.py -n 1 -v 1_4_2 > test_results/O1_child_lock_B_results_v01_05_08.txt
+
+
+// O2
+time ./run_dgo_tests.sh -s other -c ./testsuites/child_lock_stress_A_O2.json -f ./child_lock_stress_A_O2.py -n 30 -v O2_1_4_2 > test_results/O2_child_lock_stress_A_results_v01_05_08.txt
+
+time ./run_dgo_tests.sh -s other -c ./testsuites/child_lock_B_O2.json -f ./child_lock_B_O2.py -n 3 -v O2_1_4_2 > test_results/O2_child_lock_B_results_v01_05_08.txt
+
+
+guo3@guo3:~$ tailscale status | egrep guo
+100.92.225.35   guo3                 guo@         linux   -
+100.123.214.82  calpartition1        guo@         linux   offline
+100.104.30.118  dgo1                 guo@         linux   -
+100.71.28.52    guo-s-iphone         guo@         iOS     offline
+100.112.63.18   guo                  guo@         linux   offline
+100.116.120.145 guo5                 guo@         linux   offline
+100.105.149.92  guos-macbook-pro-2   guo@         macOS   -
+100.74.40.108   ip-172-31-93-153     guo@         linux   offline
+100.86.60.107   josh-remote          guo@         linux   -
+100.98.148.93   mill-pi              guo@         linux   offline
+100.110.223.9   ota1                 guo@         linux   offline
+100.96.241.98   pi                   guo@         linux   offline
+100.91.118.92   provisioning-o2-office guo@         linux   offline
+100.110.14.71   ps                   guo@         linux   -
+100.123.238.17  ps1                  guo@         linux   offline
+100.85.75.33    qa1                  guo@         linux   -
+100.88.133.84   qa2-1                guo@         linux   offline
+100.94.39.6     qa2                  guo@         linux   offline
+100.117.244.108 qa3                  guo@         linux   -
+100.126.212.16  qa5                  guo@         linux   -
+100.100.77.113  qa6                  guo@         linux   -
+100.121.150.100 qa7                  guo@         linux   -
+100.100.88.3    raspberry-81         guo@         linux   offline
+guo3@guo3:~$ 
+
+
+# to add the local ip address mapping in /etc/hosts file:
+127.0.0.1	localhost
+127.0.1.1	guo3
+
+100.104.30.118  dgo1
+100.86.60.107   josh-remote 
+100.110.14.71   ps
+100.123.238.17  ps1
+100.85.75.33    qa1
+100.117.244.108 qa3
+100.126.212.16  qa5
+100.100.77.113  qa6
+100.121.150.100 qa7
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+To sync all the log files from rasp-pi, commands could be run in any place
+
+
+1. To rsync ota O2 files from pi@qa1     	
+rsync -avzh pi@qa1:~/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa1
+rsync -avzh pi@100.85.75.33:~/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa1
+
+2. To rsync ota O1 files from pi@qa3    	
+rsync -avzh pi@qa3:~/work2/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa3   
+rsync -avzh pi@100.117.244.108:~/work2/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa3 
+
+3. To rsync ota_power O1 & O2 files from pi@qa6  
+rsync -avzh pi@qa6:~/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa6   
+rsync -avzh pi@100.100.77.113:~/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa6
+
+rsync -avzh pi@qa6:~/work2/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa6_2   
+rsync -avzh pi@100.100.77.113:~/work2/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa6_2
+
+rsync -avzh pi@qa6:~/dvt/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa6_dvt  
+rsync -avzh pi@100.100.77.113:~/dvt/Oscar-Python-CLI/src/oscar/ota/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa6_dvt
+
+
+
+4. To rsync dgo O1 files from pi@dgo1    
+rsync -avzh pi@dgo1:~/Oscar-Python-CLI/src/oscar/dgo/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/dgo1  
+rsync -avzh pi@100.104.30.118:~/Oscar-Python-CLI/src/oscar/dgo/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/dgo1  
+
+5. To rsync dgo O1 files from pi@qa5  
+rsync -avzh pi@qa5:~/Oscar-Python-CLI/src/oscar/dgo/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa5    
+rsync -avzh pi@100.126.212.16:~/Oscar-Python-CLI/src/oscar/dgo/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa5  
+
+rsync -avzh pi@qa5:~/Oscar-Python-CLI/src/oscar/pairing/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa5_2   
+rsync -avzh pi@100.126.212.16:~/Oscar-Python-CLI/src/oscar/pairing/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa5_2 
+
+
+
+6. To rsync dgo O2 files from pi@qa7  
+rsync -avzh pi@qa7:~/Oscar-Python-CLI/src/oscar/dgo/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa7    
+rsync -avzh pi@100.121.150.100:~/Oscar-Python-CLI/src/oscar/dgo/test_results/ /home/guo3/work7/uploadToCloud/rsyncF/qa7
+
