@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Automation Test Dashboard</title>
+<style>
+        html, body {
+            height: 100%; /* Ensures the html and body take full viewport height */
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./asset/background.png'), linear-gradient(to bottom, lightyellow, rgb(237, 237, 215) 99%);
+            background-size: 100% 200px, 100% 100%; /* Image height fixed to 200px and gradient covers the rest */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom, top;
+            background-attachment: fixed;
+        }
+        .header {
+            text-align: center;
+            padding: 2px;
+        }
+        .header img {
+            width: 100px;
+            height: auto;
+        }
+        /* Rest of your CSS */
+
+        .centered-text {
+            text-align: center; /* Align text to the left within the container */
+            margin-top: 3px; /* Spacing above the text */
+            font-size: 22px; /* Larger font size */
+        }
+
+        /* Updated CSS for the table with margins */
+        .report-table {
+            width: 80%; /* Set a specific width for the table */
+            border-collapse: collapse;
+            margin-top: 10px; /* Space above the table */
+            margin-left: auto; /* Left margin auto for centering */
+            margin-right: auto; /* Right margin auto for centering */
+            background-color: transparent; /* Make table background transparent */
+        }
+        .report-table th, .report-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            /* background-color: #f9f9f9; */
+            /* background-color: transparent;  Make cell backgrounds transparent */
+        }
+        .report-table th {
+            background-color: #4CAF50; /* Dark green for headers */
+            color: white; /* White text for headers */
+            /* background-color: transparent;  Make header background transparent */
+        }
+        .report-table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Slightly darker grey for even rows */
+            /* background-color: #f9f9f9; */
+            /* background-color: transparent;  Make even row backgrounds transparent */
+        }
+        .report-table tr:nth-child(odd) {
+            background-color: #e8e8e8; /* Slightly darker gray for odd rows */
+        }
+        .passed {
+            color: green; /* Green text for passed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; 
+        }
+        .passnoblocker {
+            color: rgb(160, 242, 160); /* Green text for passed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; 
+        }
+        .failed {
+            color: red; /* Red text for failed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; /* Larger font size */
+        }
+        .pending {
+            color: rgb(0, 229, 255); /* Red text for failed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; /* Larger font size */
+        }
+        .respin {
+            color: red; /* Red text for failed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; /* Larger font size */
+        }
+        .subheading {
+            font-size: 35px; /* Larger font size for the subheading */
+        }
+        .inline-details {
+            display: inline-block;
+            margin-right: 20px; /* Spacing between the elements */
+        }
+        .total-passed {
+        color: green;
+        }
+
+        .total-failed {
+            color: red;
+        }
+        #randomImage {
+            position: absolute;
+            width: 150px; /* New width for the image */
+            height: auto; /* Height will scale automatically */
+        }
+        .content-container {
+            /* max-height: 1000px;  Set the maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            margin-bottom: 2px; /* Add some space below the container */
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        .jira-blink-link {
+            margin-bottom: 1px; /* Space between links */
+            color: red;
+            font-style: italic;
+            font-weight: bold;
+            animation: blink 1s linear infinite;
+        }
+        .jira-link {
+            margin-bottom: 1px; /* Space between links */
+            color: red;
+            font-style: italic;
+        }
+        .diagram-text {
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+        }
+        #table_o1 th, #table_o1 td, #table_o2 th, #table_o2 td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="header">
+<img alt="Logo" src="./asset/logo.png"/>
+<h1>Automation Test Dashboard</h1>
+<h4>Date: <span id="id_cur_date" style="font-style: italic;">{{Cur_Date}}</span> </h4>
+</div>
+<img alt="Magnifying Glass" id="randomImage" src="./asset/magnify_classes.png"/>
+<div class="content-container">
+<div class="centered-text">
+
+<table class="report-table" id="table_1">
+<tr>
+<th style="text-align: center;">Builds</th>
+<th style="text-align: center;">Oscar</th>
+<th style="text-align: center;">Code Name</th>
+<th style="text-align: center;">Build Date</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: center;">Jira/Blocker</th>
+<th style="text-align: center;">Notes</th>
+</tr>
+</table>
+</div>
+</div>
+<p class="diagram-text">executed and collected from <a href="./asset/automation_system_diagram.png">Automation System Diagram</a>.</p>
+<script>
+        function adjustTableHeight() {
+            const fixedDistanceFromBottom = 100; 
+            const viewportHeight = window.innerHeight;
+            const contentAboveTable = document.querySelector('.header'); 
+            const contentAboveTableHeight = contentAboveTable ? contentAboveTable.offsetHeight : 0;
+            const newMaxHeight = viewportHeight - contentAboveTableHeight - fixedDistanceFromBottom;
+
+            const contentContainer = document.querySelector('.content-container');
+            if (contentContainer) {
+                contentContainer.style.maxHeight = `${newMaxHeight}px`;
+            }
+        }
+        adjustTableHeight();
+        window.addEventListener('resize', adjustTableHeight);
+
+        function updatePassedDisplay(v, id) {
+            document.getElementById(id).textContent = v;
+        }
+
+        function updateValue(v, id, idx=0) {
+            if (idx == 0) {
+                document.getElementById(id).textContent = v;
+            } else {
+                let resultLinkCell = document.getElementById(id).parentNode.cells[idx];
+                let resultLink = resultLinkCell.getElementsByTagName('a')[0];
+                resultLink.href = v;
+            }
+        }
+
+        function updateDisplay(fieldId, fieldV, idx=0) {
+            if (idx == 0) {
+                if (typeof fieldV !== 'undefined') { 
+                    updateValue(fieldV, fieldId);
+                } else {
+                    updateValue('', fieldId);
+                }
+            } else {
+                updateValue(fieldV, fieldId, idx);
+            }
+        }
+
+        function displayJiraLinks(containerId, getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag) {
+            let jiras = [getJIRA1]; 
+            if (getJIRA1Flag) {
+                updateJiraBlinksLinks(containerId, jiras)
+            } else {
+                updateJiraLinks(containerId, jiras)
+            }
+            jiras = [getJIRA2]; 
+            if (getJIRA2Flag) {
+                updateJiraBlinksLinks(containerId, jiras)
+            } else {
+                updateJiraLinks(containerId, jiras)
+            }
+            jiras = [getJIRA3]; 
+            if (getJIRA3Flag) {
+                updateJiraBlinksLinks(containerId, jiras)
+            } else {
+                updateJiraLinks(containerId, jiras)
+            }
+        }
+
+        function updateJiraLinks(containerId, jiraTickets) {
+            const jiraBaseUrl = 'https://chewielabs.atlassian.net/browse/';
+            const jiraLinksContainer = document.getElementById(containerId);
+
+            if (jiraLinksContainer) {
+                jiraTickets.forEach(ticket => {
+                    const link = document.createElement('a');
+                    link.href = jiraBaseUrl + ticket;
+                    link.textContent = ticket;
+                    link.target = '_blank';
+                    link.className = 'jira-link'; // Add a class for styling
+                    jiraLinksContainer.appendChild(link);
+                    jiraLinksContainer.appendChild(document.createTextNode(' ')); // Space between links
+                });
+            }
+        }
+
+        function updateJiraBlinksLinks(containerId, jiraTickets) {
+            const jiraBaseUrl = 'https://chewielabs.atlassian.net/browse/';
+            const jiraLinksContainer = document.getElementById(containerId);
+
+            if (jiraLinksContainer) {
+                jiraTickets.forEach(ticket => {
+                    const link = document.createElement('a');
+                    link.href = jiraBaseUrl + ticket;
+                    link.textContent = ticket;
+                    link.target = '_blank';
+                    link.className = 'jira-blink-link'; // Add a class for styling
+                    jiraLinksContainer.appendChild(link);
+                    jiraLinksContainer.appendChild(document.createTextNode(' ')); // Space between links
+                });
+            }
+        }
+
+        function changeLinkText(linkId, linkText, urlLink) {
+            let link = document.getElementById(linkId).querySelector('a');
+            link.textContent = linkText;
+
+            let resultLinkCell = document.getElementById(linkId);
+            let resultLink = resultLinkCell.getElementsByTagName('a')[0];
+            resultLink.href = urlLink;
+        }
+        
+        function changeClass(elmId, newClass) {
+            var cell = document.getElementById(elmId);
+            cell.className = '';
+            cell.classList.add(newClass);
+        }
+
+        function addNewEntry(build, oscar, codeName, buildDate, status, jira, notes, counter) {
+            var table = document.getElementById('table_1');
+            var newRow = table.insertRow(-1); 
+            var buildCell = newRow.insertCell(0);
+            var oscarCell = newRow.insertCell(1);
+            var codeNameCell = newRow.insertCell(2);
+            var buildDateCell = newRow.insertCell(3);
+            var statusCell = newRow.insertCell(4);
+            var jiraCell = newRow.insertCell(5);
+            var notesCell = newRow.insertCell(6);
+
+            buildCell.id = `id_build_${counter}`;
+            codeNameCell.id = `id_codename_${counter}`;
+            oscarCell.id = `id_oscar_${counter}`;
+            buildDateCell.id = `id_builddate_${counter}`;
+            statusCell.id = `id_status_${counter}`;
+            jiraCell.id = `id_jira_${counter}`;
+            notesCell.id = `id_notes_${counter}`;
+
+            buildCell.innerHTML = build;
+            oscarCell.innerHTML = oscar;
+            codeNameCell.innerHTML = codeName;
+            buildDateCell.innerHTML = buildDate;
+            statusCell.innerHTML = status;
+            jiraCell.innerHTML = jira;
+            notesCell.innerHTML = notes;
+        }
+
+        function addHyperlinkToCell(cellId, url, linkText) {
+            var cell = document.getElementById(cellId);
+            if (cell) {
+                var link = document.createElement('a');
+                link.href = url;
+                link.textContent = linkText;
+                cell.innerHTML = '';
+                cell.appendChild(link);
+            } else {
+                console.error('Cell not found: ' + cellId);
+            }
+        }
+
+        let curDate = new Date();
+        updateDisplay('id_cur_date', curDate)
+
+        let jData = GET_M_DATA
+
+        for (var i = jData.length - 1; i >= 0; i--) {
+
+            addNewEntry(jData[i]["Build"], jData[i]["Oscar"], jData[i]["CodeName"], jData[i]["BuildDate"], jData[i]["Status"], '', jData[i]["Notes"], i+1)
+            addHyperlinkToCell(jData[i]["buildId"], jData[i]["buildLink"], jData[i]["Build"])
+            changeClass(jData[i]["statusId"], jData[i]["clsStatus"])
+            displayJiraLinks(jData[i]["jiraId"], jData[i]["Jira1"], jData[i]["Jira2"], jData[i]["Jira3"], parseInt(jData[i]["JiraF1"], 10), parseInt(jData[i]["JiraF2"], 10), parseInt(jData[i]["JiraF3"], 10))
+
+        }
+
+        if (true == false) {
+            jData.forEach((item, index) => {
+                addNewEntry(item["Build"], item["Oscar"], item["CodeName"], item["BuildDate"], item["Status"], '', item["Notes"], index+1)
+                addHyperlinkToCell(item["buildId"], item["buildLink"], item["Build"])
+                changeClass(item["statusId"], item["clsStatus"])
+                displayJiraLinks(item["jiraId"], item["Jira1"], item["Jira2"], item["Jira3"], parseInt(item["JiraF1"], 10), parseInt(item["JiraF2"], 10), parseInt(item["JiraF3"], 10))
+            });
+        }
+
+        function moveImageToRandomLocation() {
+            let randomImage = document.getElementById('randomImage');
+            let maxX = document.documentElement.clientWidth - randomImage.offsetWidth;
+            let maxY = document.documentElement.clientHeight - randomImage.offsetHeight;
+            let randomX = Math.floor(Math.random() * maxX);
+            let randomY = Math.floor(Math.random() * maxY);
+            randomImage.style.left = randomX + 'px';
+            randomImage.style.top = randomY + 'px';
+        }
+        setInterval(moveImageToRandomLocation, 3000);
+
+        function calculateSummary_O1() {
+            let passedCells = document.querySelectorAll('#table_o1.report-table .passed');
+            let failedCells = document.querySelectorAll('#table_o1.report-table .failed');
+            let totalPassed = 0, totalFailed = 0;
+
+            passedCells.forEach(function(cell) {
+                totalPassed += parseInt(cell.textContent) || 0;
+            });
+
+            failedCells.forEach(function(cell) {
+                totalFailed += parseInt(cell.textContent) || 0;
+            });
+
+            document.getElementById('totalPassed_o1').textContent = totalPassed;
+            document.getElementById('totalFailed_o1').textContent = totalFailed;
+        }
+
+        function calculateSummary_O2() {
+            let passedCells = document.querySelectorAll('#table_o2.report-table .passed');
+            let failedCells = document.querySelectorAll('#table_o2.report-table .failed');
+            let totalPassed = 0, totalFailed = 0;
+
+            passedCells.forEach(function(cell) {
+                totalPassed += parseInt(cell.textContent) || 0;
+            });
+
+            failedCells.forEach(function(cell) {
+                totalFailed += parseInt(cell.textContent) || 0;
+            });
+            document.getElementById('totalPassed_o2').textContent = totalPassed;
+            document.getElementById('totalFailed_o2').textContent = totalFailed;
+        }
+
+        window.onload = function() {
+        };
+
+    </script>
+<div class="background-strip"></div>
+</body>
+</html>
