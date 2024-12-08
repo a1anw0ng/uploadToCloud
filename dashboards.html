@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Automation Test Dashboard</title>
+<style>
+        html, body {
+            height: 100%; /* Ensures the html and body take full viewport height */
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./asset/background.png'), linear-gradient(to bottom, lightyellow, rgb(237, 237, 215) 99%);
+            background-size: 100% 200px, 100% 100%; /* Image height fixed to 200px and gradient covers the rest */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom, top;
+            background-attachment: fixed;
+        }
+        .header {
+            text-align: center;
+            padding: 2px;
+        }
+        .header img {
+            width: 100px;
+            height: auto;
+        }
+        /* Rest of your CSS */
+
+        .centered-text {
+            text-align: center; /* Align text to the left within the container */
+            margin-top: 3px; /* Spacing above the text */
+            font-size: 22px; /* Larger font size */
+        }
+
+        /* Updated CSS for the table with margins */
+        .report-table {
+            width: 80%; /* Set a specific width for the table */
+            border-collapse: collapse;
+            margin-top: 10px; /* Space above the table */
+            margin-left: auto; /* Left margin auto for centering */
+            margin-right: auto; /* Right margin auto for centering */
+            background-color: transparent; /* Make table background transparent */
+        }
+        .report-table th, .report-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            /* background-color: #f9f9f9; */
+            /* background-color: transparent;  Make cell backgrounds transparent */
+        }
+        .report-table th {
+            background-color: #4CAF50; /* Dark green for headers */
+            color: white; /* White text for headers */
+            /* background-color: transparent;  Make header background transparent */
+        }
+        .report-table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Slightly darker grey for even rows */
+            /* background-color: #f9f9f9; */
+            /* background-color: transparent;  Make even row backgrounds transparent */
+        }
+        .report-table tr:nth-child(odd) {
+            background-color: #e8e8e8; /* Slightly darker gray for odd rows */
+        }
+        .passed {
+            color: green; /* Green text for passed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; 
+        }
+        .passnoblocker {
+            color: rgb(160, 242, 160); /* Green text for passed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; 
+        }
+        .failed {
+            color: red; /* Red text for failed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; /* Larger font size */
+        }
+        .pending {
+            color: rgb(0, 229, 255); /* Red text for failed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; /* Larger font size */
+        }
+        .respin {
+            color: red; /* Red text for failed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; /* Larger font size */
+        }
+        .subheading {
+            font-size: 35px; /* Larger font size for the subheading */
+        }
+        .inline-details {
+            display: inline-block;
+            margin-right: 20px; /* Spacing between the elements */
+        }
+        .total-passed {
+        color: green;
+        }
+
+        .total-failed {
+            color: red;
+        }
+        #randomImage {
+            position: absolute;
+            width: 150px; /* New width for the image */
+            height: auto; /* Height will scale automatically */
+        }
+        .content-container {
+            /* max-height: 1000px;  Set the maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            margin-bottom: 2px; /* Add some space below the container */
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        .jira-blink-link {
+            margin-bottom: 1px; /* Space between links */
+            color: red;
+            font-style: italic;
+            font-weight: bold;
+            animation: blink 1s linear infinite;
+        }
+        .jira-link {
+            margin-bottom: 1px; /* Space between links */
+            color: red;
+            font-style: italic;
+        }
+        .diagram-text {
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+        }
+        #table_o1 th, #table_o1 td, #table_o2 th, #table_o2 td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+<img alt="Logo" src="./asset/logo.png"/>
+<h1>Automation Test Dashboard</h1>
+<h4>Date: <span id="id_cur_date" style="font-style: italic;">{{Cur_Date}}</span> </h4>
+</div>
+<img alt="Magnifying Glass" id="randomImage" src="./asset/magnify_classes.png"/>
+<div class="content-container">
+<div class="centered-text">
+<table class="report-table" id="table_1">
+<tr>
+<th style="text-align: center;">Builds</th>
+<th style="text-align: center;">Oscar</th>
+<th style="text-align: center;">Code Name</th>
+<th style="text-align: center;">Build Date</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: center;">Jira/Blocker</th>
+<th style="text-align: center;">Notes</th>
+</tr>
+</table>
+</div>
+</div>
+<p class="diagram-text">executed and collected from <a href="./asset/automation_system_diagram.png">Automation System Diagram</a>.</p>
+<script>
+        function adjustTableHeight() {
+            const fixedDistanceFromBottom = 100; 
+            const viewportHeight = window.innerHeight;
+            const contentAboveTable = document.querySelector('.header'); 
+            const contentAboveTableHeight = contentAboveTable ? contentAboveTable.offsetHeight : 0;
+            const newMaxHeight = viewportHeight - contentAboveTableHeight - fixedDistanceFromBottom;
+
+            const contentContainer = document.querySelector('.content-container');
+            if (contentContainer) {
+                contentContainer.style.maxHeight = `${newMaxHeight}px`;
+            }
+        }
+        adjustTableHeight();
+        window.addEventListener('resize', adjustTableHeight);
+
+        function updatePassedDisplay(v, id) {
+            document.getElementById(id).textContent = v;
+        }
+
+        function updateValue(v, id, idx=0) {
+            if (idx == 0) {
+                document.getElementById(id).textContent = v;
+            } else {
+                let resultLinkCell = document.getElementById(id).parentNode.cells[idx];
+                let resultLink = resultLinkCell.getElementsByTagName('a')[0];
+                resultLink.href = v;
+            }
+        }
+
+        function updateDisplay(fieldId, fieldV, idx=0) {
+            if (idx == 0) {
+                if (typeof fieldV !== 'undefined') { 
+                    updateValue(fieldV, fieldId);
+                } else {
+                    updateValue('', fieldId);
+                }
+            } else {
+                updateValue(fieldV, fieldId, idx);
+            }
+        }
+
+        function displayJiraLinks(containerId, getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag) {
+            let jiras = [getJIRA1]; 
+            if (getJIRA1Flag) {
+                updateJiraBlinksLinks(containerId, jiras)
+            } else {
+                updateJiraLinks(containerId, jiras)
+            }
+            jiras = [getJIRA2]; 
+            if (getJIRA2Flag) {
+                updateJiraBlinksLinks(containerId, jiras)
+            } else {
+                updateJiraLinks(containerId, jiras)
+            }
+            jiras = [getJIRA3]; 
+            if (getJIRA3Flag) {
+                updateJiraBlinksLinks(containerId, jiras)
+            } else {
+                updateJiraLinks(containerId, jiras)
+            }
+        }
+
+        function updateJiraLinks(containerId, jiraTickets) {
+            const jiraBaseUrl = 'https://chewielabs.atlassian.net/browse/';
+            const jiraLinksContainer = document.getElementById(containerId);
+
+            if (jiraLinksContainer) {
+                jiraTickets.forEach(ticket => {
+                    const link = document.createElement('a');
+                    link.href = jiraBaseUrl + ticket;
+                    link.textContent = ticket;
+                    link.target = '_blank';
+                    link.className = 'jira-link'; // Add a class for styling
+                    jiraLinksContainer.appendChild(link);
+                    jiraLinksContainer.appendChild(document.createTextNode(' ')); // Space between links
+                });
+            }
+        }
+
+        function updateJiraBlinksLinks(containerId, jiraTickets) {
+            const jiraBaseUrl = 'https://chewielabs.atlassian.net/browse/';
+            const jiraLinksContainer = document.getElementById(containerId);
+
+            if (jiraLinksContainer) {
+                jiraTickets.forEach(ticket => {
+                    const link = document.createElement('a');
+                    link.href = jiraBaseUrl + ticket;
+                    link.textContent = ticket;
+                    link.target = '_blank';
+                    link.className = 'jira-blink-link'; // Add a class for styling
+                    jiraLinksContainer.appendChild(link);
+                    jiraLinksContainer.appendChild(document.createTextNode(' ')); // Space between links
+                });
+            }
+        }
+
+        function changeLinkText(linkId, linkText, urlLink) {
+            let link = document.getElementById(linkId).querySelector('a');
+            link.textContent = linkText;
+
+            let resultLinkCell = document.getElementById(linkId);
+            let resultLink = resultLinkCell.getElementsByTagName('a')[0];
+            resultLink.href = urlLink;
+        }
+        
+        function changeClass(elmId, newClass) {
+            var cell = document.getElementById(elmId);
+            cell.className = '';
+            cell.classList.add(newClass);
+        }
+
+        function addNewEntry(build, oscar, codeName, buildDate, status, jira, notes, counter) {
+            var table = document.getElementById('table_1');
+            var newRow = table.insertRow(-1); 
+            var buildCell = newRow.insertCell(0);
+            var oscarCell = newRow.insertCell(1);
+            var codeNameCell = newRow.insertCell(2);
+            var buildDateCell = newRow.insertCell(3);
+            var statusCell = newRow.insertCell(4);
+            var jiraCell = newRow.insertCell(5);
+            var notesCell = newRow.insertCell(6);
+
+            buildCell.id = `id_build_${counter}`;
+            codeNameCell.id = `id_codename_${counter}`;
+            oscarCell.id = `id_oscar_${counter}`;
+            buildDateCell.id = `id_builddate_${counter}`;
+            statusCell.id = `id_status_${counter}`;
+            jiraCell.id = `id_jira_${counter}`;
+            notesCell.id = `id_notes_${counter}`;
+
+            buildCell.innerHTML = build;
+            oscarCell.innerHTML = oscar;
+            codeNameCell.innerHTML = codeName;
+            buildDateCell.innerHTML = buildDate;
+            statusCell.innerHTML = status;
+            jiraCell.innerHTML = jira;
+            notesCell.innerHTML = notes;
+        }
+
+        function addHyperlinkToCell(cellId, url, linkText) {
+            var cell = document.getElementById(cellId);
+            if (cell) {
+                var link = document.createElement('a');
+                link.href = url;
+                link.textContent = linkText;
+                cell.innerHTML = '';
+                cell.appendChild(link);
+            } else {
+                console.error('Cell not found: ' + cellId);
+            }
+        }
+
+        let curDate = new Date();
+        updateDisplay('id_cur_date', curDate)
+
+        let jData = [
+   {
+      "index": 1,
+      "buildId": "id_build_1",
+      "Build": "rls-v01.05.05-19dc16c",
+      "Oscar": "O1",
+      "buildLink": "./rls-v01.05.05-19dc16c/dashboard_v01_05_05.html",
+      "CodeName": "Gournay",
+      "BuildDate": "12_7_2023",
+      "statusId": "id_status_1",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_1",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": "First in Dashboard"
+   },
+   {
+      "index": 2,
+      "buildId": "id_build_2",
+      "Build": "dbg-v01.05.05-19dc16c",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.05.05-19dc16c/dashboard_v01_05_05.html",
+      "CodeName": "Gournay",
+      "BuildDate": "12_7_2023",
+      "statusId": "id_status_2",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_2",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 3,
+      "buildId": "id_build_3",
+      "Build": "rls-v01.05.06-3725fcf",
+      "Oscar": "O1",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Gournay",
+      "BuildDate": "12_13_2023",
+      "statusId": "id_status_3",
+      "clsStatus": "respin",
+      "Status": "RESPIN",
+      "jiraId": "id_jira_3",
+      "Jira1": "FW-3843",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": "build respin"
+   },
+   {
+      "index": 4,
+      "buildId": "id_build_4",
+      "Build": "dbg-v01.05.06-3725fcf",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Gournay",
+      "BuildDate": "12_13_2023",
+      "statusId": "id_status_4",
+      "clsStatus": "respin",
+      "Status": "RESPIN",
+      "jiraId": "id_jira_4",
+      "Jira1": "FW-3843",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": "build respin"
+   },
+   {
+      "index": 5,
+      "buildId": "id_build_5",
+      "Build": "rls-v01.05.08-ba5f554",
+      "Oscar": "O1",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Gournay",
+      "BuildDate": "12_14_2023",
+      "statusId": "id_status_5",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_5",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 6,
+      "buildId": "id_build_6",
+      "Build": "dbg-v01.05.08-ba5f554",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Gournay",
+      "BuildDate": "12_14_2023",
+      "statusId": "id_status_6",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_6",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 7,
+      "buildId": "id_build_7",
+      "Build": "rls-v01.06.03-b75e7a3",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "1_11_2024",
+      "statusId": "id_status_7",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_7",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": "O2 only"
+   },
+   {
+      "index": 8,
+      "buildId": "id_build_8",
+      "Build": "rls-v01.06.04-eb8795d",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "1_18_2024",
+      "statusId": "id_status_8",
+      "clsStatus": "respin",
+      "Status": "RESPIN",
+      "jiraId": "id_jira_8",
+      "Jira1": "FW-3924",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": "O2 only & respin"
+   },
+   {
+      "index": 9,
+      "buildId": "id_build_9",
+      "Build": "rls-v01.06.05-5a226ee",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "1_20_2024",
+      "statusId": "id_status_9",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_9",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": "O2 only"
+   },
+   {
+      "index": 10,
+      "buildId": "id_build_10",
+      "Build": "rls-v01.05.09-ff78838",
+      "Oscar": "O1",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Gournay",
+      "BuildDate": "1_24_2024",
+      "statusId": "id_status_10",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_10",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 11,
+      "buildId": "id_build_11",
+      "Build": "dbg-v01.05.09-ff78838",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Gournay",
+      "BuildDate": "1_24_2024",
+      "statusId": "id_status_11",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_11",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 12,
+      "buildId": "id_build_12",
+      "Build": "rls-v01.06.06-de336c5",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "1_25_2024",
+      "statusId": "id_status_12",
+      "clsStatus": "respin",
+      "Status": "RESPIN",
+      "jiraId": "id_jira_12",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "FW-3955",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 13,
+      "buildId": "id_build_13",
+      "Build": "rls-v01.06.07-f1f2159",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "1_30_2024",
+      "statusId": "id_status_13",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_13",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 14,
+      "buildId": "id_build_14",
+      "Build": "rls-v01.06.08-76ef61d",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "1_31_2024",
+      "statusId": "id_status_14",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_14",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 15,
+      "buildId": "id_build_15",
+      "Build": "rls-v01.06.09-ef2de6d",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "2_8_2024",
+      "statusId": "id_status_15",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_15",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 16,
+      "buildId": "id_build_16",
+      "Build": "rls-v01.06.10-fa2a8cf",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "2_9_2024",
+      "statusId": "id_status_16",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_16",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 17,
+      "buildId": "id_build_17",
+      "Build": "rls-v01.06.12-a345ff2",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "2_13_2024",
+      "statusId": "id_status_17",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_17",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 18,
+      "buildId": "id_build_18",
+      "Build": "rls-v01.06.14-b294226",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.06.14-b294226/dashboard_v01_06_14.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "2_14_2024",
+      "statusId": "id_status_18",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_18",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 19,
+      "buildId": "id_build_19",
+      "Build": "rls-v01.06.15-16daade",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.06.15-16daade/dashboard_v01_06_15.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "2_21_2024",
+      "statusId": "id_status_19",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_19",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 20,
+      "buildId": "id_build_20",
+      "Build": "rls-v01.06.16-2a88ab6",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.06.16-2a88ab6/dashboard_v01_06_16.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "2_28_2024",
+      "statusId": "id_status_20",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_20",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 21,
+      "buildId": "id_build_21",
+      "Build": "rls-v01.06.17-8b85b9b",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "3_6_2024",
+      "statusId": "id_status_21",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_21",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 22,
+      "buildId": "id_build_22",
+      "Build": "rls-v01.06.18-d868772",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "3_8_2024",
+      "statusId": "id_status_22",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_22",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 23,
+      "buildId": "id_build_23",
+      "Build": "rls-v01.06.19-8cafe27",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.06.19-8cafe27/dashboard_v01_06_19.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "3_13_2024",
+      "statusId": "id_status_23",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_23",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 24,
+      "buildId": "id_build_24",
+      "Build": "rls-v01.06.20-62fcc39",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.06.20-62fcc39/dashboard_v01_06_20.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "3_20_2024",
+      "statusId": "id_status_24",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_24",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 25,
+      "buildId": "id_build_25",
+      "Build": "rls-v01.06.21-e1529df",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.06.21-e1529df/dashboard_v01_06_21.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "3_21_2024",
+      "statusId": "id_status_25",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_25",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 26,
+      "buildId": "id_build_26",
+      "Build": "rls-v01.06.22-c356fff",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.06.22-c356fff/dashboard_v01_06_22.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "3_27_2024",
+      "statusId": "id_status_26",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_26",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 27,
+      "buildId": "id_build_27",
+      "Build": "rls-v01.06.23-562210a",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.06.23-562210a/dashboard_v01_06_23.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "4_3_2024",
+      "statusId": "id_status_27",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_27",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 28,
+      "buildId": "id_build_28",
+      "Build": "rls-v01.07.00-37e01a1",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.07.00-37e01a1/dashboard_v01_07_00.html",
+      "CodeName": "Lxworth",
+      "BuildDate": "4_3_2024",
+      "statusId": "id_status_28",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_28",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 29,
+      "buildId": "id_build_29",
+      "Build": "rls-v01.07.01-c8be6d6",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.07.01-c8be6d6/dashboard_v01_07_01.html",
+      "CodeName": "Lxworth",
+      "BuildDate": "4_10_2024",
+      "statusId": "id_status_29",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_29",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 30,
+      "buildId": "id_build_30",
+      "Build": "rls-v01.06.24-b0df8e4",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.06.24-b0df8e4/dashboard_v01_06_24.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "4_12_2024",
+      "statusId": "id_status_30",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_30",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 31,
+      "buildId": "id_build_33",
+      "Build": "rls-v01.07.02-f974177",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.07.02-f974177/dashboard_v01_07_02.html",
+      "CodeName": "Lxworth",
+      "BuildDate": "4_17_2024",
+      "statusId": "id_status_33",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_33",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 32,
+      "buildId": "id_build_34",
+      "Build": "rls-v01.07.03-c21042a",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.07.03-c21042a/dashboard_v01_07_03.html",
+      "CodeName": "Lxworth",
+      "BuildDate": "4_20_2024",
+      "statusId": "id_status_34",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_34",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 33,
+      "buildId": "id_build_30",
+      "Build": "rls-v01.06.23-562210a",
+      "Oscar": "O1",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "4_3_2024",
+      "statusId": "id_status_30",
+      "clsStatus": "pending",
+      "Status": "PENDING",
+      "jiraId": "id_jira_30",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 34,
+      "buildId": "id_build_32",
+      "Build": "rls-v01.06.24-b0df8e4",
+      "Oscar": "O1",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "4_12_2024",
+      "statusId": "id_status_32",
+      "clsStatus": "pending",
+      "Status": "PENDING",
+      "jiraId": "id_jira_32",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 35,
+      "buildId": "id_build_37",
+      "Build": "rls-v01.06.27-3a12001",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "4_26_2024",
+      "statusId": "id_status_37",
+      "clsStatus": "pending",
+      "Status": "PENDING",
+      "jiraId": "id_jira_37",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 36,
+      "buildId": "id_build_35",
+      "Build": "rls-v01.06.25-07f852f",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "4_24_2024",
+      "statusId": "id_status_35",
+      "clsStatus": "pending",
+      "Status": "PENDING",
+      "jiraId": "id_jira_35",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 37,
+      "buildId": "id_build_36",
+      "Build": "rls-v01.06.26-f09d1ae",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Hamburgh",
+      "BuildDate": "4_25_2024",
+      "statusId": "id_status_36",
+      "clsStatus": "pending",
+      "Status": "PENDING",
+      "jiraId": "id_jira_36",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 38,
+      "buildId": "id_build_39",
+      "Build": "rls-v01.07.05-1b8bb0d",
+      "Oscar": "O2",
+      "buildLink": "./asset/under_construction.html",
+      "CodeName": "Lxworth",
+      "BuildDate": "5_3_2024",
+      "statusId": "id_status_39",
+      "clsStatus": "pending",
+      "Status": "PENDING",
+      "jiraId": "id_jira_39",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 39,
+      "buildId": "id_build_61",
+      "Build": "rls-v01.08.03-ca8ea55",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.08.03-ca8ea55/dashboard_v01_08_03.html",
+      "CodeName": "Jussila",
+      "BuildDate": "7_10_2024",
+      "statusId": "id_status_61",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_61",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 40,
+      "buildId": "id_build_63",
+      "Build": "rls-v01.09.00-67a78c5",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.09.00-67a78c5/dashboard_v01_09_00.html",
+      "CodeName": "Kruper",
+      "BuildDate": "7_31_2024",
+      "statusId": "id_status_63",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_63",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 41,
+      "buildId": "id_build_64",
+      "Build": "rls-v01.09.01-853c366",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.09.01-853c366/dashboard_v01_09_01.html",
+      "CodeName": "Kruper",
+      "BuildDate": "8_7_2024",
+      "statusId": "id_status_64",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_64",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 42,
+      "buildId": "id_build_65",
+      "Build": "rls-v01.09.02-0f7027d",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.09.02-0f7027d/dashboard_v01_09_02.html",
+      "CodeName": "Kruper",
+      "BuildDate": "8_14_2024",
+      "statusId": "id_status_65",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_65",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 43,
+      "buildId": "id_build_65",
+      "Build": "rls-v01.09.02-0f7027d",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.09.02-0f7027d/dashboard_v01_09_02.html",
+      "CodeName": "Kruper",
+      "BuildDate": "8_14_2024",
+      "statusId": "id_status_65",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_65",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 44,
+      "buildId": "id_build_66",
+      "Build": "rls-v01.09.03-0b95ab9",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.09.03-0b95ab9/dashboard_v01_09_03.html",
+      "CodeName": "Kruper",
+      "BuildDate": "8_22_2024",
+      "statusId": "id_status_66",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_66",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 45,
+      "buildId": "id_build_67",
+      "Build": "rls-v01.09.04-4008370",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01_09_04-4008370/dashboard_v01_09_04.html",
+      "CodeName": "Kruper",
+      "BuildDate": "8_29_2024",
+      "statusId": "id_status_67",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_67",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 46,
+      "buildId": "id_build_68",
+      "Build": "rls_v01.09.05-e58d19c",
+      "Oscar": "O2",
+      "buildLink": "./rls_v01.09.05-e58d19c/dashboard_v01_09_05.html",
+      "CodeName": "Kruper",
+      "BuildDate": "9_4_2024",
+      "statusId": "id_status_68",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_68",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 47,
+      "buildId": "id_build_68",
+      "Build": "rls-v01.09.05-e58d19c",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.09.05-e58d19c/dashboard_v01_09_05.html",
+      "CodeName": "Kruper",
+      "BuildDate": "9_4_2024",
+      "statusId": "id_status_68",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_68",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 48,
+      "buildId": "id_build_69",
+      "Build": "rls-v01.10.00-455b8f9",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.10.00-455b8f9/dashboard_v01_10_00.html",
+      "CodeName": "Kruper",
+      "BuildDate": "9_11_2024",
+      "statusId": "id_status_69",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_69",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 49,
+      "buildId": "id_build_70",
+      "Build": "rls-v01.10.01-b1f410e",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.10.01-b1f410e/dashboard_v01_10_01.html",
+      "CodeName": "Kruper",
+      "BuildDate": "9_18_2024",
+      "statusId": "id_status_70",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_70",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 50,
+      "buildId": "id_build_71",
+      "Build": "rls-v01.10.02-1b86212",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.10.02-1b86212/dashboard_v01_10_02.html",
+      "CodeName": "Kruper",
+      "BuildDate": "9_25_2024",
+      "statusId": "id_status_71",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_71",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 51,
+      "buildId": "id_build_72",
+      "Build": "rls-v01.10.03-b7275dd",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.10.03-b7275dd/dashboard_v01_10_03.html",
+      "CodeName": "Kruper",
+      "BuildDate": "10_2_2024",
+      "statusId": "id_status_72",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_72",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 52,
+      "buildId": "id_build_73",
+      "Build": "rls-v01.10.04-6b177d4",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.10.04-6b177d4/dashboard_v01_10_04.html",
+      "CodeName": "Kruper",
+      "BuildDate": "10_3_2024",
+      "statusId": "id_status_73",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_73",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 53,
+      "buildId": "id_build_74",
+      "Build": "rls-v01.10.05-a746415",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.10.05-a746415/dashboard_v01_10_05.html",
+      "CodeName": "Kruper",
+      "BuildDate": "10_7_2024",
+      "statusId": "id_status_74",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_74",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 54,
+      "buildId": "id_build_75",
+      "Build": "rls-v01.10.06-d7ec934",
+      "Oscar": "O2",
+      "buildLink": "./rls-v01.10.06-d7ec934/dashboard_v01_10_06.html",
+      "CodeName": "Kruper",
+      "BuildDate": "10_17_2024",
+      "statusId": "id_status_75",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_75",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 55,
+      "buildId": "id_build_76",
+      "Build": "rls-v02.00.00-f103178",
+      "Oscar": "O2",
+      "buildLink": "./rls-v02.00.00-f103178/dashboard_v02_00_00.html",
+      "CodeName": "???",
+      "BuildDate": "10_23_2024",
+      "statusId": "id_status_76",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_76",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 56,
+      "buildId": "id_build_77",
+      "Build": "rls-v02.00.01-a38a8d6",
+      "Oscar": "O2",
+      "buildLink": "./rls-v02.00.01-a38a8d6/dashboard_v02_00_01.html",
+      "CodeName": "Marans",
+      "BuildDate": "10_30_2024",
+      "statusId": "id_status_77",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_77",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 57,
+      "buildId": "id_build_78",
+      "Build": "rls-v02.00.03-9b5d04e",
+      "Oscar": "O2",
+      "buildLink": "./rls-v02.00.03-9b5d04e/dashboard_v02_00_03.html",
+      "CodeName": "Marans",
+      "BuildDate": "11_06_2024",
+      "statusId": "id_status_78",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_78",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   },
+   {
+      "index": 58,
+      "buildId": "id_build_79",
+      "Build": "rls-v02.00.04-cbb3d68",
+      "Oscar": "O2",
+      "buildLink": "./rls-v02.00.04-cbb3d68/dashboard_v02_00_04.html",
+      "CodeName": "Marans",
+      "BuildDate": "11_13_2024",
+      "statusId": "id_status_79",
+      "clsStatus": "passed",
+      "Status": "PASS",
+      "jiraId": "id_jira_79",
+      "Jira1": "",
+      "JiraF1": "0",
+      "Jira2": "",
+      "JiraF2": "0",
+      "Jira3": "",
+      "JiraF3": "0",
+      "Notes": ""
+   }
+]
+
+        for (var i = jData.length - 1; i >= 0; i--) {
+
+            addNewEntry(jData[i]["Build"], jData[i]["Oscar"], jData[i]["CodeName"], jData[i]["BuildDate"], jData[i]["Status"], '', jData[i]["Notes"], i+1)
+            addHyperlinkToCell(jData[i]["buildId"], jData[i]["buildLink"], jData[i]["Build"])
+            changeClass(jData[i]["statusId"], jData[i]["clsStatus"])
+            displayJiraLinks(jData[i]["jiraId"], jData[i]["Jira1"], jData[i]["Jira2"], jData[i]["Jira3"], parseInt(jData[i]["JiraF1"], 10), parseInt(jData[i]["JiraF2"], 10), parseInt(jData[i]["JiraF3"], 10))
+
+        }
+
+        if (true == false) {
+            jData.forEach((item, index) => {
+                addNewEntry(item["Build"], item["Oscar"], item["CodeName"], item["BuildDate"], item["Status"], '', item["Notes"], index+1)
+                addHyperlinkToCell(item["buildId"], item["buildLink"], item["Build"])
+                changeClass(item["statusId"], item["clsStatus"])
+                displayJiraLinks(item["jiraId"], item["Jira1"], item["Jira2"], item["Jira3"], parseInt(item["JiraF1"], 10), parseInt(item["JiraF2"], 10), parseInt(item["JiraF3"], 10))
+            });
+        }
+
+        function moveImageToRandomLocation() {
+            let randomImage = document.getElementById('randomImage');
+            let maxX = document.documentElement.clientWidth - randomImage.offsetWidth;
+            let maxY = document.documentElement.clientHeight - randomImage.offsetHeight;
+            let randomX = Math.floor(Math.random() * maxX);
+            let randomY = Math.floor(Math.random() * maxY);
+            randomImage.style.left = randomX + 'px';
+            randomImage.style.top = randomY + 'px';
+        }
+        setInterval(moveImageToRandomLocation, 3000);
+
+        function calculateSummary_O1() {
+            let passedCells = document.querySelectorAll('#table_o1.report-table .passed');
+            let failedCells = document.querySelectorAll('#table_o1.report-table .failed');
+            let totalPassed = 0, totalFailed = 0;
+
+            passedCells.forEach(function(cell) {
+                totalPassed += parseInt(cell.textContent) || 0;
+            });
+
+            failedCells.forEach(function(cell) {
+                totalFailed += parseInt(cell.textContent) || 0;
+            });
+
+            document.getElementById('totalPassed_o1').textContent = totalPassed;
+            document.getElementById('totalFailed_o1').textContent = totalFailed;
+        }
+
+        function calculateSummary_O2() {
+            let passedCells = document.querySelectorAll('#table_o2.report-table .passed');
+            let failedCells = document.querySelectorAll('#table_o2.report-table .failed');
+            let totalPassed = 0, totalFailed = 0;
+
+            passedCells.forEach(function(cell) {
+                totalPassed += parseInt(cell.textContent) || 0;
+            });
+
+            failedCells.forEach(function(cell) {
+                totalFailed += parseInt(cell.textContent) || 0;
+            });
+            document.getElementById('totalPassed_o2').textContent = totalPassed;
+            document.getElementById('totalFailed_o2').textContent = totalFailed;
+        }
+
+        window.onload = function() {
+        };
+
+    </script>
+<div class="background-strip"></div>
+</body>
+</html>
