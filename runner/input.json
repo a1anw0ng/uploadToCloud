@@ -1,0 +1,9 @@
+{
+    "inputs": {
+        "build_template": "dbg-v01_05_03-1dae2d3",
+        "build_version": "dbg-v01.05.03-1dae2d3",
+        "oscar_type": "O1",
+        "runtest": "ota_stress",
+        "repeats": "2"
+    }
+}

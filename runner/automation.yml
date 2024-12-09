@@ -1,0 +1,769 @@
+name: mill_auto
+on:
+  workflow_dispatch:
+
+
+env:
+  TEMPLE: ${{ github.event.inputs.build_template }}
+  VERSION: ${{ github.event.inputs.build_version }}
+  PROD_TEMP_O2: "NA"
+  PROD_VER_O2: "NA"
+  VENV_PATH: "venv/"
+  ERROR_FDR:  "src/oscar/ota/error/"
+  LOG_FDR:  "src/oscar/ota/log/"
+  PYLOG_FDR:  "src/oscar/ota/pylog/"
+  RESULT_FDR: "src/oscar/ota/result/"
+  SHADOWS_FDR: "src/oscar/ota/shadows/"
+  DATA_FDR: "src/oscar/ota/data/"
+  REPORT_FDR: "src/oscar/ota/report/"
+  UARTLOG_FDR: "src/oscar/ota/uartlog/"
+  TEST_RESULTS_FDR: "src/oscar/ota/test_results/"
+  SYS_SETUP: "sys_setup.yml"
+  OTA_PATH: "src/oscar/ota/"
+  DGO_PATH: "src/oscar/dgo/"
+  PAIRING_PATH: "src/oscar/pairing/"
+  REPORT_O1_A: "report/report_o1_a.html"
+  REPORT_BU_O1_A: "report/report_o1_a_bu.html"
+
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      CURDATE: ${{ steps.set_curtime.outputs.value }}
+      VER_STR: ${{ steps.set_verstr.outputs.value }}
+      PROD_TEMP_O1: ${{ steps.set_pord_o1.outputs.temp }}
+      PROD_VER_O1: ${{ steps.set_pord_o1.outputs.ver }} 
+      EXT_FT_TEMP_O1: ${{ steps.set_ext_ft.outputs.temp_o1 }}
+      EXT_FT_VER_O1: ${{ steps.set_ext_ft.outputs.ver_o1 }}
+      EXT_FT_TEMP_O2: ${{ steps.set_ext_ft.outputs.temp_o2 }}
+      EXT_FT_VER_O2: ${{ steps.set_ext_ft.outputs.ver_o2 }}
+      INT_FT_TEMP_O1: ${{ steps.set_int_ft.outputs.temp_o1 }}
+      INT_FT_VER_O1: ${{ steps.set_int_ft.outputs.ver_o1 }}
+      INT_FT_TEMP_O2: ${{ steps.set_int_ft.outputs.temp_o2 }}
+      INT_FT_VER_O2: ${{ steps.set_int_ft.outputs.ver_o2 }}
+      REPEATCNT: ${{ steps.set_repeat.outputs.value }}
+      TYPEFLAG: ${{ steps.set_build_type.outputs.value }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: set current time
+      id: set_curtime
+      run: |
+        echo "CURDATE=$(date +"%m_%d_%Y")" >> $GITHUB_ENV
+        echo "::set-output name=value::$(date +"%m_%d_%Y")"
+
+    - name: set version str
+      id: set_verstr
+      run: |
+        echo "VER_STR=$(echo $TEMPLE | sed -n 's/[^-]*-\(v[0-9][0-9]_[0-9][0-9]_[0-9][0-9]\).*/\1/p')" >> $GITHUB_ENV
+        echo "::set-output name=value::$(echo $TEMPLE | sed -n 's/[^-]*-\(v[0-9][0-9]_[0-9][0-9]_[0-9][0-9]\).*/\1/p')"
+
+    - name: set prod O1
+      id: set_pord_o1
+      run: |
+        echo "PROD_TEMP_O1=$(yq e '.O1.prod_release_O1.template' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "PROD_VER_O1=$(yq e '.O1.prod_release_O1.version' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "::set-output name=temp::$(yq e '.O1.prod_release_O1.template' $SYS_SETUP)"
+        echo "::set-output name=ver::$(yq e '.O1.prod_release_O1.version' $SYS_SETUP)"
+
+    - name: set ext. ft
+      id: set_ext_ft
+      run: |
+        echo "EXT_FT_TEMP_O1=$(yq e '.O1.Ext_FT_O1.template' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "EXT_FT_VER_O1=$(yq e '.O1.Ext_FT_O1.version' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "::set-output name=temp_o1::$(yq e '.O1.Ext_FT_O1.template' $SYS_SETUP)"
+        echo "::set-output name=ver_o1::$(yq e '.O1.Ext_FT_O1.version' $SYS_SETUP)"
+        echo "EXT_FT_TEMP_O2=$(yq e '.O2.Ext_FT_O2.template' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "EXT_FT_VER_O2=$(yq e '.O2.Ext_FT_O2.version' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "::set-output name=temp_o2::$(yq e '.O2.Ext_FT_O2.template' $SYS_SETUP)"
+        echo "::set-output name=ver_o2::$(yq e '.O2.Ext_FT_O2.version' $SYS_SETUP)"
+
+
+    - name: set int. ft
+      id: set_int_ft
+      run: |
+        echo "INT_FT_TEMP_O1=$(yq e '.O1.Int_FT_O1.template' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "INT_FT_VER_O1=$(yq e '.O1.Int_FT_O1.version' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "::set-output name=temp_o1::$(yq e '.O1.Int_FT_O1.template' $SYS_SETUP)"
+        echo "::set-output name=ver_o1::$(yq e '.O1.Int_FT_O1.version' $SYS_SETUP)"
+        echo "INT_FT_TEMP_O2=$(yq e '.O2.Int_FT_O2.template' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "INT_FT_VER_O2=$(yq e '.O2.Int_FT_O2.version' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "::set-output name=temp_o2::$(yq e '.O2.Int_FT_O2.template' $SYS_SETUP)"
+        echo "::set-output name=ver_o2::$(yq e '.O2.Int_FT_O2.version' $SYS_SETUP)"
+
+    - name: set repeat
+      id: set_repeat
+      run: |
+        repeat=1
+        repeat=${{ github.event.inputs.repeats }} 
+        if [ -z "$repeat" ]; then
+          echo "REPEATCNT=$repeatCnt" >> $GITHUB_ENV
+          echo "::set-output name=value::$repeatCnt"
+        else
+          echo "REPEATCNT=$repeat" >> $GITHUB_ENV
+          echo "::set-output name=value::$repeat"
+        fi
+
+    - name: set thing
+      id: set_thing
+      run: |
+        echo "thingSN=$(yq e '.qa6.thing' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "::set-output name=value::$(yq e '.qa6.thing' $SYS_SETUP)"
+
+    - name: set thinggroup
+      id: set_thinggroup
+      run: |
+        echo "thingGRP=$(yq e '.qa6.thinggroup' $SYS_SETUP)" >> $GITHUB_ENV
+        echo "::set-output name=value::$(yq e '.qa6.thinggroup' $SYS_SETUP)"
+
+    - name: set build type
+      id: set_build_type
+      run: |
+          build_type_O1=$(yq e '.O1.build_type_O1' $SYS_SETUP)
+          if [ "$build_type_O1" = "release" ]; then
+            echo "TYPEFLAG=0" >> $GITHUB_ENV
+            echo "::set-output name=value::0"
+          else
+            echo "TYPEFLAG=1" >> $GITHUB_ENV
+            echo "::set-output name=value::1"
+          fi
+
+    - name: test inputs
+      run: |
+        echo "oscar_type= ${{ github.event.inputs.oscar_type }}"
+        echo "runtest= ${{ github.event.inputs.runtest }}"
+        echo "repeats= ${{ github.event.inputs.repeats }}"
+
+  ota_O1:
+    needs: setup
+    #runs-on: self-hosted, dgo1
+    runs-on: ubuntu-latest
+    if: >-
+      ${{ 
+        (github.event.inputs.oscar_type == 'O1' || github.event.inputs.oscar_type == 'both') && 
+        (github.event.inputs.runtest == 'ota_stress' || github.event.inputs.runtest == 'all')
+      }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: set thing
+      run: echo "thingSN=$(yq e '.dgo1.thing' $SYS_SETUP)" >> $GITHUB_ENV
+
+    - name: set thinggroup
+      run: echo "thingGRP=$(yq e '.dgo1.thinggroup' $SYS_SETUP)" >> $GITHUB_ENV
+
+  
+    - name : TESTing
+      run: | 
+        echo "==================ota_O1====================="
+        echo "ota_O1"
+        echo "TEMPLE= $TEMPLE"
+        echo "VERSION= $VERSION"
+
+        echo "out CURDATE= ${{ needs.setup.outputs.CURDATE }}"
+
+        echo "out VER_STR= ${{ needs.setup.outputs.VER_STR }}"
+
+        echo "out PROD_TEMP_O1= ${{ needs.setup.outputs.PROD_TEMP_O1 }}"
+        echo "out PROD_VER_O1= ${{ needs.setup.outputs.PROD_VER_O1 }}"
+
+        echo "out EXT_FT_TEMP_O1= ${{ needs.setup.outputs.EXT_FT_TEMP_O1 }}"
+        echo "out EXT_FT_VER_O1= ${{ needs.setup.outputs.EXT_FT_VER_O1 }}"
+
+        echo "out EXT_FT_TEMP_O2= ${{ needs.setup.outputs.EXT_FT_TEMP_O2 }}"
+        echo "out EXT_FT_VER_O2= ${{ needs.setup.outputs.EXT_FT_VER_O2 }}"
+
+        echo "out INT_FT_TEMP_O1= ${{ needs.setup.outputs.INT_FT_TEMP_O1 }}"
+        echo "out INT_FT_VER_O1= ${{ needs.setup.outputs.INT_FT_VER_O1 }}"
+
+        echo "out INT_FT_TEMP_O2= ${{ needs.setup.outputs.INT_FT_TEMP_O2 }}"
+        echo "out INT_FT_VER_O2= ${{ needs.setup.outputs.INT_FT_VER_O2 }}"
+
+        echo "out REPEATCNT= ${{ needs.setup.outputs.REPEATCNT }}"
+
+        echo "thingSN= $thingSN"
+
+        echo "thingGRP= $thingGRP"
+
+        echo "out TYPEFLAG= ${{ needs.setup.outputs.TYPEFLAG }}"
+
+        echo "-------------------end ota_O1------------------"
+
+    - name: clearing
+      run: | 
+        if [ -d "$VENV_PATH" ]; then
+          rm -r $VENV_PATH
+        fi
+        if [ -d "$ERROR_FDR" ]; then
+          rm -r $ERROR_FDR
+        fi
+        if [ -d "$LOG_FDR" ]; then 
+          rm -r $LOG_FDR 
+        fi
+        if [ -d "$PYLOG_FDR" ]; then
+          rm -r $PYLOG_FDR
+        fi
+        if [ -d "$RESULT_FDR" ]; then
+          rm -r src/oscar/ota/result/
+        fi
+        if [ -d "$SHADOWS_FDR" ]; then
+          rm -r src/oscar/ota/shadows/
+        fi
+        if [ -d "$DATA_FDR" ]; then
+          rm -r src/oscar/ota/data/ 
+        fi
+        if [ -d "$REPORT_FDR" ]; then
+          rm -r src/oscar/ota/report/ 
+        fi
+
+        if [ -d "$UARTLOG_FDR" ]; then
+          rm -r src/oscar/ota/uartlog/ 
+        fi
+
+        if [ -d "$TEST_RESULTS_FDR" ]; then
+          rm -r src/oscar/ota/test_results/ 
+        fi
+
+    - name: Run ota in O1
+      run: |
+        pwd
+        ls -l
+        # python3 -m venv venv
+        # source venv/bin/activate
+        # pip install -e .
+        cd $OTA_PATH
+        mkdir error
+        mkdir log
+        mkdir pylog
+        mkdir result
+        mkdir shadows
+        mkdir data
+        mkdir report
+        mkdir uartlog
+        mkdir test_results
+
+        #time python run_ota_3D.py -t $thingSN -g $thingGRP -j $TEMPLATE -f $VERSION -i $TYPEFLAG -r $REPEATCNT
+
+        echo "thingSN= $thingSN"
+        echo "thingGRP= $thingGRP"
+        echo "TEMPLE= $TEMPLE"
+        echo "VERSION= $VERSION"
+        echo "TYPEFLAG= ${{ needs.setup.outputs.TYPEFLAG }}"
+        echo "REPEATCNT= ${{ needs.setup.outputs.REPEATCNT }}"
+
+    - name: preset data
+      run: |
+        cp -r preset/error/ src/oscar/ota/
+        cp -r preset/log/ src/oscar/ota/
+        cp -r preset/result/ src/oscar/ota/
+        cp -r preset/shadows/ src/oscar/ota/
+        cp -r preset/uartlog/ src/oscar/ota/
+        cp -r preset/report/ src/oscar/ota/
+
+
+    - name: check test result
+      run: |
+        # pwd
+        ls -lR src/oscar/ota/log
+
+
+        cd $LOG_FDR
+        pwd
+        laFile=$(ls -Art | tail -n 1)
+        echo "laFile=  $laFile" 
+        echo "laFile=$laFile" >> $GITHUB_ENV
+
+        succComCnt=$(egrep -a "INFO.*commMCU.*Passed!" "$laFile" | wc -l || true )
+        echo "succComCnt=$succComCnt" >> $GITHUB_ENV
+
+        failComCnt=$(egrep -a "INFO.*commMCU.*Failed!" "$laFile" | wc -l || true)
+        echo "failComCnt=$failComCnt" >> $GITHUB_ENV
+
+        succCtrCnt=$(egrep -a "INFO.*contrMCU.*Passed!" "$laFile" | wc -l || true )
+        echo "succCtrCnt=$succCtrCnt" >> $GITHUB_ENV
+
+        failCtrCnt=$(egrep -a "INFO.*contrMCU.*Failed!" "$laFile" | wc -l || true)
+        echo "failCtrCnt=$failCtrCnt" >> $GITHUB_ENV
+
+        echo "CURDATE= ${{ needs.setup.outputs.CURDATE }}"
+        echo "VER_STR= ${{ needs.setup.outputs.VER_STR }}"
+
+        dataFile="${{ needs.setup.outputs.CURDATE }}_data_${{ needs.setup.outputs.VER_STR }}.log"
+        echo "dataFile=$dataFile" >> $GITHUB_ENV
+
+        cat $laFile | egrep -a INFO | egrep -a Takes > "../data/${dataFile}"
+
+        cd ..
+
+        ls -l data/
+
+        pwd
+
+        #cat data/11_28_2023_data_v01_05_03.log
+
+
+
+    - name: calculate test result & report
+      run: |
+        echo "CURDATE= ${{ needs.setup.outputs.CURDATE }}"
+        echo "laFile= $laFile" 
+        echo "succComCnt= $succComCnt"
+        echo "failComCnt= $failComCnt"
+        echo "succCtrCnt= $succCtrCnt" 
+        echo "failCtrCnt= $failCtrCnt"
+        echo "dataFile= $dataFile" 
+
+        cd $OTA_PATH
+        pwd
+        avgtime=$(awk 'BEGIN { total = 0; count = 0 } { total += $8; count += 1; } END { avg = total / count; print avg}' "data/$dataFile")
+        maxTime=$(awk 'BEGIN { max = 0 } { if ($8 > max) max = $8 } END { print "Max:", max }' "data/$dataFile")
+        minTime=$(awk 'BEGIN { min = "inf" } { if ($8 < min) min = $8 } END { print "Min:", min }' "data/$dataFile")
+
+        echo "avgtime= $avgtime" 
+        echo "maxTime= $maxTime" 
+        echo "minTime= $minTime" 
+
+        # to build report
+        cp $REPORT_O1_A $REPORT_BU_O1_A
+        sed -i "s/{{Template_Number}}/$TEMPLATE/g" $REPORT_O1_A
+        sed -i "s/{{Build_Number}}/$VERSION/g"  $REPORT_O1_A
+
+        sed -i "s/{{Prod_Upgrade}}/${{ needs.setup.outputs.PROD_TEMP_O1 }}/g" $REPORT_O1_A 
+        sed -i "s/{{External_FT_Upgrade}}/${{ needs.setup.outputs.EXT_FT_TEMP_O1 }}/g" $REPORT_O1_A
+        sed -i "s/{{Internal_FT_Upgrade}}/${{ needs.setup.outputs.INT_FT_TEMP_O1 }}/g" $REPORT_O1_A
+        sed -i "s/{{Repeat_Count}}/${{ needs.setup.outputs.REPEATCNT }}/g" $REPORT_O1_A
+
+        multipler=6
+        if [ "${{ needs.setup.outputs.PROD_TEMP_O1 }}" -eq ${{ needs.setup.outputs.EXT_FT_TEMP_O1 }} ]; then
+          multipler=$((multipler - 2))
+        fi
+
+        if [ "${{ needs.setup.outputs.EXT_FT_TEMP_O1 }}" -eq "${{ needs.setup.outputs.INT_FT_TEMP_O1 }}" ]; then
+          multipler=$((multipler - 2))
+        fi
+
+        hitCount=$((${{ needs.setup.outputs.REPEATCNT }} * multipler))
+        sed -i "s/{{Hit_Count}}/$hitCount/g" $REPORT_O1_A
+
+        sed -i "s/{{SN_Number}}/$thingSN/g" $REPORT_O1_A
+       
+
+        sed -i "s/{{Average_Time}}/$avgtime/g" $REPORT_O1_A
+        sed -i "s/{{Maximum_Time}}/$maxTime/g" $REPORT_O1_A
+        sed -i "s/{{Minimum_Time}}/$minTime/g" $REPORT_O1_A
+
+        sed -i "s/{{succComCnt}}/$succComCnt/g" $REPORT_O1_A
+        sed -i "s/{{failComCnt}}/$failComCnt/g" $REPORT_O1_A
+        sed -i "s/{{succCtrCnt}}/$succCtrCnt/g" $REPORT_O1_A
+        sed -i "s/{{failCtrCnt}}/$failCtrCnt/g" $REPORT_O1_A
+
+        cat $REPORT_O1_A
+
+
+    # # - name: Copy file from Docker Container
+    # #   run: |
+    # #     pwd
+    # #     docker cp act-ota-stress-ota-power-O1-7789fbde1987daf03568ca6a12d9b7a7abba9400c2e82f8f5a0ffabe8b8a6ad6:/home/guo3/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/ota/report/report_o1_a.html /home/guo3/actions-runner/_work/Oscar-Python-CLI/ota/report/report_o1_a.html
+
+
+    # # - name: Copy out test result
+    # #   run: |
+    # #     cd $OTA_PATH
+    # #     pwd
+    # #     # rsync -av error/ ../../../../ota/error/ 
+    # #     # rsync -av log/ ../../../../ota/log/ 
+    # #     # rsync -av pylog/ ../../../../ota/pylog/ 
+    # #     # rsync -av result/ ../../../../ota/result/
+    # #     # rsync -av report/ ../../../../ota/report/
+    # #     # rsync -av shadows/ ../../../../ota/shadows/
+    # #     # rsync -av uartlog/ ../../../../ota/uartlog/
+    # #     # rsync -av data/ ../../../../ota/data/
+
+    # # - name: Upload results to cloud
+    # #   run: |
+    # #     date
+    # #     pwd
+
+
+
+  ota_O2:
+    needs: setup
+    #runs-on: self-hosted, qa1
+    runs-on: ubuntu-latest
+    if: >-
+      ${{ 
+        (github.event.inputs.oscar_type == 'O2' || github.event.inputs.oscar_type == 'both') && 
+        (github.event.inputs.runtest == 'ota_stress' || github.event.inputs.runtest == 'all') 
+      }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: set thing
+      run: echo "thingSN=$(yq e '.qa1.thing' $SYS_SETUP)" >> $GITHUB_ENV
+
+    - name: set thinggroup
+      run: echo "thingGRP=$(yq e '.qa1.thinggroup' $SYS_SETUP)" >> $GITHUB_ENV
+
+  
+    - name : TESTing
+      run: | 
+        echo "==================ota_O2====================="
+        echo "ota_O2"
+        echo "TEMPLE= $TEMPLE"
+        echo "VERSION= $VERSION"
+
+        echo "CURDATE= $CURDATE"
+        echo "out CURDATE= ${{ needs.setup.outputs.CURDATE }}"
+
+        echo "VER_STR= $VER_STR"
+        echo "out VER_STR= ${{ needs.setup.outputs.VER_STR }}"
+
+        echo "PROD_TEMP_O1= $PROD_TEMP_O1"
+        echo "PROD_VER_O1= $PROD_VER_O1"
+        echo "out PROD_TEMP_O1= ${{ needs.setup.outputs.PROD_TEMP_O1 }}"
+        echo "out PROD_VER_O1= ${{ needs.setup.outputs.PROD_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O1= $EXT_FT_TEMP_O1"
+        echo "EXT_FT_VER_O1= $EXT_FT_VER_O1"
+        echo "out EXT_FT_TEMP_O1= ${{ needs.setup.outputs.EXT_FT_TEMP_O1 }}"
+        echo "out EXT_FT_VER_O1= ${{ needs.setup.outputs.EXT_FT_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O2= $EXT_FT_TEMP_O2"
+        echo "EXT_FT_VER_O2= $EXT_FT_VER_O2"
+        echo "out EXT_FT_TEMP_O2= ${{ needs.setup.outputs.EXT_FT_TEMP_O2 }}"
+        echo "out EXT_FT_VER_O2= ${{ needs.setup.outputs.EXT_FT_VER_O2 }}"
+
+        echo "INT_FT_TEMP_O1= $INT_FT_TEMP_O1"
+        echo "INT_FT_VER_O1= $INT_FT_VER_O1"
+        echo "out INT_FT_TEMP_O1= ${{ needs.setup.outputs.INT_FT_TEMP_O1 }}"
+        echo "out INT_FT_VER_O1= ${{ needs.setup.outputs.INT_FT_VER_O1 }}"
+
+        echo "INT_FT_TEMP_O2= $INT_FT_TEMP_O2"
+        echo "INT_FT_VER_O2= $INT_FT_VER_O2"
+        echo "out INT_FT_TEMP_O2= ${{ needs.setup.outputs.INT_FT_TEMP_O2 }}"
+        echo "out INT_FT_VER_O2= ${{ needs.setup.outputs.INT_FT_VER_O2 }}"
+
+        echo "REPEATCNT= $REPEATCNT"
+        echo "out REPEATCNT= ${{ needs.setup.outputs.REPEATCNT }}"
+
+        echo "thingSN= $thingSN"
+        echo "out thingSN= ${{ needs.setup.outputs.thingSN }}"
+
+        echo "thingGRP= $thingGRP"
+        echo "out thingGRP= ${{ needs.setup.outputs.thingGRP }}"
+        
+        echo "TYPEFLAG= $TYPEFLAG"
+        echo "out TYPEFLAG= ${{ needs.setup.outputs.TYPEFLAG }}"
+
+        pwd
+
+        echo "-------------------end ota_O2------------------"
+
+
+
+  ota_upgrade_O1:
+    needs: setup
+    #runs-on: self-hosted, dgo1
+    runs-on: ubuntu-latest
+    if: >-
+      ${{ 
+        (github.event.inputs.oscar_type == 'O1' || github.event.inputs.oscar_type == 'both') && 
+        (github.event.inputs.runtest == 'ota_upgrade' || github.event.inputs.runtest == 'all') 
+      }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: set thing
+      run: echo "thingSN=$(yq e '.dgo1.thing' $SYS_SETUP)" >> $GITHUB_ENV
+
+    - name: set thinggroup
+      run: echo "thingGRP=$(yq e '.dgo1.thinggroup' $SYS_SETUP)" >> $GITHUB_ENV
+
+  
+    - name : TESTing
+      run: | 
+        echo "==================ota_upgrade_O1====================="
+        echo "ota_upgrade_O1"
+        echo "TEMPLE= $TEMPLE"
+        echo "VERSION= $VERSION"
+
+        echo "CURDATE= $CURDATE"
+        echo "out CURDATE= ${{ needs.setup.outputs.CURDATE }}"
+
+        echo "VER_STR= $VER_STR"
+        echo "out VER_STR= ${{ needs.setup.outputs.VER_STR }}"
+
+        echo "PROD_TEMP_O1= $PROD_TEMP_O1"
+        echo "PROD_VER_O1= $PROD_VER_O1"
+        echo "out PROD_TEMP_O1= ${{ needs.setup.outputs.PROD_TEMP_O1 }}"
+        echo "out PROD_VER_O1= ${{ needs.setup.outputs.PROD_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O1= $EXT_FT_TEMP_O1"
+        echo "EXT_FT_VER_O1= $EXT_FT_VER_O1"
+        echo "out EXT_FT_TEMP_O1= ${{ needs.setup.outputs.EXT_FT_TEMP_O1 }}"
+        echo "out EXT_FT_VER_O1= ${{ needs.setup.outputs.EXT_FT_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O2= $EXT_FT_TEMP_O2"
+        echo "EXT_FT_VER_O2= $EXT_FT_VER_O2"
+        echo "out EXT_FT_TEMP_O2= ${{ needs.setup.outputs.EXT_FT_TEMP_O2 }}"
+        echo "out EXT_FT_VER_O2= ${{ needs.setup.outputs.EXT_FT_VER_O2 }}"
+
+        echo "INT_FT_TEMP_O1= $INT_FT_TEMP_O1"
+        echo "INT_FT_VER_O1= $INT_FT_VER_O1"
+        echo "out INT_FT_TEMP_O1= ${{ needs.setup.outputs.INT_FT_TEMP_O1 }}"
+        echo "out INT_FT_VER_O1= ${{ needs.setup.outputs.INT_FT_VER_O1 }}"
+
+        echo "INT_FT_TEMP_O2= $INT_FT_TEMP_O2"
+        echo "INT_FT_VER_O2= $INT_FT_VER_O2"
+        echo "out INT_FT_TEMP_O2= ${{ needs.setup.outputs.INT_FT_TEMP_O2 }}"
+        echo "out INT_FT_VER_O2= ${{ needs.setup.outputs.INT_FT_VER_O2 }}"
+
+        echo "REPEATCNT= $REPEATCNT"
+        echo "out REPEATCNT= ${{ needs.setup.outputs.REPEATCNT }}"
+
+        echo "thingSN= $thingSN"
+        echo "out thingSN= ${{ needs.setup.outputs.thingSN }}"
+
+        echo "thingGRP= $thingGRP"
+        echo "out thingGRP= ${{ needs.setup.outputs.thingGRP }}"
+        
+        echo "TYPEFLAG= $TYPEFLAG"
+        echo "out TYPEFLAG= ${{ needs.setup.outputs.TYPEFLAG }}"
+
+        pwd
+
+        echo "-------------------end ota_upgrade_O1------------------"        
+
+
+
+
+  ota_upgrade_O2:
+    needs: setup
+    #runs-on: self-hosted, qa1
+    runs-on: ubuntu-latest
+    if: >-
+      ${{ 
+        (github.event.inputs.oscar_type == 'O2' || github.event.inputs.oscar_type == 'both') && 
+        (github.event.inputs.runtest == 'ota_upgrade' || github.event.inputs.runtest == 'all') 
+      }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: set thing
+      run: echo "thingSN=$(yq e '.qa1.thing' $SYS_SETUP)" >> $GITHUB_ENV
+
+    - name: set thinggroup
+      run: echo "thingGRP=$(yq e '.qa1.thinggroup' $SYS_SETUP)" >> $GITHUB_ENV
+
+  
+    - name : TESTing
+      run: | 
+        echo "==================ota_upgrade_O2====================="
+        echo "ota_upgrade_O2"
+        echo "TEMPLE= $TEMPLE"
+        echo "VERSION= $VERSION"
+
+        echo "CURDATE= $CURDATE"
+        echo "out CURDATE= ${{ needs.setup.outputs.CURDATE }}"
+
+        echo "VER_STR= $VER_STR"
+        echo "out VER_STR= ${{ needs.setup.outputs.VER_STR }}"
+
+        echo "PROD_TEMP_O1= $PROD_TEMP_O1"
+        echo "PROD_VER_O1= $PROD_VER_O1"
+        echo "out PROD_TEMP_O1= ${{ needs.setup.outputs.PROD_TEMP_O1 }}"
+        echo "out PROD_VER_O1= ${{ needs.setup.outputs.PROD_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O1= $EXT_FT_TEMP_O1"
+        echo "EXT_FT_VER_O1= $EXT_FT_VER_O1"
+        echo "out EXT_FT_TEMP_O1= ${{ needs.setup.outputs.EXT_FT_TEMP_O1 }}"
+        echo "out EXT_FT_VER_O1= ${{ needs.setup.outputs.EXT_FT_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O2= $EXT_FT_TEMP_O2"
+        echo "EXT_FT_VER_O2= $EXT_FT_VER_O2"
+        echo "out EXT_FT_TEMP_O2= ${{ needs.setup.outputs.EXT_FT_TEMP_O2 }}"
+        echo "out EXT_FT_VER_O2= ${{ needs.setup.outputs.EXT_FT_VER_O2 }}"
+
+        echo "INT_FT_TEMP_O1= $INT_FT_TEMP_O1"
+        echo "INT_FT_VER_O1= $INT_FT_VER_O1"
+        echo "out INT_FT_TEMP_O1= ${{ needs.setup.outputs.INT_FT_TEMP_O1 }}"
+        echo "out INT_FT_VER_O1= ${{ needs.setup.outputs.INT_FT_VER_O1 }}"
+
+        echo "INT_FT_TEMP_O2= $INT_FT_TEMP_O2"
+        echo "INT_FT_VER_O2= $INT_FT_VER_O2"
+        echo "out INT_FT_TEMP_O2= ${{ needs.setup.outputs.INT_FT_TEMP_O2 }}"
+        echo "out INT_FT_VER_O2= ${{ needs.setup.outputs.INT_FT_VER_O2 }}"
+
+        echo "REPEATCNT= $REPEATCNT"
+        echo "out REPEATCNT= ${{ needs.setup.outputs.REPEATCNT }}"
+
+        echo "thingSN= $thingSN"
+        echo "out thingSN= ${{ needs.setup.outputs.thingSN }}"
+
+        echo "thingGRP= $thingGRP"
+        echo "out thingGRP= ${{ needs.setup.outputs.thingGRP }}"
+        
+        echo "TYPEFLAG= $TYPEFLAG"
+        echo "out TYPEFLAG= ${{ needs.setup.outputs.TYPEFLAG }}"
+
+        pwd
+
+        echo "-------------------end ota_upgrade_O2------------------"        
+
+
+
+ota_power_O1:
+    needs: setup
+    #runs-on: self-hosted, qa3
+    runs-on: ubuntu-latest
+    if: >-
+      ${{ 
+        (github.event.inputs.oscar_type == 'O1' || github.event.inputs.oscar_type == 'both') && 
+        (github.event.inputs.runtest == 'ota_power' || github.event.inputs.runtest == 'all') 
+      }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: set thing
+      run: echo "thingSN=$(yq e '.qa3.thing' $SYS_SETUP)" >> $GITHUB_ENV
+
+    - name: set thinggroup
+      run: echo "thingGRP=$(yq e '.qa3.thinggroup' $SYS_SETUP)" >> $GITHUB_ENV
+
+  
+    - name : TESTing
+      run: | 
+        echo "==================ota_power_O1====================="
+        echo "ota_power_O1"
+        echo "TEMPLE= $TEMPLE"
+        echo "VERSION= $VERSION"
+
+        echo "CURDATE= $CURDATE"
+        echo "out CURDATE= ${{ needs.setup.outputs.CURDATE }}"
+
+        echo "VER_STR= $VER_STR"
+        echo "out VER_STR= ${{ needs.setup.outputs.VER_STR }}"
+
+        echo "PROD_TEMP_O1= $PROD_TEMP_O1"
+        echo "PROD_VER_O1= $PROD_VER_O1"
+        echo "out PROD_TEMP_O1= ${{ needs.setup.outputs.PROD_TEMP_O1 }}"
+        echo "out PROD_VER_O1= ${{ needs.setup.outputs.PROD_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O1= $EXT_FT_TEMP_O1"
+        echo "EXT_FT_VER_O1= $EXT_FT_VER_O1"
+        echo "out EXT_FT_TEMP_O1= ${{ needs.setup.outputs.EXT_FT_TEMP_O1 }}"
+        echo "out EXT_FT_VER_O1= ${{ needs.setup.outputs.EXT_FT_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O2= $EXT_FT_TEMP_O2"
+        echo "EXT_FT_VER_O2= $EXT_FT_VER_O2"
+        echo "out EXT_FT_TEMP_O2= ${{ needs.setup.outputs.EXT_FT_TEMP_O2 }}"
+        echo "out EXT_FT_VER_O2= ${{ needs.setup.outputs.EXT_FT_VER_O2 }}"
+
+        echo "INT_FT_TEMP_O1= $INT_FT_TEMP_O1"
+        echo "INT_FT_VER_O1= $INT_FT_VER_O1"
+        echo "out INT_FT_TEMP_O1= ${{ needs.setup.outputs.INT_FT_TEMP_O1 }}"
+        echo "out INT_FT_VER_O1= ${{ needs.setup.outputs.INT_FT_VER_O1 }}"
+
+        echo "INT_FT_TEMP_O2= $INT_FT_TEMP_O2"
+        echo "INT_FT_VER_O2= $INT_FT_VER_O2"
+        echo "out INT_FT_TEMP_O2= ${{ needs.setup.outputs.INT_FT_TEMP_O2 }}"
+        echo "out INT_FT_VER_O2= ${{ needs.setup.outputs.INT_FT_VER_O2 }}"
+
+        echo "REPEATCNT= $REPEATCNT"
+        echo "out REPEATCNT= ${{ needs.setup.outputs.REPEATCNT }}"
+
+        echo "thingSN= $thingSN"
+        echo "out thingSN= ${{ needs.setup.outputs.thingSN }}"
+
+        echo "thingGRP= $thingGRP"
+        echo "out thingGRP= ${{ needs.setup.outputs.thingGRP }}"
+        
+        echo "TYPEFLAG= $TYPEFLAG"
+        echo "out TYPEFLAG= ${{ needs.setup.outputs.TYPEFLAG }}"
+
+        pwd
+
+        echo "-------------------end ota_power_O1------------------"        
+
+
+
+ota_power_O2:
+    needs: setup
+    #runs-on: self-hosted, qa6
+    runs-on: ubuntu-latest
+    if: >-
+      ${{ 
+        (github.event.inputs.oscar_type == 'O2' || github.event.inputs.oscar_type == 'both') && 
+        (github.event.inputs.runtest == 'ota_power' || github.event.inputs.runtest == 'all') 
+      }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: set thing
+      run: echo "thingSN=$(yq e '.qa6.thing' $SYS_SETUP)" >> $GITHUB_ENV
+
+    - name: set thinggroup
+      run: echo "thingGRP=$(yq e '.qa6.thinggroup' $SYS_SETUP)" >> $GITHUB_ENV
+
+  
+    - name : TESTing
+      run: | 
+        echo "==================ota_power_O2====================="
+        echo "ota_power_O2"
+        echo "TEMPLE= $TEMPLE"
+        echo "VERSION= $VERSION"
+
+        echo "CURDATE= $CURDATE"
+        echo "out CURDATE= ${{ needs.setup.outputs.CURDATE }}"
+
+        echo "VER_STR= $VER_STR"
+        echo "out VER_STR= ${{ needs.setup.outputs.VER_STR }}"
+
+        echo "PROD_TEMP_O1= $PROD_TEMP_O1"
+        echo "PROD_VER_O1= $PROD_VER_O1"
+        echo "out PROD_TEMP_O1= ${{ needs.setup.outputs.PROD_TEMP_O1 }}"
+        echo "out PROD_VER_O1= ${{ needs.setup.outputs.PROD_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O1= $EXT_FT_TEMP_O1"
+        echo "EXT_FT_VER_O1= $EXT_FT_VER_O1"
+        echo "out EXT_FT_TEMP_O1= ${{ needs.setup.outputs.EXT_FT_TEMP_O1 }}"
+        echo "out EXT_FT_VER_O1= ${{ needs.setup.outputs.EXT_FT_VER_O1 }}"
+
+        echo "EXT_FT_TEMP_O2= $EXT_FT_TEMP_O2"
+        echo "EXT_FT_VER_O2= $EXT_FT_VER_O2"
+        echo "out EXT_FT_TEMP_O2= ${{ needs.setup.outputs.EXT_FT_TEMP_O2 }}"
+        echo "out EXT_FT_VER_O2= ${{ needs.setup.outputs.EXT_FT_VER_O2 }}"
+
+        echo "INT_FT_TEMP_O1= $INT_FT_TEMP_O1"
+        echo "INT_FT_VER_O1= $INT_FT_VER_O1"
+        echo "out INT_FT_TEMP_O1= ${{ needs.setup.outputs.INT_FT_TEMP_O1 }}"
+        echo "out INT_FT_VER_O1= ${{ needs.setup.outputs.INT_FT_VER_O1 }}"
+
+        echo "INT_FT_TEMP_O2= $INT_FT_TEMP_O2"
+        echo "INT_FT_VER_O2= $INT_FT_VER_O2"
+        echo "out INT_FT_TEMP_O2= ${{ needs.setup.outputs.INT_FT_TEMP_O2 }}"
+        echo "out INT_FT_VER_O2= ${{ needs.setup.outputs.INT_FT_VER_O2 }}"
+
+        echo "REPEATCNT= $REPEATCNT"
+        echo "out REPEATCNT= ${{ needs.setup.outputs.REPEATCNT }}"
+
+        echo "thingSN= $thingSN"
+        echo "out thingSN= ${{ needs.setup.outputs.thingSN }}"
+
+        echo "thingGRP= $thingGRP"
+        echo "out thingGRP= ${{ needs.setup.outputs.thingGRP }}"
+        
+        echo "TYPEFLAG= $TYPEFLAG"
+        echo "out TYPEFLAG= ${{ needs.setup.outputs.TYPEFLAG }}"
+
+        pwd
+
+        echo "-------------------end ota_power_O2------------------"      

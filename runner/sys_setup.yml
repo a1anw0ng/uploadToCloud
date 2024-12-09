@@ -1,0 +1,214 @@
+{
+    "O1":
+    {
+        "build_type_O1": "release",
+        "prod_release_O1": {
+            "template": "rls-v01_04_07-6a5dcd4",
+            "version": "rls-v01.04.07-6a5dcd4"
+        },
+        "Ext_FT_O1": {
+            "template": "rls-v01_05_04-f3e2334",
+            "version": "rls-v01.05.04-f3e2334"
+        },
+        "Int_FT_O1": {
+            "template": "rls-v01_05_04-f3e2334",
+            "version": "rls-v01.05.04-f3e2334"
+        }
+    },
+    "O2":
+    {
+        "build_type_O2": "debug",
+        "prod_release_O2": {
+            "template": "N/A",
+            "version": "N/A"
+        },
+        "Ext_FT_O2": {
+            "template": "dbg-v01_05_04-f3e2334",
+            "version": "dbg-v01.05.04-f3e2334"
+        },
+        "Int_FT_O2": {
+            "template": "dbg-v01_05_04-f3e2334",
+            "version": "dbg-v01.05.04-f3e2334"
+        }
+    },
+    "dgo1":
+    {
+        "server": "dgo1",
+        "thing": "MG52306A1US0030",
+        "thinggroup": "qa_ota_test4",
+        "ipaddr": "192.168.131.80",
+        "macAddr": "e8:31:cd:60:55:d6",
+        "ssid": "CheWiFi",
+        "wifiPW": "thingsarehappening",
+        "portIndex": "7",
+        "raspPort": "6",
+        "switchport": "9",
+        "advertisement": "Mill_MG52306A1US0030",
+        "ipaddr1": "100.104.30.118",
+        "ipaddr2": "192.168.0.112",
+        "ipaddr3": "192.168.129.19",
+        "fqdn": "dgo1",
+        "test": ["otastress"],
+        "oscartype": "O1",
+        "platform": "prepvt"
+    },
+
+    "qa6":
+    {
+        "server": "qa6",
+        "thing": "MGM2327A1US0030",
+        "thinggroup": "qa_ota_test_14",
+        "ipaddr": "",
+        "macAddr": "",
+        "ssid": "CheWiFi",
+        "wifiPW": "thingsarehappening",
+        "portIndex": "4",
+        "raspPort": "3",
+        "ipaddr1": "100.100.77.113",
+        "ipaddr2": "192.168.0.106",
+        "ipaddr3": "192.168.129.139",
+        "fqdn": "",
+        "test": ["otastress"],
+        "oscartype": "O1",
+        "platform": "pvt"
+    },
+
+    "qa6b":
+    {
+        "server": "qa6b",
+        "thing": "guo_sn_14_o2",
+        "thinggroup": "qa_ota_test11",
+        "ipaddr": "",
+        "macAddr": "",
+        "ssid": "CheWiFi",
+        "wifiPW": "thingsarehappening",
+        "portIndex": "4",
+        "raspPort": "3",
+        "ipaddr1": "100.100.77.113",
+        "ipaddr2": "192.168.0.106",
+        "ipaddr3": "192.168.129.139",
+        "fqdn": "",
+        "test": ["otastress"],
+        "oscartype": "O2",
+        "platform": "p2"
+    },
+
+    "qa3":
+    {
+        "server": "qa3",
+        "thing": "MG52306A1US002C",
+        "thinggroup": "qa_ota_test5",
+        "thing2": "guo_sn_14_o2",
+        "thinggroup2": "qa_ota_test11",
+        "ipaddr": "",
+        "macAddr": "",
+        "ssid": "CheWiFi",
+        "wifiPW": "thingsarehappening",
+        "portIndex": "5",
+        "raspPort": "1",
+        "ipaddr1": "100.117.244.108",
+        "ipaddr2": "192.168.0.135",
+        "ipaddr3": "192.168.130.122",
+        "fqdn": "",
+        "test": ["otastress"],
+        "oscartype": "O1",
+        "platform": "prepvt"
+    },
+
+    "qa1":
+    {
+        "server": "qa1",
+        "thing": "CLS32245A1US0002",
+        "thinggroup": "qa_ota_21",
+        "ipaddr": "192.168.131.121",
+        "macAddr": "c0:49:ef:91:32:42",
+        "ssid": "CheWiFi",
+        "wifiPW": "thingsarehappening",
+        "advertisement": "Mill_CLS32245A1US0002",
+        "portIndex": "0",
+        "raspPort": "7",
+        "ipaddr1": "100.85.75.33",
+        "ipaddr2": "192.168.0.118",
+        "ipaddr3": "192.168.128.48",
+        "fqdn": "qa1",
+        "test": ["otastress", "otapower"],
+        "oscartype": "O2",
+        "platform": "fitcheck"
+    },
+
+    "qa7":
+    {
+        "server": "qa7",
+        "thing": "MG22332A2US0019",
+        "thinggroup": "qa_ota_test_15",
+        "ipaddr": "",
+        "macAddr": "",
+        "ssid": "CheWiFi",
+        "wifiPW": "thingsarehappening",
+        "portIndex": "",
+        "raspPort": "",
+        "ipaddr1": "100.121.150.100",
+        "ipaddr2": "192.168.0.37",
+        "ipaddr3": "192.168.129.119",
+        "fqdn": "",
+        "test": ["otastress"],
+        "oscartype": "O2",
+        "platform": "evt"
+    },
+    "qa5":
+    {
+        "server": "qa5",
+        "thing": "MG62311A1US0028",
+        "thinggroup": "qa_ota_test_17",
+        "ipaddr": "",
+        "macAddr": "",
+        "ssid": "CheWiFi",
+        "wifiPW": "thingsarehappening",
+        "portIndex": "0",
+        "raspPort": "1",
+        "switchport": "1",
+        "ipaddr1": "100.126.212.16",
+        "ipaddr2": "192.168.0.55",
+        "ipaddr3": "192.168.129.123",
+        "fqdn": "",
+        "test": ["otastress"],
+        "oscartype": "O1",
+        "platform": "pvt"
+    },
+    "home_O1":
+    {
+        "server": "home_O1",
+        "thing": "MG52306A1US002E",
+        "thinggroup": "qa_ota_test9",
+        "ipaddr": "",
+        "macAddr": "",
+        "wifiLogin": "",
+        "wifiPW": "",
+        "portIndex": "",
+        "ipaddr1": "100.92.225.35",
+        "ipaddr2": "",
+        "ipaddr3": "",
+        "fqdn": "",
+        "test": ["otastress"],
+        "oscartype": "O1",
+        "platform": "prepvt"
+    },
+    "home_O2":
+    {
+        "server": "home_O2",
+        "thing": "MG22335A2US0024",
+        "thinggroup": "qa_ota_test9",
+        "ipaddr": "",
+        "macAddr": "",
+        "wifiLogin": "",
+        "wifiPW": "",
+        "portIndex": "",
+        "ipaddr1": "100.92.225.35",
+        "ipaddr2": "192.168.0.116",
+        "ipaddr3": "",
+        "fqdn": "",
+        "test": ["otastress"],
+        "oscartype": "O2",
+        "platform": "evt"
+    }
+}
