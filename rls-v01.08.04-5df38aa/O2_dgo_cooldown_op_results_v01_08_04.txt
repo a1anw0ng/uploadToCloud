@@ -1,0 +1,223 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 28 items
+
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Start_with_COOLDOWN_State 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:36:43 INFO     dgo manual_stop executed
+2024-07-18 04:36:46 INFO     Current State: IDLE
+2024-07-18 04:36:51 INFO     dgo manual_start executed
+2024-07-18 04:37:03 INFO     Current State: LIP
+2024-07-18 04:37:12 INFO     dgo stage skip executed HIP
+2024-07-18 04:37:15 INFO     Current State: HIP
+2024-07-18 04:37:49 INFO     dgo stage skip executed COOLDOWN
+2024-07-18 04:38:23 INFO     Current State: COOLDOWN
+2024-07-18 04:38:26 INFO     ===> dgo status
+2024-07-18 04:38:26 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+PASSED                                                                   [  3%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_State_Run_Time 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:28 INFO     ===> dgo status
+2024-07-18 04:38:28 INFO     ### test_dgo_State_Run_Time ==> PASSED
+PASSED                                                                   [  7%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Lid_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:30 INFO     ===> fan get 1
+2024-07-18 04:38:30 INFO     ### test_dgo_Lid_Fan_PWM ==> PASSED
+PASSED                                                                   [ 10%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Exhaust_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:32 INFO     ===> fan get 0
+2024-07-18 04:38:32 INFO     ### test_dgo_Exhaust_Fan_PWM ==> PASSED
+PASSED                                                                   [ 14%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Bucket_Heater_Set_Point 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:34 INFO     ===> heater get 0
+2024-07-18 04:38:34 INFO     ### test_dgo_Bucket_Heater_Set_Point ==> PASSED
+PASSED                                                                   [ 17%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Bucket_Heater_Hysterisis_Range 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:36 INFO     ===> heater get 0
+2024-07-18 04:38:36 INFO     ### test_dgo_Bucket_Heater_Hysterisis_Range ==> PASSED
+PASSED                                                                   [ 21%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Amp_Hard_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:38 INFO     ===> grinder stall_get
+2024-07-18 04:38:38 INFO     ### test_dgo_Grinder_Amp_Hard_Limit ==> PASSED
+PASSED                                                                   [ 25%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Amp_Soft_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:40 INFO     ===> grinder stall_get
+2024-07-18 04:38:40 INFO     ### test_dgo_Grinder_Amp_Soft_Limit ==> PASSED
+PASSED                                                                   [ 28%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:42 INFO     ===> grinder get
+2024-07-18 04:38:43 INFO     ### test_dgo_Grinder_PWM ==> PASSED
+PASSED                                                                   [ 32%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Stall_Speed_Drop_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:45 INFO     ===> grinder stall_get
+2024-07-18 04:38:45 INFO     ### test_dgo_Grinder_Stall_Speed_Drop_Limit ==> PASSED
+PASSED                                                                   [ 35%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Amp_Threshold_Hard 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:47 INFO     ===> grinder stall_get
+2024-07-18 04:38:47 INFO     ### test_dgo_Grinder_Amp_Threshold_Hard ==> PASSED
+PASSED                                                                   [ 39%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Amp_Threshold_Soft 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:49 INFO     ===> grinder stall_get
+2024-07-18 04:38:49 INFO     ### test_dgo_Grinder_Amp_Threshold_Soft ==> PASSED
+PASSED                                                                   [ 42%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Speed_Threshold 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:51 INFO     ===> grinder stall_get
+2024-07-18 04:38:51 INFO     ### test_dgo_Grinder_Speed_Threshold ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:53 INFO     ===> grinder get
+2024-07-18 04:38:53 INFO     ### test_dgo_Grinder_Enabled ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Duty_ON 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:55 INFO     ===> grinder get
+2024-07-18 04:38:55 INFO     ### test_dgo_Grinder_Duty_ON ==> PASSED
+PASSED                                                                   [ 53%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Duty_OFF 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:57 INFO     ===> grinder get
+2024-07-18 04:38:57 INFO     ### test_dgo_Grinder_Duty_OFF ==> PASSED
+PASSED                                                                   [ 57%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Grinder_Direction 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:38:59 INFO         Checking directions in progressing ...
+2024-07-18 04:38:59 INFO     ### test_dgo_Grinder_Direction ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_dgo_Lid_Heater_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:39:01 INFO     ===> heater get 1
+2024-07-18 04:39:01 INFO     ### test_dgo_Lid_Heater_Enabled ==> PASSED
+PASSED                                                                   [ 64%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_10800 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:39:04 INFO     ===> hipStartTime set 10800
+2024-07-18 04:39:06 INFO     ### test_hipStartTime_set_10800 ==> PASSED
+2024-07-18 04:39:09 INFO     ===> hipStartTime get
+2024-07-18 04:39:10 INFO     ### test_hipStartTime_get_10800 ==> PASSED
+2024-07-18 04:39:13 INFO     ===> dgo config get
+2024-07-18 04:39:13 INFO     ### test_dgo_config_get_10800 ==> PASSED
+2024-07-18 04:39:16 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:39:16 INFO     ### get_shadow_scheduledHIPStartTime_10800 ==> PASSED
+PASSED                                                                   [ 67%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_12600 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:39:19 INFO     ===> hipStartTime set 12600
+2024-07-18 04:39:20 INFO     ### test_hipStartTime_set_12600 ==> PASSED
+2024-07-18 04:39:23 INFO     ===> hipStartTime get
+2024-07-18 04:39:24 INFO     ### test_hipStartTime_get_12600 ==> PASSED
+2024-07-18 04:39:27 INFO     ===> dgo config get
+2024-07-18 04:39:27 INFO     ### test_dgo_config_get_12600 ==> PASSED
+2024-07-18 04:39:31 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:39:31 INFO     ### get_shadow_scheduledHIPStartTime_12600 ==> PASSED
+PASSED                                                                   [ 71%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_27000 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:39:34 INFO     ===> hipStartTime set 27000
+2024-07-18 04:39:35 INFO     ### test_hipStartTime_set_27000 ==> PASSED
+2024-07-18 04:39:38 INFO     ===> hipStartTime get
+2024-07-18 04:39:39 INFO     ### test_hipStartTime_get_27000 ==> PASSED
+2024-07-18 04:39:42 INFO     ===> dgo config get
+2024-07-18 04:39:42 INFO     ### test_dgo_config_get_27000 ==> PASSED
+2024-07-18 04:39:45 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:39:46 INFO     ### get_shadow_scheduledHIPStartTime_27000 ==> PASSED
+PASSED                                                                   [ 75%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_30600 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:39:49 INFO     ===> hipStartTime set 30600
+2024-07-18 04:39:50 INFO     ### test_hipStartTime_set_30600 ==> PASSED
+2024-07-18 04:39:53 INFO     ===> hipStartTime get
+2024-07-18 04:39:59 INFO     ### test_hipStartTime_get_30600 ==> PASSED
+2024-07-18 04:40:02 INFO     ===> dgo config get
+2024-07-18 04:40:02 INFO     ### test_dgo_config_get_30600 ==> PASSED
+2024-07-18 04:40:05 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:40:06 INFO     ### get_shadow_scheduledHIPStartTime_30600 ==> PASSED
+PASSED                                                                   [ 78%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_34200 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:40:09 INFO     ===> hipStartTime set 34200
+2024-07-18 04:40:10 INFO     ### test_hipStartTime_set_34200 ==> PASSED
+2024-07-18 04:40:13 INFO     ===> hipStartTime get
+2024-07-18 04:40:14 INFO     ### test_hipStartTime_get_34200 ==> PASSED
+2024-07-18 04:40:17 INFO     ===> dgo config get
+2024-07-18 04:40:17 INFO     ### test_dgo_config_get_34200 ==> PASSED
+2024-07-18 04:40:20 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:40:20 INFO     ### get_shadow_scheduledHIPStartTime_34200 ==> PASSED
+PASSED                                                                   [ 82%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_45000 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:40:23 INFO     ===> hipStartTime set 45000
+2024-07-18 04:40:25 INFO     ### test_hipStartTime_set_45000 ==> PASSED
+2024-07-18 04:40:28 INFO     ===> hipStartTime get
+2024-07-18 04:40:29 INFO     ### test_hipStartTime_get_45000 ==> PASSED
+2024-07-18 04:40:32 INFO     ===> dgo config get
+2024-07-18 04:40:32 INFO     ### test_dgo_config_get_45000 ==> PASSED
+2024-07-18 04:40:35 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:40:35 INFO     ### get_shadow_scheduledHIPStartTime_45000 ==> PASSED
+PASSED                                                                   [ 85%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_48600 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:40:38 INFO     ===> hipStartTime set 48600
+2024-07-18 04:40:39 INFO     ### test_hipStartTime_set_48600 ==> PASSED
+2024-07-18 04:40:42 INFO     ===> hipStartTime get
+2024-07-18 04:40:43 INFO     ### test_hipStartTime_get_48600 ==> PASSED
+2024-07-18 04:40:46 INFO     ===> dgo config get
+2024-07-18 04:40:46 INFO     ### test_dgo_config_get_48600 ==> PASSED
+2024-07-18 04:40:50 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:40:50 INFO     ### get_shadow_scheduledHIPStartTime_48600 ==> PASSED
+PASSED                                                                   [ 89%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_72900 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:40:53 INFO     ===> hipStartTime set 72900
+2024-07-18 04:40:54 INFO     ### test_hipStartTime_set_72900 ==> PASSED
+2024-07-18 04:40:57 INFO     ===> hipStartTime get
+2024-07-18 04:40:58 INFO     ### test_hipStartTime_get_72900 ==> PASSED
+2024-07-18 04:41:01 INFO     ===> dgo config get
+2024-07-18 04:41:01 INFO     ### test_dgo_config_get_72900 ==> PASSED
+2024-07-18 04:41:04 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:41:05 INFO     ### get_shadow_scheduledHIPStartTime_72900 ==> PASSED
+PASSED                                                                   [ 92%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_76500 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:41:08 INFO     ===> hipStartTime set 76500
+2024-07-18 04:41:09 INFO     ### test_hipStartTime_set_76500 ==> PASSED
+2024-07-18 04:41:12 INFO     ===> hipStartTime get
+2024-07-18 04:41:13 INFO     ### test_hipStartTime_get_76500 ==> PASSED
+2024-07-18 04:41:16 INFO     ===> dgo config get
+2024-07-18 04:41:16 INFO     ### test_dgo_config_get_76500 ==> PASSED
+2024-07-18 04:41:19 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:41:19 INFO     ### get_shadow_scheduledHIPStartTime_76500 ==> PASSED
+PASSED                                                                   [ 96%]
+dgo_test_COOLDOWN_state2_O2.py::TestDGOFSM_COOLDOWN::test_group_start_time_78300 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:41:23 INFO     ===> hipStartTime set 78300
+2024-07-18 04:41:24 INFO     ### test_hipStartTime_set_78300 ==> PASSED
+2024-07-18 04:41:27 INFO     ===> hipStartTime get
+2024-07-18 04:41:28 INFO     ### test_hipStartTime_get_78300 ==> PASSED
+2024-07-18 04:41:31 INFO     ===> dgo config get
+2024-07-18 04:41:31 INFO     ### test_dgo_config_get_78300 ==> PASSED
+2024-07-18 04:41:34 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 04:41:34 INFO     ### get_shadow_scheduledHIPStartTime_78300 ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 28 passed in 297.70s (0:04:57) ========================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1721273796.json': No such file or directory

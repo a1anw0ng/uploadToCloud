@@ -1,0 +1,498 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.2.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 8 items
+
+dgo_inactive.py::TestDGOInactive::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:49:19 INFO     dgo manual_stop executed
+2024-07-20 07:49:22 INFO     Current State: IDLE
+2024-07-20 07:49:22 INFO     ===> dgo status
+2024-07-20 07:49:22 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 12%]
+dgo_inactive.py::TestDGOInactive::test_group_grinder_jam 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:49:28 INFO     dgo manual_stop executed
+2024-07-20 07:49:31 INFO     Current State: IDLE
+2024-07-20 07:49:37 INFO     dgo manual_start executed
+2024-07-20 07:49:48 INFO     Current State: LIP
+2024-07-20 07:49:51 INFO     ===> dgo status
+2024-07-20 07:49:51 INFO     ### test_dgo_Start_with_LIP_State ==> PASSED
+2024-07-20 07:49:54 INFO     ===> grinder inject 1
+2024-07-20 07:49:54 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-20 07:49:54 INFO     ### test_grinder_inject_jam ==> PASSED
+2024-07-20 07:49:57 INFO     ===> dgo status
+2024-07-20 07:49:57 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 07:50:00 INFO     ===> dgo status
+2024-07-20 07:50:00 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 07:50:04 INFO     ===> grinder inject 0
+2024-07-20 07:50:04 INFO     ### test_grinder_inject_jam_cleared ==> PASSED
+2024-07-20 07:50:07 INFO     ===> dgo status
+2024-07-20 07:50:07 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 07:50:13 INFO     dgo manual_stop executed
+2024-07-20 07:50:16 INFO     Current State: IDLE
+2024-07-20 07:50:16 INFO     ===> dgo status
+2024-07-20 07:50:16 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 25%]
+dgo_inactive.py::TestDGOInactive::test_group_lid_lock_failure 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:50:22 INFO     dgo manual_stop executed
+2024-07-20 07:50:26 INFO     Current State: IDLE
+2024-07-20 07:50:31 INFO     dgo manual_start executed
+2024-07-20 07:50:42 INFO     Current State: LIP
+2024-07-20 07:50:45 INFO     ===> dgo status
+2024-07-20 07:50:45 INFO     ### test_dgo_Start_with_LIP_State ==> PASSED
+2024-07-20 07:50:48 INFO     ===> lid_lock inject 1
+2024-07-20 07:50:48 INFO     ### test_lid_lock_inject_fault ==> PASSED
+2024-07-20 07:50:51 INFO     ===> dgo status
+2024-07-20 07:50:51 INFO     ### test_dgo_timeout_to_IDLE ==> PASSED
+2024-07-20 07:50:54 INFO     ===> lid_lock inject 0
+2024-07-20 07:50:57 INFO     retries counts: 1
+2024-07-20 07:51:00 INFO     retries counts: 2
+2024-07-20 07:51:04 INFO     retries counts: 3
+2024-07-20 07:51:07 INFO     retries counts: 4
+2024-07-20 07:51:10 INFO     retries counts: 5
+2024-07-20 07:51:10 ERROR    Timeout after 5 retries!
+2024-07-20 07:51:10 INFO     ### test_lid_lock_inject_fault_clear ==> PASSED
+PASSED                                                                   [ 37%]
+dgo_inactive.py::TestDGOInactive::test_group_bucket_overheat 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:51:16 INFO     dgo manual_stop executed
+2024-07-20 07:51:19 INFO     Current State: IDLE
+2024-07-20 07:51:24 INFO     dgo manual_start executed
+2024-07-20 07:51:35 INFO     Current State: LIP
+2024-07-20 07:51:44 INFO     dgo stage skip executed HIP
+2024-07-20 07:51:48 INFO     Current State: HIP
+2024-07-20 07:51:51 INFO     ===> dgo status
+2024-07-20 07:51:51 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 07:51:54 INFO     ===> heater inject 2
+2024-07-20 07:51:54 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-20 07:51:54 INFO     ### test_heater_inject_overheat ==> PASSED
+2024-07-20 07:51:57 INFO     ===> dgo status
+2024-07-20 07:51:57 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 07:52:00 INFO     ===> dgo status
+2024-07-20 07:52:00 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 07:52:03 INFO     ===> heater inject 3
+2024-07-20 07:52:03 INFO     ### test_heater_inject_overheat_cleared ==> PASSED
+2024-07-20 07:52:06 INFO     ===> dgo status
+2024-07-20 07:52:07 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 07:52:13 INFO     dgo manual_stop executed
+2024-07-20 07:52:23 INFO     Current State: IDLE
+2024-07-20 07:52:23 INFO     ===> dgo status
+2024-07-20 07:52:24 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_inactive.py::TestDGOInactive::test_group_bucket_pwm_on_time_exceed_limit 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:52:30 INFO     dgo manual_stop executed
+2024-07-20 07:52:33 INFO     Current State: IDLE
+2024-07-20 07:52:38 INFO     dgo manual_start executed
+2024-07-20 07:52:49 INFO     Current State: LIP
+2024-07-20 07:52:58 INFO     dgo stage skip executed HIP
+2024-07-20 07:53:01 INFO     Current State: HIP
+2024-07-20 07:53:04 INFO     ===> dgo status
+2024-07-20 07:53:05 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 07:53:08 INFO     ===> heater inject 4
+2024-07-20 07:53:08 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-20 07:53:08 INFO     ### test_heater_inject_pwm_on_exceed_limit ==> PASSED
+2024-07-20 07:53:11 INFO     ===> dgo status
+2024-07-20 07:53:11 INFO     ### test_dgo_being_killed_and_go_IDLE ==> PASSED
+PASSED                                                                   [ 62%]
+dgo_inactive.py::TestDGOInactive::test_group_exhaust_fan_stall 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:53:17 INFO     dgo manual_stop executed
+2024-07-20 07:53:20 INFO     Current State: IDLE
+2024-07-20 07:53:25 INFO     dgo manual_start executed
+2024-07-20 07:53:37 INFO     Current State: LIP
+2024-07-20 07:53:46 INFO     dgo stage skip executed HIP
+2024-07-20 07:53:49 INFO     Current State: HIP
+2024-07-20 07:53:52 INFO     ===> dgo status
+2024-07-20 07:53:52 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 07:53:55 INFO     ===> fan inject 1
+2024-07-20 07:53:55 INFO     ### test_fan_inject_exhaust_stall ==> PASSED
+2024-07-20 07:53:58 INFO     ===> dgo status
+2024-07-20 07:53:58 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 07:54:01 INFO     ===> dgo status
+2024-07-20 07:54:02 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 07:54:05 INFO     ===> fan inject 0
+2024-07-20 07:54:05 INFO     ### test_fan_inject_exhaust_stall_cleared ==> PASSED
+2024-07-20 07:54:08 INFO     ===> dgo status
+2024-07-20 07:54:08 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 07:54:14 INFO     dgo manual_stop executed
+2024-07-20 07:54:17 INFO     Current State: IDLE
+2024-07-20 07:54:17 INFO     ===> dgo status
+2024-07-20 07:54:18 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 75%]
+dgo_inactive.py::TestDGOInactive::test_group_intake_fan_stall 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:54:24 INFO     dgo manual_stop executed
+2024-07-20 07:54:27 INFO     Current State: IDLE
+2024-07-20 07:54:32 INFO     dgo manual_start executed
+2024-07-20 07:54:43 INFO     Current State: LIP
+2024-07-20 07:54:52 INFO     dgo stage skip executed HIP
+2024-07-20 07:54:55 INFO     Current State: HIP
+2024-07-20 07:54:58 INFO     ===> dgo status
+2024-07-20 07:54:59 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 07:55:02 INFO     ===> fan inject 2
+2024-07-20 07:55:02 INFO     ### test_fan_inject_intake_stall ==> PASSED
+2024-07-20 07:55:05 INFO     ===> dgo status
+2024-07-20 07:55:05 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 07:55:08 INFO     ===> dgo status
+2024-07-20 07:55:08 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 07:55:11 INFO     ===> fan inject 0
+2024-07-20 07:55:11 INFO     ### test_fan_inject_intake_stall_cleared ==> PASSED
+2024-07-20 07:55:14 INFO     ===> dgo status
+2024-07-20 07:55:15 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 07:55:21 INFO     dgo manual_stop executed
+2024-07-20 07:55:24 INFO     Current State: IDLE
+2024-07-20 07:55:24 INFO     ===> dgo status
+2024-07-20 07:55:24 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 87%]
+dgo_inactive.py::TestDGOInactive::test_controlMCU_reset_idle 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:55:26 INFO     ===> reset
+2024-07-20 07:55:37 ERROR    ConnectionError(command)= reset
+
+2024-07-20 07:55:37 INFO     TS caught Reset
+2024-07-20 07:55:37 INFO     TS self.result:{'timeBegin': 1721458526, 'cmd': 'reset', 'pickCount': 0, 'test': 'test_controlMCU_reset_idle', 'noduplicate': 'performed', 'verifyCount': 1, 'verifyLst': [[['restarted', 1], ['via', 2]]], 'dataCount': 45, 'selectData': [['I', 'Energy', 'algo', '-', 'non_hip', 'selected'], ['I', 'Restarted', 'via', 'software', 'call'], ['E', 'power_control:', 'Unknown', 'power', 'ID:', '2'], ['#', 'I', 'main_app:', 'kv_store', 'passed', 'consistency', 'check'], ['I', '~Read', '0'], ['I', 'Ver', 'match', '1', '[6]', 'valid', '0'], ['I', 'I2C', 'init:', 'I2C0:', '1,', 'I2C1:', '1'], ['I', 'BKT_SEAT_HELPER:', 'Init', 'with', 'state', '4'], ['I', 'SHT40', 'cal', 'load[0]:', '2.710'], ['I', 'SHT40', 'cal', 'load[1]:', '7.605'], ['I', 'New', 'end', 'UTC', '1721458527'], ['I', 'Tare', 'loaded', 'from', 'kv:', '4250'], ['I', 'Bucket', 'fullness:', '0'], ['I', 'Bucket', 'not', 'full'], ['I', 'main_app', 'receive', 'event_id:0x000b0008', 'event_time_ms:203', 'now_ms:205'], ['I', 'main_app', 'receive', 'event_id:0x000b0005', 'event_time_ms:204', 'now_ms:205'], ['I', 'main_app', 'receive', 'event_id:0x000b0009', 'event_time_ms:204', 'now_ms:206'], ['I', 'DGO', 'Store:', 'Stage::', '{'], ['start:', '1970-01-01T00:00:00'], ['end:', '1970-01-01T00:00:00'], ['stage_id::', '{'], ['cycle_idx:', '255'], ['stage_idx:', '255'], ['}'], ['remaining:', '0'], ['I', 'Cycle::', '{'], ['Mass::', '{'], ['unprocessed_next_cycle:', '0'], ['total_since_stage_start:', '0'], ['total_add_hip_extend_sec:', '0'], ['I'], ['I', 'main_app', 'receive', 'event_id:0x00080008', 'event_time_ms:1735', 'now_ms:1735'], ['I', 'Set', 'vac', 'mode:', '0'], ['I', 'Set', 'no_payment', 'warn:', '0'], ['I', 'main_app', 'receive', 'event_id:0x00100000', 'event_time_ms:1808', 'now_ms:1808'], ['I', 'ONLINE'], ['I', 'main_app', 'receive', 'event_id:0x00020003', 'event_time_ms:2289', 'now_ms:2289'], ['resetI', 'Oscar', 'Controls', 'MCU', 'dbg-v01.08.04-5df38aa', '[Jul', '17', '2024', '22:57:30', 'release/v01.08', '5df38aa13', 'o2-dvt', 'debug]'], ['E', 'DGO:', 'UTC', 'time', 'is', 'invalid', 'for', 'DGO', 'config'], ['I', 'main_app', 'receive', 'event_id:0x000b0005', 'event_time_ms:204', 'now_ms:206'], ['I', 'main_app', 'receive', 'event_id:0x000b0009', 'event_time_ms:204', 'now_ms:207'], ['I', 'main_app', 'receive', 'event_id:0x000e0000', 'event_time_ms:1576', 'now_ms:1576'], ['I', 'New', 'end', 'UTC', '1721457980'], ['I', 'main_app', 'receive', 'event_id:0x00100000', 'event_time_ms:1703', 'now_ms:1703'], ['I', 'main_app', 'receive', 'event_id:0x00020003', 'event_time_ms:2290', 'now_ms:2290']]}
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 8 passed in 383.80s (0:06:23) =========================
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 2 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.2.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 8 items
+
+dgo_inactive.py::TestDGOInactive::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:55:47 INFO     dgo manual_stop executed
+2024-07-20 07:55:50 INFO     Current State: IDLE
+2024-07-20 07:55:50 INFO     ===> dgo status
+2024-07-20 07:55:50 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 12%]
+dgo_inactive.py::TestDGOInactive::test_group_grinder_jam 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:55:56 INFO     dgo manual_stop executed
+2024-07-20 07:55:59 INFO     Current State: IDLE
+2024-07-20 07:56:04 INFO     dgo manual_start executed
+2024-07-20 07:56:16 INFO     Current State: LIP
+2024-07-20 07:56:19 INFO     ===> dgo status
+2024-07-20 07:56:19 INFO     ### test_dgo_Start_with_LIP_State ==> PASSED
+2024-07-20 07:56:22 INFO     ===> grinder inject 1
+2024-07-20 07:56:22 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-20 07:56:22 INFO     ### test_grinder_inject_jam ==> PASSED
+2024-07-20 07:56:25 INFO     ===> dgo status
+2024-07-20 07:56:25 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 07:56:28 INFO     ===> dgo status
+2024-07-20 07:56:28 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 07:56:31 INFO     ===> grinder inject 0
+2024-07-20 07:56:31 INFO     ### test_grinder_inject_jam_cleared ==> PASSED
+2024-07-20 07:56:34 INFO     ===> dgo status
+2024-07-20 07:56:35 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 07:56:41 INFO     dgo manual_stop executed
+2024-07-20 07:56:44 INFO     Current State: IDLE
+2024-07-20 07:56:44 INFO     ===> dgo status
+2024-07-20 07:56:44 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 25%]
+dgo_inactive.py::TestDGOInactive::test_group_lid_lock_failure 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:56:50 INFO     dgo manual_stop executed
+2024-07-20 07:56:53 INFO     Current State: IDLE
+2024-07-20 07:56:59 INFO     dgo manual_start executed
+2024-07-20 07:57:10 INFO     Current State: LIP
+2024-07-20 07:57:13 INFO     ===> dgo status
+2024-07-20 07:57:13 INFO     ### test_dgo_Start_with_LIP_State ==> PASSED
+2024-07-20 07:57:16 INFO     ===> lid_lock inject 1
+2024-07-20 07:57:16 INFO     ### test_lid_lock_inject_fault ==> PASSED
+2024-07-20 07:57:19 INFO     ===> dgo status
+2024-07-20 07:57:19 INFO     ### test_dgo_timeout_to_IDLE ==> PASSED
+2024-07-20 07:57:22 INFO     ===> lid_lock inject 0
+2024-07-20 07:57:25 INFO     retries counts: 1
+2024-07-20 07:57:28 INFO     retries counts: 2
+2024-07-20 07:57:31 INFO     retries counts: 3
+2024-07-20 07:57:34 INFO     retries counts: 4
+2024-07-20 07:57:37 INFO     retries counts: 5
+2024-07-20 07:57:37 ERROR    Timeout after 5 retries!
+2024-07-20 07:57:37 INFO     ### test_lid_lock_inject_fault_clear ==> PASSED
+PASSED                                                                   [ 37%]
+dgo_inactive.py::TestDGOInactive::test_group_bucket_overheat 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:57:44 INFO     dgo manual_stop executed
+2024-07-20 07:57:47 INFO     Current State: IDLE
+2024-07-20 07:57:52 INFO     dgo manual_start executed
+2024-07-20 07:58:03 INFO     Current State: LIP
+2024-07-20 07:58:12 INFO     dgo stage skip executed HIP
+2024-07-20 07:58:15 INFO     Current State: HIP
+2024-07-20 07:58:18 INFO     ===> dgo status
+2024-07-20 07:58:19 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 07:58:22 INFO     ===> heater inject 2
+2024-07-20 07:58:22 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-20 07:58:22 INFO     ### test_heater_inject_overheat ==> PASSED
+2024-07-20 07:58:25 INFO     ===> dgo status
+2024-07-20 07:58:25 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 07:58:28 INFO     ===> dgo status
+2024-07-20 07:58:28 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 07:58:31 INFO     ===> heater inject 3
+2024-07-20 07:58:31 INFO     ### test_heater_inject_overheat_cleared ==> PASSED
+2024-07-20 07:58:34 INFO     ===> dgo status
+2024-07-20 07:58:34 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 07:58:41 INFO     dgo manual_stop executed
+2024-07-20 07:58:44 INFO     Current State: IDLE
+2024-07-20 07:58:44 INFO     ===> dgo status
+2024-07-20 07:58:44 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_inactive.py::TestDGOInactive::test_group_bucket_pwm_on_time_exceed_limit 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:58:50 INFO     dgo manual_stop executed
+2024-07-20 07:58:53 INFO     Current State: IDLE
+2024-07-20 07:58:58 INFO     dgo manual_start executed
+2024-07-20 07:59:10 INFO     Current State: LIP
+2024-07-20 07:59:19 INFO     dgo stage skip executed HIP
+2024-07-20 07:59:22 INFO     Current State: HIP
+2024-07-20 07:59:25 INFO     ===> dgo status
+2024-07-20 07:59:25 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 07:59:28 INFO     ===> heater inject 4
+2024-07-20 07:59:28 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-20 07:59:28 INFO     ### test_heater_inject_pwm_on_exceed_limit ==> PASSED
+2024-07-20 07:59:31 INFO     ===> dgo status
+2024-07-20 07:59:31 INFO     ### test_dgo_being_killed_and_go_IDLE ==> PASSED
+PASSED                                                                   [ 62%]
+dgo_inactive.py::TestDGOInactive::test_group_exhaust_fan_stall 
+-------------------------------- live log call ---------------------------------
+2024-07-20 07:59:37 INFO     dgo manual_stop executed
+2024-07-20 07:59:41 INFO     Current State: IDLE
+2024-07-20 07:59:46 INFO     dgo manual_start executed
+2024-07-20 07:59:57 INFO     Current State: LIP
+2024-07-20 08:00:06 INFO     dgo stage skip executed HIP
+2024-07-20 08:00:09 INFO     Current State: HIP
+2024-07-20 08:00:12 INFO     ===> dgo status
+2024-07-20 08:00:13 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 08:00:16 INFO     ===> fan inject 1
+2024-07-20 08:00:16 INFO     ### test_fan_inject_exhaust_stall ==> PASSED
+2024-07-20 08:00:19 INFO     ===> dgo status
+2024-07-20 08:00:19 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 08:00:22 INFO     ===> dgo status
+2024-07-20 08:00:22 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 08:00:25 INFO     ===> fan inject 0
+2024-07-20 08:00:25 INFO     ### test_fan_inject_exhaust_stall_cleared ==> PASSED
+2024-07-20 08:00:28 INFO     ===> dgo status
+2024-07-20 08:00:28 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 08:00:34 INFO     dgo manual_stop executed
+2024-07-20 08:00:38 INFO     Current State: IDLE
+2024-07-20 08:00:38 INFO     ===> dgo status
+2024-07-20 08:00:38 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 75%]
+dgo_inactive.py::TestDGOInactive::test_group_intake_fan_stall 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:00:44 INFO     dgo manual_stop executed
+2024-07-20 08:00:47 INFO     Current State: IDLE
+2024-07-20 08:00:52 INFO     dgo manual_start executed
+2024-07-20 08:01:04 INFO     Current State: LIP
+2024-07-20 08:01:13 INFO     dgo stage skip executed HIP
+2024-07-20 08:01:16 INFO     Current State: HIP
+2024-07-20 08:01:19 INFO     ===> dgo status
+2024-07-20 08:01:19 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 08:01:22 INFO     ===> fan inject 2
+2024-07-20 08:01:22 INFO     ### test_fan_inject_intake_stall ==> PASSED
+2024-07-20 08:01:25 INFO     ===> dgo status
+2024-07-20 08:01:25 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 08:01:28 INFO     ===> dgo status
+2024-07-20 08:01:29 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 08:01:32 INFO     ===> fan inject 0
+2024-07-20 08:01:32 INFO     ### test_fan_inject_intake_stall_cleared ==> PASSED
+2024-07-20 08:01:35 INFO     ===> dgo status
+2024-07-20 08:01:35 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 08:01:41 INFO     dgo manual_stop executed
+2024-07-20 08:01:44 INFO     Current State: IDLE
+2024-07-20 08:01:44 INFO     ===> dgo status
+2024-07-20 08:01:45 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 87%]
+dgo_inactive.py::TestDGOInactive::test_controlMCU_reset_idle 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:01:47 INFO     ===> reset
+2024-07-20 08:01:58 ERROR    ConnectionError(command)= reset
+
+2024-07-20 08:01:58 INFO     TS caught Reset
+2024-07-20 08:01:58 INFO     TS self.result:{'timeBegin': 1721458907, 'cmd': 'reset', 'pickCount': 0, 'test': 'test_controlMCU_reset_idle', 'noduplicate': 'performed', 'verifyCount': 1, 'verifyLst': [[['restarted', 1], ['via', 2]]], 'dataCount': 45, 'selectData': [['I', 'Energy', 'algo', '-', 'non_hip', 'selected'], ['I', 'Restarted', 'via', 'software', 'call'], ['E', 'power_control:', 'Unknown', 'power', 'ID:', '2'], ['#', 'I', 'main_app:', 'kv_store', 'passed', 'consistency', 'check'], ['I', '~Read', '0'], ['I', 'Ver', 'match', '1', '[6]', 'valid', '0'], ['I', 'I2C', 'init:', 'I2C0:', '1,', 'I2C1:', '1'], ['I', 'BKT_SEAT_HELPER:', 'Init', 'with', 'state', '4'], ['I', 'SHT40', 'cal', 'load[0]:', '2.674'], ['I', 'SHT40', 'cal', 'load[1]:', '7.563'], ['I', 'New', 'end', 'UTC', '1721458907'], ['I', 'Tare', 'loaded', 'from', 'kv:', '4250'], ['I', 'Bucket', 'fullness:', '0'], ['I', 'Bucket', 'not', 'full'], ['I', 'main_app', 'receive', 'event_id:0x000b0008', 'event_time_ms:203', 'now_ms:205'], ['I', 'main_app', 'receive', 'event_id:0x000b0005', 'event_time_ms:204', 'now_ms:205'], ['I', 'main_app', 'receive', 'event_id:0x000b0009', 'event_time_ms:204', 'now_ms:206'], ['I', 'DGO', 'Store:', 'Stage::', '{'], ['start:', '1970-01-01T00:00:00'], ['end:', '1970-01-01T00:00:00'], ['stage_id::', '{'], ['cycle_idx:', '255'], ['stage_idx:', '255'], ['}'], ['remaining:', '0'], ['I', 'Cycle::', '{'], ['Mass::', '{'], ['unprocessed_next_cycle:', '0'], ['total_since_stage_start:', '0'], ['total_add_hip_extend_sec:', '0'], ['I'], ['I', 'main_app', 'receive', 'event_id:0x00080008', 'event_time_ms:1689', 'now_ms:1689'], ['I', 'Set', 'vac', 'mode:', '0'], ['I', 'Set', 'no_payment', 'warn:', '0'], ['I', 'main_app', 'receive', 'event_id:0x00100000', 'event_time_ms:1732', 'now_ms:1732'], ['I', 'ONLINE'], ['I', 'main_app', 'receive', 'event_id:0x00020003', 'event_time_ms:2287', 'now_ms:2287'], ['resetI', 'Oscar', 'Controls', 'MCU', 'dbg-v01.08.04-5df38aa', '[Jul', '17', '2024', '22:57:30', 'release/v01.08', '5df38aa13', 'o2-dvt', 'debug]'], ['E', 'DGO:', 'UTC', 'time', 'is', 'invalid', 'for', 'DGO', 'config'], ['I', 'main_app', 'receive', 'event_id:0x000b0005', 'event_time_ms:204', 'now_ms:206'], ['I', 'main_app', 'receive', 'event_id:0x000e0000', 'event_time_ms:757', 'now_ms:757'], ['I', 'main_app', 'receive', 'event_id:0x00080008', 'event_time_ms:830', 'now_ms:830'], ['I', 'New', 'end', 'UTC', '1721458386'], ['I', 'main_app', 'receive', 'event_id:0x00100000', 'event_time_ms:884', 'now_ms:884'], ['I', 'New', 'end', 'UTC', '1721458915']]}
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 8 passed in 377.15s (0:06:17) =========================
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 3 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.2.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 8 items
+
+dgo_inactive.py::TestDGOInactive::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:02:08 INFO     dgo manual_stop executed
+2024-07-20 08:02:11 INFO     Current State: IDLE
+2024-07-20 08:02:11 INFO     ===> dgo status
+2024-07-20 08:02:11 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 12%]
+dgo_inactive.py::TestDGOInactive::test_group_grinder_jam 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:02:17 INFO     dgo manual_stop executed
+2024-07-20 08:02:20 INFO     Current State: IDLE
+2024-07-20 08:02:25 INFO     dgo manual_start executed
+2024-07-20 08:02:37 INFO     Current State: LIP
+2024-07-20 08:02:40 INFO     ===> dgo status
+2024-07-20 08:02:40 INFO     ### test_dgo_Start_with_LIP_State ==> PASSED
+2024-07-20 08:02:43 INFO     ===> grinder inject 1
+2024-07-20 08:02:43 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-20 08:02:43 INFO     ### test_grinder_inject_jam ==> PASSED
+2024-07-20 08:02:46 INFO     ===> dgo status
+2024-07-20 08:02:46 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 08:02:49 INFO     ===> dgo status
+2024-07-20 08:02:49 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 08:02:52 INFO     ===> grinder inject 0
+2024-07-20 08:02:53 INFO     ### test_grinder_inject_jam_cleared ==> PASSED
+2024-07-20 08:02:56 INFO     ===> dgo status
+2024-07-20 08:02:56 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 08:03:02 INFO     dgo manual_stop executed
+2024-07-20 08:03:05 INFO     Current State: IDLE
+2024-07-20 08:03:05 INFO     ===> dgo status
+2024-07-20 08:03:05 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 25%]
+dgo_inactive.py::TestDGOInactive::test_group_lid_lock_failure 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:03:11 INFO     dgo manual_stop executed
+2024-07-20 08:03:15 INFO     Current State: IDLE
+2024-07-20 08:03:20 INFO     dgo manual_start executed
+2024-07-20 08:03:31 INFO     Current State: LIP
+2024-07-20 08:03:34 INFO     ===> dgo status
+2024-07-20 08:03:34 INFO     ### test_dgo_Start_with_LIP_State ==> PASSED
+2024-07-20 08:03:37 INFO     ===> lid_lock inject 1
+2024-07-20 08:03:37 INFO     ### test_lid_lock_inject_fault ==> PASSED
+2024-07-20 08:03:40 INFO     ===> dgo status
+2024-07-20 08:03:40 INFO     ### test_dgo_timeout_to_IDLE ==> PASSED
+2024-07-20 08:03:43 INFO     ===> lid_lock inject 0
+2024-07-20 08:03:46 INFO     retries counts: 1
+2024-07-20 08:03:49 INFO     retries counts: 2
+2024-07-20 08:03:53 INFO     retries counts: 3
+2024-07-20 08:03:56 INFO     retries counts: 4
+2024-07-20 08:03:59 INFO     retries counts: 5
+2024-07-20 08:03:59 ERROR    Timeout after 5 retries!
+2024-07-20 08:03:59 INFO     ### test_lid_lock_inject_fault_clear ==> PASSED
+PASSED                                                                   [ 37%]
+dgo_inactive.py::TestDGOInactive::test_group_bucket_overheat 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:04:05 INFO     dgo manual_stop executed
+2024-07-20 08:04:08 INFO     Current State: IDLE
+2024-07-20 08:04:13 INFO     dgo manual_start executed
+2024-07-20 08:04:24 INFO     Current State: LIP
+2024-07-20 08:04:33 INFO     dgo stage skip executed HIP
+2024-07-20 08:04:37 INFO     Current State: HIP
+2024-07-20 08:04:40 INFO     ===> dgo status
+2024-07-20 08:04:40 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 08:04:43 INFO     ===> heater inject 2
+2024-07-20 08:04:43 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-20 08:04:43 INFO     ### test_heater_inject_overheat ==> PASSED
+2024-07-20 08:04:46 INFO     ===> dgo status
+2024-07-20 08:04:46 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 08:04:49 INFO     ===> dgo status
+2024-07-20 08:04:49 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 08:04:52 INFO     ===> heater inject 3
+2024-07-20 08:04:52 INFO     ### test_heater_inject_overheat_cleared ==> PASSED
+2024-07-20 08:04:55 INFO     ===> dgo status
+2024-07-20 08:04:56 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 08:05:02 INFO     dgo manual_stop executed
+2024-07-20 08:05:05 INFO     Current State: IDLE
+2024-07-20 08:05:05 INFO     ===> dgo status
+2024-07-20 08:05:05 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_inactive.py::TestDGOInactive::test_group_bucket_pwm_on_time_exceed_limit 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:05:11 INFO     dgo manual_stop executed
+2024-07-20 08:05:14 INFO     Current State: IDLE
+2024-07-20 08:05:20 INFO     dgo manual_start executed
+2024-07-20 08:05:31 INFO     Current State: LIP
+2024-07-20 08:05:40 INFO     dgo stage skip executed HIP
+2024-07-20 08:05:43 INFO     Current State: HIP
+2024-07-20 08:05:46 INFO     ===> dgo status
+2024-07-20 08:05:46 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 08:05:49 INFO     ===> heater inject 4
+2024-07-20 08:05:49 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-20 08:05:49 INFO     ### test_heater_inject_pwm_on_exceed_limit ==> PASSED
+2024-07-20 08:05:52 INFO     ===> dgo status
+2024-07-20 08:05:53 INFO     ### test_dgo_being_killed_and_go_IDLE ==> PASSED
+PASSED                                                                   [ 62%]
+dgo_inactive.py::TestDGOInactive::test_group_exhaust_fan_stall 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:05:59 INFO     dgo manual_stop executed
+2024-07-20 08:06:02 INFO     Current State: IDLE
+2024-07-20 08:06:07 INFO     dgo manual_start executed
+2024-07-20 08:06:18 INFO     Current State: LIP
+2024-07-20 08:06:27 INFO     dgo stage skip executed HIP
+2024-07-20 08:06:31 INFO     Current State: HIP
+2024-07-20 08:06:34 INFO     ===> dgo status
+2024-07-20 08:06:34 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 08:06:37 INFO     ===> fan inject 1
+2024-07-20 08:06:37 INFO     ### test_fan_inject_exhaust_stall ==> PASSED
+2024-07-20 08:06:40 INFO     ===> dgo status
+2024-07-20 08:06:40 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 08:06:43 INFO     ===> dgo status
+2024-07-20 08:06:43 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 08:06:46 INFO     ===> fan inject 0
+2024-07-20 08:06:46 INFO     ### test_fan_inject_exhaust_stall_cleared ==> PASSED
+2024-07-20 08:06:49 INFO     ===> dgo status
+2024-07-20 08:06:50 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 08:06:56 INFO     dgo manual_stop executed
+2024-07-20 08:06:59 INFO     Current State: IDLE
+2024-07-20 08:06:59 INFO     ===> dgo status
+2024-07-20 08:06:59 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 75%]
+dgo_inactive.py::TestDGOInactive::test_group_intake_fan_stall 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:07:05 INFO     dgo manual_stop executed
+2024-07-20 08:07:08 INFO     Current State: IDLE
+2024-07-20 08:07:14 INFO     dgo manual_start executed
+2024-07-20 08:07:25 INFO     Current State: LIP
+2024-07-20 08:07:34 INFO     dgo stage skip executed HIP
+2024-07-20 08:07:37 INFO     Current State: HIP
+2024-07-20 08:07:40 INFO     ===> dgo status
+2024-07-20 08:07:40 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-20 08:07:43 INFO     ===> fan inject 2
+2024-07-20 08:07:43 INFO     ### test_fan_inject_intake_stall ==> PASSED
+2024-07-20 08:07:46 INFO     ===> dgo status
+2024-07-20 08:07:47 INFO     ### test_dgo_enter_inactive ==> PASSED
+2024-07-20 08:07:50 INFO     ===> dgo status
+2024-07-20 08:07:50 INFO     ### test_inactive_reason ==> PASSED
+2024-07-20 08:07:53 INFO     ===> fan inject 0
+2024-07-20 08:07:53 INFO     ### test_fan_inject_intake_stall_cleared ==> PASSED
+2024-07-20 08:07:56 INFO     ===> dgo status
+2024-07-20 08:07:56 INFO     ### test_dgo_back_to_active ==> PASSED
+2024-07-20 08:08:02 INFO     dgo manual_stop executed
+2024-07-20 08:08:05 INFO     Current State: IDLE
+2024-07-20 08:08:05 INFO     ===> dgo status
+2024-07-20 08:08:06 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 87%]
+dgo_inactive.py::TestDGOInactive::test_controlMCU_reset_idle 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:08:08 INFO     ===> reset
+2024-07-20 08:08:18 ERROR    ConnectionError(command)= reset
+
+2024-07-20 08:08:18 INFO     TS caught Reset
+2024-07-20 08:08:18 INFO     TS self.result:{'timeBegin': 1721459288, 'cmd': 'reset', 'pickCount': 0, 'test': 'test_controlMCU_reset_idle', 'noduplicate': 'performed', 'verifyCount': 1, 'verifyLst': [[['restarted', 1], ['via', 2]]], 'dataCount': 42, 'selectData': [['I', 'Energy', 'algo', '-', 'non_hip', 'selected'], ['I', 'Restarted', 'via', 'software', 'call'], ['E', 'power_control:', 'Unknown', 'power', 'ID:', '2'], ['#', 'I', 'main_app:', 'kv_store', 'passed', 'consistency', 'check'], ['I', '~Read', '0'], ['I', 'Ver', 'match', '1', '[6]', 'valid', '0'], ['I', 'I2C', 'init:', 'I2C0:', '1,', 'I2C1:', '1'], ['I', 'BKT_SEAT_HELPER:', 'Init', 'with', 'state', '4'], ['I', 'SHT40', 'cal', 'load[0]:', '2.602'], ['I', 'SHT40', 'cal', 'load[1]:', '8.150'], ['I', 'New', 'end', 'UTC', '1721459288'], ['I', 'Tare', 'loaded', 'from', 'kv:', '4250'], ['I', 'Bucket', 'fullness:', '0'], ['I', 'Bucket', 'not', 'full'], ['I', 'main_app', 'receive', 'event_id:0x000b0008', 'event_time_ms:203', 'now_ms:205'], ['I', 'main_app', 'receive', 'event_id:0x000b0005', 'event_time_ms:204', 'now_ms:205'], ['I', 'main_app', 'receive', 'event_id:0x000b0009', 'event_time_ms:204', 'now_ms:206'], ['I', 'DGO', 'Store:', 'Stage::', '{'], ['start:', '1970-01-01T00:00:00'], ['end:', '1970-01-01T00:00:00'], ['stage_id::', '{'], ['cycle_idx:', '255'], ['stage_idx:', '255'], ['}'], ['remaining:', '0'], ['I', 'Cycle::', '{'], ['Mass::', '{'], ['unprocessed_next_cycle:', '0'], ['total_since_stage_start:', '0'], ['total_add_hip_extend_sec:', '0'], ['I'], ['I', 'main_app', 'receive', 'event_id:0x00080008', 'event_time_ms:1721', 'now_ms:1721'], ['I', 'Set', 'vac', 'mode:', '0'], ['I', 'Set', 'no_payment', 'warn:', '0'], ['I', 'main_app', 'receive', 'event_id:0x00100000', 'event_time_ms:1764', 'now_ms:1764'], ['I', 'ONLINE'], ['I', 'main_app', 'receive', 'event_id:0x00020003', 'event_time_ms:2284', 'now_ms:2284'], ['resetI', 'Oscar', 'Controls', 'MCU', 'dbg-v01.08.04-5df38aa', '[Jul', '17', '2024', '22:57:30', 'release/v01.08', '5df38aa13', 'o2-dvt', 'debug]'], ['I', 'New', 'end', 'UTC', '1721459292'], ['I', 'main_app', 'receive', 'event_id:0x000e0000', 'event_time_ms:1618', 'now_ms:1618'], ['I', 'main_app', 'receive', 'event_id:0x00100000', 'event_time_ms:1714', 'now_ms:1714'], ['I', 'New', 'end', 'UTC', '1721459295']]}
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 8 passed in 376.39s (0:06:16) =========================

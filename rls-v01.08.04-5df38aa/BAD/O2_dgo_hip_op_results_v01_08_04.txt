@@ -1,0 +1,811 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 28 items
+
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Start_with_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:32:47 INFO     dgo manual_stop executed
+2024-07-18 03:32:51 INFO     Current State: IDLE
+2024-07-18 03:32:56 INFO     dgo manual_start executed
+2024-07-18 03:33:07 INFO     Current State: LIP
+2024-07-18 03:33:16 INFO     dgo stage skip executed HIP
+2024-07-18 03:33:19 INFO     Current State: HIP
+2024-07-18 03:33:22 INFO     ===> dgo status
+2024-07-18 03:33:23 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+PASSED                                                                   [  3%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_State_Run_Time 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:25 INFO     ===> dgo status
+2024-07-18 03:33:25 INFO     ### test_dgo_State_Run_Time ==> PASSED
+PASSED                                                                   [  7%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Lid_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:27 INFO     ===> fan get 1
+2024-07-18 03:33:27 INFO     ### test_dgo_Lid_Fan_PWM ==> PASSED
+PASSED                                                                   [ 10%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Exhaust_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:29 INFO     ===> fan get 0
+2024-07-18 03:33:29 INFO     ### test_dgo_Exhaust_Fan_PWM ==> PASSED
+PASSED                                                                   [ 14%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Bucket_Heater_Set_Point 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:31 INFO     ===> heater get 0
+2024-07-18 03:33:31 INFO     ### test_dgo_Bucket_Heater_Set_Point ==> PASSED
+PASSED                                                                   [ 17%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Bucket_Heater_Hysterisis_Range 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:33 INFO     ===> heater get 0
+2024-07-18 03:33:33 INFO     ### test_dgo_Bucket_Heater_Hysterisis_Range ==> PASSED
+PASSED                                                                   [ 21%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Amp_Hard_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:35 INFO     ===> grinder stall_get
+2024-07-18 03:33:35 INFO     ### test_dgo_Grinder_Amp_Hard_Limit ==> PASSED
+PASSED                                                                   [ 25%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Amp_Soft_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:37 INFO     ===> grinder stall_get
+2024-07-18 03:33:37 INFO     ### test_dgo_Grinder_Amp_Soft_Limit ==> PASSED
+PASSED                                                                   [ 28%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:39 INFO     ===> grinder get
+2024-07-18 03:33:39 INFO     ### test_dgo_Grinder_PWM ==> PASSED
+PASSED                                                                   [ 32%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Stall_Speed_Drop_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:41 INFO     ===> grinder stall_get
+2024-07-18 03:33:42 INFO     ### test_dgo_Grinder_Stall_Speed_Drop_Limit ==> PASSED
+PASSED                                                                   [ 35%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Amp_Threshold_Hard 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:44 INFO     ===> grinder stall_get
+2024-07-18 03:33:44 INFO     ### test_dgo_Grinder_Amp_Threshold_Hard ==> PASSED
+PASSED                                                                   [ 39%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Amp_Threshold_Soft 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:46 INFO     ===> grinder stall_get
+2024-07-18 03:33:46 INFO     ### test_dgo_Grinder_Amp_Threshold_Soft ==> PASSED
+PASSED                                                                   [ 42%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Speed_Threshold 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:48 INFO     ===> grinder stall_get
+2024-07-18 03:33:48 INFO     ### test_dgo_Grinder_Speed_Threshold ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:50 INFO     ===> grinder get
+2024-07-18 03:33:50 INFO     ### test_dgo_Grinder_Enabled ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Duty_ON 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:52 INFO     ===> grinder get
+2024-07-18 03:33:52 INFO     ### test_dgo_Grinder_Duty_ON ==> PASSED
+PASSED                                                                   [ 53%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Duty_OFF 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:54 INFO     ===> grinder get
+2024-07-18 03:33:54 INFO     ### test_dgo_Grinder_Duty_OFF ==> PASSED
+PASSED                                                                   [ 57%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Grinder_Direction 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:33:56 INFO         Checking directions in progressing ...
+2024-07-18 03:34:16 INFO     pull again...: 1
+2024-07-18 03:34:36 INFO     pull again...: 2
+2024-07-18 03:34:56 INFO     pull again...: 3
+2024-07-18 03:35:16 INFO     pull again...: 4
+2024-07-18 03:35:37 INFO     pull again...: 5
+2024-07-18 03:35:57 INFO     pull again...: 6
+2024-07-18 03:36:17 INFO     pull again...: 7
+2024-07-18 03:36:37 INFO     pull again...: 8
+2024-07-18 03:36:57 INFO     pull again...: 9
+2024-07-18 03:37:17 INFO     pull again...: 10
+2024-07-18 03:37:37 INFO     pull again...: 11
+2024-07-18 03:37:37 INFO     ### test_dgo_Grinder_Direction ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Lid_Heater_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:37:39 INFO     ===> heater get 1
+2024-07-18 03:37:39 INFO        retrying... 1
+2024-07-18 03:37:49 INFO     ===> heater get 1
+2024-07-18 03:37:49 INFO        retrying... 2
+2024-07-18 03:37:59 INFO     ===> heater get 1
+2024-07-18 03:37:59 INFO        retrying... 3
+2024-07-18 03:38:09 INFO     ===> heater get 1
+2024-07-18 03:38:09 INFO        retrying... 4
+2024-07-18 03:38:19 INFO     ===> heater get 1
+2024-07-18 03:38:19 INFO        retrying... 5
+2024-07-18 03:38:30 INFO     ===> heater get 1
+2024-07-18 03:38:30 INFO        retrying... 6
+2024-07-18 03:38:40 INFO     ===> heater get 1
+2024-07-18 03:38:40 INFO        retrying... 7
+2024-07-18 03:38:50 INFO     ===> heater get 1
+2024-07-18 03:38:50 INFO        retrying... 8
+2024-07-18 03:39:00 INFO     ===> heater get 1
+2024-07-18 03:39:00 INFO        retrying... 9
+2024-07-18 03:39:10 INFO     ===> heater get 1
+2024-07-18 03:39:10 INFO        retrying... 10
+2024-07-18 03:39:20 INFO     ===> heater get 1
+2024-07-18 03:39:20 INFO     ??? timeout... test_dgo_Lid_Heater_Enabled ==> FAILED
+FAILED                                                                   [ 64%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_3600 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:39:23 INFO     ===> hipStartTime set 3600
+2024-07-18 03:39:24 INFO     ### test_hipStartTime_set_3600 ==> PASSED
+2024-07-18 03:39:27 INFO     ===> hipStartTime get
+2024-07-18 03:39:28 INFO     ### test_hipStartTime_get_3600 ==> PASSED
+2024-07-18 03:39:31 INFO     ===> dgo config get
+2024-07-18 03:39:32 INFO     ### test_dgo_config_get_3600 ==> PASSED
+2024-07-18 03:39:35 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:39:35 INFO     ### get_shadow_scheduledHIPStartTime_3600 ==> PASSED
+PASSED                                                                   [ 67%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_10800 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:39:38 INFO     ===> hipStartTime set 10800
+2024-07-18 03:39:39 INFO     ### test_hipStartTime_set_10800 ==> PASSED
+2024-07-18 03:39:42 INFO     ===> hipStartTime get
+2024-07-18 03:39:43 INFO     ### test_hipStartTime_get_10800 ==> PASSED
+2024-07-18 03:39:46 INFO     ===> dgo config get
+2024-07-18 03:39:46 INFO     ### test_dgo_config_get_10800 ==> PASSED
+2024-07-18 03:39:49 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:39:50 INFO     ### get_shadow_scheduledHIPStartTime_10800 ==> PASSED
+PASSED                                                                   [ 71%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_28800 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:39:53 INFO     ===> hipStartTime set 28800
+2024-07-18 03:39:54 INFO     ### test_hipStartTime_set_28800 ==> PASSED
+2024-07-18 03:39:57 INFO     ===> hipStartTime get
+2024-07-18 03:39:58 INFO     ### test_hipStartTime_get_28800 ==> PASSED
+2024-07-18 03:40:01 INFO     ===> dgo config get
+2024-07-18 03:40:01 INFO     ### test_dgo_config_get_28800 ==> PASSED
+2024-07-18 03:40:04 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:40:05 INFO     ### get_shadow_scheduledHIPStartTime_28800 ==> PASSED
+PASSED                                                                   [ 75%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_28700 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:40:08 INFO     ===> hipStartTime set 28700
+2024-07-18 03:40:09 INFO     ### test_hipStartTime_set_28700 ==> PASSED
+2024-07-18 03:40:12 INFO     ===> hipStartTime get
+2024-07-18 03:40:13 INFO     ### test_hipStartTime_get_28700 ==> PASSED
+2024-07-18 03:40:16 INFO     ===> dgo config get
+2024-07-18 03:40:16 INFO     ### test_dgo_config_get_28700 ==> PASSED
+2024-07-18 03:40:19 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:40:19 INFO     ### get_shadow_scheduledHIPStartTime_28700 ==> PASSED
+PASSED                                                                   [ 78%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_34556 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:40:22 INFO     ===> hipStartTime set 34556
+2024-07-18 03:40:23 INFO     ### test_hipStartTime_set_34556 ==> PASSED
+2024-07-18 03:40:26 INFO     ===> hipStartTime get
+2024-07-18 03:40:28 INFO     ### test_hipStartTime_get_34556 ==> PASSED
+2024-07-18 03:40:31 INFO     ===> dgo config get
+2024-07-18 03:40:31 INFO     ### test_dgo_config_get_34556 ==> PASSED
+2024-07-18 03:40:34 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:40:34 INFO     ### get_shadow_scheduledHIPStartTime_34556 ==> PASSED
+PASSED                                                                   [ 82%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_75600 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:40:37 INFO     ===> hipStartTime set 75600
+2024-07-18 03:40:38 INFO     ### test_hipStartTime_set_75600 ==> PASSED
+2024-07-18 03:40:41 INFO     ===> hipStartTime get
+2024-07-18 03:40:42 INFO     ### test_hipStartTime_get_75600 ==> PASSED
+2024-07-18 03:40:45 INFO     ===> dgo config get
+2024-07-18 03:40:45 INFO     ### test_dgo_config_get_75600 ==> PASSED
+2024-07-18 03:40:48 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:40:49 INFO     ### get_shadow_scheduledHIPStartTime_75600 ==> PASSED
+PASSED                                                                   [ 85%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_82800 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:40:52 INFO     ===> hipStartTime set 82800
+2024-07-18 03:40:53 INFO     ### test_hipStartTime_set_82800 ==> PASSED
+2024-07-18 03:40:56 INFO     ===> hipStartTime get
+2024-07-18 03:40:57 INFO     ### test_hipStartTime_get_82800 ==> PASSED
+2024-07-18 03:41:00 INFO     ===> dgo config get
+2024-07-18 03:41:00 INFO     ### test_dgo_config_get_82800 ==> PASSED
+2024-07-18 03:41:03 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:41:04 INFO     ### get_shadow_scheduledHIPStartTime_82800 ==> PASSED
+PASSED                                                                   [ 89%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_86399 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:41:07 INFO     ===> hipStartTime set 86399
+2024-07-18 03:41:08 INFO     ### test_hipStartTime_set_86399 ==> PASSED
+2024-07-18 03:41:11 INFO     ===> hipStartTime get
+2024-07-18 03:41:12 INFO     ### test_hipStartTime_get_86399 ==> PASSED
+2024-07-18 03:41:15 INFO     ===> dgo config get
+2024-07-18 03:41:15 INFO     ### test_dgo_config_get_86399 ==> PASSED
+2024-07-18 03:41:18 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:41:19 INFO     ### get_shadow_scheduledHIPStartTime_86399 ==> PASSED
+PASSED                                                                   [ 92%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_86400 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:41:22 INFO     ===> hipStartTime set 86400
+2024-07-18 03:41:23 INFO     ### test_hipStartTime_set_86400 ==> PASSED
+2024-07-18 03:41:26 INFO     ===> hipStartTime get
+2024-07-18 03:41:27 INFO     ### test_hipStartTime_get_86400 ==> PASSED
+2024-07-18 03:41:30 INFO     ===> dgo config get
+2024-07-18 03:41:30 INFO     ### test_dgo_config_get_86400 ==> PASSED
+2024-07-18 03:41:33 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:41:33 INFO     ### get_shadow_scheduledHIPStartTime_86400 ==> PASSED
+PASSED                                                                   [ 96%]
+dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_group_start_time_5 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:41:36 INFO     ===> hipStartTime set 5
+2024-07-18 03:41:37 INFO     ### test_hipStartTime_set_5 ==> PASSED
+2024-07-18 03:41:40 INFO     ===> hipStartTime get
+2024-07-18 03:41:41 INFO     ### test_hipStartTime_get_5 ==> PASSED
+2024-07-18 03:41:44 INFO     ===> dgo config get
+2024-07-18 03:41:45 INFO     ### test_dgo_config_get_5 ==> PASSED
+2024-07-18 03:41:48 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:41:48 INFO     ### get_shadow_scheduledHIPStartTime_5 ==> PASSED
+PASSED                                                                   [100%]
+
+=================================== FAILURES ===================================
+__________________ TestDGOFSM_HIP.test_dgo_Lid_Heater_Enabled __________________
+
+self = <dgo.dgo_test_HIP_state2_O2.TestDGOFSM_HIP object at 0x7f92859cd0>
+dgo = <libs.SetupDGO.setupDgo object at 0x7f92760a60>
+log = <Logger dgo (DEBUG)>
+testsuite = [{'command': 'dgo status', 'testcase': 'test_dgo_Start_with_HIP_State', 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G...'heater get 0', 'retryCount': 10, 'retryPeriod': 200, 'testcase': 'test_dgo_Bucket_Heater_Hysterisis_Range', ...}, ...]
+
+    def test_dgo_Lid_Heater_Enabled(self, dgo, log, testsuite):
+        testCase = "test_dgo_Lid_Heater_Enabled"
+        time.sleep(2)
+        self.result = {}
+        myConf = self._getMyConf(testsuite, testCase)
+        current_GMT = time.gmtime()
+        timeBegin = calendar.timegm(current_GMT)
+        self.result["timeBegin"] = timeBegin
+        self.result["test"] = testCase
+        if myConf.__contains__("retryCount") and myConf.__contains__("retryPeriod"):
+            count = 0
+            for i in range(myConf["retryCount"]+1):
+                count += 1
+                _, contrData = dgo.exec_cmd(myConf["command"])
+                self.result["cmd"] = myConf["command"]
+                contrData[0][7] = contrData[0][7] + " " + contrData[0][8]
+                del contrData[0][8]
+                log.info("===> %s", myConf["command"])
+                if self._performVerifies(testsuite, testCase, contrData, log):
+                    log.info("### %s ==> %s", testCase, result.passed)
+                    self.result["result"] = result.passed
+                    assert True
+                    break
+                else:
+                    if count <= myConf["retryCount"]:
+                        log.info("   retrying... %s", count)
+                        self.result["retry"] = count
+                        time.sleep(myConf["retryPeriod"] / myConf["retryCount"])
+                    else:
+                        log.info("??? timeout... %s ==> %s", testCase, result.failed)
+                        self.result["result"] = result.timeouted
+                        dgo.summaries["tests"].append(self.result)
+>                       assert False
+E                       assert False
+
+dgo_test_HIP_state2_O2.py:205: AssertionError
+------------------------------ Captured log call -------------------------------
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:34.29687 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:34.29687 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.29687', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.29687', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.29687', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.29687', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 1
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:34.20875 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:34.20875 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.20875', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.20875', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.20875', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.20875', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 2
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:34.11529 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:34.11529 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.11529', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.11529', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.11529', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.11529', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 3
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:34.05921 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:34.05921 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.05921', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.05921', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.05921', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.05921', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 4
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:34.00314 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:34.00314 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.00314', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.00314', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.00314', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:34.00314', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 5
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:33.92570 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:33.92570 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.92570', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.92570', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.92570', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.92570', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 6
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:33.86962 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:33.86962 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.86962', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.86962', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.86962', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.86962', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 7
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:33.85627 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:33.85627 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.85627', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.85627', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.85627', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.85627', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 8
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:33.80554 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:33.80554 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.80554', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.80554', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.80554', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.80554', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 9
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:33.75747 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:33.75747 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.75747', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.75747', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.75747', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.75747', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:198    retrying... 10
+DEBUG    root:SetupDGO.py:40 cmd info: heater get 1
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 heater get 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "heater get 1"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I heater      get               heater_id:1 target:60.00000 fb:33.75747 pwm:0.00000 state:"Off" fault_bitfield:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I heater      get               heater_id:1 target:60.00000 fb:33.75747 pwm:0.00000 state:"Off" fault_bitfield:0x00000000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 134
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.75747', 'pwm:0.00000', 'state:"Off"', 'fault_bitfield:0x00000000'], ['#']]
+INFO     dgo:dgo_test_HIP_state2_O2.py:190 ===> heater get 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.75747', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.75747', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'heater', 'get', 'heater_id:1', 'target:60.00000', 'fb:33.75747', 'pwm:0.00000', 'state:"Off" fault_bitfield:0x00000000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Lid_Heater_Enabled', 'command': 'heater get 1', 'retryPeriod': 100, 'retryCount': 10, 'verify': [['heater_id:1', 3], ['target:60.00000', 4], ['pwm:100.00000', 6], ['state:"Control Loop"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= heater_id:1
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= target:60.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= pwm:0.00000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= pwm:100.00000
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"Off" fault_bitfield:0x00000000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"Control Loop"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:dgo_test_HIP_state2_O2.py:202 ??? timeout... test_dgo_Lid_Heater_Enabled ==> FAILED
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+=========================== short test summary info ============================
+FAILED dgo_test_HIP_state2_O2.py::TestDGOFSM_HIP::test_dgo_Lid_Heater_Enabled
+=================== 1 failed, 27 passed in 547.56s (0:09:07) ===================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1721269960.json': No such file or directory

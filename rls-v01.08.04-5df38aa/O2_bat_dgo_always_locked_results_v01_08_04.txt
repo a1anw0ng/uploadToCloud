@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 10 items
+
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:51:50 INFO     dgo manual_stop executed
+2024-07-22 17:51:53 INFO     Current State: IDLE
+2024-07-22 17:51:53 INFO     ===> dgo status
+2024-07-22 17:51:53 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 10%]
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_set_shadow_childLockEnabled_true 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:51:55 INFO     Found credentials in environment variables.
+2024-07-22 17:51:57 INFO     ** device shadow: childLockEnabled is set to True **
+2024-07-22 17:51:57 INFO     ### set_shadow_childLockEnabled_true ==> PASSED
+PASSED                                                                   [ 20%]
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_get_shadow_childLockEnabled_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:51:59 INFO     Found credentials in environment variables.
+2024-07-22 17:52:00 INFO     ### get_shadow_childLockEnabled_true_cloud ==> PASSED
+PASSED                                                                   [ 30%]
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_get_shadow_lidLockState_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:52:02 INFO     Found credentials in environment variables.
+2024-07-22 17:52:02 INFO     ### get_shadow_lidLockState_true_cloud ==> PASSED
+PASSED                                                                   [ 40%]
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_get_shadow_childLock_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:52:04 INFO     Found credentials in environment variables.
+2024-07-22 17:52:04 INFO     ### get_shadow_childLock_true_cloud ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_white_lock_ON_idle 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:52:06 INFO     ===> led get 1 0
+2024-07-22 17:52:07 INFO     ### test_white_lock_ON_idle ==> PASSED
+PASSED                                                                   [ 60%]
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_set_shadow_childLockEnabled_false 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:52:11 INFO     ** device shadow: childLockEnabled is set to False **
+2024-07-22 17:52:11 INFO     ### set_shadow_childLockEnabled_false ==> PASSED
+PASSED                                                                   [ 70%]
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_get_shadow_childLockEnabled_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:52:13 INFO     Found credentials in environment variables.
+2024-07-22 17:52:13 INFO     ### get_shadow_childLockEnabled_false_cloud ==> PASSED
+PASSED                                                                   [ 80%]
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_get_shadow_lidLockState_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:52:15 INFO     Found credentials in environment variables.
+2024-07-22 17:52:15 INFO     ### get_shadow_lidLockState_false_cloud ==> PASSED
+PASSED                                                                   [ 90%]
+bat_dgo_always_locked.py::TestBAT_DGO_ALWAYS_LOCKED::test_get_shadow_childLock_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-22 17:52:17 INFO     Found credentials in environment variables.
+2024-07-22 17:52:17 INFO     ### get_shadow_childLock_false_cloud ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+============================= 10 passed in 32.62s ==============================

@@ -1,0 +1,451 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 46 items
+
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_open_close_lid_begin 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:34:29 INFO     ===> lid inject 0
+2024-07-18 09:34:29 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-18 09:34:29 INFO     ### test_lid_inject_0_open ==> PASSED
+2024-07-18 09:34:32 INFO     ===> lid inject 1
+2024-07-18 09:34:35 INFO     retries counts: 1
+2024-07-18 09:34:38 INFO     retries counts: 2
+2024-07-18 09:34:41 INFO     retries counts: 3
+2024-07-18 09:34:44 INFO     retries counts: 4
+2024-07-18 09:34:47 INFO     retries counts: 5
+2024-07-18 09:34:47 ERROR    Timeout after 5 retries!
+2024-07-18 09:34:47 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [  2%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:34:52 INFO     dgo manual_stop executed
+2024-07-18 09:34:56 INFO     Current State: IDLE
+2024-07-18 09:34:56 INFO     ===> dgo status
+2024-07-18 09:34:56 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  4%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_temp_get_2 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:34:58 INFO     ===> temp get 2
+2024-07-18 09:34:58 INFO     ### test_temp_get_2 ==> PASSED
+PASSED                                                                   [  6%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_force_fluff 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:00 INFO     ===> dgo force_fluff
+2024-07-18 09:35:00 INFO     ### test_dgo_force_fluff ==> PASSED
+PASSED                                                                   [  8%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_set_shadow_dgoCycle_DryGrind 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:02 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:35:03 INFO     ** device shadow: dgoCycle is set to DryGrind **
+2024-07-18 09:35:03 INFO     ### set_shadow_dgoCycle_DryGrind ==> PASSED
+PASSED                                                                   [ 10%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_online_true 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:05 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:35:06 INFO     ### get_shadow_online_true ==> PASSED
+PASSED                                                                   [ 13%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_dgoStage_LIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:08 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:35:08 INFO     ### get_shadow_dgoStage_LIP ==> PASSED
+PASSED                                                                   [ 15%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_currentDgoCycleStartMethod_ManualBinStart 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:10 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:35:11 INFO     ### get_shadow_currentDgoCycleStartMethod_ManualBinStart ==> PASSED
+PASSED                                                                   [ 17%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_lidLockState_true 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:13 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:35:13 INFO     ### get_shadow_lidLockState_true ==> PASSED
+PASSED                                                                   [ 19%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_dgoRequiredLock_true 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:15 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:35:16 INFO     ### get_shadow_dgoRequiredLock_true ==> PASSED
+PASSED                                                                   [ 21%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_white_lock_ON 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:18 INFO     ===> led_array get 1
+2024-07-18 09:35:19 INFO     ### test_white_lock_ON ==> PASSED
+PASSED                                                                   [ 23%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_white_lock_ON2 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:21 INFO     ===> led get 1 0
+2024-07-18 09:35:22 INFO     ### test_white_lock_ON2 ==> PASSED
+PASSED                                                                   [ 26%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_cycle_led_ON 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:25 INFO     ===> led get 0 0
+2024-07-18 09:35:26 INFO     0x0
+2024-07-18 09:35:26 INFO     0x0
+2024-07-18 09:35:26 INFO     0x0
+2024-07-18 09:35:26 INFO        retrying... 1
+2024-07-18 09:35:27 INFO     ===> led get 0 0
+2024-07-18 09:35:28 INFO     0x0
+2024-07-18 09:35:28 INFO     0x0
+2024-07-18 09:35:28 INFO     0x0
+2024-07-18 09:35:28 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-07-18 09:35:31 INFO     ===> led get 0 1
+2024-07-18 09:35:32 INFO     0x0
+2024-07-18 09:35:32 INFO     0x0
+2024-07-18 09:35:32 INFO     0x0
+2024-07-18 09:35:32 INFO        retrying... 1
+2024-07-18 09:35:33 INFO     ===> led get 0 1
+2024-07-18 09:35:34 INFO     0x0
+2024-07-18 09:35:34 INFO     0x0
+2024-07-18 09:35:34 INFO     0x0
+2024-07-18 09:35:34 INFO        retrying... 2
+2024-07-18 09:35:35 INFO     ===> led get 0 1
+2024-07-18 09:35:36 INFO     0x0
+2024-07-18 09:35:36 INFO     0x0
+2024-07-18 09:35:36 INFO     0x0
+2024-07-18 09:35:36 INFO        retrying... 3
+2024-07-18 09:35:37 INFO     ===> led get 0 1
+2024-07-18 09:35:38 INFO     0x0
+2024-07-18 09:35:38 INFO     0x0
+2024-07-18 09:35:38 INFO     0x0
+2024-07-18 09:35:38 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-07-18 09:35:41 INFO     ===> led get 0 2
+2024-07-18 09:35:42 INFO     0x0
+2024-07-18 09:35:42 INFO     0x0
+2024-07-18 09:35:42 INFO     0x0
+2024-07-18 09:35:42 INFO        retrying... 1
+2024-07-18 09:35:44 INFO     ===> led get 0 2
+2024-07-18 09:35:45 INFO     0x0
+2024-07-18 09:35:45 INFO     0x0
+2024-07-18 09:35:45 INFO     0x0
+2024-07-18 09:35:45 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-07-18 09:35:48 INFO     ===> led get 0 3
+2024-07-18 09:35:49 INFO     0x0
+2024-07-18 09:35:49 INFO     0x0
+2024-07-18 09:35:49 INFO     0x0
+2024-07-18 09:35:49 INFO        retrying... 1
+2024-07-18 09:35:50 INFO     ===> led get 0 3
+2024-07-18 09:35:51 INFO     0x0
+2024-07-18 09:35:51 INFO     0x0
+2024-07-18 09:35:51 INFO     0x0
+2024-07-18 09:35:51 INFO        retrying... 2
+2024-07-18 09:35:52 INFO     ===> led get 0 3
+2024-07-18 09:35:53 INFO     0x0
+2024-07-18 09:35:53 INFO     0x0
+2024-07-18 09:35:53 INFO     0x0
+2024-07-18 09:35:53 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 28%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_jump_fromLIPtoHIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:35:58 INFO     Current State: LIP
+2024-07-18 09:36:02 INFO     dgo stage skip executed HIP
+2024-07-18 09:36:10 INFO     Current State: HIP
+2024-07-18 09:36:13 INFO     ===> dgo status
+2024-07-18 09:36:14 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+PASSED                                                                   [ 30%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_status_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:36:16 INFO     ===> dgo status
+2024-07-18 09:36:16 INFO     ### test_dgo_status_HIP ==> PASSED
+PASSED                                                                   [ 32%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_cycle_N_stage_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:36:20 INFO     ** device shadow: dgoCycle is set to DryGrind **
+2024-07-18 09:36:20 INFO     ### set_shadow_dgoCycle_DryGrind ==> PASSED
+2024-07-18 09:36:23 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:36:24 INFO     ### get_shadow_dgoStage_HIP ==> PASSED
+PASSED                                                                   [ 34%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_white_lock_ON_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:36:26 INFO     ===> led_array get 1
+2024-07-18 09:36:27 INFO     ### test_white_lock_ON_HIP ==> PASSED
+PASSED                                                                   [ 36%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_white_lock_ON_HIP2 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:36:29 INFO     ===> led get 1 0
+2024-07-18 09:36:30 INFO     ### test_white_lock_ON_HIP2 ==> PASSED
+PASSED                                                                   [ 39%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_cycle_led_ON_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:36:33 INFO     ===> led get 0 0
+2024-07-18 09:36:34 INFO     0x0
+2024-07-18 09:36:34 INFO     0x0
+2024-07-18 09:36:34 INFO     0x0
+2024-07-18 09:36:34 INFO        retrying... 1
+2024-07-18 09:36:35 INFO     ===> led get 0 0
+2024-07-18 09:36:36 INFO     0x0
+2024-07-18 09:36:36 INFO     0x0
+2024-07-18 09:36:36 INFO     0x0
+2024-07-18 09:36:36 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-07-18 09:36:39 INFO     ===> led get 0 1
+2024-07-18 09:36:40 INFO     0x0
+2024-07-18 09:36:40 INFO     0x0
+2024-07-18 09:36:40 INFO     0x0
+2024-07-18 09:36:40 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-07-18 09:36:43 INFO     ===> led get 0 2
+2024-07-18 09:36:44 INFO        retrying... 1
+2024-07-18 09:36:45 INFO     ===> led get 0 2
+2024-07-18 09:36:46 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-07-18 09:36:49 INFO     ===> led get 0 3
+2024-07-18 09:36:50 INFO     0x0
+2024-07-18 09:36:50 INFO     0x0
+2024-07-18 09:36:50 INFO     0x0
+2024-07-18 09:36:50 INFO        retrying... 1
+2024-07-18 09:36:51 INFO     ===> led get 0 3
+2024-07-18 09:36:52 INFO     0x0
+2024-07-18 09:36:52 INFO     0x0
+2024-07-18 09:36:52 INFO     0x0
+2024-07-18 09:36:52 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 41%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_hip_trans_region_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:36:55 INFO     ===> dgo stage hip_trans
+2024-07-18 09:36:55 INFO     ### test_hip_trans_region_HIP ==> PASSED
+PASSED                                                                   [ 43%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_status_HIP_trans 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:36:57 INFO     ===> dgo status
+2024-07-18 09:36:57 INFO     ### test_dgo_status_HIP_trans ==> PASSED
+PASSED                                                                   [ 45%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_cycle_N_stage_HIP_trans 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:37:01 INFO     ** device shadow: dgoCycle is set to DryGrind **
+2024-07-18 09:37:01 INFO     ### set_shadow_dgoCycle_DryGrind ==> PASSED
+2024-07-18 09:37:04 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:37:05 INFO     ### get_shadow_dgoStage_HIP ==> PASSED
+PASSED                                                                   [ 47%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_white_lock_ON_HIP_trans 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:37:07 INFO     ===> led_array get 1
+2024-07-18 09:37:08 INFO     ### test_white_lock_ON_HIP_trans ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_white_lock_ON_HIP_trans2 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:37:10 INFO     ===> led get 1 0
+2024-07-18 09:37:11 INFO     ### test_white_lock_ON_HIP_trans2 ==> PASSED
+PASSED                                                                   [ 52%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_cycle_led_ON_HIP_trans 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:37:14 INFO     ===> led get 0 0
+2024-07-18 09:37:15 INFO     0x0
+2024-07-18 09:37:15 INFO     0x0
+2024-07-18 09:37:15 INFO     0x0
+2024-07-18 09:37:15 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-07-18 09:37:18 INFO     ===> led get 0 1
+2024-07-18 09:37:19 INFO     0x0
+2024-07-18 09:37:19 INFO     0x0
+2024-07-18 09:37:19 INFO     0x0
+2024-07-18 09:37:19 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-07-18 09:37:22 INFO     ===> led get 0 2
+2024-07-18 09:37:23 INFO        retrying... 1
+2024-07-18 09:37:24 INFO     ===> led get 0 2
+2024-07-18 09:37:25 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-07-18 09:37:28 INFO     ===> led get 0 3
+2024-07-18 09:37:29 INFO     0x0
+2024-07-18 09:37:29 INFO     0x0
+2024-07-18 09:37:29 INFO     0x0
+2024-07-18 09:37:29 INFO        retrying... 1
+2024-07-18 09:37:30 INFO     ===> led get 0 3
+2024-07-18 09:37:31 INFO     0x0
+2024-07-18 09:37:31 INFO     0x0
+2024-07-18 09:37:31 INFO     0x0
+2024-07-18 09:37:31 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 54%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_jump_fromHIPtoCOOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:37:37 INFO     Current State: HIP
+2024-07-18 09:37:41 INFO     dgo stage skip executed COOLDOWN
+2024-07-18 09:37:49 INFO     Current State: COOLDOWN
+2024-07-18 09:37:52 INFO     ===> dgo status
+2024-07-18 09:37:52 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+PASSED                                                                   [ 56%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_wait_time_10 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:38:04 INFO     ** wait_time_pause: 10 seconds **
+2024-07-18 09:38:04 INFO     ### wait_time_10 ==> PASSED
+PASSED                                                                   [ 58%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_cycle_N_stage_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:38:08 INFO     ** device shadow: dgoCycle is set to DryGrind **
+2024-07-18 09:38:08 INFO     ### set_shadow_dgoCycle_DryGrind ==> PASSED
+2024-07-18 09:38:12 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:38:12 INFO     ### get_shadow_dgoStage_COOLDOWN ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_white_lock_ON_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:38:14 INFO     ===> led_array get 1
+2024-07-18 09:38:15 INFO     ### test_white_lock_ON_COOLDOWN ==> PASSED
+PASSED                                                                   [ 63%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_white_lock_ON_COOLDOWN2 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:38:17 INFO     ===> led get 1 0
+2024-07-18 09:38:18 INFO     ### test_white_lock_ON_COOLDOWN2 ==> PASSED
+PASSED                                                                   [ 65%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_cycle_led_ON_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:38:21 INFO     ===> led get 0 0
+2024-07-18 09:38:22 INFO     0x0
+2024-07-18 09:38:22 INFO     0x0
+2024-07-18 09:38:22 INFO     0x0
+2024-07-18 09:38:22 INFO        retrying... 1
+2024-07-18 09:38:23 INFO     ===> led get 0 0
+2024-07-18 09:38:24 INFO     0x0
+2024-07-18 09:38:24 INFO     0x0
+2024-07-18 09:38:24 INFO     0x0
+2024-07-18 09:38:24 INFO        retrying... 2
+2024-07-18 09:38:25 INFO     ===> led get 0 0
+2024-07-18 09:38:26 INFO     0x0
+2024-07-18 09:38:26 INFO     0x0
+2024-07-18 09:38:26 INFO     0x0
+2024-07-18 09:38:26 INFO        retrying... 3
+2024-07-18 09:38:27 INFO     ===> led get 0 0
+2024-07-18 09:38:28 INFO     0x0
+2024-07-18 09:38:28 INFO     0x0
+2024-07-18 09:38:28 INFO     0x0
+2024-07-18 09:38:28 INFO        retrying... 4
+2024-07-18 09:38:29 INFO     ===> led get 0 0
+2024-07-18 09:38:31 INFO     0x0
+2024-07-18 09:38:31 INFO     0x0
+2024-07-18 09:38:31 INFO     0x0
+2024-07-18 09:38:31 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-07-18 09:38:34 INFO     ===> led get 0 1
+2024-07-18 09:38:35 INFO     0x0
+2024-07-18 09:38:35 INFO     0x0
+2024-07-18 09:38:35 INFO     0x0
+2024-07-18 09:38:35 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-07-18 09:38:38 INFO     ===> led get 0 2
+2024-07-18 09:38:39 INFO     0x0
+2024-07-18 09:38:39 INFO     0x0
+2024-07-18 09:38:39 INFO     0x0
+2024-07-18 09:38:39 INFO        retrying... 1
+2024-07-18 09:38:40 INFO     ===> led get 0 2
+2024-07-18 09:38:41 INFO     0x0
+2024-07-18 09:38:41 INFO     0x0
+2024-07-18 09:38:41 INFO     0x0
+2024-07-18 09:38:41 INFO        retrying... 2
+2024-07-18 09:38:42 INFO     ===> led get 0 2
+2024-07-18 09:38:43 INFO     0x0
+2024-07-18 09:38:43 INFO     0x0
+2024-07-18 09:38:43 INFO     0x0
+2024-07-18 09:38:43 INFO        retrying... 3
+2024-07-18 09:38:44 INFO     ===> led get 0 2
+2024-07-18 09:38:45 INFO     0x0
+2024-07-18 09:38:45 INFO     0x0
+2024-07-18 09:38:45 INFO     0x0
+2024-07-18 09:38:45 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-07-18 09:38:48 INFO     ===> led get 0 3
+2024-07-18 09:38:49 INFO     0x0
+2024-07-18 09:38:49 INFO     0x0
+2024-07-18 09:38:49 INFO     0x0
+2024-07-18 09:38:49 INFO        retrying... 1
+2024-07-18 09:38:50 INFO     ===> led get 0 3
+2024-07-18 09:38:51 INFO     0x0
+2024-07-18 09:38:51 INFO     0x0
+2024-07-18 09:38:51 INFO     0x0
+2024-07-18 09:38:51 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 67%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_set_shadow_dgoCycle_Idle 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:38:54 INFO     ** device shadow: dgoCycle is set to Idle **
+2024-07-18 09:38:54 INFO     ### set_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 69%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_online_true_stopped 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:38:57 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:38:57 INFO     ### get_shadow_online_true_stopped ==> PASSED
+PASSED                                                                   [ 71%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_dgoCycle_Idle_stopped 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:38:59 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:38:59 INFO     retry... #0 
+2024-07-18 09:39:00 INFO        retrying... 1
+2024-07-18 09:39:10 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:39:11 INFO     ### get_shadow_dgoCycle_Idle_stopped ==> PASSED
+PASSED                                                                   [ 73%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_dgoStage_Idle_stopped 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:39:13 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:39:13 INFO     ### get_shadow_dgoStage_Idle_stopped ==> PASSED
+PASSED                                                                   [ 76%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_currentDgoCycleStartMethod_Scheduled_stopped 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:39:15 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:39:16 INFO     ### get_shadow_currentDgoCycleStartMethod_Scheduled_stopped ==> PASSED
+PASSED                                                                   [ 78%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_get_shadow_dgoRequiredLock_false_stopped 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:39:18 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 09:39:18 INFO     ### get_shadow_dgoRequiredLock_false_stopped ==> PASSED
+PASSED                                                                   [ 80%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_in_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:39:20 INFO     ===> dgo status
+2024-07-18 09:39:20 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+PASSED                                                                   [ 82%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_safety_heater_get_0_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:39:22 INFO     ===> heater get 0
+2024-07-18 09:39:23 INFO     ### test_safety_heater_get_0_IDLE ==> PASSED
+PASSED                                                                   [ 84%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_temp_get_3_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:39:25 INFO     ===> temp get 3
+2024-07-18 09:39:25 INFO        retrying... 1
+2024-07-18 09:40:25 INFO     ===> temp get 3
+2024-07-18 09:40:25 INFO        retrying... 2
+2024-07-18 09:41:25 INFO     ===> temp get 3
+2024-07-18 09:41:25 INFO     ### test_temp_get_3_IDLE ==> PASSED
+PASSED                                                                   [ 86%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_temp_get_2_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:41:27 INFO     ===> temp get 2
+2024-07-18 09:41:27 INFO     ### test_temp_get_2_IDLE ==> PASSED
+PASSED                                                                   [ 89%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_orange_lock_OFF_cloud_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:41:29 INFO     ===> led_array get 1
+2024-07-18 09:41:31 INFO     ### test_orange_lock_OFF_cloud_high_temp ==> PASSED
+PASSED                                                                   [ 91%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_white_lock_OFF_stopped2 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:41:33 INFO     ===> led get 1 0
+2024-07-18 09:41:34 INFO     ### test_white_lock_OFF_stopped2 ==> PASSED
+PASSED                                                                   [ 93%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_cycle_led_OFF_stopped 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:41:37 INFO     ===> led get 0 0
+2024-07-18 09:41:38 INFO     ### test_cycle_led_turn_off_0_stopped ==> PASSED
+2024-07-18 09:41:41 INFO     ===> led get 0 1
+2024-07-18 09:41:42 INFO     ### test_cycle_led_turn_off_1_stopped ==> PASSED
+2024-07-18 09:41:45 INFO     ===> led get 0 2
+2024-07-18 09:41:46 INFO     ### test_cycle_led_turn_off_2_stopped ==> PASSED
+2024-07-18 09:41:49 INFO     ===> led get 0 3
+2024-07-18 09:41:50 INFO     ### test_cycle_led_turn_off_3_stopped ==> PASSED
+PASSED                                                                   [ 95%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_dgo_status_fluff_activated 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:41:52 INFO     ===> dgo status
+2024-07-18 09:41:52 INFO     ### test_dgo_status_fluff_activated ==> PASSED
+PASSED                                                                   [ 97%]
+dgo_start_via_bin_B_O2.py::TestStart_Via_Bin_Stress::test_open_close_lid_end 
+-------------------------------- live log call ---------------------------------
+2024-07-18 09:41:55 INFO     ===> lid inject 0
+2024-07-18 09:41:55 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-18 09:41:55 INFO     ### test_lid_inject_0_open ==> PASSED
+2024-07-18 09:41:58 INFO     ===> lid inject 1
+2024-07-18 09:42:01 INFO     retries counts: 1
+2024-07-18 09:42:04 INFO     retries counts: 2
+2024-07-18 09:42:07 INFO     retries counts: 3
+2024-07-18 09:42:11 INFO     retries counts: 4
+2024-07-18 09:42:14 INFO     retries counts: 5
+2024-07-18 09:42:14 ERROR    Timeout after 5 retries!
+2024-07-18 09:42:14 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 46 passed in 469.91s (0:07:49) ========================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1721291663.json': No such file or directory

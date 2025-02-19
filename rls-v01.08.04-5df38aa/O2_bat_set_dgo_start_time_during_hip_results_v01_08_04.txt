@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 11 items
+
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_dgo_Start_with_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:02:33 INFO     dgo manual_stop executed
+2024-07-22 18:02:36 INFO     Current State: IDLE
+2024-07-22 18:02:41 INFO     dgo manual_start executed
+2024-07-22 18:02:52 INFO     Current State: LIP
+2024-07-22 18:03:02 INFO     dgo stage skip executed HIP
+2024-07-22 18:03:05 INFO     Current State: HIP
+2024-07-22 18:03:08 INFO     ===> dgo status
+2024-07-22 18:03:08 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+PASSED                                                                   [  9%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_3600 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:03:11 INFO     ===> hipStartTime set 3600
+2024-07-22 18:03:12 INFO     ### test_hipStartTime_set_3600 ==> PASSED
+2024-07-22 18:03:15 INFO     ===> hipStartTime get
+2024-07-22 18:03:16 INFO     ### test_hipStartTime_get_3600 ==> PASSED
+2024-07-22 18:03:19 INFO     ===> dgo config get
+2024-07-22 18:03:19 INFO     ### test_dgo_config_get_3600 ==> PASSED
+2024-07-22 18:03:22 INFO     Found credentials in environment variables.
+2024-07-22 18:03:23 INFO     ### get_shadow_scheduledHIPStartTime_3600 ==> PASSED
+PASSED                                                                   [ 18%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_10800 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:03:26 INFO     ===> hipStartTime set 10800
+2024-07-22 18:03:27 INFO     ### test_hipStartTime_set_10800 ==> PASSED
+2024-07-22 18:03:30 INFO     ===> hipStartTime get
+2024-07-22 18:03:31 INFO     ### test_hipStartTime_get_10800 ==> PASSED
+2024-07-22 18:03:34 INFO     ===> dgo config get
+2024-07-22 18:03:34 INFO     ### test_dgo_config_get_10800 ==> PASSED
+2024-07-22 18:03:37 INFO     Found credentials in environment variables.
+2024-07-22 18:03:37 INFO     ### get_shadow_scheduledHIPStartTime_10800 ==> PASSED
+PASSED                                                                   [ 27%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_28800 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:03:40 INFO     ===> hipStartTime set 28800
+2024-07-22 18:03:41 INFO     ### test_hipStartTime_set_28800 ==> PASSED
+2024-07-22 18:03:44 INFO     ===> hipStartTime get
+2024-07-22 18:03:45 INFO     ### test_hipStartTime_get_28800 ==> PASSED
+2024-07-22 18:03:48 INFO     ===> dgo config get
+2024-07-22 18:03:48 INFO     ### test_dgo_config_get_28800 ==> PASSED
+2024-07-22 18:03:51 INFO     Found credentials in environment variables.
+2024-07-22 18:03:52 INFO     ### get_shadow_scheduledHIPStartTime_28800 ==> PASSED
+PASSED                                                                   [ 36%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_28700 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:03:55 INFO     ===> hipStartTime set 28700
+2024-07-22 18:03:56 INFO     ### test_hipStartTime_set_28700 ==> PASSED
+2024-07-22 18:03:59 INFO     ===> hipStartTime get
+2024-07-22 18:04:00 INFO     ### test_hipStartTime_get_28700 ==> PASSED
+2024-07-22 18:04:03 INFO     ===> dgo config get
+2024-07-22 18:04:03 INFO     ### test_dgo_config_get_28700 ==> PASSED
+2024-07-22 18:04:06 INFO     Found credentials in environment variables.
+2024-07-22 18:04:06 INFO     ### get_shadow_scheduledHIPStartTime_28700 ==> PASSED
+PASSED                                                                   [ 45%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_34556 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:04:09 INFO     ===> hipStartTime set 34556
+2024-07-22 18:04:10 INFO     ### test_hipStartTime_set_34556 ==> PASSED
+2024-07-22 18:04:13 INFO     ===> hipStartTime get
+2024-07-22 18:04:14 INFO     ### test_hipStartTime_get_34556 ==> PASSED
+2024-07-22 18:04:17 INFO     ===> dgo config get
+2024-07-22 18:04:17 INFO     ### test_dgo_config_get_34556 ==> PASSED
+2024-07-22 18:04:20 INFO     Found credentials in environment variables.
+2024-07-22 18:04:21 INFO     ### get_shadow_scheduledHIPStartTime_34556 ==> PASSED
+PASSED                                                                   [ 54%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_75600 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:04:24 INFO     ===> hipStartTime set 75600
+2024-07-22 18:04:25 INFO     ### test_hipStartTime_set_75600 ==> PASSED
+2024-07-22 18:04:28 INFO     ===> hipStartTime get
+2024-07-22 18:04:29 INFO     ### test_hipStartTime_get_75600 ==> PASSED
+2024-07-22 18:04:32 INFO     ===> dgo config get
+2024-07-22 18:04:32 INFO     ### test_dgo_config_get_75600 ==> PASSED
+2024-07-22 18:04:35 INFO     Found credentials in environment variables.
+2024-07-22 18:04:35 INFO     ### get_shadow_scheduledHIPStartTime_75600 ==> PASSED
+PASSED                                                                   [ 63%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_82800 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:04:38 INFO     ===> hipStartTime set 82800
+2024-07-22 18:04:39 INFO     ### test_hipStartTime_set_82800 ==> PASSED
+2024-07-22 18:04:42 INFO     ===> hipStartTime get
+2024-07-22 18:04:43 INFO     ### test_hipStartTime_get_82800 ==> PASSED
+2024-07-22 18:04:46 INFO     ===> dgo config get
+2024-07-22 18:04:46 INFO     ### test_dgo_config_get_82800 ==> PASSED
+2024-07-22 18:04:49 INFO     Found credentials in environment variables.
+2024-07-22 18:04:50 INFO     ### get_shadow_scheduledHIPStartTime_82800 ==> PASSED
+PASSED                                                                   [ 72%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_86399 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:04:53 INFO     ===> hipStartTime set 86399
+2024-07-22 18:04:54 INFO     ### test_hipStartTime_set_86399 ==> PASSED
+2024-07-22 18:04:57 INFO     ===> hipStartTime get
+2024-07-22 18:04:58 INFO     ### test_hipStartTime_get_86399 ==> PASSED
+2024-07-22 18:05:01 INFO     ===> dgo config get
+2024-07-22 18:05:01 INFO     ### test_dgo_config_get_86399 ==> PASSED
+2024-07-22 18:05:04 INFO     Found credentials in environment variables.
+2024-07-22 18:05:04 INFO     ### get_shadow_scheduledHIPStartTime_86399 ==> PASSED
+PASSED                                                                   [ 81%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_86400 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:05:07 INFO     ===> hipStartTime set 86400
+2024-07-22 18:05:08 INFO     ### test_hipStartTime_set_86400 ==> PASSED
+2024-07-22 18:05:11 INFO     ===> hipStartTime get
+2024-07-22 18:05:12 INFO     ### test_hipStartTime_get_86400 ==> PASSED
+2024-07-22 18:05:15 INFO     ===> dgo config get
+2024-07-22 18:05:15 INFO     ### test_dgo_config_get_86400 ==> PASSED
+2024-07-22 18:05:19 INFO     Found credentials in environment variables.
+2024-07-22 18:05:19 INFO     ### get_shadow_scheduledHIPStartTime_86400 ==> PASSED
+PASSED                                                                   [ 90%]
+dgo_set_cycle_start_time_HIP_O2.py::TestDGOFSM_HIP::test_group_start_time_5 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:05:22 INFO     ===> hipStartTime set 5
+2024-07-22 18:05:23 INFO     ### test_hipStartTime_set_5 ==> PASSED
+2024-07-22 18:05:26 INFO     ===> hipStartTime get
+2024-07-22 18:05:27 INFO     ### test_hipStartTime_get_5 ==> PASSED
+2024-07-22 18:05:30 INFO     ===> dgo config get
+2024-07-22 18:05:30 INFO     ### test_dgo_config_get_5 ==> PASSED
+2024-07-22 18:05:33 INFO     Found credentials in environment variables.
+2024-07-22 18:05:33 INFO     ### get_shadow_scheduledHIPStartTime_5 ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 11 passed in 186.38s (0:03:06) ========================

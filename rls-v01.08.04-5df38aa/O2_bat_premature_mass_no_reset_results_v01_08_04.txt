@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 8 items
+
+bat_dgo_premature_mass_no_reset.py::TestBAT_DGO_PREMATURE_MASS_NO_RESET::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:09:47 INFO     dgo manual_stop executed
+2024-07-22 18:09:51 INFO     Current State: IDLE
+2024-07-22 18:09:51 INFO     ===> dgo status
+2024-07-22 18:09:51 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 12%]
+bat_dgo_premature_mass_no_reset.py::TestBAT_DGO_PREMATURE_MASS_NO_RESET::test_mass_clear 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:09:53 INFO     ===> mass clear
+2024-07-22 18:09:53 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [ 25%]
+bat_dgo_premature_mass_no_reset.py::TestBAT_DGO_PREMATURE_MASS_NO_RESET::test_inject_500g 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:09:55 INFO     ===> mass inject 500
+2024-07-22 18:09:56 INFO     ### test_inject_500g ==> PASSED
+PASSED                                                                   [ 37%]
+bat_dgo_premature_mass_no_reset.py::TestBAT_DGO_PREMATURE_MASS_NO_RESET::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:09:58 INFO     ===> dgo manual_start
+2024-07-22 18:09:58 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_premature_mass_no_reset.py::TestBAT_DGO_PREMATURE_MASS_NO_RESET::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:10:00 INFO     ===> dgo status
+2024-07-22 18:10:00 INFO        retrying... 1
+2024-07-22 18:10:25 INFO     ===> dgo status
+2024-07-22 18:10:26 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 62%]
+bat_dgo_premature_mass_no_reset.py::TestBAT_DGO_PREMATURE_MASS_NO_RESET::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:10:38 INFO     ** wait_time_pause: 10 seconds **
+2024-07-22 18:10:38 INFO     ### wait_time_pause ==> PASSED
+2024-07-22 18:10:40 INFO     ===> dgo manual_stop
+2024-07-22 18:10:40 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 75%]
+bat_dgo_premature_mass_no_reset.py::TestBAT_DGO_PREMATURE_MASS_NO_RESET::test_dgo_end_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:10:52 INFO     ** wait_time_pause: 10 seconds **
+2024-07-22 18:10:52 INFO     ### wait_time_pause ==> PASSED
+2024-07-22 18:10:54 INFO     ===> dgo status
+2024-07-22 18:10:54 INFO     ### test_dgo_end_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 87%]
+bat_dgo_premature_mass_no_reset.py::TestBAT_DGO_PREMATURE_MASS_NO_RESET::test_mass_500g 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:10:56 INFO     ===> mass get
+2024-07-22 18:10:56 INFO     ### test_mass_500g ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+========================= 8 passed in 73.55s (0:01:13) =========================

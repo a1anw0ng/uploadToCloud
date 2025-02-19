@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.2.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: metadata-3.1.1, json-report-1.5.0, repeat-0.9.3
+collected 12 items
+
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:10 INFO     dgo manual_stop executed
+2024-07-20 09:04:14 INFO     Current State: IDLE
+2024-07-20 09:04:14 INFO     ===> dgo status
+2024-07-20 09:04:14 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  8%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_fan_0_set_40 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:16 INFO     ===> fan set 0 40
+2024-07-20 09:04:16 INFO     ### test_fan_0_set_40 ==> PASSED
+PASSED                                                                   [ 16%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_fan_1_set_70 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:18 INFO     ===> fan set 1 70
+2024-07-20 09:04:18 INFO     ### test_fan_1_set_70 ==> PASSED
+PASSED                                                                   [ 25%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_temp_get_3_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:20 INFO     ===> temp get 3
+2024-07-20 09:04:20 INFO     ### test_temp_get_3_IDLE ==> PASSED
+PASSED                                                                   [ 33%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_fan_0_set_15 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:22 INFO     ===> fan set 0 15
+2024-07-20 09:04:22 INFO     ### test_fan_0_set_15 ==> PASSED
+PASSED                                                                   [ 41%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_fan_1_set_0 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:24 INFO     ===> fan set 1 0
+2024-07-20 09:04:24 INFO     ### test_fan_1_set_0 ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:26 INFO     ===> dgo manual_start
+2024-07-20 09:04:26 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 58%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:28 INFO     ===> dgo status
+2024-07-20 09:04:29 INFO        retrying... 1
+2024-07-20 09:04:54 INFO     ===> dgo status
+2024-07-20 09:04:54 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 66%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_sht40_heater_enabled_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:56 INFO     ===> dgo status
+2024-07-20 09:04:56 INFO     ### test_sht40_heater_enabled_in_LIP_State ==> PASSED
+PASSED                                                                   [ 75%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:04:58 INFO     ===> dgo manual_stop
+2024-07-20 09:04:58 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 83%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_return_to_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:05:00 INFO     ===> dgo status
+2024-07-20 09:05:00 INFO     ### test_dgo_return_to_IDLE_State ==> PASSED
+PASSED                                                                   [ 91%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_sht40_heater_disabled_after_cancel 
+-------------------------------- live log call ---------------------------------
+2024-07-20 09:05:02 INFO     ===> dgo status
+2024-07-20 09:05:03 INFO     ### test_sht40_heater_disabled_after_cancel ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+============================= 12 passed in 57.58s ==============================

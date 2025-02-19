@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 9 items
+
+bat_dgo_reset_hip.py::TestBAT_DGO_HIP_Reset::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:04:50 INFO     dgo manual_stop executed
+2024-07-22 19:04:54 INFO     Current State: IDLE
+2024-07-22 19:04:54 INFO     ===> dgo status
+2024-07-22 19:04:54 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 11%]
+bat_dgo_reset_hip.py::TestBAT_DGO_HIP_Reset::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:04:56 INFO     ===> dgo manual_start
+2024-07-22 19:04:56 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 22%]
+bat_dgo_reset_hip.py::TestBAT_DGO_HIP_Reset::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:04:58 INFO     ===> dgo status
+2024-07-22 19:04:58 INFO        retrying... 1
+2024-07-22 19:05:23 INFO     ===> dgo status
+2024-07-22 19:05:23 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 33%]
+bat_dgo_reset_hip.py::TestBAT_DGO_HIP_Reset::test_dgo_skip_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:05:25 INFO     ===> dgo stage skip
+2024-07-22 19:05:26 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 44%]
+bat_dgo_reset_hip.py::TestBAT_DGO_HIP_Reset::test_dgo_in_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:05:28 INFO     ===> dgo status
+2024-07-22 19:05:28 INFO     ### test_dgo_in_HIP_State ==> PASSED
+PASSED                                                                   [ 55%]
+bat_dgo_reset_hip.py::TestBAT_DGO_HIP_Reset::test_controlMCU_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:05:30 INFO     ===> reset
+2024-07-22 19:05:42 ERROR    ConnectionError(command)= reset
+
+2024-07-22 19:05:42 INFO     ### test_controlMCU_reset ==> PASSED
+PASSED                                                                   [ 66%]
+bat_dgo_reset_hip.py::TestBAT_DGO_HIP_Reset::test_dgo_Return_to_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:05:54 INFO     ** wait_time_pause: 10 seconds **
+2024-07-22 19:05:54 INFO     ### wait_time_pause ==> PASSED
+2024-07-22 19:05:56 INFO     ===> dgo status
+2024-07-22 19:05:56 INFO     ### test_dgo_Return_to_HIP_State ==> PASSED
+PASSED                                                                   [ 77%]
+bat_dgo_reset_hip.py::TestBAT_DGO_HIP_Reset::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:05:58 INFO     ===> dgo manual_stop
+2024-07-22 19:05:58 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 88%]
+bat_dgo_reset_hip.py::TestBAT_DGO_HIP_Reset::test_dgo_end_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:06:10 INFO     ** wait_time_pause: 10 seconds **
+2024-07-22 19:06:10 INFO     ### wait_time_pause ==> PASSED
+2024-07-22 19:06:12 INFO     ===> dgo status
+2024-07-22 19:06:12 INFO     ### test_dgo_end_with_IDLE_State ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+========================= 9 passed in 86.92s (0:01:26) =========================

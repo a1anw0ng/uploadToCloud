@@ -1,0 +1,327 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.2.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 18 items
+
+lid_lock_smoke.py::TestLidLock_O2::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:20:58 INFO     dgo manual_stop executed
+2024-07-20 08:21:02 INFO     Current State: IDLE
+2024-07-20 08:21:02 INFO     ===> dgo status
+2024-07-20 08:21:02 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  5%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_bitmap_add_1_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:04 INFO     ===> lid_lock bitmap add 1
+2024-07-20 08:21:04 INFO     ### test_lid_lock_bitmap_add_1_lock ==> PASSED
+PASSED                                                                   [ 11%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_state_locked 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:06 INFO     ===> lid_lock get 0
+2024-07-20 08:21:06 INFO     ### test_lid_lock_state_locked ==> PASSED
+PASSED                                                                   [ 16%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_ON_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:08 INFO     ===> led_array get 1
+2024-07-20 08:21:09 INFO     ### test_white_lock_ON_lid_lock ==> PASSED
+PASSED                                                                   [ 22%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_true_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:11 INFO     Found credentials in environment variables.
+2024-07-20 08:21:12 INFO     ### get_shadow_lidLockState_true_lid_lock ==> PASSED
+PASSED                                                                   [ 27%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_bitmap_clr_1_unlock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:14 INFO     ===> lid_lock bitmap clr 1
+2024-07-20 08:21:14 INFO     ### test_lid_lock_bitmap_clr_1_unlock ==> PASSED
+PASSED                                                                   [ 33%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_state_unlocked 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:16 INFO     ===> lid_lock get 0
+2024-07-20 08:21:16 INFO     ### test_lid_lock_state_unlocked ==> PASSED
+PASSED                                                                   [ 38%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_OFF_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:18 INFO     ===> led_array get 1
+2024-07-20 08:21:19 INFO     ### test_white_lock_OFF_lid_lock ==> PASSED
+PASSED                                                                   [ 44%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_false_unlock_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:21 INFO     Found credentials in environment variables.
+2024-07-20 08:21:21 INFO     ### get_shadow_lidLockState_false_unlock_lid_lock ==> PASSED
+PASSED                                                                   [ 50%]
+lid_lock_smoke.py::TestLidLock_O2::test_set_shadow_childLockEnabled_true 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:23 INFO     Found credentials in environment variables.
+2024-07-20 08:21:25 INFO     ** device shadow: childLockEnabled is set to True **
+2024-07-20 08:21:25 INFO     ### set_shadow_childLockEnabled_true ==> PASSED
+PASSED                                                                   [ 55%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_childLockEnabled_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:27 INFO     Found credentials in environment variables.
+2024-07-20 08:21:27 INFO     ### get_shadow_childLockEnabled_true_cloud ==> PASSED
+PASSED                                                                   [ 61%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:29 INFO     Found credentials in environment variables.
+2024-07-20 08:21:30 INFO     ### get_shadow_lidLockState_true_cloud ==> PASSED
+PASSED                                                                   [ 66%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_ON_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:32 INFO     ===> led_array get 1
+2024-07-20 08:21:33 INFO     ### test_white_lock_ON_cloud ==> PASSED
+PASSED                                                                   [ 72%]
+lid_lock_smoke.py::TestLidLock_O2::test_set_shadow_childLockEnabled_false 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:36 INFO     ** device shadow: childLockEnabled is set to False **
+2024-07-20 08:21:36 INFO     ### set_shadow_childLockEnabled_false ==> PASSED
+PASSED                                                                   [ 77%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_childLockEnabled_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:38 INFO     Found credentials in environment variables.
+2024-07-20 08:21:38 INFO     ### get_shadow_childLockEnabled_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 83%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_childLock_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:41 INFO     Found credentials in environment variables.
+2024-07-20 08:21:41 INFO     ### get_shadow_childLock_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 88%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:43 INFO     Found credentials in environment variables.
+2024-07-20 08:21:44 INFO     ### get_shadow_lidLockState_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 94%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_OFF_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:46 INFO     ===> led_array get 1
+2024-07-20 08:21:47 INFO     ### test_white_lock_OFF_cloud ==> PASSED
+PASSED                                                                   [100%]
+
+=============================== warnings summary ===============================
+../libs/BasePytestEx.py:679
+  /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/libs/BasePytestEx.py:679: DeprecationWarning: invalid escape sequence \D
+    match = re.match('(\D*)(\d*)', s)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 18 passed, 1 warning in 53.49s ========================
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 2 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.2.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 18 items
+
+lid_lock_smoke.py::TestLidLock_O2::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:21:56 INFO     dgo manual_stop executed
+2024-07-20 08:21:59 INFO     Current State: IDLE
+2024-07-20 08:21:59 INFO     ===> dgo status
+2024-07-20 08:22:00 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  5%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_bitmap_add_1_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:02 INFO     ===> lid_lock bitmap add 1
+2024-07-20 08:22:02 INFO     ### test_lid_lock_bitmap_add_1_lock ==> PASSED
+PASSED                                                                   [ 11%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_state_locked 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:04 INFO     ===> lid_lock get 0
+2024-07-20 08:22:04 INFO     ### test_lid_lock_state_locked ==> PASSED
+PASSED                                                                   [ 16%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_ON_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:06 INFO     ===> led_array get 1
+2024-07-20 08:22:07 INFO     ### test_white_lock_ON_lid_lock ==> PASSED
+PASSED                                                                   [ 22%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_true_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:09 INFO     Found credentials in environment variables.
+2024-07-20 08:22:09 INFO     ### get_shadow_lidLockState_true_lid_lock ==> PASSED
+PASSED                                                                   [ 27%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_bitmap_clr_1_unlock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:11 INFO     ===> lid_lock bitmap clr 1
+2024-07-20 08:22:11 INFO     ### test_lid_lock_bitmap_clr_1_unlock ==> PASSED
+PASSED                                                                   [ 33%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_state_unlocked 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:13 INFO     ===> lid_lock get 0
+2024-07-20 08:22:13 INFO     ### test_lid_lock_state_unlocked ==> PASSED
+PASSED                                                                   [ 38%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_OFF_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:15 INFO     ===> led_array get 1
+2024-07-20 08:22:16 INFO     ### test_white_lock_OFF_lid_lock ==> PASSED
+PASSED                                                                   [ 44%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_false_unlock_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:19 INFO     Found credentials in environment variables.
+2024-07-20 08:22:19 INFO     ### get_shadow_lidLockState_false_unlock_lid_lock ==> PASSED
+PASSED                                                                   [ 50%]
+lid_lock_smoke.py::TestLidLock_O2::test_set_shadow_childLockEnabled_true 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:21 INFO     Found credentials in environment variables.
+2024-07-20 08:22:22 INFO     ** device shadow: childLockEnabled is set to True **
+2024-07-20 08:22:22 INFO     ### set_shadow_childLockEnabled_true ==> PASSED
+PASSED                                                                   [ 55%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_childLockEnabled_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:24 INFO     Found credentials in environment variables.
+2024-07-20 08:22:25 INFO     ### get_shadow_childLockEnabled_true_cloud ==> PASSED
+PASSED                                                                   [ 61%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:27 INFO     Found credentials in environment variables.
+2024-07-20 08:22:27 INFO     ### get_shadow_lidLockState_true_cloud ==> PASSED
+PASSED                                                                   [ 66%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_ON_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:29 INFO     ===> led_array get 1
+2024-07-20 08:22:30 INFO     ### test_white_lock_ON_cloud ==> PASSED
+PASSED                                                                   [ 72%]
+lid_lock_smoke.py::TestLidLock_O2::test_set_shadow_childLockEnabled_false 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:34 INFO     ** device shadow: childLockEnabled is set to False **
+2024-07-20 08:22:34 INFO     ### set_shadow_childLockEnabled_false ==> PASSED
+PASSED                                                                   [ 77%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_childLockEnabled_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:36 INFO     Found credentials in environment variables.
+2024-07-20 08:22:36 INFO     ### get_shadow_childLockEnabled_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 83%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_childLock_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:38 INFO     Found credentials in environment variables.
+2024-07-20 08:22:39 INFO     ### get_shadow_childLock_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 88%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:41 INFO     Found credentials in environment variables.
+2024-07-20 08:22:41 INFO     ### get_shadow_lidLockState_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 94%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_OFF_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:43 INFO     ===> led_array get 1
+2024-07-20 08:22:44 INFO     ### test_white_lock_OFF_cloud ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+============================= 18 passed in 53.60s ==============================
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 3 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.2.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 18 items
+
+lid_lock_smoke.py::TestLidLock_O2::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:54 INFO     dgo manual_stop executed
+2024-07-20 08:22:57 INFO     Current State: IDLE
+2024-07-20 08:22:57 INFO     ===> dgo status
+2024-07-20 08:22:57 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  5%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_bitmap_add_1_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:22:59 INFO     ===> lid_lock bitmap add 1
+2024-07-20 08:22:59 INFO     ### test_lid_lock_bitmap_add_1_lock ==> PASSED
+PASSED                                                                   [ 11%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_state_locked 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:01 INFO     ===> lid_lock get 0
+2024-07-20 08:23:02 INFO     ### test_lid_lock_state_locked ==> PASSED
+PASSED                                                                   [ 16%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_ON_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:04 INFO     ===> led_array get 1
+2024-07-20 08:23:05 INFO     ### test_white_lock_ON_lid_lock ==> PASSED
+PASSED                                                                   [ 22%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_true_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:07 INFO     Found credentials in environment variables.
+2024-07-20 08:23:07 INFO     ### get_shadow_lidLockState_true_lid_lock ==> PASSED
+PASSED                                                                   [ 27%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_bitmap_clr_1_unlock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:09 INFO     ===> lid_lock bitmap clr 1
+2024-07-20 08:23:09 INFO     ### test_lid_lock_bitmap_clr_1_unlock ==> PASSED
+PASSED                                                                   [ 33%]
+lid_lock_smoke.py::TestLidLock_O2::test_lid_lock_state_unlocked 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:11 INFO     ===> lid_lock get 0
+2024-07-20 08:23:11 INFO     ### test_lid_lock_state_unlocked ==> PASSED
+PASSED                                                                   [ 38%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_OFF_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:13 INFO     ===> led_array get 1
+2024-07-20 08:23:14 INFO     ### test_white_lock_OFF_lid_lock ==> PASSED
+PASSED                                                                   [ 44%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_false_unlock_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:16 INFO     Found credentials in environment variables.
+2024-07-20 08:23:17 INFO     ### get_shadow_lidLockState_false_unlock_lid_lock ==> PASSED
+PASSED                                                                   [ 50%]
+lid_lock_smoke.py::TestLidLock_O2::test_set_shadow_childLockEnabled_true 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:19 INFO     Found credentials in environment variables.
+2024-07-20 08:23:20 INFO     ** device shadow: childLockEnabled is set to True **
+2024-07-20 08:23:20 INFO     ### set_shadow_childLockEnabled_true ==> PASSED
+PASSED                                                                   [ 55%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_childLockEnabled_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:22 INFO     Found credentials in environment variables.
+2024-07-20 08:23:23 INFO     ### get_shadow_childLockEnabled_true_cloud ==> PASSED
+PASSED                                                                   [ 61%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:25 INFO     Found credentials in environment variables.
+2024-07-20 08:23:25 INFO     ### get_shadow_lidLockState_true_cloud ==> PASSED
+PASSED                                                                   [ 66%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_ON_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:27 INFO     ===> led_array get 1
+2024-07-20 08:23:28 INFO     ### test_white_lock_ON_cloud ==> PASSED
+PASSED                                                                   [ 72%]
+lid_lock_smoke.py::TestLidLock_O2::test_set_shadow_childLockEnabled_false 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:31 INFO     ** device shadow: childLockEnabled is set to False **
+2024-07-20 08:23:31 INFO     ### set_shadow_childLockEnabled_false ==> PASSED
+PASSED                                                                   [ 77%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_childLockEnabled_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:34 INFO     Found credentials in environment variables.
+2024-07-20 08:23:34 INFO     ### get_shadow_childLockEnabled_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 83%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_childLock_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:36 INFO     Found credentials in environment variables.
+2024-07-20 08:23:36 INFO     ### get_shadow_childLock_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 88%]
+lid_lock_smoke.py::TestLidLock_O2::test_get_shadow_lidLockState_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:38 INFO     Found credentials in environment variables.
+2024-07-20 08:23:39 INFO     ### get_shadow_lidLockState_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 94%]
+lid_lock_smoke.py::TestLidLock_O2::test_white_lock_OFF_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-20 08:23:41 INFO     ===> led_array get 1
+2024-07-20 08:23:42 INFO     ### test_white_lock_OFF_cloud ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+============================= 18 passed in 53.45s ==============================

@@ -1,0 +1,230 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 28 items
+
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Start_with_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:07 INFO     dgo manual_stop executed
+2024-07-18 02:59:11 INFO     Current State: IDLE
+2024-07-18 02:59:16 INFO     dgo manual_start executed
+2024-07-18 02:59:27 INFO     Current State: LIP
+2024-07-18 02:59:30 INFO     ===> dgo status
+2024-07-18 02:59:30 INFO     ### test_dgo_Start_with_LIP_State ==> PASSED
+PASSED                                                                   [  3%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_State_Run_Time 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:32 INFO     ===> dgo status
+2024-07-18 02:59:33 INFO     ### test_dgo_State_Run_Time ==> PASSED
+PASSED                                                                   [  7%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Lid_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:35 INFO     ===> fan get 1
+2024-07-18 02:59:35 INFO     ### test_dgo_Lid_Fan_PWM ==> PASSED
+PASSED                                                                   [ 10%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Exhaust_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:37 INFO     ===> fan get 0
+2024-07-18 02:59:37 INFO     ### test_dgo_Exhaust_Fan_PWM ==> PASSED
+PASSED                                                                   [ 14%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Bucket_Heater_Set_Point 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:39 INFO     ===> heater get 0
+2024-07-18 02:59:39 INFO     ### test_dgo_Bucket_Heater_Set_Point ==> PASSED
+PASSED                                                                   [ 17%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Bucket_Heater_Hysterisis_Range 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:41 INFO     ===> heater get 0
+2024-07-18 02:59:41 INFO     ### test_dgo_Bucket_Heater_Hysterisis_Range ==> PASSED
+PASSED                                                                   [ 21%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Amp_Hard_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:43 INFO     ===> grinder stall_get
+2024-07-18 02:59:43 INFO     ### test_dgo_Grinder_Amp_Hard_Limit ==> PASSED
+PASSED                                                                   [ 25%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Amp_Soft_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:45 INFO     ===> grinder stall_get
+2024-07-18 02:59:45 INFO     ### test_dgo_Grinder_Amp_Soft_Limit ==> PASSED
+PASSED                                                                   [ 28%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:47 INFO     ===> grinder get
+2024-07-18 02:59:47 INFO     ### test_dgo_Grinder_PWM ==> PASSED
+PASSED                                                                   [ 32%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Stall_Speed_Drop_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:49 INFO     ===> grinder stall_get
+2024-07-18 02:59:49 INFO     ### test_dgo_Grinder_Stall_Speed_Drop_Limit ==> PASSED
+PASSED                                                                   [ 35%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Amp_Threshold_Hard 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:51 INFO     ===> grinder stall_get
+2024-07-18 02:59:51 INFO     ### test_dgo_Grinder_Amp_Threshold_Hard ==> PASSED
+PASSED                                                                   [ 39%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Amp_Threshold_Soft 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:53 INFO     ===> grinder stall_get
+2024-07-18 02:59:53 INFO     ### test_dgo_Grinder_Amp_Threshold_Soft ==> PASSED
+PASSED                                                                   [ 42%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Speed_Threshold 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:55 INFO     ===> grinder stall_get
+2024-07-18 02:59:55 INFO     ### test_dgo_Grinder_Speed_Threshold ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:57 INFO     ===> grinder get
+2024-07-18 02:59:57 INFO     ### test_dgo_Grinder_Enabled ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Duty_ON 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:59:59 INFO     ===> grinder get
+2024-07-18 03:00:00 INFO     ### test_dgo_Grinder_Duty_ON ==> PASSED
+PASSED                                                                   [ 53%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Duty_OFF 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:00:02 INFO     ===> grinder get
+2024-07-18 03:00:02 INFO     ### test_dgo_Grinder_Duty_OFF ==> PASSED
+PASSED                                                                   [ 57%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Grinder_Direction 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:00:04 INFO         Checking directions in progressing ...
+2024-07-18 03:00:24 INFO     pull again...: 1
+2024-07-18 03:00:44 INFO     pull again...: 2
+2024-07-18 03:01:04 INFO     pull again...: 3
+2024-07-18 03:01:24 INFO     pull again...: 4
+2024-07-18 03:01:44 INFO     pull again...: 5
+2024-07-18 03:02:04 INFO     pull again...: 6
+2024-07-18 03:02:24 INFO     pull again...: 7
+2024-07-18 03:02:44 INFO     pull again...: 8
+2024-07-18 03:03:04 INFO     pull again...: 9
+2024-07-18 03:03:25 INFO     pull again...: 10
+2024-07-18 03:03:45 INFO     pull again...: 11
+2024-07-18 03:03:45 INFO     ### test_dgo_Grinder_Direction ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_dgo_Lid_Heater_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:03:47 INFO     ===> heater get 1
+2024-07-18 03:03:47 INFO     ### test_dgo_Lid_Heater_Enabled ==> PASSED
+PASSED                                                                   [ 64%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_1800 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:03:50 INFO     ===> hipStartTime set 1800
+2024-07-18 03:03:51 INFO     ### test_hipStartTime_set_1800 ==> PASSED
+2024-07-18 03:03:54 INFO     ===> hipStartTime get
+2024-07-18 03:03:55 INFO     ### test_hipStartTime_get_1800 ==> PASSED
+2024-07-18 03:03:58 INFO     ===> dgo config get
+2024-07-18 03:03:58 INFO     ### test_dgo_config_get_1800 ==> PASSED
+2024-07-18 03:04:01 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:04:02 INFO     ### get_shadow_scheduledHIPStartTime_1800 ==> PASSED
+PASSED                                                                   [ 67%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_2700 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:04:05 INFO     ===> hipStartTime set 2700
+2024-07-18 03:04:06 INFO     ### test_hipStartTime_set_2700 ==> PASSED
+2024-07-18 03:04:09 INFO     ===> hipStartTime get
+2024-07-18 03:04:10 INFO     ### test_hipStartTime_get_2700 ==> PASSED
+2024-07-18 03:04:13 INFO     ===> dgo config get
+2024-07-18 03:04:13 INFO     ### test_dgo_config_get_2700 ==> PASSED
+2024-07-18 03:04:16 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:04:16 INFO     ### get_shadow_scheduledHIPStartTime_2700 ==> PASSED
+PASSED                                                                   [ 71%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_3600 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:04:19 INFO     ===> hipStartTime set 3600
+2024-07-18 03:04:20 INFO     ### test_hipStartTime_set_3600 ==> PASSED
+2024-07-18 03:04:23 INFO     ===> hipStartTime get
+2024-07-18 03:04:24 INFO     ### test_hipStartTime_get_3600 ==> PASSED
+2024-07-18 03:04:27 INFO     ===> dgo config get
+2024-07-18 03:04:28 INFO     ### test_dgo_config_get_3600 ==> PASSED
+2024-07-18 03:04:31 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:04:31 INFO     ### get_shadow_scheduledHIPStartTime_3600 ==> PASSED
+PASSED                                                                   [ 75%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_4500 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:04:34 INFO     ===> hipStartTime set 4500
+2024-07-18 03:04:35 INFO     ### test_hipStartTime_set_4500 ==> PASSED
+2024-07-18 03:04:38 INFO     ===> hipStartTime get
+2024-07-18 03:04:39 INFO     ### test_hipStartTime_get_4500 ==> PASSED
+2024-07-18 03:04:42 INFO     ===> dgo config get
+2024-07-18 03:04:42 INFO     ### test_dgo_config_get_4500 ==> PASSED
+2024-07-18 03:04:46 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:04:46 INFO     ### get_shadow_scheduledHIPStartTime_4500 ==> PASSED
+PASSED                                                                   [ 78%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_5400 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:04:49 INFO     ===> hipStartTime set 5400
+2024-07-18 03:04:50 INFO     ### test_hipStartTime_set_5400 ==> PASSED
+2024-07-18 03:04:53 INFO     ===> hipStartTime get
+2024-07-18 03:04:54 INFO     ### test_hipStartTime_get_5400 ==> PASSED
+2024-07-18 03:04:57 INFO     ===> dgo config get
+2024-07-18 03:04:58 INFO     ### test_dgo_config_get_5400 ==> PASSED
+2024-07-18 03:05:01 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:05:01 INFO     ### get_shadow_scheduledHIPStartTime_5400 ==> PASSED
+PASSED                                                                   [ 82%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_6300 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:05:04 INFO     ===> hipStartTime set 6300
+2024-07-18 03:05:05 INFO     ### test_hipStartTime_set_6300 ==> PASSED
+2024-07-18 03:05:08 INFO     ===> hipStartTime get
+2024-07-18 03:05:09 INFO     ### test_hipStartTime_get_6300 ==> PASSED
+2024-07-18 03:05:12 INFO     ===> dgo config get
+2024-07-18 03:05:12 INFO     ### test_dgo_config_get_6300 ==> PASSED
+2024-07-18 03:05:15 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:05:16 INFO     ### get_shadow_scheduledHIPStartTime_6300 ==> PASSED
+PASSED                                                                   [ 85%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_7200 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:05:19 INFO     ===> hipStartTime set 7200
+2024-07-18 03:05:20 INFO     ### test_hipStartTime_set_7200 ==> PASSED
+2024-07-18 03:05:23 INFO     ===> hipStartTime get
+2024-07-18 03:05:24 INFO     ### test_hipStartTime_get_7200 ==> PASSED
+2024-07-18 03:05:27 INFO     ===> dgo config get
+2024-07-18 03:05:27 INFO     ### test_dgo_config_get_7200 ==> PASSED
+2024-07-18 03:05:30 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:05:30 INFO     ### get_shadow_scheduledHIPStartTime_7200 ==> PASSED
+PASSED                                                                   [ 89%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_8100 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:05:33 INFO     ===> hipStartTime set 8100
+2024-07-18 03:05:34 INFO     ### test_hipStartTime_set_8100 ==> PASSED
+2024-07-18 03:05:37 INFO     ===> hipStartTime get
+2024-07-18 03:05:39 INFO     ### test_hipStartTime_get_8100 ==> PASSED
+2024-07-18 03:05:42 INFO     ===> dgo config get
+2024-07-18 03:05:42 INFO     ### test_dgo_config_get_8100 ==> PASSED
+2024-07-18 03:05:45 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:05:46 INFO     ### get_shadow_scheduledHIPStartTime_8100 ==> PASSED
+PASSED                                                                   [ 92%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_9000 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:05:49 INFO     ===> hipStartTime set 9000
+2024-07-18 03:05:50 INFO     ### test_hipStartTime_set_9000 ==> PASSED
+2024-07-18 03:05:53 INFO     ===> hipStartTime get
+2024-07-18 03:05:54 INFO     ### test_hipStartTime_get_9000 ==> PASSED
+2024-07-18 03:05:57 INFO     ===> dgo config get
+2024-07-18 03:05:57 INFO     ### test_dgo_config_get_9000 ==> PASSED
+2024-07-18 03:06:00 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:06:00 INFO     ### get_shadow_scheduledHIPStartTime_9000 ==> PASSED
+PASSED                                                                   [ 96%]
+dgo_test_LIP_state2_O2.py::TestDGOFSM_LIP::test_group_start_time_9900 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:06:03 INFO     ===> hipStartTime set 9900
+2024-07-18 03:06:04 INFO     ### test_hipStartTime_set_9900 ==> PASSED
+2024-07-18 03:06:07 INFO     ===> hipStartTime get
+2024-07-18 03:06:08 INFO     ### test_hipStartTime_get_9900 ==> PASSED
+2024-07-18 03:06:11 INFO     ===> dgo config get
+2024-07-18 03:06:12 INFO     ### test_dgo_config_get_9900 ==> PASSED
+2024-07-18 03:06:15 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 03:06:15 INFO     ### get_shadow_scheduledHIPStartTime_9900 ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 28 passed in 434.21s (0:07:14) ========================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1721267940.json': No such file or directory

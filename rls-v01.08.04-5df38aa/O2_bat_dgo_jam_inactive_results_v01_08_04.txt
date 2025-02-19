@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 12 items
+
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:37:42 INFO     dgo manual_stop executed
+2024-07-22 19:37:45 INFO     Current State: IDLE
+2024-07-22 19:37:45 INFO     ===> dgo status
+2024-07-22 19:37:46 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  8%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:37:48 INFO     ===> dgo manual_start
+2024-07-22 19:37:48 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 16%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_grinder_stall_set 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:37:50 INFO     ===> grinder stall_set 20 3 550 5000 500 4500 8 3 50 600000
+2024-07-22 19:37:53 INFO     retries counts: 1
+2024-07-22 19:37:56 INFO     retries counts: 2
+2024-07-22 19:37:59 INFO     retries counts: 3
+2024-07-22 19:38:02 INFO     retries counts: 4
+2024-07-22 19:38:05 INFO     retries counts: 5
+2024-07-22 19:38:05 ERROR    Timeout after 5 retries!
+2024-07-22 19:38:05 INFO     ### test_dgo_grinder_stall_set ==> PASSED
+PASSED                                                                   [ 25%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_wait_for_jam 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:38:52 INFO     ** wait_time_pause: 45 seconds **
+2024-07-22 19:38:52 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 33%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_verify_jam_inactive_LIP 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:38:55 INFO     Found credentials in environment variables.
+2024-07-22 19:38:55 INFO     ### get_shadow_grinderState_jam_warning ==> PASSED
+2024-07-22 19:38:58 INFO     Found credentials in environment variables.
+2024-07-22 19:38:58 INFO     ### get_shadow_dgoActiveStatus_false ==> PASSED
+2024-07-22 19:39:01 INFO     Found credentials in environment variables.
+2024-07-22 19:39:02 INFO     ### get_shadow_dgoInactiveReason_grinder_jam ==> PASSED
+PASSED                                                                   [ 41%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_skip_to_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:39:05 INFO     ===> dgo stage skip
+2024-07-22 19:39:06 INFO     ### test_dgo_skip_stage ==> PASSED
+2024-07-22 19:39:09 INFO     ===> dgo status
+2024-07-22 19:39:09 INFO     ### test_dgo_in_HIP_State ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_verify_jam_inactive_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:39:12 INFO     Found credentials in environment variables.
+2024-07-22 19:39:12 INFO     ### get_shadow_grinderState_jam_warning ==> PASSED
+2024-07-22 19:39:15 INFO     Found credentials in environment variables.
+2024-07-22 19:39:16 INFO     ### get_shadow_dgoActiveStatus_false ==> PASSED
+2024-07-22 19:39:19 INFO     Found credentials in environment variables.
+2024-07-22 19:39:19 INFO     ### get_shadow_dgoInactiveReason_grinder_jam ==> PASSED
+PASSED                                                                   [ 58%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_skip_to_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:39:22 INFO     ===> dgo stage skip
+2024-07-22 19:39:23 INFO     ### test_dgo_skip_stage ==> PASSED
+2024-07-22 19:39:26 INFO     ===> dgo status
+2024-07-22 19:39:26 INFO     ### test_dgo_in_COOLDOWN_State ==> PASSED
+PASSED                                                                   [ 66%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_verify_jam_inactive_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:39:29 INFO     Found credentials in environment variables.
+2024-07-22 19:39:29 INFO     ### get_shadow_grinderState_jam_warning ==> PASSED
+2024-07-22 19:39:32 INFO     Found credentials in environment variables.
+2024-07-22 19:39:33 INFO     ### get_shadow_dgoActiveStatus_false ==> PASSED
+2024-07-22 19:39:36 INFO     Found credentials in environment variables.
+2024-07-22 19:39:36 INFO     ### get_shadow_dgoInactiveReason_grinder_jam ==> PASSED
+PASSED                                                                   [ 75%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:39:38 INFO     ===> dgo manual_stop
+2024-07-22 19:39:38 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 83%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_controlMCU_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:39:40 INFO     ===> reset
+2024-07-22 19:39:51 ERROR    ConnectionError(command)= reset
+
+2024-07-22 19:39:51 INFO     ### test_controlMCU_reset ==> PASSED
+PASSED                                                                   [ 91%]
+bat_dgo_jam_inactive.py::TestBAT_DGO_JAM_INACTIVE::test_dgo_wait_time_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:40:08 INFO     ** wait_time_pause: 15 seconds **
+2024-07-22 19:40:08 INFO     ### wait_time_reset ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 12 passed in 151.40s (0:02:31) ========================

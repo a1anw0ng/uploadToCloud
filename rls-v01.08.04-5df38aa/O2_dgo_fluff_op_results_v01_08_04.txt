@@ -1,0 +1,358 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 50 items
+
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_lid_inject_0_open 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:14 INFO     ===> lid inject 0
+2024-07-18 05:35:14 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-18 05:35:14 INFO     ### test_lid_inject_0_open ==> PASSED
+PASSED                                                                   [  2%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_lid_inject_1_close 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:16 INFO     ===> lid inject 1
+2024-07-18 05:35:19 INFO     retries counts: 1
+2024-07-18 05:35:22 INFO     retries counts: 2
+2024-07-18 05:35:25 INFO     retries counts: 3
+2024-07-18 05:35:28 INFO     retries counts: 4
+2024-07-18 05:35:31 INFO     retries counts: 5
+2024-07-18 05:35:31 ERROR    Timeout after 5 retries!
+2024-07-18 05:35:31 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [  4%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:36 INFO     dgo manual_stop executed
+2024-07-18 05:35:40 INFO     Current State: IDLE
+2024-07-18 05:35:40 INFO     ===> dgo status
+2024-07-18 05:35:40 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  6%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_config_fluff_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:42 INFO     ===> dgo config get
+2024-07-18 05:35:42 INFO     ### test_dgo_config_fluff_stage ==> PASSED
+PASSED                                                                   [  8%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_force_fluff 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:44 INFO     ===> dgo force_fluff
+2024-07-18 05:35:44 INFO     ### test_dgo_force_fluff ==> PASSED
+PASSED                                                                   [ 10%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_fluff_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:46 INFO     ===> dgo status
+2024-07-18 05:35:46 INFO     ### test_dgo_status_fluff_stage ==> PASSED
+PASSED                                                                   [ 12%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:48 INFO     ===> dgo manual_start
+2024-07-18 05:35:48 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 14%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:50 INFO     ===> dgo status
+2024-07-18 05:35:50 INFO        retrying... 1
+2024-07-18 05:35:54 INFO     ===> dgo status
+2024-07-18 05:35:55 INFO     ### test_dgo_status_manual_start ==> PASSED
+PASSED                                                                   [ 16%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:57 INFO     ===> dgo manual_stop
+2024-07-18 05:35:57 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 18%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_fluff_activated 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:35:59 INFO     ===> dgo status
+2024-07-18 05:35:59 INFO        retrying... 1
+2024-07-18 05:36:09 INFO     ===> dgo status
+2024-07-18 05:36:09 INFO     ### test_dgo_status_fluff_activated ==> PASSED
+PASSED                                                                   [ 20%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_config_get_fluff_scheduled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:36:11 INFO     ===> dgo config get
+2024-07-18 05:36:12 INFO     ### test_dgo_config_get_fluff_scheduled ==> PASSED
+PASSED                                                                   [ 22%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_get_shadow_dgoCycle_Idle 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:36:14 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 05:36:14 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 24%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_get_shadow_dgoStage_Idle 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:36:16 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 05:36:17 INFO     ### get_shadow_dgoStage_Idle ==> PASSED
+PASSED                                                                   [ 26%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_get_stopped 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:36:19 INFO     ===> grinder get
+2024-07-18 05:36:19 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+PASSED                                                                   [ 28%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_enter_into_fluff_stage_1800 
+-------------------------------- live log call ---------------------------------
+2024-07-18 05:41:22 INFO     ** wait_time_pause: 300 seconds **
+2024-07-18 05:41:22 INFO     ### wait_time_300s ==> PASSED
+2024-07-18 05:41:25 INFO     ===> dgo status
+2024-07-18 05:41:25 INFO     ### test_dgo_status_300 ==> PASSED
+2024-07-18 05:46:28 INFO     ** wait_time_pause: 300 seconds **
+2024-07-18 05:46:28 INFO     ### wait_time_600s ==> PASSED
+2024-07-18 05:46:31 INFO     ===> dgo status
+2024-07-18 05:46:31 INFO     ### test_dgo_status_600 ==> PASSED
+2024-07-18 05:51:34 INFO     ** wait_time_pause: 300 seconds **
+2024-07-18 05:51:34 INFO     ### wait_time_900s ==> PASSED
+2024-07-18 05:51:37 INFO     ===> dgo status
+2024-07-18 05:51:38 INFO     ### test_dgo_status_900 ==> PASSED
+2024-07-18 05:56:41 INFO     ** wait_time_pause: 300 seconds **
+2024-07-18 05:56:41 INFO     ### wait_time_1200s ==> PASSED
+2024-07-18 05:56:44 INFO     ===> dgo status
+2024-07-18 05:56:44 INFO     ### test_dgo_status_1200 ==> PASSED
+2024-07-18 06:01:47 INFO     ** wait_time_pause: 300 seconds **
+2024-07-18 06:01:47 INFO     ### wait_time_1500s ==> PASSED
+2024-07-18 06:01:50 INFO     ===> dgo status
+2024-07-18 06:01:50 INFO     ### test_dgo_status_1500 ==> PASSED
+2024-07-18 06:06:33 INFO     ** wait_time_pause: 280 seconds **
+2024-07-18 06:06:33 INFO     ### wait_time_1780s ==> PASSED
+PASSED                                                                   [ 30%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_FLUFF_1780 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:35 INFO     ===> dgo status
+2024-07-18 06:06:35 INFO     ### test_dgo_status_FLUFF_1780 ==> PASSED
+PASSED                                                                   [ 32%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_FLUFF_1780_remain_s 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:37 INFO     ===> dgo status
+2024-07-18 06:06:38 INFO     ### test_dgo_status_FLUFF_1780_remain_s ==> PASSED
+PASSED                                                                   [ 34%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_config_get_in_fluff 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:40 INFO     ===> dgo config get
+2024-07-18 06:06:40 INFO     ### test_dgo_config_get_in_fluff ==> PASSED
+PASSED                                                                   [ 36%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_get_running 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:42 INFO     ===> grinder get
+2024-07-18 06:06:42 INFO     ### test_dgo_Grinder_get_running ==> PASSED
+PASSED                                                                   [ 38%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_get_shadow_dgoCycle_Fluff 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:44 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:06:44 INFO     ### get_shadow_dgoCycle_Fluff ==> PASSED
+PASSED                                                                   [ 40%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_get_shadow_dgoStage_Fluff 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:47 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:06:47 INFO     ### get_shadow_dgoStage_Fluff ==> PASSED
+PASSED                                                                   [ 42%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Lid_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:49 INFO     ===> fan get 1
+2024-07-18 06:06:49 INFO     ### test_dgo_Lid_Fan_PWM ==> PASSED
+PASSED                                                                   [ 44%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Exhaust_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:51 INFO     ===> fan get 0
+2024-07-18 06:06:51 INFO     ### test_dgo_Exhaust_Fan_PWM ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Bucket_Heater_Set_Point 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:53 INFO     ===> heater get 0
+2024-07-18 06:06:53 INFO     ### test_dgo_Bucket_Heater_Set_Point ==> PASSED
+PASSED                                                                   [ 48%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Bucket_Heater_Hysterisis_Range 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:55 INFO     ===> heater get 0
+2024-07-18 06:06:55 INFO     ### test_dgo_Bucket_Heater_Hysterisis_Range ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Amp_Hard_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:06:57 INFO     ===> grinder stall_get
+2024-07-18 06:06:58 INFO     ### test_dgo_Grinder_Amp_Hard_Limit ==> PASSED
+PASSED                                                                   [ 52%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Amp_Soft_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:00 INFO     ===> grinder stall_get
+2024-07-18 06:07:00 INFO     ### test_dgo_Grinder_Amp_Soft_Limit ==> PASSED
+PASSED                                                                   [ 54%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:02 INFO     ===> grinder get
+2024-07-18 06:07:02 INFO     ### test_dgo_Grinder_PWM ==> PASSED
+PASSED                                                                   [ 56%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Stall_Speed_Drop_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:04 INFO     ===> grinder stall_get
+2024-07-18 06:07:04 INFO     ### test_dgo_Grinder_Stall_Speed_Drop_Limit ==> PASSED
+PASSED                                                                   [ 58%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Amp_Threshold_Hard 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:06 INFO     ===> grinder stall_get
+2024-07-18 06:07:06 INFO     ### test_dgo_Grinder_Amp_Threshold_Hard ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Amp_Threshold_Soft 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:08 INFO     ===> grinder stall_get
+2024-07-18 06:07:08 INFO     ### test_dgo_Grinder_Amp_Threshold_Soft ==> PASSED
+PASSED                                                                   [ 62%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Speed_Threshold 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:10 INFO     ===> grinder stall_get
+2024-07-18 06:07:10 INFO     ### test_dgo_Grinder_Speed_Threshold ==> PASSED
+PASSED                                                                   [ 64%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:12 INFO     ===> grinder get
+2024-07-18 06:07:12 INFO     ### test_dgo_Grinder_Enabled ==> PASSED
+PASSED                                                                   [ 66%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Duty_ON 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:14 INFO     ===> grinder get
+2024-07-18 06:07:14 INFO     ### test_dgo_Grinder_Duty_ON ==> PASSED
+PASSED                                                                   [ 68%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Duty_OFF 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:16 INFO     ===> grinder get
+2024-07-18 06:07:16 INFO     ### test_dgo_Grinder_Duty_OFF ==> PASSED
+PASSED                                                                   [ 70%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Direction 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:18 INFO         Checking directions in progressing ...
+2024-07-18 06:07:19 INFO     ### test_dgo_Grinder_Direction ==> PASSED
+PASSED                                                                   [ 72%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Lid_Heater_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:21 INFO     ===> heater get 1
+2024-07-18 06:07:21 INFO     ### test_dgo_Lid_Heater_Enabled ==> PASSED
+PASSED                                                                   [ 74%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_wait_time_pause 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:43 INFO     ** wait_time_pause: 20 seconds **
+2024-07-18 06:07:43 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 76%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_State_Run_Time 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:45 INFO     ===> dgo status
+2024-07-18 06:07:45 INFO     ### test_dgo_State_Run_Time ==> PASSED
+PASSED                                                                   [ 78%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_State_Run_Time_remain_s 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:47 INFO     ===> dgo status
+2024-07-18 06:07:47 INFO     ### test_dgo_State_Run_Time_remain_s ==> PASSED
+PASSED                                                                   [ 80%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_79200 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:07:50 INFO     ===> hipStartTime set 79200
+2024-07-18 06:07:51 INFO     ### test_hipStartTime_set_79200 ==> PASSED
+2024-07-18 06:07:54 INFO     ===> hipStartTime get
+2024-07-18 06:07:55 INFO     ### test_hipStartTime_get_79200 ==> PASSED
+2024-07-18 06:07:58 INFO     ===> dgo config get
+2024-07-18 06:07:59 INFO     ### test_dgo_config_get_79200 ==> PASSED
+2024-07-18 06:08:02 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:08:02 INFO     ### get_shadow_scheduledHIPStartTime_79200 ==> PASSED
+PASSED                                                                   [ 82%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_80100 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:08:05 INFO     ===> hipStartTime set 80100
+2024-07-18 06:08:06 INFO     ### test_hipStartTime_set_80100 ==> PASSED
+2024-07-18 06:08:09 INFO     ===> hipStartTime get
+2024-07-18 06:08:10 INFO     ### test_hipStartTime_get_80100 ==> PASSED
+2024-07-18 06:08:13 INFO     ===> dgo config get
+2024-07-18 06:08:13 INFO     ### test_dgo_config_get_80100 ==> PASSED
+2024-07-18 06:08:16 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:08:17 INFO     ### get_shadow_scheduledHIPStartTime_80100 ==> PASSED
+PASSED                                                                   [ 84%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_81000 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:08:20 INFO     ===> hipStartTime set 81000
+2024-07-18 06:08:21 INFO     ### test_hipStartTime_set_81000 ==> PASSED
+2024-07-18 06:08:24 INFO     ===> hipStartTime get
+2024-07-18 06:08:25 INFO     ### test_hipStartTime_get_81000 ==> PASSED
+2024-07-18 06:08:28 INFO     ===> dgo config get
+2024-07-18 06:08:28 INFO     ### test_dgo_config_get_81000 ==> PASSED
+2024-07-18 06:08:31 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:08:31 INFO     ### get_shadow_scheduledHIPStartTime_81000 ==> PASSED
+PASSED                                                                   [ 86%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_81900 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:08:34 INFO     ===> hipStartTime set 81900
+2024-07-18 06:08:36 INFO     ### test_hipStartTime_set_81900 ==> PASSED
+2024-07-18 06:08:39 INFO     ===> hipStartTime get
+2024-07-18 06:08:40 INFO     ### test_hipStartTime_get_81900 ==> PASSED
+2024-07-18 06:08:43 INFO     ===> dgo config get
+2024-07-18 06:08:43 INFO     ### test_dgo_config_get_81900 ==> PASSED
+2024-07-18 06:08:46 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:08:47 INFO     ### get_shadow_scheduledHIPStartTime_81900 ==> PASSED
+PASSED                                                                   [ 88%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_82800 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:08:50 INFO     ===> hipStartTime set 82800
+2024-07-18 06:08:51 INFO     ### test_hipStartTime_set_82800 ==> PASSED
+2024-07-18 06:08:54 INFO     ===> hipStartTime get
+2024-07-18 06:08:55 INFO     ### test_hipStartTime_get_82800 ==> PASSED
+2024-07-18 06:08:58 INFO     ===> dgo config get
+2024-07-18 06:08:58 INFO     ### test_dgo_config_get_82800 ==> PASSED
+2024-07-18 06:09:01 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:09:01 INFO     ### get_shadow_scheduledHIPStartTime_82800 ==> PASSED
+PASSED                                                                   [ 90%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_83700 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:09:04 INFO     ===> hipStartTime set 83700
+2024-07-18 06:09:06 INFO     ### test_hipStartTime_set_83700 ==> PASSED
+2024-07-18 06:09:09 INFO     ===> hipStartTime get
+2024-07-18 06:09:10 INFO     ### test_hipStartTime_get_83700 ==> PASSED
+2024-07-18 06:09:13 INFO     ===> dgo config get
+2024-07-18 06:09:13 INFO     ### test_dgo_config_get_83700 ==> PASSED
+2024-07-18 06:09:16 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:09:16 INFO     ### get_shadow_scheduledHIPStartTime_83700 ==> PASSED
+PASSED                                                                   [ 92%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_84600 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:09:19 INFO     ===> hipStartTime set 84600
+2024-07-18 06:09:20 INFO     ### test_hipStartTime_set_84600 ==> PASSED
+2024-07-18 06:09:23 INFO     ===> hipStartTime get
+2024-07-18 06:09:24 INFO     ### test_hipStartTime_get_84600 ==> PASSED
+2024-07-18 06:09:27 INFO     ===> dgo config get
+2024-07-18 06:09:28 INFO     ### test_dgo_config_get_84600 ==> PASSED
+2024-07-18 06:09:31 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:09:31 INFO     ### get_shadow_scheduledHIPStartTime_84600 ==> PASSED
+PASSED                                                                   [ 94%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_85500 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:09:34 INFO     ===> hipStartTime set 85500
+2024-07-18 06:09:35 INFO     ### test_hipStartTime_set_85500 ==> PASSED
+2024-07-18 06:09:38 INFO     ===> hipStartTime get
+2024-07-18 06:09:39 INFO     ### test_hipStartTime_get_85500 ==> PASSED
+2024-07-18 06:09:42 INFO     ===> dgo config get
+2024-07-18 06:09:42 INFO     ### test_dgo_config_get_85500 ==> PASSED
+2024-07-18 06:09:45 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:09:46 INFO     ### get_shadow_scheduledHIPStartTime_85500 ==> PASSED
+PASSED                                                                   [ 96%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_0 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:09:49 INFO     ===> hipStartTime set 0
+2024-07-18 06:09:50 INFO     ### test_hipStartTime_set_0 ==> PASSED
+2024-07-18 06:09:53 INFO     ===> hipStartTime get
+2024-07-18 06:09:54 INFO     ### test_hipStartTime_get_0 ==> PASSED
+2024-07-18 06:09:57 INFO     ===> dgo config get
+2024-07-18 06:09:57 INFO     ### test_dgo_config_get_0 ==> PASSED
+2024-07-18 06:10:00 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:10:01 INFO     ### get_shadow_scheduledHIPStartTime_0 ==> PASSED
+PASSED                                                                   [ 98%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_900 
+-------------------------------- live log call ---------------------------------
+2024-07-18 06:10:04 INFO     ===> hipStartTime set 900
+2024-07-18 06:10:05 INFO     ### test_hipStartTime_set_900 ==> PASSED
+2024-07-18 06:10:08 INFO     ===> hipStartTime get
+2024-07-18 06:10:09 INFO     ### test_hipStartTime_get_900 ==> PASSED
+2024-07-18 06:10:12 INFO     ===> dgo config get
+2024-07-18 06:10:12 INFO     ### test_dgo_config_get_900 ==> PASSED
+2024-07-18 06:10:15 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 06:10:15 INFO     ### get_shadow_scheduledHIPStartTime_900 ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 50 passed in 2105.70s (0:35:05) ========================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1721277309.json': No such file or directory

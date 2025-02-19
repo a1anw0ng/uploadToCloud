@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 10 items
+
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_mass_clear 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:15 INFO     ===> mass clear
+2024-07-22 19:41:16 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [ 10%]
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:21 INFO     dgo manual_stop executed
+2024-07-22 19:41:24 INFO     Current State: IDLE
+2024-07-22 19:41:24 INFO     ===> dgo status
+2024-07-22 19:41:24 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 20%]
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:26 INFO     ===> dgo manual_start
+2024-07-22 19:41:26 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 30%]
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_dgo_skip_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:28 INFO     ===> dgo stage skip
+2024-07-22 19:41:30 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 40%]
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_dgo_status_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:32 INFO     ===> dgo status
+2024-07-22 19:41:32 INFO     ### test_dgo_status_HIP ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_dgo_stage_hip_moist 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:34 INFO     ===> dgo stage hip_moist
+2024-07-22 19:41:34 INFO     ### test_dgo_stage_hip_moist ==> PASSED
+PASSED                                                                   [ 60%]
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_inject_500g_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:36 INFO     ===> mass inject 500
+2024-07-22 19:41:37 INFO     ### test_inject_500g_HIP ==> PASSED
+PASSED                                                                   [ 70%]
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_mass_get 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:39 INFO     ===> mass get
+2024-07-22 19:41:39 INFO     ### test_mass_get ==> PASSED
+PASSED                                                                   [ 80%]
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_test_dgo_status_after_inject 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:41 INFO     ===> dgo status
+2024-07-22 19:41:41 INFO     ### test_dgo_status_after_inject ==> PASSED
+PASSED                                                                   [ 90%]
+bat_dgo_hip_moisture_food_add.py::TestBAT_DGO_HIP_MOISTURE_FOOD_ADD::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:41:43 INFO     ===> dgo manual_stop
+2024-07-22 19:41:43 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+============================= 10 passed in 30.36s ==============================

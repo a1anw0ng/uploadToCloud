@@ -1,0 +1,209 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 28 items
+
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:33 INFO     dgo manual_stop executed
+2024-07-18 02:30:36 INFO     Current State: IDLE
+2024-07-18 02:30:36 INFO     ===> dgo status
+2024-07-18 02:30:36 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  3%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Lid_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:38 INFO     ===> fan get 1
+2024-07-18 02:30:38 INFO     ### test_dgo_Lid_Fan_PWM ==> PASSED
+PASSED                                                                   [  7%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Exhaust_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:40 INFO     ===> fan get 0
+2024-07-18 02:30:40 INFO     ### test_dgo_Exhaust_Fan_PWM ==> PASSED
+PASSED                                                                   [ 10%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Bucket_Heater_Set_Point 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:42 INFO     ===> heater get 0
+2024-07-18 02:30:42 INFO     ### test_dgo_Bucket_Heater_Set_Point ==> PASSED
+PASSED                                                                   [ 14%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Bucket_Heater_Hysterisis_Range 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:44 INFO     ===> heater get 0
+2024-07-18 02:30:44 INFO     ### test_dgo_Bucket_Heater_Hysterisis_Range ==> PASSED
+PASSED                                                                   [ 17%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Amp_Hard_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:46 INFO     ===> grinder stall_get
+2024-07-18 02:30:46 INFO     ### test_dgo_Grinder_Amp_Hard_Limit ==> PASSED
+PASSED                                                                   [ 21%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Amp_Soft_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:48 INFO     ===> grinder stall_get
+2024-07-18 02:30:48 INFO     ### test_dgo_Grinder_Amp_Soft_Limit ==> PASSED
+PASSED                                                                   [ 25%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_PWM 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:50 INFO     ===> grinder get
+2024-07-18 02:30:51 INFO     ### test_dgo_Grinder_PWM ==> PASSED
+PASSED                                                                   [ 28%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Stall_Speed_Drop_Limit 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:53 INFO     ===> grinder stall_get
+2024-07-18 02:30:53 INFO     ### test_dgo_Grinder_Stall_Speed_Drop_Limit ==> PASSED
+PASSED                                                                   [ 32%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Amp_Threshold_Hard 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:55 INFO     ===> grinder stall_get
+2024-07-18 02:30:55 INFO     ### test_dgo_Grinder_Amp_Threshold_Hard ==> PASSED
+PASSED                                                                   [ 35%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Amp_Threshold_Soft 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:57 INFO     ===> grinder stall_get
+2024-07-18 02:30:57 INFO     ### test_dgo_Grinder_Amp_Threshold_Soft ==> PASSED
+PASSED                                                                   [ 39%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Speed_Threshold 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:30:59 INFO     ===> grinder stall_get
+2024-07-18 02:30:59 INFO     ### test_dgo_Grinder_Speed_Threshold ==> PASSED
+PASSED                                                                   [ 42%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:31:01 INFO     ===> grinder get
+2024-07-18 02:31:01 INFO     ### test_dgo_Grinder_Enabled ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Duty_ON 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:31:03 INFO     ===> grinder get
+2024-07-18 02:31:03 INFO     ### test_dgo_Grinder_Duty_ON ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Duty_OFF SKIPPED [ 53%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Grinder_Direction SKIPPED [ 57%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_Lid_Heater_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:31:05 INFO     ===> heater get 1
+2024-07-18 02:31:05 INFO     ### test_dgo_Lid_Heater_Enabled ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_dgo_State_Run_Time 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:31:07 INFO     ===> dgo status
+2024-07-18 02:31:07 INFO     ### test_dgo_State_Run_Time ==> PASSED
+PASSED                                                                   [ 64%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_79200 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:31:10 INFO     ===> hipStartTime set 79200
+2024-07-18 02:31:11 INFO     ### test_hipStartTime_set_79200 ==> PASSED
+2024-07-18 02:31:14 INFO     ===> hipStartTime get
+2024-07-18 02:31:15 INFO     ### test_hipStartTime_get_79200 ==> PASSED
+2024-07-18 02:31:18 INFO     ===> dgo config get
+2024-07-18 02:31:19 INFO     ### test_dgo_config_get_79200 ==> PASSED
+2024-07-18 02:31:22 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:31:22 INFO     ### get_shadow_scheduledHIPStartTime_79200 ==> PASSED
+PASSED                                                                   [ 67%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_80100 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:31:25 INFO     ===> hipStartTime set 80100
+2024-07-18 02:31:26 INFO     ### test_hipStartTime_set_80100 ==> PASSED
+2024-07-18 02:31:29 INFO     ===> hipStartTime get
+2024-07-18 02:31:30 INFO     ### test_hipStartTime_get_80100 ==> PASSED
+2024-07-18 02:31:33 INFO     ===> dgo config get
+2024-07-18 02:31:33 INFO     ### test_dgo_config_get_80100 ==> PASSED
+2024-07-18 02:31:36 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:31:37 INFO     ### get_shadow_scheduledHIPStartTime_80100 ==> PASSED
+PASSED                                                                   [ 71%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_81000 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:31:40 INFO     ===> hipStartTime set 81000
+2024-07-18 02:31:41 INFO     ### test_hipStartTime_set_81000 ==> PASSED
+2024-07-18 02:31:44 INFO     ===> hipStartTime get
+2024-07-18 02:31:45 INFO     ### test_hipStartTime_get_81000 ==> PASSED
+2024-07-18 02:31:48 INFO     ===> dgo config get
+2024-07-18 02:31:48 INFO     ### test_dgo_config_get_81000 ==> PASSED
+2024-07-18 02:31:51 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:31:52 INFO     ### get_shadow_scheduledHIPStartTime_81000 ==> PASSED
+PASSED                                                                   [ 75%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_81900 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:31:55 INFO     ===> hipStartTime set 81900
+2024-07-18 02:31:56 INFO     ### test_hipStartTime_set_81900 ==> PASSED
+2024-07-18 02:31:59 INFO     ===> hipStartTime get
+2024-07-18 02:32:00 INFO     ### test_hipStartTime_get_81900 ==> PASSED
+2024-07-18 02:32:03 INFO     ===> dgo config get
+2024-07-18 02:32:03 INFO     ### test_dgo_config_get_81900 ==> PASSED
+2024-07-18 02:32:06 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:32:06 INFO     ### get_shadow_scheduledHIPStartTime_81900 ==> PASSED
+PASSED                                                                   [ 78%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_82800 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:32:09 INFO     ===> hipStartTime set 82800
+2024-07-18 02:32:11 INFO     ### test_hipStartTime_set_82800 ==> PASSED
+2024-07-18 02:32:14 INFO     ===> hipStartTime get
+2024-07-18 02:32:15 INFO     ### test_hipStartTime_get_82800 ==> PASSED
+2024-07-18 02:32:18 INFO     ===> dgo config get
+2024-07-18 02:32:18 INFO     ### test_dgo_config_get_82800 ==> PASSED
+2024-07-18 02:32:21 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:32:21 INFO     ### get_shadow_scheduledHIPStartTime_82800 ==> PASSED
+PASSED                                                                   [ 82%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_83700 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:32:24 INFO     ===> hipStartTime set 83700
+2024-07-18 02:32:25 INFO     ### test_hipStartTime_set_83700 ==> PASSED
+2024-07-18 02:32:28 INFO     ===> hipStartTime get
+2024-07-18 02:32:29 INFO     ### test_hipStartTime_get_83700 ==> PASSED
+2024-07-18 02:32:32 INFO     ===> dgo config get
+2024-07-18 02:32:32 INFO     ### test_dgo_config_get_83700 ==> PASSED
+2024-07-18 02:32:35 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:32:36 INFO     ### get_shadow_scheduledHIPStartTime_83700 ==> PASSED
+PASSED                                                                   [ 85%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_84600 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:32:39 INFO     ===> hipStartTime set 84600
+2024-07-18 02:32:40 INFO     ### test_hipStartTime_set_84600 ==> PASSED
+2024-07-18 02:32:43 INFO     ===> hipStartTime get
+2024-07-18 02:32:44 INFO     ### test_hipStartTime_get_84600 ==> PASSED
+2024-07-18 02:32:47 INFO     ===> dgo config get
+2024-07-18 02:32:47 INFO     ### test_dgo_config_get_84600 ==> PASSED
+2024-07-18 02:32:50 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:32:51 INFO     ### get_shadow_scheduledHIPStartTime_84600 ==> PASSED
+PASSED                                                                   [ 89%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_85500 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:32:54 INFO     ===> hipStartTime set 85500
+2024-07-18 02:32:55 INFO     ### test_hipStartTime_set_85500 ==> PASSED
+2024-07-18 02:32:58 INFO     ===> hipStartTime get
+2024-07-18 02:32:59 INFO     ### test_hipStartTime_get_85500 ==> PASSED
+2024-07-18 02:33:02 INFO     ===> dgo config get
+2024-07-18 02:33:02 INFO     ### test_dgo_config_get_85500 ==> PASSED
+2024-07-18 02:33:05 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:33:06 INFO     ### get_shadow_scheduledHIPStartTime_85500 ==> PASSED
+PASSED                                                                   [ 92%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_0 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:33:09 INFO     ===> hipStartTime set 0
+2024-07-18 02:33:10 INFO     ### test_hipStartTime_set_0 ==> PASSED
+2024-07-18 02:33:13 INFO     ===> hipStartTime get
+2024-07-18 02:33:14 INFO     ### test_hipStartTime_get_0 ==> PASSED
+2024-07-18 02:33:17 INFO     ===> dgo config get
+2024-07-18 02:33:17 INFO     ### test_dgo_config_get_0 ==> PASSED
+2024-07-18 02:33:20 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:33:20 INFO     ### get_shadow_scheduledHIPStartTime_0 ==> PASSED
+PASSED                                                                   [ 96%]
+dgo_test_IDLE_state2_O2.py::TestDGOFSM_IDLE::test_group_start_time_900 
+-------------------------------- live log call ---------------------------------
+2024-07-18 02:33:23 INFO     ===> hipStartTime set 900
+2024-07-18 02:33:24 INFO     ### test_hipStartTime_set_900 ==> PASSED
+2024-07-18 02:33:27 INFO     ===> hipStartTime get
+2024-07-18 02:33:29 INFO     ### test_hipStartTime_get_900 ==> PASSED
+2024-07-18 02:33:32 INFO     ===> dgo config get
+2024-07-18 02:33:32 INFO     ### test_dgo_config_get_900 ==> PASSED
+2024-07-18 02:33:35 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-18 02:33:35 INFO     ### get_shadow_scheduledHIPStartTime_900 ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+================== 26 passed, 2 skipped in 192.77s (0:03:12) ===================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1721266221.json': No such file or directory

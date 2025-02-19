@@ -1,0 +1,845 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 15 items
+
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_0_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:42:07 INFO     ===> lid inject 0
+2024-07-18 03:42:07 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-18 03:42:07 INFO     ### test_lid_inject_0 ==> PASSED
+2024-07-18 03:42:10 INFO     ===> lid inject 1
+2024-07-18 03:42:13 INFO     retries counts: 1
+2024-07-18 03:42:16 INFO     retries counts: 2
+2024-07-18 03:42:19 INFO     retries counts: 3
+2024-07-18 03:42:23 INFO     retries counts: 4
+2024-07-18 03:42:26 INFO     retries counts: 5
+2024-07-18 03:42:26 ERROR    Timeout after 5 retries!
+2024-07-18 03:42:26 INFO     ### test_lid_inject_1 ==> PASSED
+2024-07-18 03:42:32 INFO     dgo manual_stop executed
+2024-07-18 03:42:35 INFO     Current State: IDLE
+2024-07-18 03:42:40 INFO     dgo manual_start executed
+2024-07-18 03:42:51 INFO     Current State: LIP
+2024-07-18 03:43:00 INFO     dgo stage skip executed HIP
+2024-07-18 03:43:04 INFO     Current State: HIP
+2024-07-18 03:43:07 INFO     ===> dgo status
+2024-07-18 03:43:07 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 03:43:10 INFO     ===> mass clear
+2024-07-18 03:43:11 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 03:43:14 INFO     ===> mass get
+2024-07-18 03:43:14 INFO     ### test_mass_get ==> PASSED
+2024-07-18 03:43:17 INFO     ===> dgo status
+2024-07-18 03:43:17 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 03:43:20 INFO     ===> mass inject 0
+2024-07-18 03:43:21 INFO     ### test_mass_inject_0 ==> PASSED
+2024-07-18 03:43:24 INFO     ===> mass get
+2024-07-18 03:43:24 INFO     ### test_mass_get_0_HIP ==> PASSED
+2024-07-18 03:43:27 INFO     ===> dgo status
+2024-07-18 03:43:27 INFO     ### test_dgo_status_0_HIP ==> PASSED
+2024-07-18 03:43:30 INFO     ===> dgo stage hip_trans
+2024-07-18 03:43:30 INFO     ### hip_trans_region_0_HIP ==> PASSED
+2024-07-18 03:43:33 INFO     ===> mass get
+2024-07-18 03:43:33 INFO     ### test_mass_get_0_HIP_trans ==> PASSED
+2024-07-18 03:43:36 INFO     ===> dgo status
+2024-07-18 03:43:36 INFO     ### test_dgo_status_0_HIP_trans ==> PASSED
+PASSED                                                                   [  6%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_100_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:43:42 INFO     dgo manual_stop executed
+2024-07-18 03:43:46 INFO     Current State: IDLE
+2024-07-18 03:43:51 INFO     dgo manual_start executed
+2024-07-18 03:44:02 INFO     Current State: LIP
+2024-07-18 03:44:11 INFO     dgo stage skip executed HIP
+2024-07-18 03:44:14 INFO     Current State: HIP
+2024-07-18 03:44:17 INFO     ===> dgo status
+2024-07-18 03:44:17 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 03:44:20 INFO     ===> mass clear
+2024-07-18 03:44:21 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 03:44:24 INFO     ===> mass get
+2024-07-18 03:44:24 INFO     ### test_mass_get ==> PASSED
+2024-07-18 03:44:27 INFO     ===> dgo status
+2024-07-18 03:44:27 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 03:44:30 INFO     ===> mass inject 50
+2024-07-18 03:44:31 INFO     ### test_mass_inject_50 ==> PASSED
+2024-07-18 03:44:34 INFO     ===> mass get
+2024-07-18 03:44:34 INFO     ### test_mass_get_50 ==> PASSED
+2024-07-18 03:44:37 INFO     ===> dgo status
+2024-07-18 03:44:37 INFO     ### test_dgo_status_50 ==> PASSED
+2024-07-18 03:44:40 INFO     ===> mass inject 50
+2024-07-18 03:44:41 INFO     ### test_mass_inject_50 ==> PASSED
+2024-07-18 03:44:44 INFO     ===> mass get
+2024-07-18 03:44:44 INFO     ### test_mass_get_100_HIP ==> PASSED
+2024-07-18 03:44:47 INFO     ===> dgo status
+2024-07-18 03:44:47 INFO     ### test_dgo_status_100_HIP ==> PASSED
+2024-07-18 03:44:50 INFO     ===> dgo stage hip_trans
+2024-07-18 03:44:51 INFO     ### test_hip_trans_region_100_HIP ==> PASSED
+2024-07-18 03:44:54 INFO     ===> mass get
+2024-07-18 03:44:54 INFO     ### test_mass_get_100_HIP_trans ==> PASSED
+2024-07-18 03:44:57 INFO     ===> dgo status
+2024-07-18 03:44:57 INFO     ### test_dgo_status_100_HIP_trans ==> PASSED
+PASSED                                                                   [ 13%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_1lb_450_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:45:03 INFO     dgo manual_stop executed
+2024-07-18 03:45:06 INFO     Current State: IDLE
+2024-07-18 03:45:11 INFO     dgo manual_start executed
+2024-07-18 03:45:22 INFO     Current State: LIP
+2024-07-18 03:45:32 INFO     dgo stage skip executed HIP
+2024-07-18 03:45:35 INFO     Current State: HIP
+2024-07-18 03:45:38 INFO     ===> dgo status
+2024-07-18 03:45:38 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 03:45:41 INFO     ===> mass clear
+2024-07-18 03:45:42 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 03:45:45 INFO     ===> mass get
+2024-07-18 03:45:45 INFO     ### test_mass_get ==> PASSED
+2024-07-18 03:45:48 INFO     ===> dgo status
+2024-07-18 03:45:48 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 03:45:51 INFO     ===> mass inject 200
+2024-07-18 03:45:52 INFO     ### test_mass_inject_200 ==> PASSED
+2024-07-18 03:45:55 INFO     ===> mass get
+2024-07-18 03:45:55 INFO     ### test_mass_get_200 ==> PASSED
+2024-07-18 03:45:58 INFO     ===> dgo status
+2024-07-18 03:45:58 INFO     ### test_dgo_status_200 ==> PASSED
+2024-07-18 03:46:01 INFO     ===> mass inject 100
+2024-07-18 03:46:02 INFO     ### test_mass_inject_100 ==> PASSED
+2024-07-18 03:46:05 INFO     ===> mass get
+2024-07-18 03:46:05 INFO     ### test_mass_get_300 ==> PASSED
+2024-07-18 03:46:08 INFO     ===> dgo status
+2024-07-18 03:46:08 INFO     ### test_dgo_status_300 ==> PASSED
+2024-07-18 03:46:11 INFO     ===> mass inject 150
+2024-07-18 03:46:12 INFO     ### test_mass_inject_150 ==> PASSED
+2024-07-18 03:46:15 INFO     ===> mass get
+2024-07-18 03:46:15 INFO     ### test_mass_get_450_HIP ==> PASSED
+2024-07-18 03:46:18 INFO     ===> dgo status
+2024-07-18 03:46:19 INFO     ### test_dgo_status_450_HIP ==> PASSED
+2024-07-18 03:46:22 INFO     ===> dgo stage hip_trans
+2024-07-18 03:46:22 INFO     ### test_hip_trans_region_450_HIP ==> PASSED
+2024-07-18 03:46:25 INFO     ===> mass get
+2024-07-18 03:46:25 INFO     ### test_mass_get_450_HIP_trans ==> PASSED
+2024-07-18 03:46:28 INFO     ===> dgo status
+2024-07-18 03:46:28 INFO     ### test_dgo_status_450_HIP_trans ==> PASSED
+PASSED                                                                   [ 20%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_2lb_900_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:46:34 INFO     dgo manual_stop executed
+2024-07-18 03:46:37 INFO     Current State: IDLE
+2024-07-18 03:46:42 INFO     dgo manual_start executed
+2024-07-18 03:46:53 INFO     Current State: LIP
+2024-07-18 03:47:03 INFO     dgo stage skip executed HIP
+2024-07-18 03:47:06 INFO     Current State: HIP
+2024-07-18 03:47:09 INFO     ===> dgo status
+2024-07-18 03:47:09 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 03:47:12 INFO     ===> mass clear
+2024-07-18 03:47:13 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 03:47:16 INFO     ===> mass get
+2024-07-18 03:47:16 INFO     ### test_mass_get ==> PASSED
+2024-07-18 03:47:19 INFO     ===> dgo status
+2024-07-18 03:47:19 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 03:47:22 INFO     ===> mass inject 900
+2024-07-18 03:47:23 INFO     ### test_mass_inject_900 ==> PASSED
+2024-07-18 03:47:26 INFO     ===> mass get
+2024-07-18 03:47:26 INFO     ### test_mass_get_900_HIP ==> PASSED
+2024-07-18 03:47:29 INFO     ===> dgo status
+2024-07-18 03:47:29 INFO     ### test_dgo_status_900_HIP ==> PASSED
+2024-07-18 03:47:32 INFO     ===> dgo stage hip_trans
+2024-07-18 03:47:32 INFO     ### test_hip_trans_region_900_HIP ==> PASSED
+2024-07-18 03:47:35 INFO     ===> mass get
+2024-07-18 03:47:36 INFO     ### test_mass_get_900_HIP_trans ==> PASSED
+2024-07-18 03:47:39 INFO     ===> dgo status
+2024-07-18 03:47:39 INFO     ### test_dgo_status_900_HIP_trans ==> PASSED
+PASSED                                                                   [ 26%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_3lb_1370_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:47:45 INFO     dgo manual_stop executed
+2024-07-18 03:47:48 INFO     Current State: IDLE
+2024-07-18 03:47:53 INFO     dgo manual_start executed
+2024-07-18 03:48:04 INFO     Current State: LIP
+2024-07-18 03:48:14 INFO     dgo stage skip executed HIP
+2024-07-18 03:48:17 INFO     Current State: HIP
+2024-07-18 03:48:20 INFO     ===> dgo status
+2024-07-18 03:48:20 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 03:48:23 INFO     ===> mass clear
+2024-07-18 03:48:24 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 03:48:27 INFO     ===> mass get
+2024-07-18 03:48:27 INFO     ### test_mass_get ==> PASSED
+2024-07-18 03:48:30 INFO     ===> dgo status
+2024-07-18 03:48:30 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 03:48:33 INFO     ===> mass inject 10
+2024-07-18 03:48:34 INFO     ### test_mass_inject_10 ==> PASSED
+2024-07-18 03:48:37 INFO     ===> mass get
+2024-07-18 03:48:37 INFO     ### test_mass_get_10 ==> PASSED
+2024-07-18 03:48:40 INFO     ===> dgo status
+2024-07-18 03:48:40 INFO     ### test_dgo_status_10 ==> PASSED
+2024-07-18 03:48:43 INFO     ===> mass inject 1000
+2024-07-18 03:48:44 INFO     ### test_mass_inject_1000 ==> PASSED
+2024-07-18 03:48:47 INFO     ===> mass get
+2024-07-18 03:48:47 INFO     ### test_mass_get_1010 ==> PASSED
+2024-07-18 03:48:50 INFO     ===> dgo status
+2024-07-18 03:48:50 INFO     ### test_dgo_status_1010 ==> PASSED
+2024-07-18 03:48:53 INFO     ===> mass inject 300
+2024-07-18 03:48:54 INFO     ### test_mass_inject_300 ==> PASSED
+2024-07-18 03:48:57 INFO     ===> mass get
+2024-07-18 03:48:57 INFO     ### test_mass_get_1310 ==> PASSED
+2024-07-18 03:49:00 INFO     ===> dgo status
+2024-07-18 03:49:01 INFO     ### test_dgo_status_1310 ==> PASSED
+2024-07-18 03:49:04 INFO     ===> dgo stage hip_trans
+2024-07-18 03:49:04 INFO     ### test_hip_trans_region_1310_HIP ==> PASSED
+2024-07-18 03:49:07 INFO     ===> mass get
+2024-07-18 03:49:07 INFO     ### test_mass_get_1310_HIP_trans ==> PASSED
+2024-07-18 03:49:10 INFO     ===> dgo status
+2024-07-18 03:49:10 INFO     ### test_dgo_status_1310_HIP_trans ==> PASSED
+2024-07-18 03:50:13 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 03:50:13 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 03:50:16 INFO     ===> mass inject 60
+2024-07-18 03:50:17 INFO     ### test_mass_inject_60_HIP_trans ==> PASSED
+2024-07-18 03:50:20 INFO     ===> mass get
+2024-07-18 03:50:20 INFO     ### test_mass_get_1370_HIP_trans ==> PASSED
+2024-07-18 03:50:23 INFO     ===> dgo status
+2024-07-18 03:50:23 INFO     ### test_dgo_status_1370_HIP_trans ==> PASSED
+PASSED                                                                   [ 33%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_4lb_1946_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:50:29 INFO     dgo manual_stop executed
+2024-07-18 03:50:32 INFO     Current State: IDLE
+2024-07-18 03:50:38 INFO     dgo manual_start executed
+2024-07-18 03:50:49 INFO     Current State: LIP
+2024-07-18 03:50:58 INFO     dgo stage skip executed HIP
+2024-07-18 03:51:01 INFO     Current State: HIP
+2024-07-18 03:51:04 INFO     ===> dgo status
+2024-07-18 03:51:04 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 03:51:07 INFO     ===> mass clear
+2024-07-18 03:51:08 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 03:51:11 INFO     ===> mass get
+2024-07-18 03:51:11 INFO     ### test_mass_get ==> PASSED
+2024-07-18 03:51:14 INFO     ===> dgo status
+2024-07-18 03:51:14 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 03:51:17 INFO     ===> mass inject 1816
+2024-07-18 03:51:18 INFO     ### test_mass_inject_1816 ==> PASSED
+2024-07-18 03:51:21 INFO     ===> mass get
+2024-07-18 03:51:21 INFO     ### test_mass_get_1816_HIP ==> PASSED
+2024-07-18 03:51:24 INFO     ===> dgo status
+2024-07-18 03:51:25 INFO     ### test_dgo_status_1816_HIP ==> PASSED
+2024-07-18 03:51:28 INFO     ===> dgo stage hip_trans
+2024-07-18 03:51:28 INFO     ### test_hip_trans_region_1816_HIP ==> PASSED
+2024-07-18 03:51:31 INFO     ===> mass get
+2024-07-18 03:51:31 INFO     ### test_mass_get_1816_HIP_trans ==> PASSED
+2024-07-18 03:51:34 INFO     ===> dgo status
+2024-07-18 03:51:34 INFO     ### test_dgo_status_1816_HIP_trans ==> PASSED
+2024-07-18 03:52:37 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 03:52:37 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 03:52:40 INFO     ===> mass inject 50
+2024-07-18 03:52:41 INFO     ### test_mass_inject_50_HIP_trans ==> PASSED
+2024-07-18 03:52:44 INFO     ===> mass get
+2024-07-18 03:52:44 INFO     ### test_mass_get_1866_HIP_trans ==> PASSED
+2024-07-18 03:52:47 INFO     ===> dgo status
+2024-07-18 03:52:47 INFO     ### test_dgo_status_1866_HIP_trans ==> PASSED
+2024-07-18 03:53:50 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 03:53:50 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 03:53:53 INFO     ===> mass inject 80
+2024-07-18 03:53:54 INFO     ### test_mass_inject_80_HIP_trans ==> PASSED
+2024-07-18 03:53:57 INFO     ===> mass get
+2024-07-18 03:53:57 INFO     ### test_mass_get_1946_HIP_trans ==> PASSED
+2024-07-18 03:54:00 INFO     ===> dgo status
+2024-07-18 03:54:00 INFO     ### test_dgo_status_1946_HIP_trans ==> PASSED
+PASSED                                                                   [ 40%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_5lb_2270_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:54:06 INFO     dgo manual_stop executed
+2024-07-18 03:54:10 INFO     Current State: IDLE
+2024-07-18 03:54:15 INFO     dgo manual_start executed
+2024-07-18 03:54:26 INFO     Current State: LIP
+2024-07-18 03:54:35 INFO     dgo stage skip executed HIP
+2024-07-18 03:54:38 INFO     Current State: HIP
+2024-07-18 03:54:41 INFO     ===> dgo status
+2024-07-18 03:54:42 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 03:54:45 INFO     ===> mass clear
+2024-07-18 03:54:45 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 03:54:48 INFO     ===> mass get
+2024-07-18 03:54:48 INFO     ### test_mass_get ==> PASSED
+2024-07-18 03:54:51 INFO     ===> dgo status
+2024-07-18 03:54:52 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 03:54:55 INFO     ===> mass inject 80
+2024-07-18 03:54:56 INFO     ### test_mass_inject_80 ==> PASSED
+2024-07-18 03:54:59 INFO     ===> mass get
+2024-07-18 03:54:59 INFO     ### test_mass_get_80_HIP ==> PASSED
+2024-07-18 03:55:02 INFO     ===> dgo status
+2024-07-18 03:55:02 INFO     ### test_dgo_status_80 ==> PASSED
+2024-07-18 03:55:05 INFO     ===> mass inject 300
+2024-07-18 03:55:06 INFO     ### test_mass_inject_300 ==> PASSED
+2024-07-18 03:55:09 INFO     ===> mass get
+2024-07-18 03:55:09 INFO     ### test_mass_get_380_HIP ==> PASSED
+2024-07-18 03:55:12 INFO     ===> dgo status
+2024-07-18 03:55:12 INFO     ### test_dgo_status_380 ==> PASSED
+2024-07-18 03:55:15 INFO     ===> dgo stage hip_trans
+2024-07-18 03:55:15 INFO     ### test_hip_trans_region_380_HIP ==> PASSED
+2024-07-18 03:55:18 INFO     ===> mass get
+2024-07-18 03:55:18 INFO     ### test_mass_get_380_HIP_trans ==> PASSED
+2024-07-18 03:55:21 INFO     ===> dgo status
+2024-07-18 03:55:21 INFO     ### test_dgo_status_380_HIP_trans ==> PASSED
+2024-07-18 03:56:24 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 03:56:24 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 03:56:27 INFO     ===> mass inject 550
+2024-07-18 03:56:28 INFO     ### test_mass_inject_550_HIP_trans ==> PASSED
+2024-07-18 03:56:31 INFO     ===> mass get
+2024-07-18 03:56:31 INFO     ### test_mass_get_930_HIP_trans ==> PASSED
+2024-07-18 03:56:34 INFO     ===> dgo status
+2024-07-18 03:56:35 INFO     ### test_dgo_status_930_HIP_trans ==> PASSED
+2024-07-18 03:57:38 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 03:57:38 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 03:57:41 INFO     ===> mass inject 400
+2024-07-18 03:57:41 INFO     ### test_mass_inject_400_HIP_trans ==> PASSED
+2024-07-18 03:57:44 INFO     ===> mass get
+2024-07-18 03:57:45 INFO     ### test_mass_get_1330_HIP_trans ==> PASSED
+2024-07-18 03:57:48 INFO     ===> dgo status
+2024-07-18 03:57:48 INFO     ### test_dgo_status_1330_HIP_trans ==> PASSED
+2024-07-18 03:58:51 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 03:58:51 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 03:58:54 INFO     ===> mass inject 940
+2024-07-18 03:58:55 INFO     ### test_mass_inject_940_HIP_trans ==> PASSED
+2024-07-18 03:58:58 INFO     ===> mass get
+2024-07-18 03:58:58 INFO     ### test_mass_get_2270_HIP_trans ==> PASSED
+2024-07-18 03:59:01 INFO     ===> dgo status
+2024-07-18 03:59:01 INFO     ### test_dgo_status_2270_HIP_trans ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_6lb_2864_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 03:59:07 INFO     dgo manual_stop executed
+2024-07-18 03:59:10 INFO     Current State: IDLE
+2024-07-18 03:59:15 INFO     dgo manual_start executed
+2024-07-18 03:59:27 INFO     Current State: LIP
+2024-07-18 03:59:36 INFO     dgo stage skip executed HIP
+2024-07-18 03:59:39 INFO     Current State: HIP
+2024-07-18 03:59:42 INFO     ===> dgo status
+2024-07-18 03:59:42 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 03:59:45 INFO     ===> mass clear
+2024-07-18 03:59:46 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 03:59:49 INFO     ===> mass get
+2024-07-18 03:59:49 INFO     ### test_mass_get ==> PASSED
+2024-07-18 03:59:52 INFO     ===> dgo status
+2024-07-18 03:59:53 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 03:59:56 INFO     ===> mass inject 1900
+2024-07-18 03:59:56 INFO     ### test_mass_inject_1900 ==> PASSED
+2024-07-18 03:59:59 INFO     ===> mass get
+2024-07-18 04:00:00 INFO     ### test_mass_get_1900_HIP ==> PASSED
+2024-07-18 04:00:03 INFO     ===> dgo status
+2024-07-18 04:00:03 INFO     ### test_dgo_status_1900 ==> PASSED
+2024-07-18 04:00:06 INFO     ===> mass inject 824
+2024-07-18 04:00:06 INFO     ### test_mass_inject_824 ==> PASSED
+2024-07-18 04:00:10 INFO     ===> mass get
+2024-07-18 04:00:10 INFO     ### test_mass_get_2724_HIP ==> PASSED
+2024-07-18 04:00:13 INFO     ===> dgo status
+2024-07-18 04:00:13 INFO     ### test_dgo_status_2724_HIP ==> PASSED
+2024-07-18 04:00:16 INFO     ===> dgo stage hip_trans
+2024-07-18 04:00:16 INFO     ### test_hip_trans_region_2724_HIP ==> PASSED
+2024-07-18 04:00:19 INFO     ===> mass get
+2024-07-18 04:00:19 INFO     ### test_mass_get_2724_HIP_trans ==> PASSED
+2024-07-18 04:00:22 INFO     ===> dgo status
+2024-07-18 04:00:22 INFO     ### test_dgo_status_2724_HIP_trans ==> PASSED
+2024-07-18 04:01:25 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 04:01:25 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 04:01:28 INFO     ===> mass inject 10
+2024-07-18 04:01:29 INFO     ### test_mass_inject_10_HIP_trans ==> PASSED
+2024-07-18 04:01:32 INFO     ===> mass get
+2024-07-18 04:01:32 INFO     ### test_mass_get_2734_HIP_trans ==> PASSED
+2024-07-18 04:01:35 INFO     ===> dgo status
+2024-07-18 04:01:35 INFO     ### test_dgo_status_2734_HIP_trans ==> PASSED
+2024-07-18 04:02:38 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 04:02:38 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 04:02:41 INFO     ===> mass inject 130
+2024-07-18 04:02:42 INFO     ### test_mass_inject_130_HIP_trans ==> PASSED
+2024-07-18 04:02:45 INFO     ===> mass get
+2024-07-18 04:02:45 INFO     ### test_mass_get_2864_HIP_trans ==> PASSED
+2024-07-18 04:02:48 INFO     ===> dgo status
+2024-07-18 04:02:48 INFO     ### test_dgo_status_2864_HIP_trans ==> PASSED
+PASSED                                                                   [ 53%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_7lb_3178_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:02:55 INFO     dgo manual_stop executed
+2024-07-18 04:02:58 INFO     Current State: IDLE
+2024-07-18 04:03:03 INFO     dgo manual_start executed
+2024-07-18 04:03:14 INFO     Current State: LIP
+2024-07-18 04:03:23 INFO     dgo stage skip executed HIP
+2024-07-18 04:03:26 INFO     Current State: HIP
+2024-07-18 04:03:29 INFO     ===> dgo status
+2024-07-18 04:03:30 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 04:03:33 INFO     ===> mass clear
+2024-07-18 04:03:33 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 04:03:36 INFO     ===> mass get
+2024-07-18 04:03:37 INFO     ### test_mass_get ==> PASSED
+2024-07-18 04:03:40 INFO     ===> dgo status
+2024-07-18 04:03:40 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 04:03:43 INFO     ===> mass inject 1500
+2024-07-18 04:03:44 INFO     ### test_mass_inject_1500 ==> PASSED
+2024-07-18 04:03:47 INFO     ===> mass get
+2024-07-18 04:03:47 INFO     ### test_mass_get_1500_HIP ==> PASSED
+2024-07-18 04:03:50 INFO     ===> dgo status
+2024-07-18 04:03:50 INFO     ### test_dgo_status_1500 ==> PASSED
+2024-07-18 04:03:53 INFO     ===> mass inject 950
+2024-07-18 04:03:54 INFO     ### test_mass_inject_950 ==> PASSED
+2024-07-18 04:03:57 INFO     ===> mass get
+2024-07-18 04:03:57 INFO     ### test_mass_get_2450_HIP ==> PASSED
+2024-07-18 04:04:00 INFO     ===> dgo status
+2024-07-18 04:04:00 INFO     ### test_dgo_status_2450 ==> PASSED
+2024-07-18 04:04:03 INFO     ===> dgo stage hip_trans
+2024-07-18 04:04:03 INFO     ### test_hip_trans_region_2450_HIP ==> PASSED
+2024-07-18 04:04:06 INFO     ===> mass get
+2024-07-18 04:04:06 INFO     ### test_mass_get_2450_HIP_trans ==> PASSED
+2024-07-18 04:04:09 INFO     ===> dgo status
+2024-07-18 04:04:10 INFO     ### test_dgo_status_2450_HIP_trans ==> PASSED
+2024-07-18 04:05:13 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 04:05:13 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 04:05:16 INFO     ===> mass inject 728
+2024-07-18 04:05:16 INFO     ### test_mass_inject_728_HIP_trans ==> PASSED
+2024-07-18 04:05:19 INFO     ===> mass get
+2024-07-18 04:05:19 INFO     ### test_mass_get_3178_HIP_trans ==> PASSED
+2024-07-18 04:05:22 INFO     ===> dgo status
+2024-07-18 04:05:23 INFO     ### test_dgo_status_3178_HIP_trans ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_7_5lb_3515_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:05:29 INFO     dgo manual_stop executed
+2024-07-18 04:05:32 INFO     Current State: IDLE
+2024-07-18 04:05:37 INFO     dgo manual_start executed
+2024-07-18 04:05:48 INFO     Current State: LIP
+2024-07-18 04:05:57 INFO     dgo stage skip executed HIP
+2024-07-18 04:06:01 INFO     Current State: HIP
+2024-07-18 04:06:04 INFO     ===> dgo status
+2024-07-18 04:06:04 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 04:06:07 INFO     ===> mass clear
+2024-07-18 04:06:08 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 04:06:11 INFO     ===> mass get
+2024-07-18 04:06:11 INFO     ### test_mass_get ==> PASSED
+2024-07-18 04:06:14 INFO     ===> dgo status
+2024-07-18 04:06:14 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 04:06:17 INFO     ===> mass inject 8
+2024-07-18 04:06:18 INFO     ### test_mass_inject_8 ==> PASSED
+2024-07-18 04:06:21 INFO     ===> mass get
+2024-07-18 04:06:21 INFO     ### test_mass_get_8_HIP ==> PASSED
+2024-07-18 04:06:24 INFO     ===> dgo status
+2024-07-18 04:06:24 INFO     ### test_dgo_status_8 ==> PASSED
+2024-07-18 04:06:27 INFO     ===> mass inject 2500
+2024-07-18 04:06:28 INFO     ### test_mass_inject_2500 ==> PASSED
+2024-07-18 04:06:31 INFO     ===> mass get
+2024-07-18 04:06:31 INFO     ### test_mass_get_2508_HIP ==> PASSED
+2024-07-18 04:06:34 INFO     ===> dgo status
+2024-07-18 04:06:34 INFO     ### test_dgo_status_2508 ==> PASSED
+2024-07-18 04:06:37 INFO     ===> mass inject 0
+2024-07-18 04:06:38 INFO     ### test_mass_inject_0 ==> PASSED
+2024-07-18 04:06:41 INFO     ===> mass get
+2024-07-18 04:06:41 INFO     ### test_mass_get_2508_HIP ==> PASSED
+2024-07-18 04:06:44 INFO     ===> dgo status
+2024-07-18 04:06:44 INFO     ### test_dgo_status_2508 ==> PASSED
+2024-07-18 04:06:47 INFO     ===> dgo stage hip_trans
+2024-07-18 04:06:47 INFO     ### test_hip_trans_region_2508_HIP ==> PASSED
+2024-07-18 04:06:50 INFO     ===> mass get
+2024-07-18 04:06:50 INFO     ### test_mass_get_2508_HIP_trans ==> PASSED
+2024-07-18 04:06:53 INFO     ===> dgo status
+2024-07-18 04:06:54 INFO     ### test_dgo_status_2508_HIP_trans ==> PASSED
+2024-07-18 04:07:57 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 04:07:57 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 04:08:00 INFO     ===> mass inject 897
+2024-07-18 04:08:00 INFO     ### test_mass_inject_897_HIP_trans ==> PASSED
+2024-07-18 04:08:03 INFO     ===> mass get
+2024-07-18 04:08:04 INFO     ### test_mass_get_3405_HIP_trans ==> PASSED
+2024-07-18 04:08:07 INFO     ===> dgo status
+2024-07-18 04:08:07 INFO     ### test_dgo_status_3405_HIP_trans ==> PASSED
+2024-07-18 04:09:10 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 04:09:10 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 04:09:13 INFO     ===> mass inject 110
+2024-07-18 04:09:14 INFO     ### test_mass_inject_110_HIP_trans ==> PASSED
+2024-07-18 04:09:17 INFO     ===> mass get
+2024-07-18 04:09:17 INFO     ### test_mass_get_3515_HIP_trans ==> PASSED
+2024-07-18 04:09:20 INFO     ===> dgo status
+2024-07-18 04:09:20 INFO     ### test_dgo_status_3515_HIP_trans ==> PASSED
+PASSED                                                                   [ 66%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_8lb_3632_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:09:26 INFO     dgo manual_stop executed
+2024-07-18 04:09:29 INFO     Current State: IDLE
+2024-07-18 04:09:34 INFO     dgo manual_start executed
+2024-07-18 04:09:46 INFO     Current State: LIP
+2024-07-18 04:09:55 INFO     dgo stage skip executed HIP
+2024-07-18 04:09:58 INFO     Current State: HIP
+2024-07-18 04:10:01 INFO     ===> dgo status
+2024-07-18 04:10:01 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 04:10:04 INFO     ===> mass clear
+2024-07-18 04:10:05 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 04:10:08 INFO     ===> mass get
+2024-07-18 04:10:08 INFO     ### test_mass_get ==> PASSED
+2024-07-18 04:10:11 INFO     ===> dgo status
+2024-07-18 04:10:11 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 04:10:14 INFO     ===> mass inject 32
+2024-07-18 04:10:15 INFO     ### test_mass_inject_32 ==> PASSED
+2024-07-18 04:10:18 INFO     ===> mass get
+2024-07-18 04:10:18 INFO     ### test_mass_get_32_HIP ==> PASSED
+2024-07-18 04:10:21 INFO     ===> dgo status
+2024-07-18 04:10:22 INFO     ### test_dgo_status_32 ==> PASSED
+2024-07-18 04:10:25 INFO     ===> mass inject 3600
+2024-07-18 04:10:25 INFO     ### test_mass_inject_3600 ==> PASSED
+2024-07-18 04:10:28 INFO     ===> mass get
+2024-07-18 04:10:28 INFO     ### test_mass_get_3632_HIP ==> PASSED
+2024-07-18 04:10:31 INFO     ===> dgo status
+2024-07-18 04:10:32 INFO     ### test_dgo_status_3632_HIP ==> PASSED
+2024-07-18 04:10:35 INFO     ===> dgo stage hip_trans
+2024-07-18 04:10:35 INFO     ### test_hip_trans_region_3632_HIP ==> PASSED
+2024-07-18 04:10:38 INFO     ===> mass get
+2024-07-18 04:10:38 INFO     ### test_mass_get_3632_HIP_trans ==> PASSED
+2024-07-18 04:10:41 INFO     ===> dgo status
+2024-07-18 04:10:41 INFO     ### test_dgo_status_3632_HIP_trans ==> PASSED
+PASSED                                                                   [ 73%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_11lb_5000_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:10:47 INFO     dgo manual_stop executed
+2024-07-18 04:10:50 INFO     Current State: IDLE
+2024-07-18 04:10:55 INFO     dgo manual_start executed
+2024-07-18 04:11:07 INFO     Current State: LIP
+2024-07-18 04:11:16 INFO     dgo stage skip executed HIP
+2024-07-18 04:11:19 INFO     Current State: HIP
+2024-07-18 04:11:22 INFO     ===> dgo status
+2024-07-18 04:11:22 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 04:11:25 INFO     ===> mass clear
+2024-07-18 04:11:26 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 04:11:29 INFO     ===> mass get
+2024-07-18 04:11:29 INFO     ### test_mass_get ==> PASSED
+2024-07-18 04:11:32 INFO     ===> dgo status
+2024-07-18 04:11:33 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-18 04:11:36 INFO     ===> mass inject 5000
+2024-07-18 04:11:36 INFO     ### test_mass_inject_5000 ==> PASSED
+2024-07-18 04:11:39 INFO     ===> mass get
+2024-07-18 04:11:39 INFO     ### test_mass_get_5000_HIP ==> PASSED
+2024-07-18 04:11:42 INFO     ===> dgo status
+2024-07-18 04:11:43 INFO     ### test_dgo_status_5000_HIP ==> PASSED
+2024-07-18 04:11:46 INFO     ===> dgo stage hip_trans
+2024-07-18 04:11:46 INFO     ### test_hip_trans_region_5000_HIP ==> PASSED
+2024-07-18 04:11:49 INFO     ===> mass get
+2024-07-18 04:11:49 INFO     ### test_mass_get_5000_HIP_trans ==> PASSED
+2024-07-18 04:11:52 INFO     ===> dgo status
+2024-07-18 04:11:52 INFO     ### test_dgo_status_5000_HIP_trans ==> PASSED
+PASSED                                                                   [ 80%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_2d3lb_M_1158_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:11:58 INFO     dgo manual_stop executed
+2024-07-18 04:12:01 INFO     Current State: IDLE
+2024-07-18 04:12:06 INFO     dgo manual_start executed
+2024-07-18 04:12:18 INFO     Current State: LIP
+2024-07-18 04:12:27 INFO     dgo stage skip executed HIP
+2024-07-18 04:12:30 INFO     Current State: HIP
+2024-07-18 04:12:33 INFO     ===> dgo status
+2024-07-18 04:12:33 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 04:12:36 INFO     ===> mass clear
+2024-07-18 04:12:37 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 04:12:40 INFO     ===> mass get
+2024-07-18 04:12:40 INFO     ### test_mass_get ==> PASSED
+2024-07-18 04:12:43 INFO     ===> mass inject 1500
+2024-07-18 04:12:44 INFO     ### test_mass_inject_1500_HIP ==> PASSED
+2024-07-18 04:12:47 INFO     ===> mass get
+2024-07-18 04:12:47 INFO     ### test_mass_get_1500_HIP ==> PASSED
+2024-07-18 04:12:50 INFO     ===> dgo status
+2024-07-18 04:12:50 INFO     ### test_dgo_status_1500_HIP ==> PASSED
+2024-07-18 04:12:53 INFO     ===> dgo stage hip_trans
+2024-07-18 04:12:53 INFO     ### test_hip_trans_region_1500_HIP ==> PASSED
+2024-07-18 04:12:56 INFO     ===> mass get
+2024-07-18 04:12:57 INFO     ### test_mass_get_1500_HIP_trans ==> PASSED
+2024-07-18 04:13:00 INFO     ===> dgo status
+2024-07-18 04:13:00 INFO     ### test_dgo_status_1500_HIP_trans ==> PASSED
+2024-07-18 04:17:03 INFO     ** wait_time_pause: 240 seconds **
+2024-07-18 04:17:03 INFO     ### wait_time_240s ==> PASSED
+2024-07-18 04:17:09 INFO     Current State: HIP
+2024-07-18 04:17:13 INFO     dgo stage skip executed COOLDOWN
+2024-07-18 04:17:21 INFO     Current State: COOLDOWN
+2024-07-18 04:17:24 INFO     ===> dgo status
+2024-07-18 04:17:25 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-18 04:17:28 INFO     ===> mass get
+2024-07-18 04:17:28 INFO     ### test_mass_get_1500_COOLDOWN ==> PASSED
+2024-07-18 04:17:31 INFO     ===> dgo status
+2024-07-18 04:17:31 INFO     ### test_dgo_status_1500_COOLDOWN ==> PASSED
+2024-07-18 04:17:34 INFO     ===> mass inject 800
+2024-07-18 04:17:35 INFO     ### test_mass_inject_800_COOLDOWN ==> PASSED
+2024-07-18 04:17:38 INFO     ===> mass get
+2024-07-18 04:17:38 INFO     ### test_mass_get_2300_COOLDOWN ==> PASSED
+2024-07-18 04:17:41 INFO     ===> dgo status
+2024-07-18 04:17:41 INFO     ### test_dgo_status_2300_COOLDOWN ==> PASSED
+2024-07-18 04:17:47 INFO     Current State: COOLDOWN
+2024-07-18 04:17:51 INFO     dgo stage skip executed IDLE
+2024-07-18 04:17:59 INFO     Current State: IDLE
+2024-07-18 04:18:04 INFO     ===> dgo status
+2024-07-18 04:18:05 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-18 04:18:08 INFO     ===> dgo manual_stop
+2024-07-18 04:18:08 INFO     ### test_dgo_manual_stop ==> PASSED
+2024-07-18 04:18:11 INFO     ===> mass get
+2024-07-18 04:18:11 INFO     ### test_mass_get_800_IDLE ==> PASSED
+2024-07-18 04:18:14 INFO     ===> dgo status
+2024-07-18 04:18:14 INFO     ### test_dgo_status_800_IDLE ==> PASSED
+2024-07-18 04:18:17 INFO     ===> mass inject 85
+2024-07-18 04:18:18 INFO     ### test_mass_inject_85_IDLE ==> PASSED
+2024-07-18 04:18:21 INFO     ===> mass get
+2024-07-18 04:18:21 INFO     ### test_mass_get_885_IDLE ==> PASSED
+2024-07-18 04:18:24 INFO     ===> dgo status
+2024-07-18 04:18:24 INFO     ### test_dgo_status_885_IDLE ==> PASSED
+2024-07-18 04:18:30 INFO     Current State: IDLE
+2024-07-18 04:18:30 INFO     dgo manual_start executed
+2024-07-18 04:18:39 INFO     Current State: LIP
+2024-07-18 04:18:42 INFO     ===> dgo status
+2024-07-18 04:18:42 INFO     ### test_dgo_jump_fromIDLEtoLIP ==> PASSED
+2024-07-18 04:18:45 INFO     ===> mass get
+2024-07-18 04:18:45 INFO     ### test_mass_get_885_LIP ==> PASSED
+2024-07-18 04:18:48 INFO     ===> temp get 3
+2024-07-18 04:18:48 INFO     ### test_temp_get_3_LIP ==> PASSED
+2024-07-18 04:18:51 INFO     ===> dgo status
+2024-07-18 04:18:51 INFO     ### test_dgo_status_885_LIP ==> PASSED
+2024-07-18 04:18:54 INFO     ===> mass inject 172
+2024-07-18 04:18:55 INFO     ### test_mass_inject_172_LIP ==> PASSED
+2024-07-18 04:18:58 INFO     ===> mass get
+2024-07-18 04:18:58 INFO     ### test_mass_get_1057_LIP ==> PASSED
+2024-07-18 04:19:01 INFO     ===> dgo status
+2024-07-18 04:19:02 INFO     ### test_dgo_status_1057_LIP ==> PASSED
+2024-07-18 04:19:08 INFO     Current State: LIP
+2024-07-18 04:19:12 INFO     dgo stage skip executed HIP
+2024-07-18 04:19:20 INFO     Current State: HIP
+2024-07-18 04:19:23 INFO     ===> dgo status
+2024-07-18 04:19:23 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+2024-07-18 04:19:26 INFO     ===> mass get
+2024-07-18 04:19:26 INFO     ### test_mass_get_1057_HIP ==> PASSED
+2024-07-18 04:19:29 INFO     ===> dgo status
+2024-07-18 04:19:30 INFO     ### test_dgo_status_1057_HIP ==> PASSED
+2024-07-18 04:19:33 INFO     ===> dgo stage hip_trans
+2024-07-18 04:19:33 INFO     ### test_hip_trans_region_1057_HIP ==> PASSED
+2024-07-18 04:19:36 INFO     ===> mass get
+2024-07-18 04:19:36 INFO     ### test_mass_get_1057_HIP_trans ==> PASSED
+2024-07-18 04:19:39 INFO     ===> dgo status
+2024-07-18 04:19:39 INFO     ### test_dgo_status_1057_HIP_trans ==> PASSED
+2024-07-18 04:20:42 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 04:20:42 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 04:20:45 INFO     ===> mass inject 101
+2024-07-18 04:20:46 INFO     ### test_mass_inject_101_HIP_trans ==> PASSED
+2024-07-18 04:20:49 INFO     ===> mass get
+2024-07-18 04:20:49 INFO     ### test_mass_get_1158_HIP_trans ==> PASSED
+2024-07-18 04:20:52 INFO     ===> dgo status
+2024-07-18 04:20:53 INFO     ### test_dgo_status_1158_HIP_trans ==> PASSED
+PASSED                                                                   [ 86%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_3d7lb_M_1679_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:20:59 INFO     dgo manual_stop executed
+2024-07-18 04:21:02 INFO     Current State: IDLE
+2024-07-18 04:21:07 INFO     dgo manual_start executed
+2024-07-18 04:21:18 INFO     Current State: LIP
+2024-07-18 04:21:27 INFO     dgo stage skip executed HIP
+2024-07-18 04:21:31 INFO     Current State: HIP
+2024-07-18 04:21:34 INFO     ===> dgo status
+2024-07-18 04:21:34 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 04:21:37 INFO     ===> mass clear
+2024-07-18 04:21:38 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 04:21:41 INFO     ===> mass get
+2024-07-18 04:21:41 INFO     ### test_mass_get ==> PASSED
+2024-07-18 04:21:44 INFO     ===> mass inject 1350
+2024-07-18 04:21:45 INFO     ### test_mass_inject_1350_HIP ==> PASSED
+2024-07-18 04:21:48 INFO     ===> mass get
+2024-07-18 04:21:48 INFO     ### test_mass_get_1350_HIP ==> PASSED
+2024-07-18 04:21:51 INFO     ===> dgo status
+2024-07-18 04:21:51 INFO     ### test_dgo_status_1350_HIP ==> PASSED
+2024-07-18 04:21:54 INFO     ===> dgo stage hip_trans
+2024-07-18 04:21:54 INFO     ### test_hip_trans_region_1350_HIP ==> PASSED
+2024-07-18 04:21:57 INFO     ===> mass get
+2024-07-18 04:21:57 INFO     ### test_mass_get_1350_HIP_trans ==> PASSED
+2024-07-18 04:22:00 INFO     ===> dgo status
+2024-07-18 04:22:00 INFO     ### test_dgo_status_1350_HIP_trans ==> PASSED
+2024-07-18 04:23:03 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 04:23:03 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 04:23:06 INFO     ===> mass inject 200
+2024-07-18 04:23:07 INFO     ### test_mass_inject_200_HIP_trans ==> PASSED
+2024-07-18 04:23:10 INFO     ===> mass get
+2024-07-18 04:23:10 INFO     ### test_mass_get_1550_HIP_trans ==> PASSED
+2024-07-18 04:23:13 INFO     ===> dgo status
+2024-07-18 04:23:14 INFO     ### test_dgo_status_1550_HIP_trans ==> PASSED
+2024-07-18 04:25:17 INFO     ** wait_time_pause: 120 seconds **
+2024-07-18 04:25:17 INFO     ### wait_time_120s ==> PASSED
+2024-07-18 04:25:23 INFO     Current State: HIP
+2024-07-18 04:25:27 INFO     dgo stage skip executed COOLDOWN
+2024-07-18 04:25:35 INFO     Current State: COOLDOWN
+2024-07-18 04:25:38 INFO     ===> dgo status
+2024-07-18 04:25:38 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-18 04:25:41 INFO     ===> mass get
+2024-07-18 04:25:41 INFO     ### test_mass_get_1550_COOLDOWN ==> PASSED
+2024-07-18 04:25:44 INFO     ===> dgo status
+2024-07-18 04:25:45 INFO     ### test_dgo_status_1550_COOLDOWN ==> PASSED
+2024-07-18 04:25:48 INFO     ===> mass inject 752
+2024-07-18 04:25:49 INFO     ### test_mass_inject_752_COOLDOWN ==> PASSED
+2024-07-18 04:25:52 INFO     ===> mass get
+2024-07-18 04:25:52 INFO     ### test_mass_get_2302_COOLDOWN ==> PASSED
+2024-07-18 04:25:55 INFO     ===> dgo status
+2024-07-18 04:25:55 INFO     ### test_dgo_status_2302_COOLDOWN ==> PASSED
+2024-07-18 04:26:01 INFO     Current State: COOLDOWN
+2024-07-18 04:26:05 INFO     dgo stage skip executed IDLE
+2024-07-18 04:26:13 INFO     Current State: IDLE
+2024-07-18 04:26:18 INFO     ===> dgo status
+2024-07-18 04:26:18 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-18 04:26:21 INFO     ===> dgo manual_stop
+2024-07-18 04:26:21 INFO     ### test_dgo_manual_stop ==> PASSED
+2024-07-18 04:26:24 INFO     ===> mass get
+2024-07-18 04:26:24 INFO     ### test_mass_get_752_IDLE ==> PASSED
+2024-07-18 04:26:28 INFO     ===> dgo status
+2024-07-18 04:26:28 INFO     ### test_dgo_status_752_IDLE ==> PASSED
+2024-07-18 04:26:31 INFO     ===> mass inject 335
+2024-07-18 04:26:32 INFO     ### test_mass_inject_335_IDLE ==> PASSED
+2024-07-18 04:26:35 INFO     ===> mass get
+2024-07-18 04:26:35 INFO     ### test_mass_get_1087_IDLE ==> PASSED
+2024-07-18 04:26:38 INFO     ===> dgo status
+2024-07-18 04:26:38 INFO     ### test_dgo_status_1087_IDLE ==> PASSED
+2024-07-18 04:26:44 INFO     Current State: IDLE
+2024-07-18 04:26:44 INFO     dgo manual_start executed
+2024-07-18 04:26:53 INFO     Current State: LIP
+2024-07-18 04:26:56 INFO     ===> dgo status
+2024-07-18 04:26:56 INFO     ### test_dgo_jump_fromIDLEtoLIP ==> PASSED
+2024-07-18 04:26:59 INFO     ===> mass get
+2024-07-18 04:26:59 INFO     ### test_mass_get_1087_LIP ==> PASSED
+2024-07-18 04:27:02 INFO     ===> temp get 3
+2024-07-18 04:27:02 INFO     ### test_temp_get_3_LIP ==> PASSED
+2024-07-18 04:27:05 INFO     ===> dgo status
+2024-07-18 04:27:05 INFO     ### test_dgo_status_1087_LIP ==> PASSED
+2024-07-18 04:27:08 INFO     ===> mass inject 392
+2024-07-18 04:27:09 INFO     ### test_mass_inject_392_LIP ==> PASSED
+2024-07-18 04:27:12 INFO     ===> mass get
+2024-07-18 04:27:12 INFO     ### test_mass_get_1479_LIP ==> PASSED
+2024-07-18 04:27:15 INFO     ===> dgo status
+2024-07-18 04:27:16 INFO     ### test_dgo_status_1479_LIP ==> PASSED
+2024-07-18 04:27:22 INFO     Current State: LIP
+2024-07-18 04:27:26 INFO     dgo stage skip executed HIP
+2024-07-18 04:27:34 INFO     Current State: HIP
+2024-07-18 04:27:37 INFO     ===> dgo status
+2024-07-18 04:27:37 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+2024-07-18 04:27:40 INFO     ===> mass get
+2024-07-18 04:27:40 INFO     ### test_mass_get_1479_HIP ==> PASSED
+2024-07-18 04:27:43 INFO     ===> dgo status
+2024-07-18 04:27:44 INFO     ### test_dgo_status_1479_HIP ==> PASSED
+2024-07-18 04:27:47 INFO     ===> dgo stage hip_trans
+2024-07-18 04:27:47 INFO     ### test_hip_trans_region_1479_HIP ==> PASSED
+2024-07-18 04:27:50 INFO     ===> mass get
+2024-07-18 04:27:50 INFO     ### test_mass_get_1479_HIP_trans ==> PASSED
+2024-07-18 04:27:53 INFO     ===> dgo status
+2024-07-18 04:27:53 INFO     ### test_dgo_status_1479_HIP_trans ==> PASSED
+2024-07-18 04:28:56 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 04:28:56 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 04:28:59 INFO     ===> mass inject 200
+2024-07-18 04:29:00 INFO     ### test_mass_inject_200_HIP_trans ==> PASSED
+2024-07-18 04:29:03 INFO     ===> mass get
+2024-07-18 04:29:03 INFO     ### test_mass_get_1679_HIP_trans ==> PASSED
+2024-07-18 04:29:06 INFO     ===> dgo status
+2024-07-18 04:29:06 INFO     ### test_dgo_status_1679_HIP_trans ==> PASSED
+PASSED                                                                   [ 93%]
+dgo_mass_add_5hr_min_runtime_HIP.py::TestMass5HrMinRuntimeHIP::test_group_mass_add_6d9lb_M_3131_From_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-18 04:29:12 INFO     dgo manual_stop executed
+2024-07-18 04:29:16 INFO     Current State: IDLE
+2024-07-18 04:29:21 INFO     dgo manual_start executed
+2024-07-18 04:29:32 INFO     Current State: LIP
+2024-07-18 04:29:41 INFO     dgo stage skip executed HIP
+2024-07-18 04:29:44 INFO     Current State: HIP
+2024-07-18 04:29:47 INFO     ===> dgo status
+2024-07-18 04:29:48 INFO     ### test_dgo_Start_with_HIP_State ==> PASSED
+2024-07-18 04:29:51 INFO     ===> mass clear
+2024-07-18 04:29:51 INFO     ### test_mass_clear ==> PASSED
+2024-07-18 04:29:54 INFO     ===> mass get
+2024-07-18 04:29:54 INFO     ### test_mass_get ==> PASSED
+2024-07-18 04:29:57 INFO     ===> mass inject 1350
+2024-07-18 04:29:58 INFO     ### test_mass_inject_1350_HIP ==> PASSED
+2024-07-18 04:30:01 INFO     ===> mass get
+2024-07-18 04:30:02 INFO     ### test_mass_get_1350_HIP ==> PASSED
+2024-07-18 04:30:05 INFO     ===> dgo status
+2024-07-18 04:30:05 INFO     ### test_dgo_status_1350_HIP ==> PASSED
+2024-07-18 04:30:08 INFO     ===> dgo stage hip_trans
+2024-07-18 04:30:08 INFO     ### test_hip_trans_region_1350_HIP ==> PASSED
+2024-07-18 04:30:11 INFO     ===> mass get
+2024-07-18 04:30:11 INFO     ### test_mass_get_1350_HIP_trans ==> PASSED
+2024-07-18 04:30:14 INFO     ===> dgo status
+2024-07-18 04:30:14 INFO     ### test_dgo_status_1350_HIP_trans ==> PASSED
+2024-07-18 04:32:17 INFO     ** wait_time_pause: 120 seconds **
+2024-07-18 04:32:17 INFO     ### wait_time_120s ==> PASSED
+2024-07-18 04:32:24 INFO     Current State: HIP
+2024-07-18 04:32:28 INFO     dgo stage skip executed COOLDOWN
+2024-07-18 04:32:36 INFO     Current State: COOLDOWN
+2024-07-18 04:32:39 INFO     ===> dgo status
+2024-07-18 04:32:39 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-18 04:32:42 INFO     ===> mass get
+2024-07-18 04:32:42 INFO     ### test_mass_get_1350_COOLDOWN ==> PASSED
+2024-07-18 04:32:45 INFO     ===> dgo status
+2024-07-18 04:32:45 INFO     ### test_dgo_status_1350_COOLDOWN ==> PASSED
+2024-07-18 04:32:49 INFO     ===> mass inject 952
+2024-07-18 04:32:49 INFO     ### test_mass_inject_952_COOLDOWN ==> PASSED
+2024-07-18 04:32:52 INFO     ===> mass get
+2024-07-18 04:32:53 INFO     ### test_mass_get_2302_COOLDOWN ==> PASSED
+2024-07-18 04:32:56 INFO     ===> dgo status
+2024-07-18 04:32:56 INFO     ### test_dgo_status_2302_COOLDOWN ==> PASSED
+2024-07-18 04:33:02 INFO     Current State: COOLDOWN
+2024-07-18 04:33:06 INFO     dgo stage skip executed IDLE
+2024-07-18 04:33:14 INFO     Current State: IDLE
+2024-07-18 04:33:19 INFO     ===> dgo status
+2024-07-18 04:33:19 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-18 04:33:22 INFO     ===> dgo manual_stop
+2024-07-18 04:33:22 INFO     ### test_dgo_manual_stop ==> PASSED
+2024-07-18 04:33:25 INFO     ===> mass get
+2024-07-18 04:33:25 INFO     ### test_mass_get_952_IDLE ==> PASSED
+2024-07-18 04:33:28 INFO     ===> dgo status
+2024-07-18 04:33:29 INFO     ### test_dgo_status_952_IDLE ==> PASSED
+2024-07-18 04:33:32 INFO     ===> mass inject 1235
+2024-07-18 04:33:33 INFO     ### test_mass_inject_1235_IDLE ==> PASSED
+2024-07-18 04:33:36 INFO     ===> mass get
+2024-07-18 04:33:36 INFO     ### test_mass_get_2187_IDLE ==> PASSED
+2024-07-18 04:33:39 INFO     ===> dgo status
+2024-07-18 04:33:39 INFO     ### test_dgo_status_2187_IDLE ==> PASSED
+2024-07-18 04:33:45 INFO     Current State: IDLE
+2024-07-18 04:33:45 INFO     dgo manual_start executed
+2024-07-18 04:33:53 INFO     Current State: LIP
+2024-07-18 04:33:56 INFO     ===> dgo status
+2024-07-18 04:33:57 INFO     ### test_dgo_jump_fromIDLEtoLIP ==> PASSED
+2024-07-18 04:34:00 INFO     ===> mass get
+2024-07-18 04:34:00 INFO     ### test_mass_get_2187_LIP ==> PASSED
+2024-07-18 04:34:03 INFO     ===> temp get 3
+2024-07-18 04:34:03 INFO     ### test_temp_get_3_LIP ==> PASSED
+2024-07-18 04:34:06 INFO     ===> dgo status
+2024-07-18 04:34:06 INFO     ### test_dgo_status_2187_LIP ==> PASSED
+2024-07-18 04:34:09 INFO     ===> mass inject 572
+2024-07-18 04:34:10 INFO     ### test_mass_inject_572_LIP ==> PASSED
+2024-07-18 04:34:13 INFO     ===> mass get
+2024-07-18 04:34:13 INFO     ### test_mass_get_2759_LIP ==> PASSED
+2024-07-18 04:34:16 INFO     ===> dgo status
+2024-07-18 04:34:16 INFO     ### test_dgo_status_2759_LIP ==> PASSED
+2024-07-18 04:34:23 INFO     Current State: LIP
+2024-07-18 04:34:27 INFO     dgo stage skip executed HIP
+2024-07-18 04:34:35 INFO     Current State: HIP
+2024-07-18 04:34:38 INFO     ===> dgo status
+2024-07-18 04:34:38 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+2024-07-18 04:34:41 INFO     ===> mass get
+2024-07-18 04:34:41 INFO     ### test_mass_get_2759_HIP ==> PASSED
+2024-07-18 04:34:44 INFO     ===> dgo status
+2024-07-18 04:34:44 INFO     ### test_dgo_status_2759_HIP ==> PASSED
+2024-07-18 04:34:47 INFO     ===> dgo stage hip_trans
+2024-07-18 04:34:48 INFO     ### test_hip_trans_region_2759_HIP ==> PASSED
+2024-07-18 04:34:51 INFO     ===> mass get
+2024-07-18 04:34:51 INFO     ### test_mass_get_2759_HIP_trans ==> PASSED
+2024-07-18 04:34:54 INFO     ===> dgo status
+2024-07-18 04:34:54 INFO     ### test_dgo_status_2759_HIP_trans ==> PASSED
+2024-07-18 04:35:57 INFO     ** wait_time_pause: 60 seconds **
+2024-07-18 04:35:57 INFO     ### wait_time_pause ==> PASSED
+2024-07-18 04:36:00 INFO     ===> mass inject 372
+2024-07-18 04:36:01 INFO     ### test_mass_inject_372_HIP_trans ==> PASSED
+2024-07-18 04:36:04 INFO     ===> mass get
+2024-07-18 04:36:04 INFO     ### test_mass_get_3131_HIP_trans ==> PASSED
+2024-07-18 04:36:07 INFO     ===> dgo status
+2024-07-18 04:36:07 INFO     ### test_dgo_status_3131_HIP_trans ==> PASSED
+2024-07-18 04:36:13 INFO     dgo manual_stop executed
+2024-07-18 04:36:16 INFO     Current State: IDLE
+2024-07-18 04:36:16 INFO     ===> dgo status
+2024-07-18 04:36:17 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-18 04:36:20 INFO     ===> mass clear
+2024-07-18 04:36:20 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 15 passed in 3259.77s (0:54:19) ========================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1721270522.json': No such file or directory

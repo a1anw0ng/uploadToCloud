@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 11 items
+
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:56:17 INFO     dgo manual_stop executed
+2024-07-22 18:56:21 INFO     Current State: IDLE
+2024-07-22 18:56:21 INFO     ===> dgo status
+2024-07-22 18:56:21 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  9%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:56:23 INFO     ===> dgo manual_start
+2024-07-22 18:56:23 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 18%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_dgo_skip_stage_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:56:25 INFO     ===> dgo stage skip
+2024-07-22 18:56:27 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 27%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_wait_time_heatup 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:59:29 INFO     ** wait_time_pause: 180 seconds **
+2024-07-22 18:59:29 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 36%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_get_shadow_lidLockState_true 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:59:31 INFO     Found credentials in environment variables.
+2024-07-22 18:59:31 INFO     ### get_shadow_lidLockState_true ==> PASSED
+PASSED                                                                   [ 45%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_get_shadow_safetyLock_true 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:59:33 INFO     Found credentials in environment variables.
+2024-07-22 18:59:33 INFO     ### get_shadow_safetyLock_true ==> PASSED
+PASSED                                                                   [ 54%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_get_shadow_dgoSafetyLockEnabled_true 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:59:35 INFO     Found credentials in environment variables.
+2024-07-22 18:59:36 INFO     ### get_shadow_dgoSafetyLockEnabled_true ==> PASSED
+PASSED                                                                   [ 63%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_get_shadow_dgoRequiredLock_true 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:59:38 INFO     Found credentials in environment variables.
+2024-07-22 18:59:38 INFO     ### get_shadow_dgoRequiredLock_true ==> PASSED
+PASSED                                                                   [ 72%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_dgo_skip_stage_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-07-22 18:59:40 INFO     ===> dgo stage skip
+2024-07-22 18:59:41 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 81%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_wait_time_cool 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:02:43 INFO     ** wait_time_pause: 180 seconds **
+2024-07-22 19:02:43 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 90%]
+bat_dgo_locked_when_hot_shadows.py::TestBAT_DGO_LOCKED_WHEN_HOT_SHADOWS::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-22 19:02:45 INFO     ===> dgo manual_stop
+2024-07-22 19:02:45 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 11 passed in 392.64s (0:06:32) ========================

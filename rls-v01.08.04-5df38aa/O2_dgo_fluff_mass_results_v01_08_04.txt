@@ -1,0 +1,976 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 15 items
+
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_0_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 01:38:02 INFO     ===> lid inject 0
+2024-07-21 01:38:02 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 01:38:05 INFO     ### test_lid_inject_0 ==> PASSED
+2024-07-21 01:38:08 INFO     ===> lid inject 1
+2024-07-21 01:38:11 INFO     retries counts: 1
+2024-07-21 01:38:14 INFO     retries counts: 2
+2024-07-21 01:38:17 INFO     retries counts: 3
+2024-07-21 01:38:20 INFO     retries counts: 4
+2024-07-21 01:38:24 INFO     retries counts: 5
+2024-07-21 01:38:24 ERROR    Timeout after 5 retries!
+2024-07-21 01:38:24 INFO     ### test_lid_inject_1 ==> PASSED
+2024-07-21 01:38:30 INFO     dgo manual_stop executed
+2024-07-21 01:38:33 INFO     Current State: IDLE
+2024-07-21 01:38:33 INFO     ===> dgo status
+2024-07-21 01:38:33 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 01:38:36 INFO     ===> mass clear
+2024-07-21 01:38:37 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 01:38:40 INFO     ===> mass get
+2024-07-21 01:38:40 INFO     ### test_mass_get ==> PASSED
+2024-07-21 01:38:43 INFO     ===> mass inject 0
+2024-07-21 01:38:43 INFO     ### test_mass_inject_0 ==> PASSED
+2024-07-21 01:38:46 INFO     ===> mass get
+2024-07-21 01:38:46 INFO     ### test_mass_get_0 ==> PASSED
+2024-07-21 01:38:49 INFO     ===> dgo config get
+2024-07-21 01:38:50 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 01:38:56 INFO     Current State: IDLE
+2024-07-21 01:38:56 INFO     dgo manual_start executed
+2024-07-21 01:39:09 INFO     Current State: LIP
+2024-07-21 01:39:13 INFO     dgo stage skip executed HIP
+2024-07-21 01:39:21 INFO     Current State: HIP
+2024-07-21 01:39:24 INFO     ===> dgo status
+2024-07-21 01:39:25 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 01:39:28 INFO     ===> dgo stage hip_trans
+2024-07-21 01:39:28 INFO     ### test_hip_trans_region_0_HIP ==> PASSED
+2024-07-21 01:39:34 INFO     Current State: HIP
+2024-07-21 01:39:38 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 01:39:46 INFO     Current State: COOLDOWN
+2024-07-21 01:39:49 INFO     ===> dgo status
+2024-07-21 01:39:49 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 01:40:02 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 01:40:02 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 01:40:09 INFO     Current State: COOLDOWN
+2024-07-21 01:40:12 INFO     dgo stage skip executed IDLE
+2024-07-21 01:40:21 INFO     Current State: IDLE
+2024-07-21 01:40:26 INFO     ===> dgo status
+2024-07-21 01:40:26 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 01:40:34 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 01:40:34 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 01:40:37 INFO     ===> dgo status
+2024-07-21 01:40:37 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 01:40:40 INFO     ===> grinder get
+2024-07-21 01:40:40 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 01:40:43 INFO     ===> dgo config get
+2024-07-21 01:40:43 INFO     ### test_dgo_config_fluff_still_no_schedule ==> PASSED
+2024-07-21 01:40:46 INFO     ===> dgo status
+2024-07-21 01:40:46 INFO     ### test_dgo_status_0_no_fluff ==> PASSED
+2024-07-21 01:40:50 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 01:40:50 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [  6%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_1lb_454_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 01:40:56 INFO     dgo manual_stop executed
+2024-07-21 01:41:00 INFO     Current State: IDLE
+2024-07-21 01:41:00 INFO     ===> dgo status
+2024-07-21 01:41:00 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 01:41:03 INFO     ===> mass clear
+2024-07-21 01:41:03 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 01:41:06 INFO     ===> mass get
+2024-07-21 01:41:06 INFO     ### test_mass_get ==> PASSED
+2024-07-21 01:41:09 INFO     ===> mass inject 454
+2024-07-21 01:41:10 INFO     ### test_mass_inject_454 ==> PASSED
+2024-07-21 01:41:13 INFO     ===> mass get
+2024-07-21 01:41:13 INFO     ### test_mass_get_454 ==> PASSED
+2024-07-21 01:41:16 INFO     ===> dgo config get
+2024-07-21 01:41:16 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 01:41:23 INFO     Current State: IDLE
+2024-07-21 01:41:23 INFO     dgo manual_start executed
+2024-07-21 01:41:36 INFO     Current State: LIP
+2024-07-21 01:41:40 INFO     dgo stage skip executed HIP
+2024-07-21 01:41:48 INFO     Current State: HIP
+2024-07-21 01:41:51 INFO     ===> dgo status
+2024-07-21 01:41:52 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 01:41:55 INFO     ===> dgo stage hip_trans
+2024-07-21 01:41:55 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 01:42:01 INFO     Current State: HIP
+2024-07-21 01:42:05 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 01:42:13 INFO     Current State: COOLDOWN
+2024-07-21 01:42:16 INFO     ===> dgo status
+2024-07-21 01:42:16 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 01:42:29 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 01:42:29 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 01:42:36 INFO     Current State: COOLDOWN
+2024-07-21 01:42:39 INFO     dgo stage skip executed IDLE
+2024-07-21 01:42:48 INFO     Current State: IDLE
+2024-07-21 01:42:53 INFO     ===> dgo status
+2024-07-21 01:42:53 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 01:43:01 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 01:43:01 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 01:43:04 INFO     ===> dgo status
+2024-07-21 01:43:04 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 01:43:07 INFO     ===> grinder get
+2024-07-21 01:43:07 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 01:43:10 INFO     ===> dgo config get
+2024-07-21 01:43:10 INFO     ### test_dgo_config_fluff_still_no_schedule ==> PASSED
+2024-07-21 01:43:13 INFO     ===> dgo status
+2024-07-21 01:43:14 INFO     ### test_dgo_status_454_no_fluff ==> PASSED
+2024-07-21 01:43:17 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 01:43:17 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 13%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_1_5lb_681_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 01:43:23 INFO     dgo manual_stop executed
+2024-07-21 01:43:26 INFO     Current State: IDLE
+2024-07-21 01:43:26 INFO     ===> dgo status
+2024-07-21 01:43:27 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 01:43:30 INFO     ===> mass clear
+2024-07-21 01:43:30 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 01:43:33 INFO     ===> mass get
+2024-07-21 01:43:33 INFO     ### test_mass_get ==> PASSED
+2024-07-21 01:43:36 INFO     ===> mass inject 681
+2024-07-21 01:43:37 INFO     ### test_mass_inject_681 ==> PASSED
+2024-07-21 01:43:40 INFO     ===> mass get
+2024-07-21 01:43:40 INFO     ### test_mass_get_681 ==> PASSED
+2024-07-21 01:43:43 INFO     ===> dgo config get
+2024-07-21 01:43:43 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 01:43:50 INFO     Current State: IDLE
+2024-07-21 01:43:50 INFO     dgo manual_start executed
+2024-07-21 01:44:03 INFO     Current State: LIP
+2024-07-21 01:44:07 INFO     dgo stage skip executed HIP
+2024-07-21 01:44:15 INFO     Current State: HIP
+2024-07-21 01:44:18 INFO     ===> dgo status
+2024-07-21 01:44:19 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 01:44:22 INFO     ===> dgo stage hip_trans
+2024-07-21 01:44:22 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 01:44:28 INFO     Current State: HIP
+2024-07-21 01:44:32 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 01:44:40 INFO     Current State: COOLDOWN
+2024-07-21 01:44:43 INFO     ===> dgo status
+2024-07-21 01:44:43 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 01:44:56 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 01:44:56 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 01:45:02 INFO     Current State: COOLDOWN
+2024-07-21 01:45:06 INFO     dgo stage skip executed IDLE
+2024-07-21 01:45:14 INFO     Current State: IDLE
+2024-07-21 01:45:19 INFO     ===> dgo status
+2024-07-21 01:45:20 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 01:45:28 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 01:45:28 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 01:45:31 INFO     ===> dgo status
+2024-07-21 01:45:31 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 01:45:34 INFO     ===> grinder get
+2024-07-21 01:45:34 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 01:45:37 INFO     ===> dgo config get
+2024-07-21 01:45:37 INFO     ### test_dgo_config_fluff_still_no_schedule ==> PASSED
+2024-07-21 01:45:40 INFO     ===> dgo status
+2024-07-21 01:45:40 INFO     ### test_dgo_status_681_no_fluff ==> PASSED
+2024-07-21 01:45:43 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 01:45:44 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 20%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_2_5lb_1135_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 01:45:50 INFO     dgo manual_stop executed
+2024-07-21 01:45:53 INFO     Current State: IDLE
+2024-07-21 01:45:53 INFO     ===> dgo status
+2024-07-21 01:45:53 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 01:45:56 INFO     ===> mass clear
+2024-07-21 01:45:57 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 01:46:00 INFO     ===> mass get
+2024-07-21 01:46:00 INFO     ### test_mass_get ==> PASSED
+2024-07-21 01:46:03 INFO     ===> mass inject 1135
+2024-07-21 01:46:04 INFO     ### test_mass_inject_1135 ==> PASSED
+2024-07-21 01:46:07 INFO     ===> mass get
+2024-07-21 01:46:07 INFO     ### test_mass_get_1135 ==> PASSED
+2024-07-21 01:46:10 INFO     ===> dgo config get
+2024-07-21 01:46:10 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 01:46:16 INFO     Current State: IDLE
+2024-07-21 01:46:16 INFO     dgo manual_start executed
+2024-07-21 01:46:29 INFO     Current State: LIP
+2024-07-21 01:46:34 INFO     dgo stage skip executed HIP
+2024-07-21 01:46:42 INFO     Current State: HIP
+2024-07-21 01:46:45 INFO     ===> dgo status
+2024-07-21 01:46:45 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 01:46:48 INFO     ===> dgo stage hip_trans
+2024-07-21 01:46:48 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 01:46:54 INFO     Current State: HIP
+2024-07-21 01:46:58 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 01:47:07 INFO     Current State: COOLDOWN
+2024-07-21 01:47:10 INFO     ===> dgo status
+2024-07-21 01:47:10 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 01:47:23 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 01:47:23 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 01:47:29 INFO     Current State: COOLDOWN
+2024-07-21 01:47:33 INFO     dgo stage skip executed IDLE
+2024-07-21 01:47:41 INFO     Current State: IDLE
+2024-07-21 01:47:46 INFO     ===> dgo status
+2024-07-21 01:47:46 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 01:47:54 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 01:47:54 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 01:47:57 INFO     ===> dgo status
+2024-07-21 01:47:58 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 01:48:01 INFO     ===> grinder get
+2024-07-21 01:48:01 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 01:48:04 INFO     ===> dgo config get
+2024-07-21 01:48:04 INFO     ### test_dgo_config_fluff_still_no_schedule ==> PASSED
+2024-07-21 01:48:07 INFO     ===> dgo status
+2024-07-21 01:48:07 INFO     ### test_dgo_status_0_no_fluff ==> PASSED
+2024-07-21 01:48:10 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 01:48:10 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 26%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_3lb_1362_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 01:48:17 INFO     dgo manual_stop executed
+2024-07-21 01:48:20 INFO     Current State: IDLE
+2024-07-21 01:48:20 INFO     ===> dgo status
+2024-07-21 01:48:20 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 01:48:23 INFO     ===> mass clear
+2024-07-21 01:48:24 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 01:48:27 INFO     ===> mass get
+2024-07-21 01:48:27 INFO     ### test_mass_get ==> PASSED
+2024-07-21 01:48:30 INFO     ===> mass inject 1362
+2024-07-21 01:48:30 INFO     ### test_mass_inject_1362 ==> PASSED
+2024-07-21 01:48:33 INFO     ===> mass get
+2024-07-21 01:48:34 INFO     ### test_mass_get_1362 ==> PASSED
+2024-07-21 01:48:37 INFO     ===> dgo config get
+2024-07-21 01:48:37 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 01:48:43 INFO     Current State: IDLE
+2024-07-21 01:48:43 INFO     dgo manual_start executed
+2024-07-21 01:48:56 INFO     Current State: LIP
+2024-07-21 01:49:00 INFO     dgo stage skip executed HIP
+2024-07-21 01:49:09 INFO     Current State: HIP
+2024-07-21 01:49:12 INFO     ===> dgo status
+2024-07-21 01:49:12 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 01:49:15 INFO     ===> dgo stage hip_trans
+2024-07-21 01:49:15 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 01:49:21 INFO     Current State: HIP
+2024-07-21 01:49:25 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 01:49:33 INFO     Current State: COOLDOWN
+2024-07-21 01:49:36 INFO     ===> dgo status
+2024-07-21 01:49:36 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 01:49:49 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 01:49:49 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 01:49:56 INFO     Current State: COOLDOWN
+2024-07-21 01:49:59 INFO     dgo stage skip executed IDLE
+2024-07-21 01:50:08 INFO     Current State: IDLE
+2024-07-21 01:50:13 INFO     ===> dgo status
+2024-07-21 01:50:13 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 01:50:21 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 01:50:21 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 01:50:24 INFO     ===> dgo status
+2024-07-21 01:50:24 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 01:50:27 INFO     ===> grinder get
+2024-07-21 01:50:27 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 01:50:30 INFO     ===> dgo config get
+2024-07-21 01:50:30 INFO     ### test_dgo_config_fluff_still_no_schedule ==> PASSED
+2024-07-21 01:50:33 INFO     ===> dgo status
+2024-07-21 01:50:34 INFO     ### test_dgo_status_0_no_fluff ==> PASSED
+2024-07-21 01:50:37 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 01:50:37 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 33%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_3_5lb_1589_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 01:50:43 INFO     dgo manual_stop executed
+2024-07-21 01:50:46 INFO     Current State: IDLE
+2024-07-21 01:50:46 INFO     ===> dgo status
+2024-07-21 01:50:47 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 01:50:50 INFO     ===> mass clear
+2024-07-21 01:50:50 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 01:50:53 INFO     ===> mass get
+2024-07-21 01:50:53 INFO     ### test_mass_get ==> PASSED
+2024-07-21 01:50:56 INFO     ===> mass inject 1589
+2024-07-21 01:50:57 INFO     ### test_mass_inject_1589 ==> PASSED
+2024-07-21 01:51:00 INFO     ===> mass get
+2024-07-21 01:51:00 INFO     ### test_mass_get_1589 ==> PASSED
+2024-07-21 01:51:03 INFO     ===> dgo config get
+2024-07-21 01:51:03 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 01:51:10 INFO     Current State: IDLE
+2024-07-21 01:51:10 INFO     dgo manual_start executed
+2024-07-21 01:51:23 INFO     Current State: LIP
+2024-07-21 01:51:27 INFO     dgo stage skip executed HIP
+2024-07-21 01:51:35 INFO     Current State: HIP
+2024-07-21 01:51:38 INFO     ===> dgo status
+2024-07-21 01:51:38 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 01:51:41 INFO     ===> dgo stage hip_trans
+2024-07-21 01:51:42 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 01:51:48 INFO     Current State: HIP
+2024-07-21 01:51:52 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 01:52:00 INFO     Current State: COOLDOWN
+2024-07-21 01:52:03 INFO     ===> dgo status
+2024-07-21 01:52:03 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 01:52:16 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 01:52:16 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 01:52:23 INFO     Current State: COOLDOWN
+2024-07-21 01:52:26 INFO     dgo stage skip executed IDLE
+2024-07-21 01:52:35 INFO     Current State: IDLE
+2024-07-21 01:52:40 INFO     ===> dgo status
+2024-07-21 01:52:40 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 01:52:48 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 01:52:48 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 01:52:51 INFO     ===> dgo status
+2024-07-21 01:52:51 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 01:52:54 INFO     ===> grinder get
+2024-07-21 01:52:54 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 01:52:57 INFO     ===> dgo config get
+2024-07-21 01:52:57 INFO     ### test_dgo_config_fluff_still_no_schedule ==> PASSED
+2024-07-21 01:53:00 INFO     ===> dgo status
+2024-07-21 01:53:01 INFO     ### test_dgo_status_0_no_fluff ==> PASSED
+2024-07-21 01:53:04 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 01:53:04 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 40%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_4lb_1816_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 01:53:10 INFO     dgo manual_stop executed
+2024-07-21 01:53:13 INFO     Current State: IDLE
+2024-07-21 01:53:13 INFO     ===> dgo status
+2024-07-21 01:53:13 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 01:53:17 INFO     ===> mass clear
+2024-07-21 01:53:17 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 01:53:20 INFO     ===> mass get
+2024-07-21 01:53:20 INFO     ### test_mass_get ==> PASSED
+2024-07-21 01:53:23 INFO     ===> mass inject 1816
+2024-07-21 01:53:24 INFO     ### test_mass_inject_1816 ==> PASSED
+2024-07-21 01:53:27 INFO     ===> mass get
+2024-07-21 01:53:27 INFO     ### test_mass_get_1816 ==> PASSED
+2024-07-21 01:53:30 INFO     ===> dgo config get
+2024-07-21 01:53:30 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 01:53:36 INFO     Current State: IDLE
+2024-07-21 01:53:36 INFO     dgo manual_start executed
+2024-07-21 01:53:50 INFO     Current State: LIP
+2024-07-21 01:53:54 INFO     dgo stage skip executed HIP
+2024-07-21 01:54:02 INFO     Current State: HIP
+2024-07-21 01:54:05 INFO     ===> dgo status
+2024-07-21 01:54:05 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 01:54:08 INFO     ===> dgo stage hip_trans
+2024-07-21 01:54:08 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 01:54:15 INFO     Current State: HIP
+2024-07-21 01:54:18 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 01:54:27 INFO     Current State: COOLDOWN
+2024-07-21 01:54:30 INFO     ===> dgo status
+2024-07-21 01:54:30 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 01:54:43 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 01:54:43 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 01:54:49 INFO     Current State: COOLDOWN
+2024-07-21 01:54:53 INFO     dgo stage skip executed IDLE
+2024-07-21 01:55:01 INFO     Current State: IDLE
+2024-07-21 01:55:06 INFO     ===> dgo status
+2024-07-21 01:55:06 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 01:55:14 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 01:55:14 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 01:55:17 INFO     ===> dgo status
+2024-07-21 01:55:18 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 01:55:21 INFO     ===> grinder get
+2024-07-21 01:55:21 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 01:55:24 INFO     ===> dgo config get
+2024-07-21 01:55:24 INFO     ### test_dgo_config_fluff_still_no_schedule ==> PASSED
+2024-07-21 01:55:27 INFO     ===> dgo status
+2024-07-21 01:55:27 INFO     ### test_dgo_status_0_no_fluff ==> PASSED
+2024-07-21 01:55:30 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 01:55:31 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_5lb_2270_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 01:55:37 INFO     dgo manual_stop executed
+2024-07-21 01:55:40 INFO     Current State: IDLE
+2024-07-21 01:55:40 INFO     ===> dgo status
+2024-07-21 01:55:40 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 01:55:43 INFO     ===> mass clear
+2024-07-21 01:55:44 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 01:55:47 INFO     ===> mass get
+2024-07-21 01:55:47 INFO     ### test_mass_get ==> PASSED
+2024-07-21 01:55:50 INFO     ===> mass inject 2270
+2024-07-21 01:55:50 INFO     ### test_mass_inject_2270 ==> PASSED
+2024-07-21 01:55:54 INFO     ===> mass get
+2024-07-21 01:55:54 INFO     ### test_mass_get_2270 ==> PASSED
+2024-07-21 01:55:57 INFO     ===> dgo config get
+2024-07-21 01:55:57 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 01:56:03 INFO     Current State: IDLE
+2024-07-21 01:56:03 INFO     dgo manual_start executed
+2024-07-21 01:56:16 INFO     Current State: LIP
+2024-07-21 01:56:20 INFO     dgo stage skip executed HIP
+2024-07-21 01:56:29 INFO     Current State: HIP
+2024-07-21 01:56:32 INFO     ===> dgo status
+2024-07-21 01:56:32 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 01:56:35 INFO     ===> dgo stage hip_trans
+2024-07-21 01:56:35 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 01:56:41 INFO     Current State: HIP
+2024-07-21 01:56:45 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 01:56:53 INFO     Current State: COOLDOWN
+2024-07-21 01:56:56 INFO     ===> dgo status
+2024-07-21 01:56:57 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 01:57:10 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 01:57:10 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 01:57:16 INFO     Current State: COOLDOWN
+2024-07-21 01:57:20 INFO     dgo stage skip executed IDLE
+2024-07-21 01:57:28 INFO     Current State: IDLE
+2024-07-21 01:57:33 INFO     ===> dgo status
+2024-07-21 01:57:33 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 01:57:41 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 01:57:41 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 01:57:44 INFO     ===> dgo status
+2024-07-21 01:57:44 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 01:57:47 INFO     ===> grinder get
+2024-07-21 01:57:47 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 01:57:50 INFO     ===> dgo config get
+2024-07-21 01:57:50 INFO     ### test_dgo_config_fluff_still_no_schedule ==> PASSED
+2024-07-21 01:57:54 INFO     ===> dgo status
+2024-07-21 01:57:54 INFO     ### test_dgo_status_0_no_fluff ==> PASSED
+2024-07-21 01:57:57 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 01:57:57 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 53%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_5_5lb_2497_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 01:58:03 INFO     dgo manual_stop executed
+2024-07-21 01:58:06 INFO     Current State: IDLE
+2024-07-21 01:58:06 INFO     ===> dgo status
+2024-07-21 01:58:07 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 01:58:10 INFO     ===> mass clear
+2024-07-21 01:58:10 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 01:58:13 INFO     ===> mass get
+2024-07-21 01:58:13 INFO     ### test_mass_get ==> PASSED
+2024-07-21 01:58:16 INFO     ===> mass inject 2497
+2024-07-21 01:58:17 INFO     ### test_mass_inject_2497 ==> PASSED
+2024-07-21 01:58:20 INFO     ===> mass get
+2024-07-21 01:58:20 INFO     ### test_mass_get_2497 ==> PASSED
+2024-07-21 01:58:23 INFO     ===> dgo config get
+2024-07-21 01:58:23 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 01:58:30 INFO     Current State: IDLE
+2024-07-21 01:58:30 INFO     dgo manual_start executed
+2024-07-21 01:58:43 INFO     Current State: LIP
+2024-07-21 01:58:47 INFO     dgo stage skip executed HIP
+2024-07-21 01:58:55 INFO     Current State: HIP
+2024-07-21 01:58:58 INFO     ===> dgo status
+2024-07-21 01:58:59 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 01:59:02 INFO     ===> dgo stage hip_trans
+2024-07-21 01:59:02 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 01:59:08 INFO     Current State: HIP
+2024-07-21 01:59:12 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 01:59:20 INFO     Current State: COOLDOWN
+2024-07-21 01:59:23 INFO     ===> dgo status
+2024-07-21 01:59:23 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 01:59:36 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 01:59:36 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 01:59:42 INFO     Current State: COOLDOWN
+2024-07-21 01:59:46 INFO     dgo stage skip executed IDLE
+2024-07-21 01:59:54 INFO     Current State: IDLE
+2024-07-21 01:59:59 INFO     ===> dgo status
+2024-07-21 02:00:00 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 02:00:08 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 02:00:08 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 02:00:11 INFO     ===> dgo status
+2024-07-21 02:00:11 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 02:00:14 INFO     ===> grinder get
+2024-07-21 02:00:14 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 02:00:17 INFO     ===> dgo config get
+2024-07-21 02:00:17 INFO     ### test_dgo_config_fluff_still_no_schedule ==> PASSED
+2024-07-21 02:00:20 INFO     ===> dgo status
+2024-07-21 02:00:21 INFO     ### test_dgo_status_0_no_fluff ==> PASSED
+2024-07-21 02:00:24 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:00:24 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_6lb_2724_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 02:00:27 INFO     ===> lid inject 0
+2024-07-21 02:00:27 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:00:27 INFO     ### test_lid_inject_0 ==> PASSED
+2024-07-21 02:00:30 INFO     ===> lid inject 1
+2024-07-21 02:00:33 INFO     retries counts: 1
+2024-07-21 02:00:36 INFO     retries counts: 2
+2024-07-21 02:00:39 INFO     retries counts: 3
+2024-07-21 02:00:42 INFO     retries counts: 4
+2024-07-21 02:00:45 INFO     retries counts: 5
+2024-07-21 02:00:45 ERROR    Timeout after 5 retries!
+2024-07-21 02:00:45 INFO     ### test_lid_inject_1 ==> PASSED
+2024-07-21 02:00:52 INFO     dgo manual_stop executed
+2024-07-21 02:00:55 INFO     Current State: IDLE
+2024-07-21 02:00:55 INFO     ===> dgo status
+2024-07-21 02:00:55 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 02:00:58 INFO     ===> mass clear
+2024-07-21 02:00:59 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 02:01:02 INFO     ===> mass get
+2024-07-21 02:01:02 INFO     ### test_mass_get ==> PASSED
+2024-07-21 02:01:05 INFO     ===> mass inject 2724
+2024-07-21 02:01:05 INFO     ### test_mass_inject_2724 ==> PASSED
+2024-07-21 02:01:08 INFO     ===> mass get
+2024-07-21 02:01:09 INFO     ### test_mass_get_2724 ==> PASSED
+2024-07-21 02:01:12 INFO     ===> dgo config get
+2024-07-21 02:01:12 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 02:01:15 INFO     ===> dgo force_fluff
+2024-07-21 02:01:15 INFO     ### test_dgo_force_fluff ==> PASSED
+2024-07-21 02:01:21 INFO     Current State: IDLE
+2024-07-21 02:01:21 INFO     dgo manual_start executed
+2024-07-21 02:01:34 INFO     Current State: LIP
+2024-07-21 02:01:38 INFO     dgo stage skip executed HIP
+2024-07-21 02:01:47 INFO     Current State: HIP
+2024-07-21 02:01:50 INFO     ===> dgo status
+2024-07-21 02:01:50 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 02:01:53 INFO     ===> dgo stage hip_trans
+2024-07-21 02:01:53 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 02:01:59 INFO     Current State: HIP
+2024-07-21 02:02:03 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 02:02:11 INFO     Current State: COOLDOWN
+2024-07-21 02:02:14 INFO     ===> dgo status
+2024-07-21 02:02:15 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 02:02:28 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 02:02:28 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 02:02:34 INFO     Current State: COOLDOWN
+2024-07-21 02:02:38 INFO     dgo stage skip executed IDLE
+2024-07-21 02:02:46 INFO     Current State: IDLE
+2024-07-21 02:02:51 INFO     ===> dgo status
+2024-07-21 02:02:51 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 02:02:59 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 02:02:59 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 02:03:02 INFO     ===> dgo status
+2024-07-21 02:03:02 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 02:03:05 INFO     ===> grinder get
+2024-07-21 02:03:05 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 02:03:09 INFO     ===> dgo config get
+2024-07-21 02:03:09 INFO     ### test_dgo_config_fluff_scheduled ==> PASSED
+2024-07-21 02:03:12 INFO     ===> dgo status
+2024-07-21 02:03:12 INFO     ### test_dgo_status_3859_in_fluff ==> PASSED
+2024-07-21 02:03:15 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:03:15 INFO     ### get_shadow_dgoStage_Idle ==> PASSED
+2024-07-21 02:03:18 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:03:19 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+2024-07-21 02:08:22 INFO     ** wait_time_pause: 300 seconds **
+2024-07-21 02:08:22 INFO     ### wait_time_300s ==> PASSED
+2024-07-21 02:08:25 INFO     ===> dgo status
+2024-07-21 02:08:25 INFO     ### test_dgo_status_300 ==> PASSED
+2024-07-21 02:13:28 INFO     ** wait_time_pause: 300 seconds **
+2024-07-21 02:13:28 INFO     ### wait_time_600s ==> PASSED
+2024-07-21 02:13:31 INFO     ===> dgo status
+2024-07-21 02:13:31 INFO     ### test_dgo_status_600 ==> PASSED
+2024-07-21 02:18:35 INFO     ** wait_time_pause: 300 seconds **
+2024-07-21 02:18:35 INFO     ### wait_time_900s ==> PASSED
+2024-07-21 02:18:38 INFO     ===> dgo status
+2024-07-21 02:18:38 INFO     ### test_dgo_status_900 ==> PASSED
+2024-07-21 02:23:41 INFO     ** wait_time_pause: 300 seconds **
+2024-07-21 02:23:41 INFO     ### wait_time_1200s ==> PASSED
+2024-07-21 02:23:44 INFO     ===> dgo status
+2024-07-21 02:23:44 INFO     ### test_dgo_status_1200 ==> PASSED
+2024-07-21 02:28:47 INFO     ** wait_time_pause: 300 seconds **
+2024-07-21 02:28:47 INFO     ### wait_time_1500s ==> PASSED
+2024-07-21 02:28:50 INFO     ===> dgo status
+2024-07-21 02:28:51 INFO     ### test_dgo_status_1500 ==> PASSED
+2024-07-21 02:33:34 INFO     ** wait_time_pause: 280 seconds **
+2024-07-21 02:33:34 INFO     ### wait_time_1780s ==> PASSED
+2024-07-21 02:33:37 INFO     ===> dgo status
+2024-07-21 02:33:37 INFO     ### test_dgo_status_in_FLUFF_stage_remain_s ==> PASSED
+2024-07-21 02:33:40 INFO     ===> dgo config get
+2024-07-21 02:33:40 INFO     ### test_dgo_config_get_in_fluff_scheduled ==> PASSED
+2024-07-21 02:33:43 INFO     ===> grinder get
+2024-07-21 02:33:43 INFO     ### test_dgo_Grinder_get_running ==> PASSED
+2024-07-21 02:33:46 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:33:47 INFO     ### get_shadow_dgoCycle_in_Fluff ==> PASSED
+2024-07-21 02:33:50 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:33:50 INFO     ### get_shadow_dgoStage_in_Fluff ==> PASSED
+2024-07-21 02:33:53 INFO     ===> lid_lock set 0 0
+2024-07-21 02:33:53 INFO     ### test_lid_lock_set_0_0_unlock ==> PASSED
+2024-07-21 02:33:56 INFO     ===> lid inject 0
+2024-07-21 02:33:56 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:33:56 INFO     ### test_lid_inject_0_open ==> PASSED
+2024-07-21 02:34:00 INFO     ===> lid inject 1
+2024-07-21 02:34:03 INFO     retries counts: 1
+2024-07-21 02:34:06 INFO     retries counts: 2
+2024-07-21 02:34:09 INFO     retries counts: 3
+2024-07-21 02:34:12 INFO     retries counts: 4
+2024-07-21 02:34:15 INFO     retries counts: 5
+2024-07-21 02:34:15 ERROR    Timeout after 5 retries!
+2024-07-21 02:34:15 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [ 66%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_6_5lb_M_2951_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 02:34:18 INFO     ===> lid inject 0
+2024-07-21 02:34:18 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:34:18 INFO     ### test_lid_inject_0 ==> PASSED
+2024-07-21 02:34:21 INFO     ===> lid inject 1
+2024-07-21 02:34:24 INFO     retries counts: 1
+2024-07-21 02:34:27 INFO     retries counts: 2
+2024-07-21 02:34:30 INFO     retries counts: 3
+2024-07-21 02:34:33 INFO     retries counts: 4
+2024-07-21 02:34:36 INFO     retries counts: 5
+2024-07-21 02:34:36 ERROR    Timeout after 5 retries!
+2024-07-21 02:34:36 INFO     ### test_lid_inject_1 ==> PASSED
+2024-07-21 02:34:42 INFO     dgo manual_stop executed
+2024-07-21 02:34:46 INFO     Current State: IDLE
+2024-07-21 02:34:46 INFO     ===> dgo status
+2024-07-21 02:34:46 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 02:34:49 INFO     ===> mass clear
+2024-07-21 02:34:50 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 02:34:53 INFO     ===> mass get
+2024-07-21 02:34:53 INFO     ### test_mass_get ==> PASSED
+2024-07-21 02:34:56 INFO     ===> mass inject 2951
+2024-07-21 02:34:57 INFO     ### test_mass_inject_2951 ==> PASSED
+2024-07-21 02:35:00 INFO     ===> mass get
+2024-07-21 02:35:00 INFO     ### test_mass_get_2951 ==> PASSED
+2024-07-21 02:35:03 INFO     ===> dgo config get
+2024-07-21 02:35:03 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 02:35:06 INFO     ===> dgo force_fluff
+2024-07-21 02:35:06 INFO     ### test_dgo_force_fluff ==> PASSED
+2024-07-21 02:35:12 INFO     Current State: IDLE
+2024-07-21 02:35:12 INFO     dgo manual_start executed
+2024-07-21 02:35:25 INFO     Current State: LIP
+2024-07-21 02:35:30 INFO     dgo stage skip executed HIP
+2024-07-21 02:35:38 INFO     Current State: HIP
+2024-07-21 02:35:41 INFO     ===> dgo status
+2024-07-21 02:35:41 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 02:35:44 INFO     ===> dgo stage hip_trans
+2024-07-21 02:35:44 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 02:35:50 INFO     Current State: HIP
+2024-07-21 02:35:54 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 02:36:02 INFO     Current State: COOLDOWN
+2024-07-21 02:36:05 INFO     ===> dgo status
+2024-07-21 02:36:06 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 02:36:19 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 02:36:19 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 02:36:25 INFO     Current State: COOLDOWN
+2024-07-21 02:36:29 INFO     dgo stage skip executed IDLE
+2024-07-21 02:36:37 INFO     Current State: IDLE
+2024-07-21 02:36:42 INFO     ===> dgo status
+2024-07-21 02:36:42 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 02:36:50 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 02:36:50 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 02:36:53 INFO     ===> dgo status
+2024-07-21 02:36:53 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 02:36:56 INFO     ===> grinder get
+2024-07-21 02:36:56 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 02:36:59 INFO     ===> dgo config get
+2024-07-21 02:37:00 INFO     ### test_dgo_config_fluff_scheduled ==> PASSED
+2024-07-21 02:37:03 INFO     ===> dgo status
+2024-07-21 02:37:03 INFO     ### test_dgo_status_3859_in_fluff ==> PASSED
+2024-07-21 02:37:06 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:37:06 INFO     ### get_shadow_dgoStage_Idle ==> PASSED
+2024-07-21 02:37:09 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:37:10 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+2024-07-21 02:37:13 INFO     ===> lid_lock set 0 0
+2024-07-21 02:37:13 INFO     ### test_lid_lock_set_0_0_unlock ==> PASSED
+2024-07-21 02:37:16 INFO     ===> lid inject 0
+2024-07-21 02:37:16 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:37:16 INFO     ### test_lid_inject_0_open ==> PASSED
+2024-07-21 02:37:19 INFO     ===> lid inject 1
+2024-07-21 02:37:22 INFO     retries counts: 1
+2024-07-21 02:37:25 INFO     retries counts: 2
+2024-07-21 02:37:28 INFO     retries counts: 3
+2024-07-21 02:37:31 INFO     retries counts: 4
+2024-07-21 02:37:34 INFO     retries counts: 5
+2024-07-21 02:37:34 ERROR    Timeout after 5 retries!
+2024-07-21 02:37:34 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [ 73%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_7lb_M_3178_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 02:37:37 INFO     ===> lid inject 0
+2024-07-21 02:37:37 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:37:38 INFO     ### test_lid_inject_0 ==> PASSED
+2024-07-21 02:37:41 INFO     ===> lid inject 1
+2024-07-21 02:37:44 INFO     retries counts: 1
+2024-07-21 02:37:47 INFO     retries counts: 2
+2024-07-21 02:37:50 INFO     retries counts: 3
+2024-07-21 02:37:53 INFO     retries counts: 4
+2024-07-21 02:37:56 INFO     retries counts: 5
+2024-07-21 02:37:56 ERROR    Timeout after 5 retries!
+2024-07-21 02:37:56 INFO     ### test_lid_inject_1 ==> PASSED
+2024-07-21 02:38:02 INFO     dgo manual_stop executed
+2024-07-21 02:38:05 INFO     Current State: IDLE
+2024-07-21 02:38:05 INFO     ===> dgo status
+2024-07-21 02:38:05 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 02:38:08 INFO     ===> mass clear
+2024-07-21 02:38:09 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 02:38:12 INFO     ===> mass get
+2024-07-21 02:38:12 INFO     ### test_mass_get ==> PASSED
+2024-07-21 02:38:15 INFO     ===> mass inject 3178
+2024-07-21 02:38:16 INFO     ### test_mass_inject_3178 ==> PASSED
+2024-07-21 02:38:19 INFO     ===> mass get
+2024-07-21 02:38:19 INFO     ### test_mass_get_3178 ==> PASSED
+2024-07-21 02:38:22 INFO     ===> dgo config get
+2024-07-21 02:38:22 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 02:38:25 INFO     ===> dgo force_fluff
+2024-07-21 02:38:25 INFO     ### test_dgo_force_fluff ==> PASSED
+2024-07-21 02:38:31 INFO     Current State: IDLE
+2024-07-21 02:38:31 INFO     dgo manual_start executed
+2024-07-21 02:38:45 INFO     Current State: LIP
+2024-07-21 02:38:49 INFO     dgo stage skip executed HIP
+2024-07-21 02:38:57 INFO     Current State: HIP
+2024-07-21 02:39:00 INFO     ===> dgo status
+2024-07-21 02:39:00 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 02:39:03 INFO     ===> dgo stage hip_trans
+2024-07-21 02:39:03 INFO     ### test_hip_trans_region_HIP ==> PASSED
+2024-07-21 02:39:10 INFO     Current State: HIP
+2024-07-21 02:39:14 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 02:39:22 INFO     Current State: COOLDOWN
+2024-07-21 02:39:25 INFO     ===> dgo status
+2024-07-21 02:39:25 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 02:39:38 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 02:39:38 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 02:39:44 INFO     Current State: COOLDOWN
+2024-07-21 02:39:48 INFO     dgo stage skip executed IDLE
+2024-07-21 02:39:56 INFO     Current State: IDLE
+2024-07-21 02:40:01 INFO     ===> dgo status
+2024-07-21 02:40:01 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 02:40:09 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 02:40:09 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 02:40:12 INFO     ===> dgo status
+2024-07-21 02:40:13 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 02:40:16 INFO     ===> grinder get
+2024-07-21 02:40:16 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 02:40:19 INFO     ===> dgo config get
+2024-07-21 02:40:19 INFO     ### test_dgo_config_fluff_scheduled ==> PASSED
+2024-07-21 02:40:22 INFO     ===> dgo status
+2024-07-21 02:40:22 INFO     ### test_dgo_status_3859_in_fluff ==> PASSED
+2024-07-21 02:40:25 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:40:26 INFO     ### get_shadow_dgoStage_Idle ==> PASSED
+2024-07-21 02:40:29 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:40:29 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+2024-07-21 02:40:32 INFO     ===> lid_lock set 0 0
+2024-07-21 02:40:32 INFO     ### test_lid_lock_set_0_0_unlock ==> PASSED
+2024-07-21 02:40:35 INFO     ===> lid inject 0
+2024-07-21 02:40:35 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:40:35 INFO     ### test_lid_inject_0_open ==> PASSED
+2024-07-21 02:40:38 INFO     ===> lid inject 1
+2024-07-21 02:40:41 INFO     retries counts: 1
+2024-07-21 02:40:44 INFO     retries counts: 2
+2024-07-21 02:40:47 INFO     retries counts: 3
+2024-07-21 02:40:50 INFO     retries counts: 4
+2024-07-21 02:40:53 INFO     retries counts: 5
+2024-07-21 02:40:53 ERROR    Timeout after 5 retries!
+2024-07-21 02:40:53 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [ 80%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_7_5lb_3405_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 02:40:57 INFO     ===> lid inject 0
+2024-07-21 02:40:57 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:40:57 INFO     ### test_lid_inject_0 ==> PASSED
+2024-07-21 02:41:00 INFO     ===> lid inject 1
+2024-07-21 02:41:03 INFO     retries counts: 1
+2024-07-21 02:41:06 INFO     retries counts: 2
+2024-07-21 02:41:09 INFO     retries counts: 3
+2024-07-21 02:41:12 INFO     retries counts: 4
+2024-07-21 02:41:15 INFO     retries counts: 5
+2024-07-21 02:41:15 ERROR    Timeout after 5 retries!
+2024-07-21 02:41:15 INFO     ### test_lid_inject_1 ==> PASSED
+2024-07-21 02:41:21 INFO     dgo manual_stop executed
+2024-07-21 02:41:24 INFO     Current State: IDLE
+2024-07-21 02:41:24 INFO     ===> dgo status
+2024-07-21 02:41:24 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 02:41:27 INFO     ===> mass clear
+2024-07-21 02:41:28 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 02:41:31 INFO     ===> mass get
+2024-07-21 02:41:31 INFO     ### test_mass_get ==> PASSED
+2024-07-21 02:41:34 INFO     ===> mass inject 3405
+2024-07-21 02:41:35 INFO     ### test_mass_inject_3405 ==> PASSED
+2024-07-21 02:41:38 INFO     ===> mass get
+2024-07-21 02:41:38 INFO     ### test_mass_get_3405 ==> PASSED
+2024-07-21 02:41:41 INFO     ===> dgo config get
+2024-07-21 02:41:41 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 02:41:44 INFO     ===> dgo force_fluff
+2024-07-21 02:41:44 INFO     ### test_dgo_force_fluff ==> PASSED
+2024-07-21 02:41:50 INFO     Current State: IDLE
+2024-07-21 02:41:51 INFO     dgo manual_start executed
+2024-07-21 02:42:04 INFO     Current State: LIP
+2024-07-21 02:42:08 INFO     dgo stage skip executed HIP
+2024-07-21 02:42:16 INFO     Current State: HIP
+2024-07-21 02:42:19 INFO     ===> dgo status
+2024-07-21 02:42:19 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 02:42:22 INFO     ===> dgo stage hip_trans
+2024-07-21 02:42:22 INFO     ### test_hip_trans_region_3405_HIP ==> PASSED
+2024-07-21 02:42:29 INFO     Current State: HIP
+2024-07-21 02:42:33 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 02:42:41 INFO     Current State: COOLDOWN
+2024-07-21 02:42:44 INFO     ===> dgo status
+2024-07-21 02:42:44 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 02:42:57 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 02:42:57 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 02:43:03 INFO     Current State: COOLDOWN
+2024-07-21 02:43:07 INFO     dgo stage skip executed IDLE
+2024-07-21 02:43:15 INFO     Current State: IDLE
+2024-07-21 02:43:20 INFO     ===> dgo status
+2024-07-21 02:43:21 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 02:43:29 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 02:43:29 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 02:43:32 INFO     ===> dgo status
+2024-07-21 02:43:32 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 02:43:35 INFO     ===> grinder get
+2024-07-21 02:43:35 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 02:43:38 INFO     ===> dgo config get
+2024-07-21 02:43:38 INFO     ### test_dgo_config_fluff_scheduled ==> PASSED
+2024-07-21 02:43:41 INFO     ===> dgo status
+2024-07-21 02:43:41 INFO     ### test_dgo_status_3405_in_fluff ==> PASSED
+2024-07-21 02:43:44 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:43:45 INFO     ### get_shadow_dgoStage_Idle ==> PASSED
+2024-07-21 02:43:48 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:43:48 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+2024-07-21 02:43:51 INFO     ===> lid_lock set 0 0
+2024-07-21 02:43:51 INFO     ### test_lid_lock_set_0_0_unlock ==> PASSED
+2024-07-21 02:43:54 INFO     ===> lid inject 0
+2024-07-21 02:43:55 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:43:55 INFO     ### test_lid_inject_0_open ==> PASSED
+2024-07-21 02:43:58 INFO     ===> lid inject 1
+2024-07-21 02:44:01 INFO     retries counts: 1
+2024-07-21 02:44:04 INFO     retries counts: 2
+2024-07-21 02:44:07 INFO     retries counts: 3
+2024-07-21 02:44:10 INFO     retries counts: 4
+2024-07-21 02:44:13 INFO     retries counts: 5
+2024-07-21 02:44:13 ERROR    Timeout after 5 retries!
+2024-07-21 02:44:13 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [ 86%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_8lb_3632_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 02:44:16 INFO     ===> lid inject 0
+2024-07-21 02:44:16 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:44:16 INFO     ### test_lid_inject_0 ==> PASSED
+2024-07-21 02:44:19 INFO     ===> lid inject 1
+2024-07-21 02:44:22 INFO     retries counts: 1
+2024-07-21 02:44:25 INFO     retries counts: 2
+2024-07-21 02:44:28 INFO     retries counts: 3
+2024-07-21 02:44:31 INFO     retries counts: 4
+2024-07-21 02:44:34 INFO     retries counts: 5
+2024-07-21 02:44:34 ERROR    Timeout after 5 retries!
+2024-07-21 02:44:34 INFO     ### test_lid_inject_1 ==> PASSED
+2024-07-21 02:44:40 INFO     dgo manual_stop executed
+2024-07-21 02:44:44 INFO     Current State: IDLE
+2024-07-21 02:44:44 INFO     ===> dgo status
+2024-07-21 02:44:44 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 02:44:47 INFO     ===> mass clear
+2024-07-21 02:44:48 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 02:44:51 INFO     ===> mass get
+2024-07-21 02:44:51 INFO     ### test_mass_get ==> PASSED
+2024-07-21 02:44:54 INFO     ===> mass inject 3632
+2024-07-21 02:44:54 INFO     ### test_mass_inject_3632 ==> PASSED
+2024-07-21 02:44:57 INFO     ===> mass get
+2024-07-21 02:44:57 INFO     ### test_mass_get_3632 ==> PASSED
+2024-07-21 02:45:00 INFO     ===> dgo config get
+2024-07-21 02:45:01 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 02:45:04 INFO     ===> dgo force_fluff
+2024-07-21 02:45:04 INFO     ### test_dgo_force_fluff ==> PASSED
+2024-07-21 02:45:10 INFO     Current State: IDLE
+2024-07-21 02:45:10 INFO     dgo manual_start executed
+2024-07-21 02:45:23 INFO     Current State: LIP
+2024-07-21 02:45:27 INFO     dgo stage skip executed HIP
+2024-07-21 02:45:35 INFO     Current State: HIP
+2024-07-21 02:45:38 INFO     ===> dgo status
+2024-07-21 02:45:39 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 02:45:42 INFO     ===> dgo stage hip_trans
+2024-07-21 02:45:42 INFO     ### test_hip_trans_region_3632_HIP ==> PASSED
+2024-07-21 02:45:48 INFO     Current State: HIP
+2024-07-21 02:45:52 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 02:46:00 INFO     Current State: COOLDOWN
+2024-07-21 02:46:03 INFO     ===> dgo status
+2024-07-21 02:46:03 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 02:46:16 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 02:46:16 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 02:46:23 INFO     Current State: COOLDOWN
+2024-07-21 02:46:26 INFO     dgo stage skip executed IDLE
+2024-07-21 02:46:35 INFO     Current State: IDLE
+2024-07-21 02:46:40 INFO     ===> dgo status
+2024-07-21 02:46:40 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 02:46:48 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 02:46:48 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 02:46:51 INFO     ===> dgo status
+2024-07-21 02:46:51 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 02:46:54 INFO     ===> grinder get
+2024-07-21 02:46:54 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 02:46:57 INFO     ===> dgo config get
+2024-07-21 02:46:57 INFO     ### test_dgo_config_fluff_scheduled ==> PASSED
+2024-07-21 02:47:00 INFO     ===> dgo status
+2024-07-21 02:47:01 INFO     ### test_dgo_status_3632_in_fluff ==> PASSED
+2024-07-21 02:47:04 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:47:04 INFO     ### get_shadow_dgoStage_Idle ==> PASSED
+2024-07-21 02:47:07 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:47:07 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+2024-07-21 02:47:10 INFO     ===> lid_lock set 0 0
+2024-07-21 02:47:11 INFO     ### test_lid_lock_set_0_0_unlock ==> PASSED
+2024-07-21 02:47:14 INFO     ===> lid inject 0
+2024-07-21 02:47:14 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:47:14 INFO     ### test_lid_inject_0_open ==> PASSED
+2024-07-21 02:47:17 INFO     ===> lid inject 1
+2024-07-21 02:47:20 INFO     retries counts: 1
+2024-07-21 02:47:23 INFO     retries counts: 2
+2024-07-21 02:47:26 INFO     retries counts: 3
+2024-07-21 02:47:29 INFO     retries counts: 4
+2024-07-21 02:47:32 INFO     retries counts: 5
+2024-07-21 02:47:32 ERROR    Timeout after 5 retries!
+2024-07-21 02:47:32 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [ 93%]
+dgo_mass_add_5hr_min_runtime_FLUFF.py::TestMass5hrMinRuntimeFLUFF::test_group_mass_add_8_5lb_3859_From_FLUFF 
+-------------------------------- live log call ---------------------------------
+2024-07-21 02:47:35 INFO     ===> lid inject 0
+2024-07-21 02:47:35 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:47:35 INFO     ### test_lid_inject_0 ==> PASSED
+2024-07-21 02:47:38 INFO     ===> lid inject 1
+2024-07-21 02:47:41 INFO     retries counts: 1
+2024-07-21 02:47:44 INFO     retries counts: 2
+2024-07-21 02:47:47 INFO     retries counts: 3
+2024-07-21 02:47:50 INFO     retries counts: 4
+2024-07-21 02:47:53 INFO     retries counts: 5
+2024-07-21 02:47:53 ERROR    Timeout after 5 retries!
+2024-07-21 02:47:53 INFO     ### test_lid_inject_1 ==> PASSED
+2024-07-21 02:47:59 INFO     dgo manual_stop executed
+2024-07-21 02:48:03 INFO     Current State: IDLE
+2024-07-21 02:48:03 INFO     ===> dgo status
+2024-07-21 02:48:03 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-21 02:48:06 INFO     ===> mass clear
+2024-07-21 02:48:07 INFO     ### test_mass_clear ==> PASSED
+2024-07-21 02:48:10 INFO     ===> mass get
+2024-07-21 02:48:10 INFO     ### test_mass_get ==> PASSED
+2024-07-21 02:48:13 INFO     ===> mass inject 3859
+2024-07-21 02:48:13 INFO     ### test_mass_inject_3859 ==> PASSED
+2024-07-21 02:48:16 INFO     ===> mass get
+2024-07-21 02:48:16 INFO     ### test_mass_get_3859 ==> PASSED
+2024-07-21 02:48:19 INFO     ===> dgo config get
+2024-07-21 02:48:20 INFO     ### test_dgo_config_fluff_no_schedule ==> PASSED
+2024-07-21 02:48:23 INFO     ===> dgo force_fluff
+2024-07-21 02:48:23 INFO     ### test_dgo_force_fluff ==> PASSED
+2024-07-21 02:48:29 INFO     Current State: IDLE
+2024-07-21 02:48:29 INFO     dgo manual_start executed
+2024-07-21 02:48:42 INFO     Current State: LIP
+2024-07-21 02:48:46 INFO     dgo stage skip executed HIP
+2024-07-21 02:48:55 INFO     Current State: HIP
+2024-07-21 02:48:58 INFO     ===> dgo status
+2024-07-21 02:48:58 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-21 02:49:01 INFO     ===> dgo stage hip_trans
+2024-07-21 02:49:01 INFO     ### test_hip_trans_region_3859_HIP ==> PASSED
+2024-07-21 02:49:07 INFO     Current State: HIP
+2024-07-21 02:49:11 INFO     dgo stage skip executed COOLDOWN
+2024-07-21 02:49:19 INFO     Current State: COOLDOWN
+2024-07-21 02:49:22 INFO     ===> dgo status
+2024-07-21 02:49:23 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+2024-07-21 02:49:36 INFO     ** wait_time_pause: 10 seconds **
+2024-07-21 02:49:36 INFO     ### wait_time_10 ==> PASSED
+2024-07-21 02:49:42 INFO     Current State: COOLDOWN
+2024-07-21 02:49:46 INFO     dgo stage skip executed IDLE
+2024-07-21 02:49:54 INFO     Current State: IDLE
+2024-07-21 02:49:59 INFO     ===> dgo status
+2024-07-21 02:49:59 INFO     ### test_dgo_jump_fromCOOLDOWNskiptoIDLE ==> PASSED
+2024-07-21 02:50:07 INFO     ** wait_time_pause: 5 seconds **
+2024-07-21 02:50:07 INFO     ### wait_time_5 ==> PASSED
+2024-07-21 02:50:10 INFO     ===> dgo status
+2024-07-21 02:50:10 INFO     ### test_dgo_in_IDLE_State ==> PASSED
+2024-07-21 02:50:13 INFO     ===> grinder get
+2024-07-21 02:50:13 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+2024-07-21 02:50:16 INFO     ===> dgo config get
+2024-07-21 02:50:17 INFO     ### test_dgo_config_fluff_scheduled ==> PASSED
+2024-07-21 02:50:20 INFO     ===> dgo status
+2024-07-21 02:50:20 INFO     ### test_dgo_status_3859_in_fluff ==> PASSED
+2024-07-21 02:50:23 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:50:23 INFO     ### get_shadow_dgoStage_Idle ==> PASSED
+2024-07-21 02:50:26 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-21 02:50:27 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+2024-07-21 02:50:30 INFO     ===> lid_lock set 0 0
+2024-07-21 02:50:30 INFO     ### test_lid_lock_set_0_0_unlock ==> PASSED
+2024-07-21 02:50:33 INFO     ===> lid inject 0
+2024-07-21 02:50:33 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-21 02:50:33 INFO     ### test_lid_inject_0_open ==> PASSED
+2024-07-21 02:50:36 INFO     ===> lid inject 1
+2024-07-21 02:50:39 INFO     retries counts: 1
+2024-07-21 02:50:42 INFO     retries counts: 2
+2024-07-21 02:50:45 INFO     retries counts: 3
+2024-07-21 02:50:48 INFO     retries counts: 4
+2024-07-21 02:50:51 INFO     retries counts: 5
+2024-07-21 02:50:51 ERROR    Timeout after 5 retries!
+2024-07-21 02:50:51 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 15 passed in 4376.67s (1:12:56) ========================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1721522276.json': No such file or directory

@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, repeat-0.9.3, metadata-3.1.1
+collected 13 items
+
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-23 01:37:29 INFO     dgo manual_stop executed
+2024-07-23 01:37:33 INFO     Current State: IDLE
+2024-07-23 01:37:33 INFO     ===> dgo status
+2024-07-23 01:37:33 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  7%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_temp_get_3_low 
+-------------------------------- live log call ---------------------------------
+2024-07-23 01:37:33 INFO     ===> temp get 3
+2024-07-23 01:37:33 INFO     Temperature value: 72.26399
+2024-07-23 01:37:33 INFO     Initial Temp High, Starting Cooldown before Tests
+2024-07-23 01:37:36 INFO     ===> dgo manual_start
+2024-07-23 01:37:36 INFO     ### test_dgo_manual_start ==> PASSED
+2024-07-23 01:37:39 INFO     ===> dgo stage skip
+2024-07-23 01:37:40 INFO     ### test_dgo_skip_LIP_stage ==> PASSED
+2024-07-23 01:37:43 INFO     ===> dgo stage skip
+2024-07-23 01:37:44 INFO     ### test_dgo_skip_HIP_stage ==> PASSED
+2024-07-23 02:07:47 INFO     ** wait_time_pause: 1800 seconds **
+2024-07-23 02:07:47 INFO     ### wait_time_pause_cooldown ==> PASSED
+2024-07-23 02:07:50 INFO     ===> dgo manual_stop
+2024-07-23 02:07:50 INFO     ### test_dgo_manual_stop ==> PASSED
+2024-07-23 02:07:52 INFO     ===> temp get 3
+2024-07-23 02:07:52 INFO     ### test_temp_get_3_low ==> PASSED
+PASSED                                                                   [ 15%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:07:54 INFO     ===> dgo manual_start
+2024-07-23 02:07:54 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 23%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:07:56 INFO     ===> dgo status
+2024-07-23 02:07:56 INFO        retrying... 1
+2024-07-23 02:08:21 INFO     ===> dgo status
+2024-07-23 02:08:22 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 30%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_skip_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:08:24 INFO     ===> dgo stage skip
+2024-07-23 02:08:25 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 38%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_in_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:08:27 INFO     ===> dgo status
+2024-07-23 02:08:27 INFO     ### test_dgo_in_HIP_State ==> PASSED
+PASSED                                                                   [ 46%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_temp_get_3_high 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:12:29 INFO     ** wait_time_pause: 240 seconds **
+2024-07-23 02:12:29 INFO     ### wait_time_pause_high ==> PASSED
+2024-07-23 02:12:31 INFO     ===> temp get 3
+2024-07-23 02:12:31 INFO     ### test_temp_get_3_high ==> PASSED
+PASSED                                                                   [ 53%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_skip_HIP_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:12:33 INFO     ===> dgo stage skip
+2024-07-23 02:12:34 INFO     ### test_dgo_skip_HIP_stage ==> PASSED
+PASSED                                                                   [ 61%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_in_Cooldown_State 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:12:36 INFO     ===> dgo status
+2024-07-23 02:12:36 INFO     ### test_dgo_in_Cooldown_State ==> PASSED
+PASSED                                                                   [ 69%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_capturelog_1800 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:12:39 INFO     ===> capturelog 1800
+2024-07-23 02:42:39 INFO     ### capturelog_1800 ==> PASSED
+PASSED                                                                   [ 76%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:42:41 INFO     ===> dgo manual_stop
+2024-07-23 02:42:41 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 84%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_end_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:42:43 INFO     ===> dgo status
+2024-07-23 02:42:43 INFO     ### test_dgo_end_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 92%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_zero_unprocessed_mass 
+-------------------------------- live log call ---------------------------------
+2024-07-23 02:42:45 INFO     ===> mass get -d
+2024-07-23 02:42:45 INFO     ### test_zero_unprocessed_mass ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 13 passed in 3921.98s (1:05:21) ========================
