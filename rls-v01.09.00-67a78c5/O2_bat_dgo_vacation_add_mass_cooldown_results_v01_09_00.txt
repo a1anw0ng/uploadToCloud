@@ -1,0 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 13 items
+
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_mass_clear 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:56:43 INFO     ===> mass clear
+2024-07-31 19:56:43 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [  7%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:56:48 INFO     dgo manual_stop executed
+2024-07-31 19:56:52 INFO     Current State: IDLE
+2024-07-31 19:56:52 INFO     ===> dgo status
+2024-07-31 19:56:52 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 15%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:56:54 INFO     ===> dgo manual_start
+2024-07-31 19:56:54 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 23%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:56:56 INFO     ===> dgo status
+2024-07-31 19:56:56 INFO        retrying... 1
+2024-07-31 19:57:21 INFO     ===> dgo status
+2024-07-31 19:57:21 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 30%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_skip_LIP_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:57:23 INFO     ===> dgo stage skip
+2024-07-31 19:57:24 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 38%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_in_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:57:26 INFO     ===> dgo status
+2024-07-31 19:57:27 INFO     ### test_dgo_in_HIP_State ==> PASSED
+PASSED                                                                   [ 46%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_skip_HIP_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:57:29 INFO     ===> dgo stage skip
+2024-07-31 19:57:29 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 53%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_in_Cooldown_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:57:31 INFO     ===> dgo status
+2024-07-31 19:57:32 INFO     ### test_dgo_in_Cooldown_State ==> PASSED
+PASSED                                                                   [ 61%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_inject_100g 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:57:34 INFO     ===> mass inject 100
+2024-07-31 19:57:35 INFO     ### test_inject_100g ==> PASSED
+PASSED                                                                   [ 69%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_mass_100g 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:57:37 INFO     ===> mass get -d
+2024-07-31 19:57:37 INFO     ### test_mass_100g ==> PASSED
+PASSED                                                                   [ 76%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_skip_Cooldown_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:57:39 INFO     ===> dgo stage skip
+2024-07-31 19:57:39 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 84%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_return_to_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:57:51 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 19:57:51 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:57:53 INFO     ===> dgo status
+2024-07-31 19:57:53 INFO     ### test_dgo_return_to_IDLE_State ==> PASSED
+PASSED                                                                   [ 92%]
+bat_dgo_vacation_add_mass_cooldown.py::TestBAT_DGO_VACATION_ADD_MASS_COOLDOWN::test_dgo_status_will_skip_3_cycles 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:57:55 INFO     ===> dgo status
+2024-07-31 19:57:56 INFO     ### test_dgo_status_will_skip_3_cycles ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 13 passed in 74.77s (0:01:14) =========================

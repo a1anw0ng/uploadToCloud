@@ -1,0 +1,83 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 9 items
+
+bat_dgo_grinder_state_lid.py::TestBAT_DGO_GRINDER_STATE_LID::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:35:30 INFO     dgo manual_stop executed
+2024-07-31 19:35:34 INFO     Current State: IDLE
+2024-07-31 19:35:34 INFO     ===> dgo status
+2024-07-31 19:35:34 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 11%]
+bat_dgo_grinder_state_lid.py::TestBAT_DGO_GRINDER_STATE_LID::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:35:36 INFO     ===> dgo manual_start
+2024-07-31 19:35:36 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 22%]
+bat_dgo_grinder_state_lid.py::TestBAT_DGO_GRINDER_STATE_LID::test_dgo_grinder_stall_set 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:35:38 INFO     ===> grinder stall_set 20 5 500 5000 1000 4000 30 3 50 900000
+2024-07-31 19:35:38 INFO     ### test_dgo_grinder_stall_set ==> PASSED
+2024-07-31 19:36:25 INFO     ** wait_time_pause: 45 seconds **
+2024-07-31 19:36:25 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:36:25 INFO     Found credentials in environment variables.
+2024-07-31 19:36:41 INFO     Grinder State: JamWarning
+PASSED                                                                   [ 33%]
+bat_dgo_grinder_state_lid.py::TestBAT_DGO_GRINDER_STATE_LID::test_dgo_grinder_trying_to_clear 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:36:44 INFO     ===> lid inject 0
+2024-07-31 19:36:48 INFO     ### test_lid_inject_0_open ==> PASSED
+2024-07-31 19:36:51 INFO     ===> lid inject 1
+2024-07-31 19:36:54 INFO     retries counts: 1
+2024-07-31 19:36:57 INFO     retries counts: 2
+2024-07-31 19:37:00 INFO     retries counts: 3
+2024-07-31 19:37:03 INFO     retries counts: 4
+2024-07-31 19:37:06 INFO     retries counts: 5
+2024-07-31 19:37:06 ERROR    Timeout after 5 retries!
+2024-07-31 19:37:06 INFO     ### test_lid_inject_1_close ==> PASSED
+2024-07-31 19:37:09 INFO     Found credentials in environment variables.
+2024-07-31 19:37:09 INFO     ### get_shadow_grinderState_jam_trying_to_clear ==> PASSED
+PASSED                                                                   [ 44%]
+bat_dgo_grinder_state_lid.py::TestBAT_DGO_GRINDER_STATE_LID::test_jam_led_on 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:37:12 INFO     ===> led get 0 0
+2024-07-31 19:37:13 INFO     ### test_jam_led_on_0 ==> PASSED
+2024-07-31 19:37:16 INFO     ===> led get 0 1
+2024-07-31 19:37:17 INFO     ### test_jam_led_on_1 ==> PASSED
+2024-07-31 19:37:20 INFO     ===> led get 0 2
+2024-07-31 19:37:21 INFO     ### test_jam_led_on_2 ==> PASSED
+2024-07-31 19:37:24 INFO     ===> led get 0 3
+2024-07-31 19:37:25 INFO     ### test_jam_led_on_3 ==> PASSED
+PASSED                                                                   [ 55%]
+bat_dgo_grinder_state_lid.py::TestBAT_DGO_GRINDER_STATE_LID::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:37:27 INFO     ===> dgo manual_stop
+2024-07-31 19:37:27 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 66%]
+bat_dgo_grinder_state_lid.py::TestBAT_DGO_GRINDER_STATE_LID::test_controlMCU_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:37:29 INFO     ===> reset
+2024-07-31 19:37:31 INFO     ### test_controlMCU_reset ==> PASSED
+PASSED                                                                   [ 77%]
+bat_dgo_grinder_state_lid.py::TestBAT_DGO_GRINDER_STATE_LID::test_dgo_wait_time_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:37:48 INFO     ** wait_time_pause: 15 seconds **
+2024-07-31 19:37:48 INFO     ### wait_time_reset ==> PASSED
+PASSED                                                                   [ 88%]
+bat_dgo_grinder_state_lid.py::TestBAT_DGO_GRINDER_STATE_LID::test_get_shadow_grinderState_jam_normal 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:38:35 INFO     ** wait_time_pause: 45 seconds **
+2024-07-31 19:38:35 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:38:37 INFO     Found credentials in environment variables.
+2024-07-31 19:38:38 INFO     ### get_shadow_grinderState_jam_normal ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 9 passed in 192.41s (0:03:12) =========================

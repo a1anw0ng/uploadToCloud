@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: metadata-3.1.1, json-report-1.5.0, repeat-0.9.3
+collected 13 items
+
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:53:52 INFO     dgo manual_stop executed
+2024-08-01 01:53:55 INFO     Current State: IDLE
+2024-08-01 01:53:55 INFO     ===> dgo status
+2024-08-01 01:53:56 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  7%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_temp_get_3_low 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:53:56 INFO     ===> temp get 3
+2024-08-01 01:53:56 INFO     Temperature value: 48.97198
+2024-08-01 01:53:58 INFO     ===> temp get 3
+2024-08-01 01:53:58 INFO     ### test_temp_get_3_low ==> PASSED
+PASSED                                                                   [ 15%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_mass_clear 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:54:00 INFO     ===> mass clear
+2024-08-01 01:54:00 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [ 23%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_inject_500g 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:54:02 INFO     ===> mass inject 500
+2024-08-01 01:54:03 INFO     ### test_inject_500g ==> PASSED
+PASSED                                                                   [ 30%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_mass_500g 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:54:05 INFO     ===> mass get -d
+2024-08-01 01:54:05 INFO     ### test_mass_500g ==> PASSED
+PASSED                                                                   [ 38%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:54:07 INFO     ===> dgo manual_start
+2024-08-01 01:54:07 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 46%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:54:09 INFO     ===> dgo status
+2024-08-01 01:54:09 INFO        retrying... 1
+2024-08-01 01:54:34 INFO     ===> dgo status
+2024-08-01 01:54:35 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 53%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_dgo_stage_remain_15min 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:54:37 INFO     ===> dgo status
+2024-08-01 01:54:37 INFO     ### test_dgo_stage_remain_15min ==> PASSED
+PASSED                                                                   [ 61%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_dgo_skip_stage 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:54:39 INFO     ===> dgo stage skip
+2024-08-01 01:54:40 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 69%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_dgo_status_HIP_time_remain 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:54:42 INFO     ===> dgo status
+2024-08-01 01:54:42 INFO     ### test_dgo_status_HIP_time_remain ==> PASSED
+PASSED                                                                   [ 76%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_capturelog_1800 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:54:42 INFO     Wait for 2 Hours Before Log Capture
+2024-08-01 03:54:44 INFO     ** wait_time_pause: 7200 seconds **
+2024-08-01 03:54:44 INFO     ### wait_time_pause ==> PASSED
+2024-08-01 03:54:44 INFO     Capturing log for delta_mr value when should_stop turned 1
+2024-08-01 03:54:46 INFO     ===> capturelog 1800
+2024-08-01 04:24:46 INFO     ### capturelog_1800 ==> PASSED
+PASSED                                                                   [ 84%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_dgo_status_COOLDOWN_state 
+-------------------------------- live log call ---------------------------------
+2024-08-01 04:24:48 INFO     ===> dgo status
+2024-08-01 04:24:48 INFO     ### test_dgo_status_COOLDOWN_state ==> PASSED
+PASSED                                                                   [ 92%]
+bat_dgo_hip_mass_bucket.py::TestBAT_DGO_HIP_MASS_BUCKET::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-08-01 04:24:50 INFO     ===> dgo manual_stop
+2024-08-01 04:24:50 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 13 passed in 9063.65s (2:31:03) ========================

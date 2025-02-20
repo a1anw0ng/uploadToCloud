@@ -1,0 +1,687 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 50 items
+
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_lid_inject_0_open 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:13:57 INFO     ===> lid inject 0
+2024-08-01 02:13:57 ERROR    line= E power_control: Unknown power ID: 0
+2024-08-01 02:13:57 INFO     ### test_lid_inject_0_open ==> PASSED
+PASSED                                                                   [  2%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_lid_inject_1_close 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:13:59 INFO     ===> lid inject 1
+2024-08-01 02:14:02 INFO     retries counts: 1
+2024-08-01 02:14:05 INFO     retries counts: 2
+2024-08-01 02:14:08 INFO     retries counts: 3
+2024-08-01 02:14:11 INFO     retries counts: 4
+2024-08-01 02:14:14 INFO     retries counts: 5
+2024-08-01 02:14:14 ERROR    Timeout after 5 retries!
+2024-08-01 02:14:14 INFO     ### test_lid_inject_1_close ==> PASSED
+PASSED                                                                   [  4%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:19 INFO     dgo manual_stop executed
+2024-08-01 02:14:23 INFO     Current State: IDLE
+2024-08-01 02:14:23 INFO     ===> dgo status
+2024-08-01 02:14:23 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  6%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_config_fluff_stage 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:25 INFO     ===> dgo config get
+2024-08-01 02:14:25 INFO     ### test_dgo_config_fluff_stage ==> PASSED
+PASSED                                                                   [  8%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_force_fluff 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:27 INFO     ===> dgo force_fluff
+2024-08-01 02:14:27 INFO     ### test_dgo_force_fluff ==> PASSED
+PASSED                                                                   [ 10%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_fluff_stage 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:29 INFO     ===> dgo status
+2024-08-01 02:14:29 INFO     ### test_dgo_status_fluff_stage ==> PASSED
+PASSED                                                                   [ 12%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:31 INFO     ===> dgo manual_start
+2024-08-01 02:14:31 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 14%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:33 INFO     ===> dgo status
+2024-08-01 02:14:34 INFO        retrying... 1
+2024-08-01 02:14:38 INFO     ===> dgo status
+2024-08-01 02:14:38 INFO     ### test_dgo_status_manual_start ==> PASSED
+PASSED                                                                   [ 16%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:40 INFO     ===> dgo manual_stop
+2024-08-01 02:14:40 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 18%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_fluff_activated 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:42 INFO     ===> dgo status
+FAILED                                                                   [ 20%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_config_get_fluff_scheduled 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:48 INFO     ===> dgo config get
+2024-08-01 02:14:48 INFO     ### test_dgo_config_get_fluff_scheduled ==> PASSED
+PASSED                                                                   [ 22%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_get_shadow_dgoCycle_Idle 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:50 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:14:51 INFO     ### get_shadow_dgoCycle_Idle ==> PASSED
+PASSED                                                                   [ 24%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_get_shadow_dgoStage_Idle 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:53 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:14:53 INFO     ### get_shadow_dgoStage_Idle ==> PASSED
+PASSED                                                                   [ 26%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_get_stopped 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:14:55 INFO     ===> grinder get
+2024-08-01 02:14:55 INFO     ### test_dgo_Grinder_get_stopped ==> PASSED
+PASSED                                                                   [ 28%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_enter_into_fluff_stage_1800 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:19:58 INFO     ** wait_time_pause: 300 seconds **
+2024-08-01 02:19:58 INFO     ### wait_time_300s ==> PASSED
+2024-08-01 02:20:02 INFO     ===> dgo status
+2024-08-01 02:20:02 INFO     ### test_dgo_status_300 ==> PASSED
+2024-08-01 02:25:05 INFO     ** wait_time_pause: 300 seconds **
+2024-08-01 02:25:05 INFO     ### wait_time_600s ==> PASSED
+2024-08-01 02:25:08 INFO     ===> dgo status
+2024-08-01 02:25:08 INFO     ### test_dgo_status_600 ==> PASSED
+2024-08-01 02:30:11 INFO     ** wait_time_pause: 300 seconds **
+2024-08-01 02:30:11 INFO     ### wait_time_900s ==> PASSED
+2024-08-01 02:30:14 INFO     ===> dgo status
+2024-08-01 02:30:14 INFO     ### test_dgo_status_900 ==> PASSED
+2024-08-01 02:35:18 INFO     ** wait_time_pause: 300 seconds **
+2024-08-01 02:35:18 INFO     ### wait_time_1200s ==> PASSED
+2024-08-01 02:35:21 INFO     ===> dgo status
+2024-08-01 02:35:21 INFO     ### test_dgo_status_1200 ==> PASSED
+2024-08-01 02:40:24 INFO     ** wait_time_pause: 300 seconds **
+2024-08-01 02:40:24 INFO     ### wait_time_1500s ==> PASSED
+2024-08-01 02:40:27 INFO     ===> dgo status
+2024-08-01 02:40:27 INFO     ### test_dgo_status_1500 ==> PASSED
+2024-08-01 02:45:10 INFO     ** wait_time_pause: 280 seconds **
+2024-08-01 02:45:10 INFO     ### wait_time_1780s ==> PASSED
+PASSED                                                                   [ 30%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_FLUFF_1780 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:12 INFO     ===> dgo status
+2024-08-01 02:45:12 INFO     ### test_dgo_status_FLUFF_1780 ==> PASSED
+PASSED                                                                   [ 32%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_FLUFF_1780_remain_s 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:15 INFO     ===> dgo status
+2024-08-01 02:45:15 INFO     ### test_dgo_status_FLUFF_1780_remain_s ==> PASSED
+PASSED                                                                   [ 34%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_config_get_in_fluff 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:17 INFO     ===> dgo config get
+2024-08-01 02:45:17 INFO     ### test_dgo_config_get_in_fluff ==> PASSED
+PASSED                                                                   [ 36%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_get_running 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:19 INFO     ===> grinder get
+2024-08-01 02:45:19 INFO     ### test_dgo_Grinder_get_running ==> PASSED
+PASSED                                                                   [ 38%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_get_shadow_dgoCycle_Fluff 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:21 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:45:22 INFO     ### get_shadow_dgoCycle_Fluff ==> PASSED
+PASSED                                                                   [ 40%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_get_shadow_dgoStage_Fluff 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:24 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:45:24 INFO     ### get_shadow_dgoStage_Fluff ==> PASSED
+PASSED                                                                   [ 42%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Lid_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:26 INFO     ===> fan get 1
+2024-08-01 02:45:26 INFO     ### test_dgo_Lid_Fan_PWM ==> PASSED
+PASSED                                                                   [ 44%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Exhaust_Fan_PWM 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:28 INFO     ===> fan get 0
+2024-08-01 02:45:28 INFO     ### test_dgo_Exhaust_Fan_PWM ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Bucket_Heater_Set_Point 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:30 INFO     ===> heater get 0
+2024-08-01 02:45:30 INFO     ### test_dgo_Bucket_Heater_Set_Point ==> PASSED
+PASSED                                                                   [ 48%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Bucket_Heater_Hysterisis_Range 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:32 INFO     ===> heater get 0
+2024-08-01 02:45:32 INFO     ### test_dgo_Bucket_Heater_Hysterisis_Range ==> PASSED
+PASSED                                                                   [ 50%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Amp_Hard_Limit 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:34 INFO     ===> grinder stall_get
+2024-08-01 02:45:34 INFO     ### test_dgo_Grinder_Amp_Hard_Limit ==> PASSED
+PASSED                                                                   [ 52%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Amp_Soft_Limit 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:36 INFO     ===> grinder stall_get
+2024-08-01 02:45:37 INFO     ### test_dgo_Grinder_Amp_Soft_Limit ==> PASSED
+PASSED                                                                   [ 54%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_PWM 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:39 INFO     ===> grinder get
+2024-08-01 02:45:39 INFO     ### test_dgo_Grinder_PWM ==> PASSED
+PASSED                                                                   [ 56%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Stall_Speed_Drop_Limit 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:41 INFO     ===> grinder stall_get
+2024-08-01 02:45:41 INFO     ### test_dgo_Grinder_Stall_Speed_Drop_Limit ==> PASSED
+PASSED                                                                   [ 58%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Amp_Threshold_Hard 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:43 INFO     ===> grinder stall_get
+2024-08-01 02:45:43 INFO     ### test_dgo_Grinder_Amp_Threshold_Hard ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Amp_Threshold_Soft 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:45 INFO     ===> grinder stall_get
+2024-08-01 02:45:45 INFO     ### test_dgo_Grinder_Amp_Threshold_Soft ==> PASSED
+PASSED                                                                   [ 62%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Speed_Threshold 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:47 INFO     ===> grinder stall_get
+2024-08-01 02:45:47 INFO     ### test_dgo_Grinder_Speed_Threshold ==> PASSED
+PASSED                                                                   [ 64%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:49 INFO     ===> grinder get
+2024-08-01 02:45:49 INFO     ### test_dgo_Grinder_Enabled ==> PASSED
+PASSED                                                                   [ 66%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Duty_ON 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:51 INFO     ===> grinder get
+2024-08-01 02:45:51 INFO     ### test_dgo_Grinder_Duty_ON ==> PASSED
+PASSED                                                                   [ 68%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Duty_OFF 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:53 INFO     ===> grinder get
+2024-08-01 02:45:53 INFO     ### test_dgo_Grinder_Duty_OFF ==> PASSED
+PASSED                                                                   [ 70%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Grinder_Direction 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:55 INFO         Checking directions in progressing ...
+2024-08-01 02:45:55 INFO     ### test_dgo_Grinder_Direction ==> PASSED
+PASSED                                                                   [ 72%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_Lid_Heater_Enabled 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:45:57 INFO     ===> heater get 1
+2024-08-01 02:45:58 INFO     ### test_dgo_Lid_Heater_Enabled ==> PASSED
+PASSED                                                                   [ 74%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_wait_time_pause 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:46:20 INFO     ** wait_time_pause: 20 seconds **
+2024-08-01 02:46:20 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 76%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_State_Run_Time 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:46:22 INFO     ===> dgo status
+2024-08-01 02:46:22 INFO     ### test_dgo_State_Run_Time ==> PASSED
+PASSED                                                                   [ 78%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_State_Run_Time_remain_s 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:46:24 INFO     ===> dgo status
+2024-08-01 02:46:24 INFO     ### test_dgo_State_Run_Time_remain_s ==> PASSED
+PASSED                                                                   [ 80%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_79200 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:46:27 INFO     ===> hipStartTime set 79200
+2024-08-01 02:46:28 INFO     ### test_hipStartTime_set_79200 ==> PASSED
+2024-08-01 02:46:31 INFO     ===> hipStartTime get
+2024-08-01 02:46:32 INFO     ### test_hipStartTime_get_79200 ==> PASSED
+2024-08-01 02:46:35 INFO     ===> dgo config get
+2024-08-01 02:46:35 INFO     ### test_dgo_config_get_79200 ==> PASSED
+2024-08-01 02:46:39 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:46:39 INFO     ### get_shadow_scheduledHIPStartTime_79200 ==> PASSED
+PASSED                                                                   [ 82%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_80100 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:46:42 INFO     ===> hipStartTime set 80100
+2024-08-01 02:46:43 INFO     ### test_hipStartTime_set_80100 ==> PASSED
+2024-08-01 02:46:46 INFO     ===> hipStartTime get
+2024-08-01 02:46:47 INFO     ### test_hipStartTime_get_80100 ==> PASSED
+2024-08-01 02:46:50 INFO     ===> dgo config get
+2024-08-01 02:46:50 INFO     ### test_dgo_config_get_80100 ==> PASSED
+2024-08-01 02:46:53 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:46:54 INFO     ### get_shadow_scheduledHIPStartTime_80100 ==> PASSED
+PASSED                                                                   [ 84%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_81000 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:46:57 INFO     ===> hipStartTime set 81000
+2024-08-01 02:46:58 INFO     ### test_hipStartTime_set_81000 ==> PASSED
+2024-08-01 02:47:01 INFO     ===> hipStartTime get
+2024-08-01 02:47:02 INFO     ### test_hipStartTime_get_81000 ==> PASSED
+2024-08-01 02:47:05 INFO     ===> dgo config get
+2024-08-01 02:47:05 INFO     ### test_dgo_config_get_81000 ==> PASSED
+2024-08-01 02:47:08 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:47:09 INFO     ### get_shadow_scheduledHIPStartTime_81000 ==> PASSED
+PASSED                                                                   [ 86%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_81900 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:47:12 INFO     ===> hipStartTime set 81900
+2024-08-01 02:47:13 INFO     ### test_hipStartTime_set_81900 ==> PASSED
+2024-08-01 02:47:16 INFO     ===> hipStartTime get
+2024-08-01 02:47:17 INFO     ### test_hipStartTime_get_81900 ==> PASSED
+2024-08-01 02:47:20 INFO     ===> dgo config get
+2024-08-01 02:47:20 INFO     ### test_dgo_config_get_81900 ==> PASSED
+2024-08-01 02:47:23 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:47:23 INFO     ### get_shadow_scheduledHIPStartTime_81900 ==> PASSED
+PASSED                                                                   [ 88%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_82800 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:47:26 INFO     ===> hipStartTime set 82800
+2024-08-01 02:47:27 INFO     ### test_hipStartTime_set_82800 ==> PASSED
+2024-08-01 02:47:30 INFO     ===> hipStartTime get
+2024-08-01 02:47:31 INFO     ### test_hipStartTime_get_82800 ==> PASSED
+2024-08-01 02:47:34 INFO     ===> dgo config get
+2024-08-01 02:47:35 INFO     ### test_dgo_config_get_82800 ==> PASSED
+2024-08-01 02:47:38 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:47:38 INFO     ### get_shadow_scheduledHIPStartTime_82800 ==> PASSED
+PASSED                                                                   [ 90%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_83700 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:47:41 INFO     ===> hipStartTime set 83700
+2024-08-01 02:47:42 INFO     ### test_hipStartTime_set_83700 ==> PASSED
+2024-08-01 02:47:45 INFO     ===> hipStartTime get
+2024-08-01 02:47:50 INFO     ### test_hipStartTime_get_83700 ==> PASSED
+2024-08-01 02:47:53 INFO     ===> dgo config get
+2024-08-01 02:47:53 INFO     ### test_dgo_config_get_83700 ==> PASSED
+2024-08-01 02:47:56 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:47:56 INFO     ### get_shadow_scheduledHIPStartTime_83700 ==> PASSED
+PASSED                                                                   [ 92%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_84600 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:47:59 INFO     ===> hipStartTime set 84600
+2024-08-01 02:48:00 INFO     ### test_hipStartTime_set_84600 ==> PASSED
+2024-08-01 02:48:03 INFO     ===> hipStartTime get
+2024-08-01 02:48:04 INFO     ### test_hipStartTime_get_84600 ==> PASSED
+2024-08-01 02:48:07 INFO     ===> dgo config get
+2024-08-01 02:48:08 INFO     ### test_dgo_config_get_84600 ==> PASSED
+2024-08-01 02:48:11 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:48:11 INFO     ### get_shadow_scheduledHIPStartTime_84600 ==> PASSED
+PASSED                                                                   [ 94%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_85500 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:48:14 INFO     ===> hipStartTime set 85500
+2024-08-01 02:48:15 INFO     ### test_hipStartTime_set_85500 ==> PASSED
+2024-08-01 02:48:18 INFO     ===> hipStartTime get
+2024-08-01 02:48:19 INFO     ### test_hipStartTime_get_85500 ==> PASSED
+2024-08-01 02:48:22 INFO     ===> dgo config get
+2024-08-01 02:48:23 INFO     ### test_dgo_config_get_85500 ==> PASSED
+2024-08-01 02:48:26 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:48:26 INFO     ### get_shadow_scheduledHIPStartTime_85500 ==> PASSED
+PASSED                                                                   [ 96%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_0 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:48:29 INFO     ===> hipStartTime set 0
+2024-08-01 02:48:30 INFO     ### test_hipStartTime_set_0 ==> PASSED
+2024-08-01 02:48:33 INFO     ===> hipStartTime get
+2024-08-01 02:48:34 INFO     ### test_hipStartTime_get_0 ==> PASSED
+2024-08-01 02:48:37 INFO     ===> dgo config get
+2024-08-01 02:48:37 INFO     ### test_dgo_config_get_0 ==> PASSED
+2024-08-01 02:48:40 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:48:41 INFO     ### get_shadow_scheduledHIPStartTime_0 ==> PASSED
+PASSED                                                                   [ 98%]
+dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_group_start_time_900 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:48:44 INFO     ===> hipStartTime set 900
+2024-08-01 02:48:45 INFO     ### test_hipStartTime_set_900 ==> PASSED
+2024-08-01 02:48:48 INFO     ===> hipStartTime get
+2024-08-01 02:48:49 INFO     ### test_hipStartTime_get_900 ==> PASSED
+2024-08-01 02:48:52 INFO     ===> dgo config get
+2024-08-01 02:48:52 INFO     ### test_dgo_config_get_900 ==> PASSED
+2024-08-01 02:48:55 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 02:48:56 INFO     ### get_shadow_scheduledHIPStartTime_900 ==> PASSED
+PASSED                                                                   [100%]
+
+=================================== FAILURES ===================================
+_______________ TestDGOFSM_FLUFF.test_dgo_status_fluff_activated _______________
+
+self = <dgo.dgo_test_FLUFF_state2_O2.TestDGOFSM_FLUFF object at 0x7f76b53820>
+dgo = <libs.SetupDGO.setupDgo object at 0x7f76a89070>
+log = <Logger dgo (DEBUG)>
+testsuite = [{'command': 'lid inject 0', 'picktopone': True, 'testcase': 'test_lid_inject_0_open', 'verify': []}, {'command': 'lid... 'testcase': 'test_dgo_status_fluff_stage', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, ...]
+
+    def test_dgo_status_fluff_activated(self, dgo, log, testsuite):
+        testCase = "test_dgo_status_fluff_activated"
+>       self._run_testcase(dgo, log, testsuite, testCase)
+
+dgo_test_FLUFF_state2_O2.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+BasePytest.py:14: in _run_testcase
+    libs.basePytestEx._run_testcaseNext(self, dgo, log, testsuite, testCase)
+../libs/BasePytestEx.py:131: in _run_testcaseNext
+    if self._performVerifies(testsuite, testCase, selectData, log, testGrp):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dgo.dgo_test_FLUFF_state2_O2.TestDGOFSM_FLUFF object at 0x7f76b53820>
+testsuite = [{'command': 'lid inject 0', 'picktopone': True, 'testcase': 'test_lid_inject_0_open', 'verify': []}, {'command': 'lid... 'testcase': 'test_dgo_status_fluff_stage', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, ...]
+testCase = 'test_dgo_status_fluff_activated'
+selectData = [['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', ...], ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"FLUFF"', ...]]
+log = <Logger dgo (DEBUG)>, testGrp = None
+
+    def _performVerifies(self, testsuite, testCase, selectData, log, testGrp=None):
+        myConf = self._getMyConf(testsuite, testCase, testGrp)
+    
+        selectData = [item for item in selectData if item]
+    
+        if myConf.__contains__("linecount"):
+            keyLst = myConf.keys()
+            for i in range(1, myConf["linecount"]+1):
+                verifyStr = "verify"
+                if i > 1:
+                    verifyStr = "verify" + str(i)
+    
+                if verifyStr not in keyLst:
+                    myConf.update({verifyStr : []})
+    
+        if myConf.__contains__("removeCBOR"):
+            if myConf["removeCBOR"]:
+                sequence = ['Send', 'CBOR', 'data', 'to']
+                filtered_data = []
+                for sublist in selectData:
+                    joined_string = ' '.join(sublist)
+                    if ' '.join(sequence) not in joined_string:
+                        filtered_data.append(sublist)
+    
+                selectData = filtered_data
+                log.debug("removeCBOR performed")
+                self.result["removeCBOR"] = "performed"
+    
+        if myConf.__contains__("noduplicate"):
+            if myConf["noduplicate"]:
+                seen = set()
+                resultLst = []
+                for item in selectData:
+                    tuple_item = tuple(item)
+                    if tuple_item not in seen:
+                        resultLst.append(item)
+                        seen.add(tuple_item)
+    
+                selectData = resultLst
+                log.debug("noduplicate performed")
+                self.result["noduplicate"] = "performed"
+    
+        if myConf.__contains__("noduplicate2"):
+            if myConf["noduplicate2"]:
+                seen = set()
+                resultLst = []
+                for item in selectData:
+                    tuple_item = tuple(item[1:])
+                    if tuple_item not in seen:
+                        resultLst.append(item)
+                        seen.add(tuple_item)
+    
+                selectData = resultLst
+                log.debug("noduplicate2 performed")
+                self.result["noduplicate2"] = "performed"
+    
+        if myConf.__contains__("noduplicate3"):
+            if myConf["noduplicate3"]:
+                seen = set()
+                resultLst = []
+                for item in selectData:
+                    tuple_item = tuple(item[2:])
+                    if tuple_item not in seen:
+                        resultLst.append(item)
+                        seen.add(tuple_item)
+    
+                selectData = resultLst
+                log.debug("noduplicate3 performed")
+                self.result["noduplicate3"] = "performed"
+    
+        if myConf.__contains__("noduplicate6"):
+            if myConf["noduplicate6"]:
+                seen = set()
+                resultLst = []
+                for item in selectData:
+                    tuple_item = tuple(item[5:])
+                    if tuple_item not in seen:
+                        resultLst.append(item)
+                        seen.add(tuple_item)
+    
+                selectData = resultLst
+                log.debug("noduplicate6 performed")
+                self.result["noduplicate6"] = "performed"
+    
+        if myConf.__contains__("noduplicate1_"):
+            if myConf["noduplicate1_"]:
+                seen = set()
+                resultLst = []
+                for item in selectData:
+                    tuple_item = tuple(item[0:-1])
+                    if tuple_item not in seen:
+                        resultLst.append(item)
+                        seen.add(tuple_item)
+    
+                selectData = resultLst
+                log.debug("noduplicate1_ performed")
+                self.result["noduplicate1_"] = "performed"
+    
+        if myConf.__contains__("picktopone"):
+            if myConf["picktopone"]:
+                if len(selectData) > 1:
+                    selectData = [selectData[0]]
+                    log.debug("picktopone performed")
+                    self.result["picktopone"] = "performed"
+    
+        if myConf.__contains__("pickbottomone"):
+            if myConf["pickbottomone"]:
+                if len(selectData) > 1:
+                    selectData = [selectData[len(selectData)-2]]
+                    log.debug("pickbottomone performed")
+                    self.result["pickbottomone"] = "performed"
+    
+        myVerifyList, verifyCount = self._checkVerifyCounts(myConf)
+        myVerifyList = sorted(myVerifyList, key=self._sorting_key)
+    
+        self.result["verifyCount"] = verifyCount
+        verifyLst = []
+    
+        for i in range(verifyCount):
+            verifyLst.append(myConf[myVerifyList[i]])
+        self.result["verifyLst"] = verifyLst
+    
+        bSubLst = False
+        if (any(isinstance(el, list) for el in selectData)):
+            bSubLst = True
+            dataCount = len(selectData)
+            if selectData[dataCount-1] == ['#']:
+                dataCount -= 1
+        else:
+            dataCount = 1
+    
+        log.debug("selectData info: %s", selectData)
+        log.debug("verifyCount info: %s", verifyCount)
+        log.debug("dataCount info: %s", dataCount)
+        self.result["dataCount"] = dataCount
+        self.result["selectData"] = selectData
+    
+>       assert verifyCount == dataCount
+E       AssertionError
+
+../libs/BasePytestEx.py:825: AssertionError
+------------------------------ Captured log call -------------------------------
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:105 BBB test_dgo_status_fluff_activated 
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+INFO     dgo:BasePytestEx.py:538 ===> dgo status
+DEBUG    root:SetupDGO.py:40 cmd info: dgo status
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I Schedule next cycle, time_offset: -25200
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I cycle_stopped_incomplete 1. honor_starting_window 0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: " I cycle_stopped_incomplete 1. honor_starting_window 0"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I DGO: No cycle to enter, eval next cycle start time
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I today idx (epoch) 19939, planned skip till day idx (epoch) 19939, real skip till day idx (epoch) 19942, cur_time_local_spm 32969
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Get dgo status
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 s
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 ec hdl. Today idx (week) 3, start with day idx (epoch): 19939, (week) 3. Real skip till day idx 19942
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Checking target_day_idx 3, days_in_future 0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I This day is enabled by user ~~
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I cur_spm 32969, target_spm 78300, days_in_future 0, del 45331
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I sec_to_next_cycle 45331
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I i: 0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            state:"IDLE" upcoming cycle:"D&G" upcoming stage:"LIP" time to next cycle:"T00:14:51"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            epoch:"2024-08-04T16:09:29.756"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cur_time_utc:"2024-08-04T16:09:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:09:29" time_offset:-25200
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            end_time_utc:"2024-08-04T16:24:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:24:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cycle_start_utc:"2024-08-04T16:09:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:09:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cycle_remain_s:"T00:00:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_start_utc:"2024-08-04T16:09:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:09:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I ----- Updated real skip till day idx 19939, planned skip till day idx 19939
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I today_epoch 19939 real skip_until_idx 19939
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Same day
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Is D&G going to run in less than 24h? 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I --- idx 3, final res 45331
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I cur_spm 32969, target_spm 34767, days_in_future 0, del 1798
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I sec_to_next_cycle 1798
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I --- idx 4, final res 1798
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I (kv)store0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Staying in IDLE now: 1722787769 until 1722789567
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I +++ Will enter scheduled cycle FLUFF (0x4) in 1798 sec
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I today_epoch 19939 real skip_until_idx 19939
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Same day
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Is D&G going to run in less than 24h? 1
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I DGO: cycle remaining time 9960
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_end_utc:"2024-08-04T16:24:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:24:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            mandatory_stage_end_utc:"2024-08-04T16:24:22"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:24:22"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_remain_s:"T00:00:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            dgo_inactive_reasons:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            unprocessed_mass_next_cycle_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            total_mass_added_since_stage_start_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            accu_mass_time_ext_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            total_mass_add_hip_extend_s:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_reached_min_dur:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            will_skip_next_cycle:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_reached_exit_condition:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_check_exit_cond:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_storage:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_sht40_heater.val:0 sw_counter_sht40_heater.en:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_skip_count:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            today_idx (epoch):19939 today_idx (week):3
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            planned_skip_until_idx:19939
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            real_skip_until_idx:19939
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 dgo status
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "dgo status"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I dgo         status            state:"IDLE" upcoming cycle:"FLUFF" upcoming stage:"FLUFF" time to next cycle:"T00:29:54"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            epoch:"2024-08-04T16:09:33.533"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cur_time_utc:"2024-08-04T16:09:33"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:09:33" time_offset:-25200
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            end_time_utc:"2024-08-04T16:39:27"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:39:27"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cycle_start_utc:"2024-08-04T16:09:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:09:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cycle_remain_s:"T00:00:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_start_utc:"2024-08-04T16:09:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:09:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_end_utc:"2024-08-04T16:24:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:24:20"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            mandatory_stage_end_utc:"2024-08-04T16:24:22"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-04T09:24:22"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_remain_s:"T00:00:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            dgo_inactive_reasons:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            unprocessed_mass_next_cycle_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            total_mass_added_since_stage_start_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            accu_mass_time_ext_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            total_mass_add_hip_extend_s:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_reached_min_dur:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            will_skip_next_cycle:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_reached_exit_condition:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_check_exit_cond:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_storage:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_sht40_heater.val:0 sw_counter_sht40_heater.en:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_skip_count:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            today_idx (epoch):19939 today_idx (week):3
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            planned_skip_until_idx:19939
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            real_skip_until_idx:19939
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I Schedule next cycle, time_offset: -25200', '\x00I DGO: No cycle to enter, eval next cycle start time', '\x00I today idx (epoch) 19939, planned skip till day idx (epoch) 19939, real skip till day idx (epoch) 19942, cur_time_local_spm 32969', '\x00I Get dgo status', 's', 'ec hdl. Today idx (week) 3, start with day idx (epoch): 19939, (week) 3. Real skip till day idx 19942', '\x00I Checking target_day_idx 3, days_in_future 0', '\x00I This day is enabled by user ~~', '\x00I cur_spm 32969, target_spm 78300, days_in_future 0, del 45331', '\x00I sec_to_next_cycle 45331', '\x00I i: 0', '\x00I dgo         status            state:"IDLE" upcoming cycle:"D&G" upcoming stage:"LIP" time to next cycle:"T00:14:51"', '\x00I dgo         status            epoch:"2024-08-04T16:09:29.756"', '\x00I dgo         status            cur_time_utc:"2024-08-04T16:09:29"', '\x00I dgo         status            LOCAL:"2024-08-04T09:09:29" time_offset:-25200', '\x00I dgo         status            end_time_utc:"2024-08-04T16:24:20"', '\x00I dgo         status            LOCAL:"2024-08-04T09:24:20"', '\x00I dgo         status            cycle_start_utc:"2024-08-04T16:09:20"', '\x00I dgo         status            LOCAL:"2024-08-04T09:09:20"', '\x00I dgo         status            cycle_remain_s:"T00:00:00"', '\x00I dgo         status            stage_start_utc:"2024-08-04T16:09:20"', '\x00I dgo         status            LOCAL:"2024-08-04T09:09:20"', '\x00I ----- Updated real skip till day idx 19939, planned skip till day idx 19939', '\x00I today_epoch 19939 real skip_until_idx 19939', '\x00I Same day', '\x00I Is D&G going to run in less than 24h? 1', '\x00I --- idx 3, final res 45331', '\x00I cur_spm 32969, target_spm 34767, days_in_future 0, del 1798', '\x00I sec_to_next_cycle 1798', '\x00I --- idx 4, final res 1798', '\x00I (kv)store0', '\x00I Staying in IDLE now: 1722787769 until 1722789567', '\x00I +++ Will enter scheduled cycle FLUFF (0x4) in 1798 sec', '\x00I today_epoch 19939 real skip_until_idx 19939', '\x00I Same day', '\x00I Is D&G going to run in less than 24h? 1', '\x00I DGO: cycle remaining time 9960', '\x00I dgo         status            stage_end_utc:"2024-08-04T16:24:20"', '\x00I dgo         status            LOCAL:"2024-08-04T09:24:20"', '\x00I dgo         status            mandatory_stage_end_utc:"2024-08-04T16:24:22"', '\x00I dgo         status            LOCAL:"2024-08-04T09:24:22"', '\x00I dgo         status            stage_remain_s:"T00:00:00"', '\x00I dgo         status            dgo_inactive_reasons:0x00000000', '\x00I dgo         status            unprocessed_mass_next_cycle_g:0', '\x00I dgo         status            total_mass_added_since_stage_start_g:0', '\x00I dgo         status            accu_mass_time_ext_g:0', '\x00I dgo         status            total_mass_add_hip_extend_s:0', '\x00I dgo         status            stage_reached_min_dur:"no"', '\x00I dgo         status            will_skip_next_cycle:"no"', '\x00I dgo         status            stage_reached_exit_condition:"no"', '\x00I dgo         status            sw_counter_check_exit_cond:0', '\x00I dgo         status            sw_counter_storage:0', '\x00I dgo         status            sw_counter_sht40_heater.val:0 sw_counter_sht40_heater.en:0', '\x00I dgo         status            sw_counter_skip_count:0', '\x00I dgo         status            today_idx (epoch):19939 today_idx (week):3', '\x00I dgo         status            planned_skip_until_idx:19939', '\x00I dgo         status            real_skip_until_idx:19939', '\x00#', 'I dgo         status            state:"IDLE" upcoming cycle:"FLUFF" upcoming stage:"FLUFF" time to next cycle:"T00:29:54"', '\x00I dgo         status            epoch:"2024-08-04T16:09:33.533"', '\x00I dgo         status            cur_time_utc:"2024-08-04T16:09:33"', '\x00I dgo         status            LOCAL:"2024-08-04T09:09:33" time_offset:-25200', '\x00I dgo         status            end_time_utc:"2024-08-04T16:39:27"', '\x00I dgo         status            LOCAL:"2024-08-04T09:39:27"', '\x00I dgo         status            cycle_start_utc:"2024-08-04T16:09:20"', '\x00I dgo         status            LOCAL:"2024-08-04T09:09:20"', '\x00I dgo         status            cycle_remain_s:"T00:00:00"', '\x00I dgo         status            stage_start_utc:"2024-08-04T16:09:20"', '\x00I dgo         status            LOCAL:"2024-08-04T09:09:20"', '\x00I dgo         status            stage_end_utc:"2024-08-04T16:24:20"', '\x00I dgo         status            LOCAL:"2024-08-04T09:24:20"', '\x00I dgo         status            mandatory_stage_end_utc:"2024-08-04T16:24:22"', '\x00I dgo         status            LOCAL:"2024-08-04T09:24:22"', '\x00I dgo         status            stage_remain_s:"T00:00:00"', '\x00I dgo         status            dgo_inactive_reasons:0x00000000', '\x00I dgo         status            unprocessed_mass_next_cycle_g:0', '\x00I dgo         status            total_mass_added_since_stage_start_g:0', '\x00I dgo         status            accu_mass_time_ext_g:0', '\x00I dgo         status            total_mass_add_hip_extend_s:0', '\x00I dgo         status            stage_reached_min_dur:"no"', '\x00I dgo         status            will_skip_next_cycle:"no"', '\x00I dgo         status            stage_reached_exit_condition:"no"', '\x00I dgo         status            sw_counter_check_exit_cond:0', '\x00I dgo         status            sw_counter_storage:0', '\x00I dgo         status            sw_counter_sht40_heater.val:0 sw_counter_sht40_heater.en:0', '\x00I dgo         status            sw_counter_skip_count:0', '\x00I dgo         status            today_idx (epoch):19939 today_idx (week):3', '\x00I dgo         status            planned_skip_until_idx:19939', '\x00I dgo         status            real_skip_until_idx:19939', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 5825
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'Schedule', 'next', 'cycle,', 'time_offset:', '-25200'], ['I', 'DGO:', 'No', 'cycle', 'to', 'enter,', 'eval', 'next', 'cycle', 'start', 'time'], ['I', 'today', 'idx', '(epoch)', '19939,', 'planned', 'skip', 'till', 'day', 'idx', '(epoch)', '19939,', 'real', 'skip', 'till', 'day', 'idx', '(epoch)', '19942,', 'cur_time_local_spm', '32969'], ['I', 'Get', 'dgo', 'status'], ['s'], ['ec', 'hdl.', 'Today', 'idx', '(week)', '3,', 'start', 'with', 'day', 'idx', '(epoch):', '19939,', '(week)', '3.', 'Real', 'skip', 'till', 'day', 'idx', '19942'], ['I', 'Checking', 'target_day_idx', '3,', 'days_in_future', '0'], ['I', 'This', 'day', 'is', 'enabled', 'by', 'user', '~~'], ['I', 'cur_spm', '32969,', 'target_spm', '78300,', 'days_in_future', '0,', 'del', '45331'], ['I', 'sec_to_next_cycle', '45331'], ['I', 'i:', '0'], ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T00:14:51"'], ['I', 'dgo', 'status', 'epoch:"2024-08-04T16:09:29.756"'], ['I', 'dgo', 'status', 'cur_time_utc:"2024-08-04T16:09:29"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:29"', 'time_offset:-25200'], ['I', 'dgo', 'status', 'end_time_utc:"2024-08-04T16:24:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:20"'], ['I', 'dgo', 'status', 'cycle_start_utc:"2024-08-04T16:09:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:20"'], ['I', 'dgo', 'status', 'cycle_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'stage_start_utc:"2024-08-04T16:09:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:20"'], ['I', '-----', 'Updated', 'real', 'skip', 'till', 'day', 'idx', '19939,', 'planned', 'skip', 'till', 'day', 'idx', '19939'], ['I', 'today_epoch', '19939', 'real', 'skip_until_idx', '19939'], ['I', 'Same', 'day'], ['I', 'Is', 'D&G', 'going', 'to', 'run', 'in', 'less', 'than', '24h?', '1'], ['I', '---', 'idx', '3,', 'final', 'res', '45331'], ['I', 'cur_spm', '32969,', 'target_spm', '34767,', 'days_in_future', '0,', 'del', '1798'], ['I', 'sec_to_next_cycle', '1798'], ['I', '---', 'idx', '4,', 'final', 'res', '1798'], ['I', '(kv)store0'], ['I', 'Staying', 'in', 'IDLE', 'now:', '1722787769', 'until', '1722789567'], ['I', '+++', 'Will', 'enter', 'scheduled', 'cycle', 'FLUFF', '(0x4)', 'in', '1798', 'sec'], ['I', 'today_epoch', '19939', 'real', 'skip_until_idx', '19939'], ['I', 'Same', 'day'], ['I', 'Is', 'D&G', 'going', 'to', 'run', 'in', 'less', 'than', '24h?', '1'], ['I', 'DGO:', 'cycle', 'remaining', 'time', '9960'], ['I', 'dgo', 'status', 'stage_end_utc:"2024-08-04T16:24:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:20"'], ['I', 'dgo', 'status', 'mandatory_stage_end_utc:"2024-08-04T16:24:22"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:22"'], ['I', 'dgo', 'status', 'stage_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'dgo_inactive_reasons:0x00000000'], ['I', 'dgo', 'status', 'unprocessed_mass_next_cycle_g:0'], ['I', 'dgo', 'status', 'total_mass_added_since_stage_start_g:0'], ['I', 'dgo', 'status', 'accu_mass_time_ext_g:0'], ['I', 'dgo', 'status', 'total_mass_add_hip_extend_s:0'], ['I', 'dgo', 'status', 'stage_reached_min_dur:"no"'], ['I', 'dgo', 'status', 'will_skip_next_cycle:"no"'], ['I', 'dgo', 'status', 'stage_reached_exit_condition:"no"'], ['I', 'dgo', 'status', 'sw_counter_check_exit_cond:0'], ['I', 'dgo', 'status', 'sw_counter_storage:0'], ['I', 'dgo', 'status', 'sw_counter_sht40_heater.val:0', 'sw_counter_sht40_heater.en:0'], ['I', 'dgo', 'status', 'sw_counter_skip_count:0'], ['I', 'dgo', 'status', 'today_idx', '(epoch):19939', 'today_idx', '(week):3'], ['I', 'dgo', 'status', 'planned_skip_until_idx:19939'], ['I', 'dgo', 'status', 'real_skip_until_idx:19939'], ['#'], ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"FLUFF"', 'upcoming', 'stage:"FLUFF"', 'time', 'to', 'next', 'cycle:"T00:29:54"'], ['I', 'dgo', 'status', 'epoch:"2024-08-04T16:09:33.533"'], ['I', 'dgo', 'status', 'cur_time_utc:"2024-08-04T16:09:33"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:33"', 'time_offset:-25200'], ['I', 'dgo', 'status', 'end_time_utc:"2024-08-04T16:39:27"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:39:27"'], ['I', 'dgo', 'status', 'cycle_start_utc:"2024-08-04T16:09:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:20"'], ['I', 'dgo', 'status', 'cycle_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'stage_start_utc:"2024-08-04T16:09:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:20"'], ['I', 'dgo', 'status', 'stage_end_utc:"2024-08-04T16:24:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:20"'], ['I', 'dgo', 'status', 'mandatory_stage_end_utc:"2024-08-04T16:24:22"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:22"'], ['I', 'dgo', 'status', 'stage_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'dgo_inactive_reasons:0x00000000'], ['I', 'dgo', 'status', 'unprocessed_mass_next_cycle_g:0'], ['I', 'dgo', 'status', 'total_mass_added_since_stage_start_g:0'], ['I', 'dgo', 'status', 'accu_mass_time_ext_g:0'], ['I', 'dgo', 'status', 'total_mass_add_hip_extend_s:0'], ['I', 'dgo', 'status', 'stage_reached_min_dur:"no"'], ['I', 'dgo', 'status', 'will_skip_next_cycle:"no"'], ['I', 'dgo', 'status', 'stage_reached_exit_condition:"no"'], ['I', 'dgo', 'status', 'sw_counter_check_exit_cond:0'], ['I', 'dgo', 'status', 'sw_counter_storage:0'], ['I', 'dgo', 'status', 'sw_counter_sht40_heater.val:0', 'sw_counter_sht40_heater.en:0'], ['I', 'dgo', 'status', 'sw_counter_skip_count:0'], ['I', 'dgo', 'status', 'today_idx', '(epoch):19939', 'today_idx', '(week):3'], ['I', 'dgo', 'status', 'planned_skip_until_idx:19939'], ['I', 'dgo', 'status', 'real_skip_until_idx:19939'], ['#']]
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:551 pickCount info= 1
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:594 contrData info: [['I', 'Schedule', 'next', 'cycle,', 'time_offset:', '-25200'], ['I', 'DGO:', 'No', 'cycle', 'to', 'enter,', 'eval', 'next', 'cycle', 'start', 'time'], ['I', 'today', 'idx', '(epoch)', '19939,', 'planned', 'skip', 'till', 'day', 'idx', '(epoch)', '19939,', 'real', 'skip', 'till', 'day', 'idx', '(epoch)', '19942,', 'cur_time_local_spm', '32969'], ['I', 'Get', 'dgo', 'status'], ['s'], ['ec', 'hdl.', 'Today', 'idx', '(week)', '3,', 'start', 'with', 'day', 'idx', '(epoch):', '19939,', '(week)', '3.', 'Real', 'skip', 'till', 'day', 'idx', '19942'], ['I', 'Checking', 'target_day_idx', '3,', 'days_in_future', '0'], ['I', 'This', 'day', 'is', 'enabled', 'by', 'user', '~~'], ['I', 'cur_spm', '32969,', 'target_spm', '78300,', 'days_in_future', '0,', 'del', '45331'], ['I', 'sec_to_next_cycle', '45331'], ['I', 'i:', '0'], ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T00:14:51"'], ['I', 'dgo', 'status', 'epoch:"2024-08-04T16:09:29.756"'], ['I', 'dgo', 'status', 'cur_time_utc:"2024-08-04T16:09:29"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:29"', 'time_offset:-25200'], ['I', 'dgo', 'status', 'end_time_utc:"2024-08-04T16:24:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:20"'], ['I', 'dgo', 'status', 'cycle_start_utc:"2024-08-04T16:09:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:20"'], ['I', 'dgo', 'status', 'cycle_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'stage_start_utc:"2024-08-04T16:09:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:20"'], ['I', '-----', 'Updated', 'real', 'skip', 'till', 'day', 'idx', '19939,', 'planned', 'skip', 'till', 'day', 'idx', '19939'], ['I', 'today_epoch', '19939', 'real', 'skip_until_idx', '19939'], ['I', 'Same', 'day'], ['I', 'Is', 'D&G', 'going', 'to', 'run', 'in', 'less', 'than', '24h?', '1'], ['I', '---', 'idx', '3,', 'final', 'res', '45331'], ['I', 'cur_spm', '32969,', 'target_spm', '34767,', 'days_in_future', '0,', 'del', '1798'], ['I', 'sec_to_next_cycle', '1798'], ['I', '---', 'idx', '4,', 'final', 'res', '1798'], ['I', '(kv)store0'], ['I', 'Staying', 'in', 'IDLE', 'now:', '1722787769', 'until', '1722789567'], ['I', '+++', 'Will', 'enter', 'scheduled', 'cycle', 'FLUFF', '(0x4)', 'in', '1798', 'sec'], ['I', 'today_epoch', '19939', 'real', 'skip_until_idx', '19939'], ['I', 'Same', 'day'], ['I', 'Is', 'D&G', 'going', 'to', 'run', 'in', 'less', 'than', '24h?', '1'], ['I', 'DGO:', 'cycle', 'remaining', 'time', '9960'], ['I', 'dgo', 'status', 'stage_end_utc:"2024-08-04T16:24:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:20"'], ['I', 'dgo', 'status', 'mandatory_stage_end_utc:"2024-08-04T16:24:22"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:22"'], ['I', 'dgo', 'status', 'stage_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'dgo_inactive_reasons:0x00000000'], ['I', 'dgo', 'status', 'unprocessed_mass_next_cycle_g:0'], ['I', 'dgo', 'status', 'total_mass_added_since_stage_start_g:0'], ['I', 'dgo', 'status', 'accu_mass_time_ext_g:0'], ['I', 'dgo', 'status', 'total_mass_add_hip_extend_s:0'], ['I', 'dgo', 'status', 'stage_reached_min_dur:"no"'], ['I', 'dgo', 'status', 'will_skip_next_cycle:"no"'], ['I', 'dgo', 'status', 'stage_reached_exit_condition:"no"'], ['I', 'dgo', 'status', 'sw_counter_check_exit_cond:0'], ['I', 'dgo', 'status', 'sw_counter_storage:0'], ['I', 'dgo', 'status', 'sw_counter_sht40_heater.val:0', 'sw_counter_sht40_heater.en:0'], ['I', 'dgo', 'status', 'sw_counter_skip_count:0'], ['I', 'dgo', 'status', 'today_idx', '(epoch):19939', 'today_idx', '(week):3'], ['I', 'dgo', 'status', 'planned_skip_until_idx:19939'], ['I', 'dgo', 'status', 'real_skip_until_idx:19939'], ['#'], ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"FLUFF"', 'upcoming', 'stage:"FLUFF"', 'time', 'to', 'next', 'cycle:"T00:29:54"'], ['I', 'dgo', 'status', 'epoch:"2024-08-04T16:09:33.533"'], ['I', 'dgo', 'status', 'cur_time_utc:"2024-08-04T16:09:33"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:33"', 'time_offset:-25200'], ['I', 'dgo', 'status', 'end_time_utc:"2024-08-04T16:39:27"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:39:27"'], ['I', 'dgo', 'status', 'cycle_start_utc:"2024-08-04T16:09:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:20"'], ['I', 'dgo', 'status', 'cycle_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'stage_start_utc:"2024-08-04T16:09:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:09:20"'], ['I', 'dgo', 'status', 'stage_end_utc:"2024-08-04T16:24:20"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:20"'], ['I', 'dgo', 'status', 'mandatory_stage_end_utc:"2024-08-04T16:24:22"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-04T09:24:22"'], ['I', 'dgo', 'status', 'stage_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'dgo_inactive_reasons:0x00000000'], ['I', 'dgo', 'status', 'unprocessed_mass_next_cycle_g:0'], ['I', 'dgo', 'status', 'total_mass_added_since_stage_start_g:0'], ['I', 'dgo', 'status', 'accu_mass_time_ext_g:0'], ['I', 'dgo', 'status', 'total_mass_add_hip_extend_s:0'], ['I', 'dgo', 'status', 'stage_reached_min_dur:"no"'], ['I', 'dgo', 'status', 'will_skip_next_cycle:"no"'], ['I', 'dgo', 'status', 'stage_reached_exit_condition:"no"'], ['I', 'dgo', 'status', 'sw_counter_check_exit_cond:0'], ['I', 'dgo', 'status', 'sw_counter_storage:0'], ['I', 'dgo', 'status', 'sw_counter_sht40_heater.val:0', 'sw_counter_sht40_heater.en:0'], ['I', 'dgo', 'status', 'sw_counter_skip_count:0'], ['I', 'dgo', 'status', 'today_idx', '(epoch):19939', 'today_idx', '(week):3'], ['I', 'dgo', 'status', 'planned_skip_until_idx:19939'], ['I', 'dgo', 'status', 'real_skip_until_idx:19939'], ['#']]
+DEBUG    dgo:BasePytestEx.py:596 pickedLst info: [['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T00:14:51"'], ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"FLUFF"', 'upcoming', 'stage:"FLUFF"', 'time', 'to', 'next', 'cycle:"T00:29:54"']]
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    root:BasePytestEx.py:311 myConf= {}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T00:14:51"'], ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"FLUFF"', 'upcoming', 'stage:"FLUFF"', 'time', 'to', 'next', 'cycle:"T00:29:54"']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 2
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+=========================== short test summary info ============================
+FAILED dgo_test_FLUFF_state2_O2.py::TestDGOFSM_FLUFF::test_dgo_status_fluff_activated
+================== 1 failed, 49 passed in 2102.69s (0:35:02) ===================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1722474832.json': No such file or directory

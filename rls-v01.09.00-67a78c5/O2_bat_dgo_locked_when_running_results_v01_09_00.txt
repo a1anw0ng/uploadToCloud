@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 16 items
+
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:33:49 INFO     dgo manual_stop executed
+2024-07-31 19:33:52 INFO     Current State: IDLE
+2024-07-31 19:33:52 INFO     ===> dgo status
+2024-07-31 19:33:52 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  6%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_temp_get_3_low 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:33:52 INFO     ===> temp get 3
+2024-07-31 19:33:52 INFO     Temperature value: 38.38198
+2024-07-31 19:33:54 INFO     ===> temp get 3
+2024-07-31 19:33:55 INFO     ### test_temp_get_3_low ==> PASSED
+PASSED                                                                   [ 12%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_set_shadow_childLockEnabled_false 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:33:57 INFO     Found credentials in environment variables.
+2024-07-31 19:33:58 INFO     ** device shadow: childLockEnabled is set to False **
+2024-07-31 19:33:58 INFO     ### set_shadow_childLockEnabled_false ==> PASSED
+PASSED                                                                   [ 18%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_set_shadow_dgoSafetyLockEnabled_true 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:01 INFO     ** device shadow: dgoSafetyLockEnabled is set to True **
+2024-07-31 19:34:01 INFO     ### set_shadow_dgoSafetyLockEnabled_true ==> PASSED
+PASSED                                                                   [ 25%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_get_shadow_childLockEnabled_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:03 INFO     Found credentials in environment variables.
+2024-07-31 19:34:03 INFO     ### get_shadow_childLockEnabled_false_cloud ==> PASSED
+PASSED                                                                   [ 31%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_get_shadow_dgoSafetyLockEnabled_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:06 INFO     Found credentials in environment variables.
+2024-07-31 19:34:06 INFO     ### get_shadow_dgoSafetyLockEnabled_true_cloud ==> PASSED
+PASSED                                                                   [ 37%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_get_shadow_lidLockState_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:08 INFO     Found credentials in environment variables.
+2024-07-31 19:34:08 INFO     ### get_shadow_lidLockState_false_cloud ==> PASSED
+PASSED                                                                   [ 43%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_get_shadow_childLock_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:10 INFO     Found credentials in environment variables.
+2024-07-31 19:34:10 INFO     ### get_shadow_childLock_false_cloud ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_white_lock_OFF_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:12 INFO     ===> led get 1 0
+2024-07-31 19:34:13 INFO     ### test_white_lock_OFF_IDLE ==> PASSED
+PASSED                                                                   [ 56%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:16 INFO     ===> dgo manual_start
+2024-07-31 19:34:16 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 62%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:18 INFO     ===> dgo status
+2024-07-31 19:34:18 INFO        retrying... 1
+2024-07-31 19:34:43 INFO     ===> dgo status
+2024-07-31 19:34:43 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 68%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_white_lock_ON_LIP 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:45 INFO     ===> led get 1 0
+2024-07-31 19:34:46 INFO     ### test_white_lock_ON_LIP ==> PASSED
+PASSED                                                                   [ 75%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_lid_lock_state_locked 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:48 INFO     ===> lid_lock get 0
+2024-07-31 19:34:48 INFO     ### test_lid_lock_state_locked ==> PASSED
+PASSED                                                                   [ 81%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_get_shadow_lidLockState_ture_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:50 INFO     Found credentials in environment variables.
+2024-07-31 19:34:50 INFO     ### get_shadow_lidLockState_true_cloud ==> PASSED
+PASSED                                                                   [ 87%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:34:52 INFO     ===> dgo manual_stop
+2024-07-31 19:34:52 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 93%]
+bat_dgo_locked_when_running.py::TestBAT_DGO_LOCKED_WHEN_RUNNING::test_dgo_end_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:35:04 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 19:35:04 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:35:06 INFO     ===> dgo status
+2024-07-31 19:35:07 INFO     ### test_dgo_end_with_IDLE_State ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 16 passed in 82.80s (0:01:22) =========================

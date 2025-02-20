@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, repeat-0.9.3, metadata-3.1.1
+collected 17 items
+
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:57:35 INFO     dgo manual_stop executed
+2024-07-31 23:57:38 INFO     Current State: IDLE
+2024-07-31 23:57:38 INFO     ===> dgo status
+2024-07-31 23:57:38 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  5%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:57:40 INFO     ===> dgo manual_start
+2024-07-31 23:57:40 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 11%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_dgo_skip_stage_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:57:42 INFO     ===> dgo stage skip
+2024-07-31 23:57:44 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 17%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_wait_time_heatup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:02:46 INFO     ** wait_time_pause: 300 seconds **
+2024-08-01 00:02:46 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 23%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_get_shadow_heatWarningStatus_true 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:02:48 INFO     Found credentials in environment variables.
+2024-08-01 00:02:49 INFO     ### get_shadow_heatWarningStatus_true ==> PASSED
+PASSED                                                                   [ 29%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_orange_lock_ON 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:02:51 INFO     ===> led get 2 0
+2024-08-01 00:02:52 INFO     ### test_orange_lock_ON ==> PASSED
+PASSED                                                                   [ 35%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_fr 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:02:54 INFO     ===> fr
+2024-08-01 00:02:55 ERROR    line= E (528608) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54
+2024-08-01 00:02:55 ERROR    line= E (528608) tls_freertos: Reading failed, errno= 119
+2024-08-01 00:02:55 ERROR    line= E (528618) mqtt_helpers: mqtt_loop_keep_alive returned with status = 4.
+2024-08-01 00:02:55 ERROR    line= E (528618) mqtt_helpers: Network issue, try to disconnect shadow.
+2024-08-01 00:02:55 ERROR    line= E (528638) transport_base: poll_write select error 0, errno = Success, fd = 54
+2024-08-01 00:02:55 INFO     ### test_fr ==> PASSED
+PASSED                                                                   [ 41%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_wait_time_fr 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:03:57 INFO     ** wait_time_pause: 60 seconds **
+2024-08-01 00:03:57 INFO     ### wait_time_pause_60 ==> PASSED
+PASSED                                                                   [ 47%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_wifi_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:03:59 INFO     ===> wifi setup CheWiFi thingsarehappening
+2024-08-01 00:04:01 INFO     ### test_wifi_setup ==> PASSED
+PASSED                                                                   [ 52%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_nvs_set_oscar_is_paired_1 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:04:03 INFO     ===> nvs set oscar_is_paired 1
+2024-08-01 00:04:04 INFO     ### test_nvs_set_oscar_is_paired_1 ==> PASSED
+PASSED                                                                   [ 58%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_reset 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:04:06 INFO     ===> reset
+2024-08-01 00:04:09 ERROR    line= E (874) secure_boot_v2: Secure Boot V2 verification failed.
+2024-08-01 00:04:09 ERROR    line= E (880) esp_image: Secure boot signature verification failed
+2024-08-01 00:04:09 INFO     ### test_reset ==> PASSED
+PASSED                                                                   [ 64%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:04:11 INFO     ===> reset 1
+2024-08-01 00:04:15 ERROR    line= E (5526) ipc_utils: ipc read error @ 0000d082: ret:-201 read_resp.retval:0
+2024-08-01 00:04:15 ERROR    line= E (5526) ipc_utils: read sensor status error @ 0000d082
+2024-08-01 00:04:15 ERROR    line= E (5566) ipc_utils: ipc read error @ 0000d083: ret:-201 read_resp.retval:0
+2024-08-01 00:04:15 ERROR    line= E (5566) ipc_utils: read sensor status error @ 0000d083
+2024-08-01 00:04:15 ERROR    line= E (5606) ipc_utils: ipc read error @ 0000d080: ret:-201 read_resp.retval:0
+2024-08-01 00:04:15 ERROR    line= E (5606) ipc_utils: read sensor status error @ 0000d080
+2024-08-01 00:04:15 ERROR    line= E (5646) ipc_utils: ipc read error @ 0000d081: ret:-201 read_resp.retval:0
+2024-08-01 00:04:15 ERROR    line= E (5646) ipc_utils: read sensor status error @ 0000d081
+2024-08-01 00:04:15 ERROR    line= E (5686) ipc_utils: ipc read error @ 0000d082: ret:-201 read_resp.retval:0
+2024-08-01 00:04:15 ERROR    line= E (5686) ipc_utils: read sensor status error @ 0000d082
+2024-08-01 00:04:15 ERROR    line= E (5726) ipc_utils: ipc read error @ 0000d083: ret:-201 read_resp.retval:0
+2024-08-01 00:04:15 ERROR    line= E (5726) ipc_utils: read sensor status error @ 0000d083
+2024-08-01 00:04:15 ERROR    line= E (5766) ipc_utils: ipc read error @ 0000d080: ret:-201 read_resp.retval:0
+2024-08-01 00:04:15 ERROR    line= E (5766) ipc_utils: read sensor status error @ 0000d080
+2024-08-01 00:04:15 INFO     ### test_reset_1 ==> PASSED
+PASSED                                                                   [ 70%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_wait_time_reset 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:05:17 INFO     ** wait_time_pause: 60 seconds **
+2024-08-01 00:05:17 INFO     ### wait_time_pause_60 ==> PASSED
+PASSED                                                                   [ 76%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_get_shadow_heatWarningStatus_true_fr 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:05:19 INFO     Found credentials in environment variables.
+2024-08-01 00:05:20 INFO     ### get_shadow_heatWarningStatus_true ==> PASSED
+PASSED                                                                   [ 82%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_orange_lock_ON_fr 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:05:22 INFO     ===> led get 2 0
+2024-08-01 00:05:23 INFO     ### test_orange_lock_ON ==> PASSED
+PASSED                                                                   [ 88%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:05:25 INFO     ===> dgo manual_stop
+2024-08-01 00:05:34 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 94%]
+bat_dgo_fr_heat_warning_status.py::TestBAT_DGO_FR_HEAT_WARNING_STATUS::test_wait_time_cool 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:10:36 INFO     ** wait_time_pause: 300 seconds **
+2024-08-01 00:10:36 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 17 passed in 786.72s (0:13:06) ========================

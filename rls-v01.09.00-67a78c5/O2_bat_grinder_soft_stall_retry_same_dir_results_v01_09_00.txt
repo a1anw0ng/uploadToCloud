@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 11 items
+
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:50:57 INFO     dgo manual_stop executed
+2024-07-31 19:51:00 INFO     Current State: IDLE
+2024-07-31 19:51:00 INFO     ===> dgo status
+2024-07-31 19:51:00 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  9%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:51:02 INFO     ===> dgo manual_start
+2024-07-31 19:51:02 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 18%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:51:04 INFO     ===> dgo status
+2024-07-31 19:51:05 INFO        retrying... 1
+2024-07-31 19:51:10 INFO     ===> dgo status
+2024-07-31 19:51:10 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 27%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_verify_grinder_running_state 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:51:22 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 19:51:22 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:51:24 INFO     ===> grinder get
+2024-07-31 19:51:24 INFO     ### test_verify_grinder_running_state ==> PASSED
+PASSED                                                                   [ 36%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_hack_grinder_stall_params_soft 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:51:26 INFO     ===> grinder stall_set 20 750 5 5000 1000 4000 30 3 50 900000
+2024-07-31 19:51:29 INFO     retries counts: 1
+2024-07-31 19:51:32 INFO     retries counts: 2
+2024-07-31 19:51:35 INFO     retries counts: 3
+2024-07-31 19:51:38 INFO     retries counts: 4
+2024-07-31 19:51:41 INFO     retries counts: 5
+2024-07-31 19:51:41 ERROR    Timeout after 5 retries!
+2024-07-31 19:51:41 INFO     ### test_hack_grinder_stall_params_soft ==> PASSED
+PASSED                                                                   [ 45%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_verify_grinder_wait_to_retry_state 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:51:53 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 19:51:53 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:51:55 INFO     ===> grinder get
+2024-07-31 19:51:55 INFO     ### test_verify_grinder_wait_to_retry_state ==> PASSED
+PASSED                                                                   [ 54%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_set_grinder_stall_params_normal 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:51:57 INFO     ===> grinder stall_set 20 750 500 5000 1000 4000 30 3 50 900000
+2024-07-31 19:52:00 INFO     retries counts: 1
+2024-07-31 19:52:03 INFO     retries counts: 2
+2024-07-31 19:52:06 INFO     retries counts: 3
+2024-07-31 19:52:09 INFO     retries counts: 4
+2024-07-31 19:52:12 INFO     retries counts: 5
+2024-07-31 19:52:12 ERROR    Timeout after 5 retries!
+2024-07-31 19:52:12 INFO     ### test_set_grinder_stall_params_normal ==> PASSED
+PASSED                                                                   [ 63%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_verify_grinder_retry_state_pulling 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:53:10 INFO     ** wait_time_pause: 55 seconds **
+2024-07-31 19:53:10 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:53:13 INFO     ===> grinder get
+2024-07-31 19:53:13 INFO     ### test_verify_grinder_retry_state_pulling ==> PASSED
+PASSED                                                                   [ 72%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_verify_grinder_retry_state 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:53:15 INFO     ===> grinder get
+2024-07-31 19:53:15 INFO     ### test_verify_grinder_retry_state ==> PASSED
+PASSED                                                                   [ 81%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:53:17 INFO     ===> dgo manual_stop
+2024-07-31 19:53:17 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 90%]
+bat_grinder_soft_stall_retry.py::Test_Grinder_Stall_SoftStallRetrySameDir::test_dgo_end_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:53:29 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 19:53:29 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:53:31 INFO     ===> dgo status
+2024-07-31 19:53:31 INFO     ### test_dgo_end_with_IDLE_State ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 11 passed in 159.67s (0:02:39) ========================

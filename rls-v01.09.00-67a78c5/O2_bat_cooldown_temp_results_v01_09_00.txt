@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, repeat-0.9.3, metadata-3.1.1
+collected 13 items
+
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:42:15 INFO     dgo manual_stop executed
+2024-08-01 00:42:18 INFO     Current State: IDLE
+2024-08-01 00:42:18 INFO     ===> dgo status
+2024-08-01 00:42:18 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  7%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_temp_get_3_low 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:42:18 INFO     ===> temp get 3
+2024-08-01 00:42:18 INFO     Temperature value: 120.30699
+2024-08-01 00:42:18 INFO     Initial Temp High, Starting Cooldown before Tests
+2024-08-01 00:42:21 INFO     ===> dgo manual_start
+2024-08-01 00:42:21 INFO     ### test_dgo_manual_start ==> PASSED
+2024-08-01 00:42:24 INFO     ===> dgo stage skip
+2024-08-01 00:42:25 INFO     ### test_dgo_skip_LIP_stage ==> PASSED
+2024-08-01 00:42:28 INFO     ===> dgo stage skip
+2024-08-01 00:42:29 INFO     ### test_dgo_skip_HIP_stage ==> PASSED
+2024-08-01 01:12:32 INFO     ** wait_time_pause: 1800 seconds **
+2024-08-01 01:12:32 INFO     ### wait_time_pause_cooldown ==> PASSED
+2024-08-01 01:12:35 INFO     ===> dgo manual_stop
+2024-08-01 01:12:35 INFO     ### test_dgo_manual_stop ==> PASSED
+2024-08-01 01:12:37 INFO     ===> temp get 3
+2024-08-01 01:12:37 INFO        retrying... 1
+2024-08-01 01:14:37 INFO     ===> temp get 3
+2024-08-01 01:14:38 INFO        retrying... 2
+2024-08-01 01:16:38 INFO     ===> temp get 3
+2024-08-01 01:16:38 INFO        retrying... 3
+2024-08-01 01:18:38 INFO     ===> temp get 3
+2024-08-01 01:18:38 INFO        retrying... 4
+2024-08-01 01:20:38 INFO     ===> temp get 3
+2024-08-01 01:20:38 INFO        retrying... 5
+2024-08-01 01:22:38 INFO     ===> temp get 3
+2024-08-01 01:22:38 INFO        retrying... 6
+2024-08-01 01:24:38 INFO     ===> temp get 3
+2024-08-01 01:24:39 INFO        retrying... 7
+2024-08-01 01:26:39 INFO     ===> temp get 3
+2024-08-01 01:26:39 INFO        retrying... 8
+2024-08-01 01:28:39 INFO     ===> temp get 3
+2024-08-01 01:28:39 INFO        retrying... 9
+2024-08-01 01:30:39 INFO     ===> temp get 3
+2024-08-01 01:30:39 INFO        retrying... 10
+2024-08-01 01:32:39 INFO     ===> temp get 3
+2024-08-01 01:32:40 INFO        retrying... 11
+2024-08-01 01:34:40 INFO     ===> temp get 3
+2024-08-01 01:34:40 INFO     ### test_temp_get_3_low ==> PASSED
+PASSED                                                                   [ 15%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:34:42 INFO     ===> dgo manual_start
+2024-08-01 01:34:42 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 23%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:34:44 INFO     ===> dgo status
+2024-08-01 01:34:44 INFO        retrying... 1
+2024-08-01 01:35:09 INFO     ===> dgo status
+2024-08-01 01:35:09 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 30%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_skip_stage 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:35:11 INFO     ===> dgo stage skip
+2024-08-01 01:35:12 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 38%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_in_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:35:14 INFO     ===> dgo status
+2024-08-01 01:35:15 INFO     ### test_dgo_in_HIP_State ==> PASSED
+PASSED                                                                   [ 46%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_temp_get_3_high 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:39:17 INFO     ** wait_time_pause: 240 seconds **
+2024-08-01 01:39:17 INFO     ### wait_time_pause_high ==> PASSED
+2024-08-01 01:39:19 INFO     ===> temp get 3
+2024-08-01 01:39:19 INFO     ### test_temp_get_3_high ==> PASSED
+PASSED                                                                   [ 53%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_skip_HIP_stage 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:39:21 INFO     ===> dgo stage skip
+2024-08-01 01:39:22 INFO     ### test_dgo_skip_HIP_stage ==> PASSED
+PASSED                                                                   [ 61%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_in_Cooldown_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:39:24 INFO     ===> dgo status
+2024-08-01 01:39:24 INFO     ### test_dgo_in_Cooldown_State ==> PASSED
+PASSED                                                                   [ 69%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_capturelog_1800 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:39:26 INFO     ===> capturelog 1800
+2024-08-01 02:09:26 INFO     ### capturelog_1800 ==> PASSED
+PASSED                                                                   [ 76%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:09:28 INFO     ===> dgo manual_stop
+2024-08-01 02:09:28 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 84%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_dgo_end_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:09:30 INFO     ===> dgo status
+2024-08-01 02:09:30 INFO     ### test_dgo_end_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 92%]
+bat_dgo_cooldown_temp.py::TestBAT_DGO_COOLDOWN_TEMP::test_zero_unprocessed_mass 
+-------------------------------- live log call ---------------------------------
+2024-08-01 02:09:32 INFO     ===> mass get -d
+2024-08-01 02:09:32 INFO     ### test_zero_unprocessed_mass ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 13 passed in 5244.18s (1:27:24) ========================

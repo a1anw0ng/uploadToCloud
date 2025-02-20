@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: metadata-3.1.1, json-report-1.5.0, repeat-0.9.3
+collected 11 items
+
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:49:50 INFO     dgo manual_stop executed
+2024-08-01 00:49:53 INFO     Current State: IDLE
+2024-08-01 00:49:53 INFO     ===> dgo status
+2024-08-01 00:49:53 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  9%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:49:55 INFO     ===> dgo manual_start
+2024-08-01 00:49:55 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 18%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_dgo_grinder_stall_set 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:49:58 INFO     ===> grinder stall_set 20 20 20 5000 500 4500 8 3 50 600000
+2024-08-01 00:49:58 INFO     ### test_dgo_grinder_stall_set ==> PASSED
+PASSED                                                                   [ 27%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_dgo_wait_for_jam 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:50:30 INFO     ** wait_time_pause: 30 seconds **
+2024-08-01 00:50:30 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 36%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_get_shadow_grinderState_jam_warning 
+-------------------------------- live log call ---------------------------------
+2024-08-01 00:50:32 INFO     Found credentials in environment variables.
+2024-08-01 00:50:32 INFO     ### get_shadow_grinderState_jam_warning ==> PASSED
+PASSED                                                                   [ 45%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_dgo_wait_for_1hr 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:49:34 INFO     ** wait_time_pause: 3540 seconds **
+2024-08-01 01:49:34 INFO     ### wait_time_pause_1hr ==> PASSED
+PASSED                                                                   [ 54%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_get_shadow_grinderState_jam_trying_to_clear 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:49:36 INFO     Found credentials in environment variables.
+2024-08-01 01:49:37 INFO     retry... #0 
+2024-08-01 01:49:38 INFO        retrying... 1
+2024-08-01 01:49:53 INFO     Found credentials in environment variables.
+2024-08-01 01:49:53 INFO     retry... #0 
+2024-08-01 01:49:54 INFO        retrying... 2
+2024-08-01 01:50:09 INFO     Found credentials in environment variables.
+2024-08-01 01:50:10 INFO     ### get_shadow_grinderState_jam_trying_to_clear ==> PASSED
+PASSED                                                                   [ 63%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:50:12 INFO     ===> dgo manual_stop
+2024-08-01 01:50:17 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 72%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_controlMCU_reset 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:50:19 INFO     ===> reset
+2024-08-01 01:50:32 ERROR    ConnectionError(command)= reset
+
+2024-08-01 01:50:32 INFO     ### test_controlMCU_reset ==> PASSED
+PASSED                                                                   [ 81%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_dgo_wait_time_reset 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:50:49 INFO     ** wait_time_pause: 15 seconds **
+2024-08-01 01:50:49 INFO     ### wait_time_reset ==> PASSED
+PASSED                                                                   [ 90%]
+bat_dgo_grinder_jam_auto_retry.py::TestBAT_DGO_GRINDER_JAM_AUTO_RETRY::test_get_shadow_grinderState_jam_normal 
+-------------------------------- live log call ---------------------------------
+2024-08-01 01:51:21 INFO     ** wait_time_pause: 30 seconds **
+2024-08-01 01:51:21 INFO     ### wait_time_pause ==> PASSED
+2024-08-01 01:51:23 INFO     Found credentials in environment variables.
+2024-08-01 01:51:23 INFO     ### get_shadow_grinderState_jam_normal ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 11 passed in 3698.31s (1:01:38) ========================

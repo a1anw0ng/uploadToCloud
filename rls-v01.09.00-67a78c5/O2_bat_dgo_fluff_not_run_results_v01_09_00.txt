@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 8 items
+
+bat_dgo_fluff_not_run.py::TestDGOFSM_FLUFF::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:53:53 INFO     dgo manual_stop executed
+2024-07-31 19:53:56 INFO     Current State: IDLE
+2024-07-31 19:53:56 INFO     ===> dgo status
+2024-07-31 19:53:57 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 12%]
+bat_dgo_fluff_not_run.py::TestDGOFSM_FLUFF::test_mass_clear 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:53:59 INFO     ===> mass clear
+2024-07-31 19:53:59 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [ 25%]
+bat_dgo_fluff_not_run.py::TestDGOFSM_FLUFF::test_dgo_config_fluff_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:01 INFO     ===> dgo config get
+2024-07-31 19:54:02 INFO     ### test_dgo_config_fluff_stage ==> PASSED
+PASSED                                                                   [ 37%]
+bat_dgo_fluff_not_run.py::TestDGOFSM_FLUFF::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:04 INFO     ===> dgo manual_start
+2024-07-31 19:54:04 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_fluff_not_run.py::TestDGOFSM_FLUFF::test_dgo_status_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:06 INFO     ===> dgo status
+2024-07-31 19:54:06 INFO        retrying... 1
+2024-07-31 19:54:10 INFO     ===> dgo status
+2024-07-31 19:54:10 INFO     ### test_dgo_status_manual_start ==> PASSED
+PASSED                                                                   [ 62%]
+bat_dgo_fluff_not_run.py::TestDGOFSM_FLUFF::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:12 INFO     ===> dgo manual_stop
+2024-07-31 19:54:12 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 75%]
+bat_dgo_fluff_not_run.py::TestDGOFSM_FLUFF::test_upm_0g 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:14 INFO     ===> mass get -d
+2024-07-31 19:54:14 INFO     ### test_upm_0g ==> PASSED
+PASSED                                                                   [ 87%]
+bat_dgo_fluff_not_run.py::TestDGOFSM_FLUFF::test_dgo_status_fluff_not_activated 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:16 INFO     ===> dgo status
+2024-07-31 19:54:16 INFO     ### test_dgo_status_fluff_not_activated ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+============================== 8 passed in 28.17s ==============================

@@ -1,0 +1,271 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 22 items
+
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:31:36 INFO     dgo manual_stop executed
+2024-07-31 16:31:39 INFO     Current State: IDLE
+2024-07-31 16:31:39 INFO     ===> dgo status
+2024-07-31 16:31:39 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  4%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:31:41 INFO     ===> dgo manual_start
+2024-07-31 16:31:41 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [  9%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:31:43 INFO     ===> dgo status
+2024-07-31 16:31:43 INFO        retrying... 1
+2024-07-31 16:32:08 INFO     ===> dgo status
+2024-07-31 16:32:09 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 13%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_dgo_skip_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:32:11 INFO     ===> dgo stage skip
+2024-07-31 16:32:12 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 18%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_dgo_in_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:32:14 INFO     ===> dgo status
+2024-07-31 16:32:14 INFO     ### test_dgo_in_HIP_State ==> PASSED
+PASSED                                                                   [ 22%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_temp_get_3_high 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:32:16 INFO     ===> temp get 3
+2024-07-31 16:32:16 INFO        retrying... 1
+2024-07-31 16:33:16 INFO     ===> temp get 3
+2024-07-31 16:33:16 INFO     ### test_temp_get_3_high ==> PASSED
+PASSED                                                                   [ 27%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_orange_lock_ON_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:33:18 INFO     ===> led get 2 0
+2024-07-31 16:33:19 INFO     ### test_orange_lock_ON_HIP ==> PASSED
+PASSED                                                                   [ 31%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_white_lock_ON_high_temp_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:33:21 INFO     ===> led get 1 0
+2024-07-31 16:33:22 INFO     ### test_white_lock_ON_high_temp_HIP ==> PASSED
+PASSED                                                                   [ 36%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_cycle_led_ON_high_temp_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:33:25 INFO     ===> led get 0 0
+2024-07-31 16:33:26 INFO     0x0
+2024-07-31 16:33:26 INFO     0x0
+2024-07-31 16:33:26 INFO     0x0
+2024-07-31 16:33:26 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-07-31 16:33:29 INFO     ===> led get 0 1
+2024-07-31 16:33:30 INFO     0x0
+2024-07-31 16:33:30 INFO     0x0
+2024-07-31 16:33:30 INFO     0x0
+2024-07-31 16:33:30 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-07-31 16:33:33 INFO     ===> led get 0 2
+2024-07-31 16:33:34 INFO     0x0
+2024-07-31 16:33:34 INFO     0x0
+2024-07-31 16:33:34 INFO     0x0
+2024-07-31 16:33:34 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-07-31 16:33:37 INFO     ===> led get 0 3
+2024-07-31 16:33:38 INFO     0x0
+2024-07-31 16:33:38 INFO     0x0
+2024-07-31 16:33:38 INFO     0x0
+2024-07-31 16:33:38 INFO        retrying... 1
+2024-07-31 16:33:39 INFO     ===> led get 0 3
+2024-07-31 16:33:40 INFO     0x0
+2024-07-31 16:33:40 INFO     0x0
+2024-07-31 16:33:40 INFO     0x0
+2024-07-31 16:33:40 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 40%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_dgo_skip_HIP_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:33:42 INFO     ===> dgo stage skip
+2024-07-31 16:33:43 INFO     ### test_dgo_skip_HIP_stage ==> PASSED
+PASSED                                                                   [ 45%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_dgo_in_Cooldown_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:33:45 INFO     ===> dgo status
+2024-07-31 16:33:46 INFO     ### test_dgo_in_Cooldown_State ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_orange_lock_ON_cooldown 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:33:48 INFO     ===> led get 2 0
+2024-07-31 16:33:49 INFO     ### test_orange_lock_ON_cooldown ==> PASSED
+PASSED                                                                   [ 54%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_white_lock_ON_high_temp_cooldown 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:33:51 INFO     ===> led get 1 0
+2024-07-31 16:33:52 INFO     ### test_white_lock_ON_high_temp_cooldown ==> PASSED
+PASSED                                                                   [ 59%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_cycle_led_ON_high_temp_cooldown 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:33:55 INFO     ===> led get 0 0
+2024-07-31 16:33:56 INFO     0x0
+2024-07-31 16:33:56 INFO     0x0
+2024-07-31 16:33:56 INFO     0x0
+2024-07-31 16:33:56 INFO        retrying... 1
+2024-07-31 16:33:57 INFO     ===> led get 0 0
+2024-07-31 16:33:58 INFO     0x0
+2024-07-31 16:33:58 INFO     0x0
+2024-07-31 16:33:58 INFO     0x0
+2024-07-31 16:33:58 INFO        retrying... 2
+2024-07-31 16:33:59 INFO     ===> led get 0 0
+2024-07-31 16:34:00 INFO     0x0
+2024-07-31 16:34:00 INFO     0x0
+2024-07-31 16:34:00 INFO     0x0
+2024-07-31 16:34:00 INFO        retrying... 3
+2024-07-31 16:34:01 INFO     ===> led get 0 0
+2024-07-31 16:34:02 INFO     0x0
+2024-07-31 16:34:02 INFO     0x0
+2024-07-31 16:34:02 INFO     0x0
+2024-07-31 16:34:02 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-07-31 16:34:05 INFO     ===> led get 0 1
+2024-07-31 16:34:06 INFO     0x0
+2024-07-31 16:34:06 INFO     0x0
+2024-07-31 16:34:06 INFO     0x0
+2024-07-31 16:34:06 INFO        retrying... 1
+2024-07-31 16:34:07 INFO     ===> led get 0 1
+2024-07-31 16:34:08 INFO     0x0
+2024-07-31 16:34:08 INFO     0x0
+2024-07-31 16:34:08 INFO     0x0
+2024-07-31 16:34:08 INFO        retrying... 2
+2024-07-31 16:34:09 INFO     ===> led get 0 1
+2024-07-31 16:34:10 INFO     0x0
+2024-07-31 16:34:10 INFO     0x0
+2024-07-31 16:34:10 INFO     0x0
+2024-07-31 16:34:10 INFO        retrying... 3
+2024-07-31 16:34:11 INFO     ===> led get 0 1
+2024-07-31 16:34:12 INFO     0x0
+2024-07-31 16:34:12 INFO     0x0
+2024-07-31 16:34:12 INFO     0x0
+2024-07-31 16:34:12 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-07-31 16:34:15 INFO     ===> led get 0 2
+2024-07-31 16:34:16 INFO     0x0
+2024-07-31 16:34:16 INFO     0x0
+2024-07-31 16:34:16 INFO     0x0
+2024-07-31 16:34:16 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-07-31 16:34:19 INFO     ===> led get 0 3
+2024-07-31 16:34:20 INFO     0x0
+2024-07-31 16:34:20 INFO     0x0
+2024-07-31 16:34:20 INFO     0x0
+2024-07-31 16:34:20 INFO        retrying... 1
+2024-07-31 16:34:21 INFO     ===> led get 0 3
+2024-07-31 16:34:22 INFO     0x0
+2024-07-31 16:34:22 INFO     0x0
+2024-07-31 16:34:22 INFO     0x0
+2024-07-31 16:34:22 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 63%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_temp_get_3_low 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:39:24 INFO     ** wait_time_pause: 300 seconds **
+2024-07-31 16:39:24 INFO     ### wait_time_pause_low ==> PASSED
+2024-07-31 16:39:26 INFO     ===> temp get 3
+2024-07-31 16:39:26 INFO        retrying... 1
+2024-07-31 16:40:26 INFO     ===> temp get 3
+2024-07-31 16:40:26 INFO     ### test_temp_get_3_low ==> PASSED
+PASSED                                                                   [ 68%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_white_lock_ON_low_temp_cooldown 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:40:28 INFO     ===> led get 1 0
+2024-07-31 16:40:29 INFO     ### test_white_lock_ON_low_temp_cooldown ==> PASSED
+PASSED                                                                   [ 72%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_cycle_led_ON_low_temp_cooldown 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:40:32 INFO     ===> led get 0 0
+2024-07-31 16:40:33 INFO     0x0
+2024-07-31 16:40:33 INFO     0x0
+2024-07-31 16:40:33 INFO     0x0
+2024-07-31 16:40:33 INFO        retrying... 1
+2024-07-31 16:40:34 INFO     ===> led get 0 0
+2024-07-31 16:40:35 INFO     0x0
+2024-07-31 16:40:35 INFO     0x0
+2024-07-31 16:40:35 INFO     0x0
+2024-07-31 16:40:35 INFO        retrying... 2
+2024-07-31 16:40:36 INFO     ===> led get 0 0
+2024-07-31 16:40:37 INFO     0x0
+2024-07-31 16:40:37 INFO     0x0
+2024-07-31 16:40:37 INFO     0x0
+2024-07-31 16:40:37 INFO        retrying... 3
+2024-07-31 16:40:38 INFO     ===> led get 0 0
+2024-07-31 16:40:39 INFO     0x0
+2024-07-31 16:40:39 INFO     0x0
+2024-07-31 16:40:39 INFO     0x0
+2024-07-31 16:40:39 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-07-31 16:40:42 INFO     ===> led get 0 1
+2024-07-31 16:40:43 INFO     0x0
+2024-07-31 16:40:43 INFO     0x0
+2024-07-31 16:40:43 INFO     0x0
+2024-07-31 16:40:43 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-07-31 16:40:46 INFO     ===> led get 0 2
+2024-07-31 16:40:47 INFO     0x0
+2024-07-31 16:40:48 INFO     0x0
+2024-07-31 16:40:48 INFO     0x0
+2024-07-31 16:40:48 INFO        retrying... 1
+2024-07-31 16:40:49 INFO     ===> led get 0 2
+2024-07-31 16:40:50 INFO     0x0
+2024-07-31 16:40:50 INFO     0x0
+2024-07-31 16:40:50 INFO     0x0
+2024-07-31 16:40:50 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-07-31 16:40:53 INFO     ===> led get 0 3
+2024-07-31 16:40:54 INFO     0x0
+2024-07-31 16:40:54 INFO     0x0
+2024-07-31 16:40:54 INFO     0x0
+2024-07-31 16:40:54 INFO        retrying... 1
+2024-07-31 16:40:55 INFO     ===> led get 0 3
+2024-07-31 16:40:56 INFO     0x0
+2024-07-31 16:40:56 INFO     0x0
+2024-07-31 16:40:56 INFO     0x0
+2024-07-31 16:40:56 INFO        retrying... 2
+2024-07-31 16:40:57 INFO     ===> led get 0 3
+2024-07-31 16:40:58 INFO     0x0
+2024-07-31 16:40:58 INFO     0x0
+2024-07-31 16:40:58 INFO     0x0
+2024-07-31 16:40:58 INFO        retrying... 3
+2024-07-31 16:40:59 INFO     ===> led get 0 3
+2024-07-31 16:41:00 INFO     0x0
+2024-07-31 16:41:00 INFO     0x0
+2024-07-31 16:41:00 INFO     0x0
+2024-07-31 16:41:00 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 77%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_orange_lock_OFF_low_temp_cooldown 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:02 INFO     ===> led get 2 0
+2024-07-31 16:41:03 INFO     ### test_orange_lock_OFF_low_temp_cooldown ==> PASSED
+PASSED                                                                   [ 81%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:05 INFO     ===> dgo manual_stop
+2024-07-31 16:41:05 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 86%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_dgo_end_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:17 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 16:41:17 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 16:41:19 INFO     ===> dgo status
+2024-07-31 16:41:19 INFO     ### test_dgo_end_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 90%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_white_lock_OFF_idle 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:21 INFO     ===> led get 1 0
+2024-07-31 16:41:22 INFO     ### test_white_lock_OFF_idle ==> PASSED
+PASSED                                                                   [ 95%]
+bat_dgo_heat_led.py::TestBAT_DGO_HEAT_LED::test_cycle_led_OFF_idle 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:25 INFO     ===> led get 0 0
+2024-07-31 16:41:26 INFO     ### test_cycle_led_turn_off_0_stopped ==> PASSED
+2024-07-31 16:41:29 INFO     ===> led get 0 1
+2024-07-31 16:41:30 INFO     ### test_cycle_led_turn_off_1_stopped ==> PASSED
+2024-07-31 16:41:33 INFO     ===> led get 0 2
+2024-07-31 16:41:34 INFO     ### test_cycle_led_turn_off_2_stopped ==> PASSED
+2024-07-31 16:41:37 INFO     ===> led get 0 3
+2024-07-31 16:41:38 INFO     ### test_cycle_led_turn_off_3_stopped ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 22 passed in 608.64s (0:10:08) ========================

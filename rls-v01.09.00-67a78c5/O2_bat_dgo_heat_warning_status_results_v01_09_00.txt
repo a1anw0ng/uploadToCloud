@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 8 items
+
+bat_dgo_heat_warning_status.py::TestBAT_DGO_HEAT_WARNING_STATUS::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:30:39 INFO     dgo manual_stop executed
+2024-07-31 20:30:42 INFO     Current State: IDLE
+2024-07-31 20:30:42 INFO     ===> dgo status
+2024-07-31 20:30:42 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 12%]
+bat_dgo_heat_warning_status.py::TestBAT_DGO_HEAT_WARNING_STATUS::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:30:44 INFO     ===> dgo manual_start
+2024-07-31 20:30:44 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 25%]
+bat_dgo_heat_warning_status.py::TestBAT_DGO_HEAT_WARNING_STATUS::test_dgo_skip_stage_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:30:46 INFO     ===> dgo stage skip
+2024-07-31 20:30:48 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 37%]
+bat_dgo_heat_warning_status.py::TestBAT_DGO_HEAT_WARNING_STATUS::test_wait_time_heatup 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:33:50 INFO     ** wait_time_pause: 180 seconds **
+2024-07-31 20:33:50 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_heat_warning_status.py::TestBAT_DGO_HEAT_WARNING_STATUS::test_get_shadow_heatWarningStatus_true 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:33:52 INFO     Found credentials in environment variables.
+2024-07-31 20:33:53 INFO     ### get_shadow_heatWarningStatus_true ==> PASSED
+PASSED                                                                   [ 62%]
+bat_dgo_heat_warning_status.py::TestBAT_DGO_HEAT_WARNING_STATUS::test_dgo_skip_stage_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:33:55 INFO     ===> dgo stage skip
+2024-07-31 20:33:56 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 75%]
+bat_dgo_heat_warning_status.py::TestBAT_DGO_HEAT_WARNING_STATUS::test_wait_time_cool 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:36:58 INFO     ** wait_time_pause: 180 seconds **
+2024-07-31 20:36:58 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 87%]
+bat_dgo_heat_warning_status.py::TestBAT_DGO_HEAT_WARNING_STATUS::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:37:00 INFO     ===> dgo manual_stop
+2024-07-31 20:37:00 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 8 passed in 386.00s (0:06:25) =========================

@@ -1,0 +1,651 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 91 items
+
+child_lock_B_O2.py::TestChildLock_B_O2::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:40:40 INFO     dgo manual_stop executed
+2024-08-01 06:40:43 INFO     Current State: IDLE
+2024-08-01 06:40:43 INFO     ===> dgo status
+2024-08-01 06:40:43 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  1%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_2_tostart 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:40:45 INFO     ===> temp get 2
+2024-08-01 06:40:46 INFO     ### test_temp_get_2_tostart ==> PASSED
+PASSED                                                                   [  2%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_lid_lock_set_0_1_lock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:40:48 INFO     ===> lid_lock set 0 1
+2024-08-01 06:40:48 INFO     ### test_lid_lock_set_0_1_lock ==> PASSED
+PASSED                                                                   [  3%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_ON_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:40:50 INFO     ===> led get 1 0
+2024-08-01 06:40:51 INFO     ### test_white_lock_ON_lid_lock ==> PASSED
+PASSED                                                                   [  4%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_lidLockState_false_unlock_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:40:53 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:40:53 INFO     retry... #0 
+2024-08-01 06:40:54 INFO        retrying... 1
+2024-08-01 06:41:04 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:05 INFO     ### get_shadow_lidLockState_false_unlock_lid_lock ==> PASSED
+PASSED                                                                   [  5%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_OFF_lid_lock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:07 INFO     ===> led_array get 1
+2024-08-01 06:41:08 INFO     ### test_white_lock_OFF_lid_lock ==> PASSED
+PASSED                                                                   [  6%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_OFF_lid_lock2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:10 INFO     ===> led get 1 0
+2024-08-01 06:41:11 INFO     ### test_white_lock_OFF_lid_lock2 ==> PASSED
+PASSED                                                                   [  7%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_set_shadow_dgoSafetyLockEnabled_true 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:13 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:15 INFO     ** device shadow: dgoSafetyLockEnabled is set to True **
+2024-08-01 06:41:15 INFO     ### set_shadow_dgoSafetyLockEnabled_true ==> PASSED
+PASSED                                                                   [  8%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_set_shadow_childLockEnabled_true 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:18 INFO     ** device shadow: childLockEnabled is set to True **
+2024-08-01 06:41:18 INFO     ### set_shadow_childLockEnabled_true ==> PASSED
+PASSED                                                                   [  9%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_lidLockState_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:20 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:20 INFO     ### get_shadow_lidLockState_true_cloud ==> PASSED
+PASSED                                                                   [ 10%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_safetyLock_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:23 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:23 INFO     ### get_shadow_safetyLock_false_cloud ==> PASSED
+PASSED                                                                   [ 12%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLockEnabled_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:25 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:25 INFO     ### get_shadow_childLockEnabled_true_cloud ==> PASSED
+PASSED                                                                   [ 13%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLock_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:27 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:28 INFO     ### get_shadow_childLock_true_cloud ==> PASSED
+PASSED                                                                   [ 14%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoRequiredLock_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:30 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:30 INFO     ### get_shadow_dgoRequiredLock_false_cloud ==> PASSED
+PASSED                                                                   [ 15%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_ON_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:32 INFO     ===> led_array get 1
+2024-08-01 06:41:33 INFO     ### test_white_lock_ON_cloud ==> PASSED
+PASSED                                                                   [ 16%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_ON_cloud2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:35 INFO     ===> led get 1 0
+2024-08-01 06:41:36 INFO     ### test_white_lock_ON_cloud2 ==> PASSED
+PASSED                                                                   [ 17%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_set_shadow_childLockEnabled_false 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:40 INFO     ** device shadow: childLockEnabled is set to False **
+2024-08-01 06:41:40 INFO     ### set_shadow_childLockEnabled_false ==> PASSED
+PASSED                                                                   [ 18%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_lidLockState_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:42 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:42 INFO     ### get_shadow_lidLockState_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 19%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_safetyLock_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:44 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:45 INFO     ### get_shadow_safetyLock_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 20%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLockEnabled_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:47 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:47 INFO     ### get_shadow_childLockEnabled_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 21%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLock_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:49 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:50 INFO     ### get_shadow_childLock_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 23%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoRequiredLock_false_unlock_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:52 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:41:52 INFO     ### get_shadow_dgoRequiredLock_false_unlock_cloud ==> PASSED
+PASSED                                                                   [ 24%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_OFF_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:54 INFO     ===> led_array get 1
+2024-08-01 06:41:55 INFO     ### test_white_lock_OFF_cloud ==> PASSED
+PASSED                                                                   [ 25%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_OFF_cloud2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:41:57 INFO     ===> led get 1 0
+2024-08-01 06:41:58 INFO     ### test_white_lock_OFF_cloud2 ==> PASSED
+PASSED                                                                   [ 26%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_cycle_led_OFF_cloud 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:42:02 INFO     ===> led get 0 0
+2024-08-01 06:42:03 INFO     ### test_cycle_led_turn_off_0_stopped ==> PASSED
+2024-08-01 06:42:06 INFO     ===> led get 0 1
+2024-08-01 06:42:07 INFO     ### test_cycle_led_turn_off_1_stopped ==> PASSED
+2024-08-01 06:42:10 INFO     ===> led get 0 2
+2024-08-01 06:42:11 INFO     ### test_cycle_led_turn_off_2_stopped ==> PASSED
+2024-08-01 06:42:14 INFO     ===> led get 0 3
+2024-08-01 06:42:15 INFO     ### test_cycle_led_turn_off_3_stopped ==> PASSED
+PASSED                                                                   [ 27%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_dgo_jump_fromIDLEtoHIP 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:42:20 INFO     Current State: IDLE
+2024-08-01 06:42:20 INFO     dgo manual_start executed
+2024-08-01 06:42:33 INFO     Current State: LIP
+2024-08-01 06:42:38 INFO     dgo stage skip executed HIP
+2024-08-01 06:42:46 INFO     Current State: HIP
+2024-08-01 06:42:49 INFO     ===> dgo status
+2024-08-01 06:42:49 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+PASSED                                                                   [ 28%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_dgo_status_HIP 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:42:51 INFO     ===> dgo status
+2024-08-01 06:42:51 INFO     ### test_dgo_status_HIP ==> PASSED
+PASSED                                                                   [ 29%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_ON_HIP 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:42:53 INFO     ===> led_array get 1
+2024-08-01 06:42:54 INFO     ### test_white_lock_ON_HIP ==> PASSED
+PASSED                                                                   [ 30%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_ON_HIP2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:42:56 INFO     ===> led get 1 0
+2024-08-01 06:42:58 INFO     ### test_white_lock_ON_HIP2 ==> PASSED
+PASSED                                                                   [ 31%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_Orange_lock_OFF_HIP 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:43:00 INFO     ===> led get 2 0
+2024-08-01 06:43:01 INFO     0x0
+2024-08-01 06:43:01 INFO     0x0
+2024-08-01 06:43:01 INFO        retrying... 1
+2024-08-01 06:43:31 INFO     ===> led get 2 0
+2024-08-01 06:43:32 INFO     0x0
+2024-08-01 06:43:32 INFO     0x0
+2024-08-01 06:43:32 INFO        retrying... 2
+2024-08-01 06:44:02 INFO     ===> led get 2 0
+2024-08-01 06:44:03 INFO     0x0
+2024-08-01 06:44:03 INFO     0x0
+2024-08-01 06:44:03 INFO     ### test_Orange_lock_OFF_HIP ==> PASSED
+PASSED                                                                   [ 32%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_cycle_led_ON_HIP 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:06 INFO     ===> led get 0 0
+2024-08-01 06:44:07 INFO     0x0
+2024-08-01 06:44:07 INFO     0x0
+2024-08-01 06:44:07 INFO     0x0
+2024-08-01 06:44:07 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-08-01 06:44:10 INFO     ===> led get 0 1
+2024-08-01 06:44:11 INFO     0x0
+2024-08-01 06:44:11 INFO     0x0
+2024-08-01 06:44:11 INFO     0x0
+2024-08-01 06:44:11 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-08-01 06:44:14 INFO     ===> led get 0 2
+2024-08-01 06:44:15 INFO     0x0
+2024-08-01 06:44:15 INFO     0x0
+2024-08-01 06:44:15 INFO     0x0
+2024-08-01 06:44:15 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-08-01 06:44:18 INFO     ===> led get 0 3
+2024-08-01 06:44:19 INFO     0x0
+2024-08-01 06:44:19 INFO     0x0
+2024-08-01 06:44:19 INFO     0x0
+2024-08-01 06:44:19 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 34%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_heater_get_0_HIP 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:21 INFO     ===> heater get 0
+2024-08-01 06:44:21 INFO     ### test_heater_get_0_HIP ==> PASSED
+PASSED                                                                   [ 35%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_lidLockState_true_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:24 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:44:24 INFO     ### get_shadow_lidLockState_true_high_temp ==> PASSED
+PASSED                                                                   [ 36%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLockEnabled_false_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:26 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:44:26 INFO     ### get_shadow_childLockEnabled_false_high_temp ==> PASSED
+PASSED                                                                   [ 37%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLock_false_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:28 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:44:29 INFO     ### get_shadow_childLock_false_high_temp ==> PASSED
+PASSED                                                                   [ 38%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoRequiredLock_true_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:31 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:44:31 INFO     ### get_shadow_dgoRequiredLock_true_high_temp ==> PASSED
+PASSED                                                                   [ 39%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_safetyLock_true_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:33 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:44:34 INFO     ### get_shadow_safetyLock_true_high_temp ==> PASSED
+PASSED                                                                   [ 40%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoSafetyLockEnabled_true_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:36 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:44:36 INFO     ### get_shadow_dgoSafetyLockEnabled_true_high_temp ==> PASSED
+PASSED                                                                   [ 41%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_2_HIP 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:38 INFO     ===> temp get 2
+2024-08-01 06:44:39 INFO     ### test_temp_get_2_HIP ==> PASSED
+PASSED                                                                   [ 42%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_3_HIP 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:41 INFO     ===> temp get 3
+2024-08-01 06:44:41 INFO     ### test_temp_get_3_HIP ==> PASSED
+PASSED                                                                   [ 43%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_orange_lock_ON_HIP_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:43 INFO     ===> led_array get 1
+2024-08-01 06:44:44 INFO     ### test_orange_lock_ON_HIP_high_temp ==> PASSED
+PASSED                                                                   [ 45%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_orange_lock_ON_HIP_high_temp2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:46 INFO     ===> led get 2 0
+2024-08-01 06:44:47 INFO     ### test_orange_lock_ON_HIP_high_temp2 ==> PASSED
+PASSED                                                                   [ 46%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_cycle_led_ON_HIP_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:44:50 INFO     ===> led get 0 0
+2024-08-01 06:44:51 INFO     0x0
+2024-08-01 06:44:51 INFO     0x0
+2024-08-01 06:44:51 INFO     0x0
+2024-08-01 06:44:51 INFO        retrying... 1
+2024-08-01 06:44:52 INFO     ===> led get 0 0
+2024-08-01 06:44:53 INFO     0x0
+2024-08-01 06:44:53 INFO     0x0
+2024-08-01 06:44:53 INFO     0x0
+2024-08-01 06:44:53 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-08-01 06:44:56 INFO     ===> led get 0 1
+2024-08-01 06:44:57 INFO     0x0
+2024-08-01 06:44:57 INFO     0x0
+2024-08-01 06:44:57 INFO     0x0
+2024-08-01 06:44:57 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-08-01 06:45:00 INFO     ===> led get 0 2
+2024-08-01 06:45:01 INFO     0x0
+2024-08-01 06:45:01 INFO     0x0
+2024-08-01 06:45:01 INFO     0x0
+2024-08-01 06:45:01 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-08-01 06:45:04 INFO     ===> led get 0 3
+2024-08-01 06:45:05 INFO     0x0
+2024-08-01 06:45:05 INFO     0x0
+2024-08-01 06:45:05 INFO     0x0
+2024-08-01 06:45:05 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 47%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_dgo_jump_fromHIPtoCOOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:45:11 INFO     Current State: HIP
+2024-08-01 06:45:15 INFO     dgo stage skip executed COOLDOWN
+2024-08-01 06:45:23 INFO     Current State: COOLDOWN
+2024-08-01 06:45:26 INFO     ===> dgo status
+2024-08-01 06:45:26 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+PASSED                                                                   [ 48%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_dgo_jump_fromCOOLDOWNtoIDLE 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:45:31 INFO     Current State: COOLDOWN
+2024-08-01 06:45:34 INFO     dgo manual_stop executed
+2024-08-01 06:45:43 INFO     Current State: IDLE
+2024-08-01 06:45:48 INFO     ===> dgo status
+2024-08-01 06:45:48 INFO     ### test_dgo_jump_fromCOOLDOWNtoIDLE ==> PASSED
+PASSED                                                                   [ 49%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_safety_heater_get_0_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:45:50 INFO     ===> heater get 0
+2024-08-01 06:45:50 INFO     ### test_safety_heater_get_0_IDLE ==> PASSED
+PASSED                                                                   [ 50%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_3_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:45:52 INFO     ===> temp get 3
+2024-08-01 06:45:52 INFO        retrying... 1
+2024-08-01 06:46:52 INFO     ===> temp get 3
+2024-08-01 06:46:52 INFO        retrying... 2
+2024-08-01 06:47:52 INFO     ===> temp get 3
+2024-08-01 06:47:53 INFO        retrying... 3
+2024-08-01 06:48:53 INFO     ===> temp get 3
+2024-08-01 06:48:53 INFO        retrying... 4
+2024-08-01 06:49:53 INFO     ===> temp get 3
+2024-08-01 06:49:53 INFO     ### test_temp_get_3_IDLE ==> PASSED
+PASSED                                                                   [ 51%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_2_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:49:55 INFO     ===> temp get 2
+2024-08-01 06:49:55 INFO     ### test_temp_get_2_IDLE ==> PASSED
+PASSED                                                                   [ 52%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_lidLockState_false_unlock_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:49:57 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:49:58 INFO     retry... #0 
+2024-08-01 06:49:59 INFO        retrying... 1
+2024-08-01 06:50:29 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:50:29 INFO     ### get_shadow_lidLockState_false_unlock_high_temp ==> PASSED
+PASSED                                                                   [ 53%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_safetyLock_false_unlock_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:50:31 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:50:32 INFO     ### get_shadow_safetyLock_false_unlock_high_temp ==> PASSED
+PASSED                                                                   [ 54%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLockEnabled_false_unlock_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:50:34 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:50:34 INFO     ### get_shadow_childLockEnabled_false_unlock_high_temp ==> PASSED
+PASSED                                                                   [ 56%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLock_false_unlock_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:50:36 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:50:37 INFO     ### get_shadow_childLock_false_unlock_high_temp ==> PASSED
+PASSED                                                                   [ 57%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoRequiredLock_false_unlock_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:50:39 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:50:39 INFO     ### get_shadow_dgoRequiredLock_false_unlock_high_temp ==> PASSED
+PASSED                                                                   [ 58%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoSafetyLockEnabled_true_high_temp2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:50:41 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:50:42 INFO     ### get_shadow_dgoSafetyLockEnabled_true_high_temp2 ==> PASSED
+PASSED                                                                   [ 59%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_orange_lock_OFF_cloud_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:50:44 INFO     ===> led_array get 1
+2024-08-01 06:50:45 INFO     ### test_orange_lock_OFF_cloud_high_temp ==> PASSED
+PASSED                                                                   [ 60%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_orange_lock_OFF_cloud_high_temp2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:50:47 INFO     ===> led get 2 0
+2024-08-01 06:50:48 INFO     ### test_orange_lock_OFF_cloud_high_temp2 ==> PASSED
+PASSED                                                                   [ 61%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_cycle_led_OFF_stopped_high_temp 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:50:51 INFO     ===> led get 0 0
+2024-08-01 06:50:52 INFO     ### test_cycle_led_turn_off_0_stopped ==> PASSED
+2024-08-01 06:50:55 INFO     ===> led get 0 1
+2024-08-01 06:50:56 INFO     ### test_cycle_led_turn_off_1_stopped ==> PASSED
+2024-08-01 06:50:59 INFO     ===> led get 0 2
+2024-08-01 06:51:00 INFO     ### test_cycle_led_turn_off_2_stopped ==> PASSED
+2024-08-01 06:51:03 INFO     ===> led get 0 3
+2024-08-01 06:51:04 INFO     ### test_cycle_led_turn_off_3_stopped ==> PASSED
+PASSED                                                                   [ 62%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_2_tostart_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:51:06 INFO     ===> temp get 2
+2024-08-01 06:51:06 INFO        retrying... 1
+2024-08-01 06:52:06 INFO     ===> temp get 2
+2024-08-01 06:52:07 INFO        retrying... 2
+2024-08-01 06:53:07 INFO     ===> temp get 2
+2024-08-01 06:53:07 INFO        retrying... 3
+2024-08-01 06:54:07 INFO     ===> temp get 2
+2024-08-01 06:54:07 INFO        retrying... 4
+2024-08-01 06:55:07 INFO     ===> temp get 2
+2024-08-01 06:55:08 INFO     ### test_temp_get_2_tostart_nolock ==> PASSED
+PASSED                                                                   [ 63%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_set_shadow_dgoSafetyLockEnabled_false_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:55:11 INFO     ** device shadow: dgoSafetyLockEnabled is set to False **
+2024-08-01 06:55:11 INFO     ### set_shadow_dgoSafetyLockEnabled_false_nolock ==> PASSED
+PASSED                                                                   [ 64%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_dgo_jump_fromIDLEtoHIP_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:55:17 INFO     Current State: IDLE
+2024-08-01 06:55:17 INFO     dgo manual_start executed
+2024-08-01 06:55:30 INFO     Current State: LIP
+2024-08-01 06:55:35 INFO     dgo stage skip executed HIP
+2024-08-01 06:55:43 INFO     Current State: HIP
+2024-08-01 06:55:46 INFO     ===> dgo status
+2024-08-01 06:55:46 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+PASSED                                                                   [ 65%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_dgo_status_HIP_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:55:48 INFO     ===> dgo status
+2024-08-01 06:55:48 INFO     ### test_dgo_status_HIP_nolock ==> PASSED
+PASSED                                                                   [ 67%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_OFF_HIP_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:55:50 INFO     ===> led_array get 1
+2024-08-01 06:55:51 INFO     ### test_white_lock_OFF_HIP_nolock ==> PASSED
+PASSED                                                                   [ 68%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_white_lock_OFF_HIP_nolock2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:55:53 INFO     ===> led get 1 0
+2024-08-01 06:55:55 INFO     ### test_white_lock_OFF_HIP_nolock2 ==> PASSED
+PASSED                                                                   [ 69%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_Orange_lock_OFF_HIP_nolock2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:55:57 INFO     ===> led get 2 0
+2024-08-01 06:55:58 INFO     0x0
+2024-08-01 06:55:58 INFO     0x0
+2024-08-01 06:55:58 INFO        retrying... 1
+2024-08-01 06:56:08 INFO     ===> led get 2 0
+2024-08-01 06:56:09 INFO     0x0
+2024-08-01 06:56:09 INFO     0x0
+2024-08-01 06:56:09 INFO        retrying... 2
+2024-08-01 06:56:19 INFO     ===> led get 2 0
+2024-08-01 06:56:20 INFO     0x0
+2024-08-01 06:56:20 INFO     0x0
+2024-08-01 06:56:20 INFO        retrying... 3
+2024-08-01 06:56:30 INFO     ===> led get 2 0
+2024-08-01 06:56:31 INFO     0x0
+2024-08-01 06:56:31 INFO     0x0
+2024-08-01 06:56:31 INFO     ### test_Orange_lock_OFF_HIP_nolock2 ==> PASSED
+PASSED                                                                   [ 70%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_cycle_led_ON_HIP_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:56:34 INFO     ===> led get 0 0
+2024-08-01 06:56:35 INFO     0x0
+2024-08-01 06:56:35 INFO     0x0
+2024-08-01 06:56:35 INFO     0x0
+2024-08-01 06:56:35 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-08-01 06:56:38 INFO     ===> led get 0 1
+2024-08-01 06:56:39 INFO     0x0
+2024-08-01 06:56:39 INFO     0x0
+2024-08-01 06:56:39 INFO     0x0
+2024-08-01 06:56:39 INFO        retrying... 1
+2024-08-01 06:56:40 INFO     ===> led get 0 1
+2024-08-01 06:56:41 INFO     0x0
+2024-08-01 06:56:41 INFO     0x0
+2024-08-01 06:56:41 INFO     0x0
+2024-08-01 06:56:41 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-08-01 06:56:44 INFO     ===> led get 0 2
+2024-08-01 06:56:45 INFO     0x0
+2024-08-01 06:56:45 INFO     0x0
+2024-08-01 06:56:45 INFO     0x0
+2024-08-01 06:56:45 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-08-01 06:56:48 INFO     ===> led get 0 3
+2024-08-01 06:56:50 INFO     0x0
+2024-08-01 06:56:50 INFO     0x0
+2024-08-01 06:56:50 INFO     0x0
+2024-08-01 06:56:50 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 71%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_heater_get_0_HIP_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:56:52 INFO     ===> heater get 0
+2024-08-01 06:56:52 INFO     ### test_heater_get_0_HIP_nolock ==> PASSED
+PASSED                                                                   [ 72%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_lidLockState_false_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:56:54 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:56:54 INFO     ### get_shadow_lidLockState_false_nolock ==> PASSED
+PASSED                                                                   [ 73%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLockEnabled_false_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:56:56 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:56:57 INFO     ### get_shadow_childLockEnabled_false_nolock ==> PASSED
+PASSED                                                                   [ 74%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLock_false_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:56:59 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:56:59 INFO     ### get_shadow_childLock_false_nolock ==> PASSED
+PASSED                                                                   [ 75%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoRequiredLock_false_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:57:01 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:57:01 INFO     ### get_shadow_dgoRequiredLock_false_nolock ==> PASSED
+PASSED                                                                   [ 76%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_safetyLock_false_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:57:04 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:57:04 INFO     ### get_shadow_safetyLock_false_nolock ==> PASSED
+PASSED                                                                   [ 78%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoSafetyLockEnabled_false_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:57:06 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 06:57:07 INFO     ### get_shadow_dgoSafetyLockEnabled_false_nolock ==> PASSED
+PASSED                                                                   [ 79%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_2_HIP_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:57:09 INFO     ===> temp get 2
+2024-08-01 06:57:09 INFO     ### test_temp_get_2_HIP_nolock ==> PASSED
+PASSED                                                                   [ 80%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_3_HIP_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:57:11 INFO     ===> temp get 3
+2024-08-01 06:57:12 INFO     ### test_temp_get_3_HIP_nolock ==> PASSED
+PASSED                                                                   [ 81%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_orange_lock_ON_HIP_high_temp_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:57:14 INFO     ===> led get 2 0
+2024-08-01 06:57:15 INFO     ### test_orange_lock_ON_HIP_high_temp_nolock ==> PASSED
+PASSED                                                                   [ 82%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_cycle_led_ON_HIP_nolock2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:57:18 INFO     ===> led get 0 0
+2024-08-01 06:57:19 INFO     0x0
+2024-08-01 06:57:19 INFO     0x0
+2024-08-01 06:57:19 INFO     0x0
+2024-08-01 06:57:19 INFO     ### test_cycle_led_turn_on_0 ==> PASSED
+2024-08-01 06:57:22 INFO     ===> led get 0 1
+2024-08-01 06:57:23 INFO     0x0
+2024-08-01 06:57:23 INFO     0x0
+2024-08-01 06:57:23 INFO     0x0
+2024-08-01 06:57:23 INFO     ### test_cycle_led_turn_on_1 ==> PASSED
+2024-08-01 06:57:26 INFO     ===> led get 0 2
+2024-08-01 06:57:27 INFO     0x0
+2024-08-01 06:57:27 INFO     0x0
+2024-08-01 06:57:27 INFO     0x0
+2024-08-01 06:57:27 INFO     ### test_cycle_led_turn_on_2 ==> PASSED
+2024-08-01 06:57:30 INFO     ===> led get 0 3
+2024-08-01 06:57:31 INFO     0x0
+2024-08-01 06:57:31 INFO     0x0
+2024-08-01 06:57:31 INFO     0x0
+2024-08-01 06:57:31 INFO     ### test_cycle_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 83%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_dgo_jump_fromHIPtoCOOLDOWN_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:57:37 INFO     Current State: HIP
+2024-08-01 06:57:41 INFO     dgo stage skip executed COOLDOWN
+2024-08-01 06:57:50 INFO     Current State: COOLDOWN
+2024-08-01 06:57:53 INFO     ===> dgo status
+2024-08-01 06:57:53 INFO     ### test_dgo_jump_fromHIPtoCOOLDOWN ==> PASSED
+PASSED                                                                   [ 84%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_dgo_jump_fromCOOLDOWNtoIDLE_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:57:59 INFO     Current State: COOLDOWN
+2024-08-01 06:58:02 INFO     dgo manual_stop executed
+2024-08-01 06:58:10 INFO     Current State: IDLE
+2024-08-01 06:58:15 INFO     ===> dgo status
+2024-08-01 06:58:16 INFO     ### test_dgo_jump_fromCOOLDOWNtoIDLE ==> PASSED
+PASSED                                                                   [ 85%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_safety_heater_get_0_IDLE_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:58:18 INFO     ===> heater get 0
+2024-08-01 06:58:18 INFO     ### test_safety_heater_get_0_IDLE_nolock ==> PASSED
+PASSED                                                                   [ 86%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_3_IDLE_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 06:58:20 INFO     ===> temp get 3
+2024-08-01 06:58:20 INFO        retrying... 1
+2024-08-01 06:59:20 INFO     ===> temp get 3
+2024-08-01 06:59:20 INFO        retrying... 2
+2024-08-01 07:00:20 INFO     ===> temp get 3
+2024-08-01 07:00:20 INFO        retrying... 3
+2024-08-01 07:01:20 INFO     ===> temp get 3
+2024-08-01 07:01:21 INFO        retrying... 4
+2024-08-01 07:02:21 INFO     ===> temp get 3
+2024-08-01 07:02:21 INFO        retrying... 5
+2024-08-01 07:03:21 INFO     ===> temp get 3
+2024-08-01 07:03:21 INFO     ### test_temp_get_3_IDLE_nolock ==> PASSED
+PASSED                                                                   [ 87%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_temp_get_2_IDLE_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:23 INFO     ===> temp get 2
+2024-08-01 07:03:23 INFO     ### test_temp_get_2_IDLE_nolock ==> PASSED
+PASSED                                                                   [ 89%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_lidLockState_false_unlock_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:25 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 07:03:26 INFO     ### get_shadow_lidLockState_false_unlock_nolock ==> PASSED
+PASSED                                                                   [ 90%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_safetyLock_false_unlock_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:28 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 07:03:28 INFO     ### get_shadow_safetyLock_false_unlock_nolock ==> PASSED
+PASSED                                                                   [ 91%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLockEnabled_false_unlock_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:31 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 07:03:31 INFO     ### get_shadow_childLockEnabled_false_unlock_nolock ==> PASSED
+PASSED                                                                   [ 92%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_childLock_false_unlock_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:33 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 07:03:33 INFO     ### get_shadow_childLock_false_unlock_nolock ==> PASSED
+PASSED                                                                   [ 93%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoRequiredLock_false_unlock_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:35 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 07:03:36 INFO     ### get_shadow_dgoRequiredLock_false_unlock_nolock ==> PASSED
+PASSED                                                                   [ 94%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_get_shadow_dgoSafetyLockEnabled_false_nolock2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:38 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-08-01 07:03:38 INFO     ### get_shadow_dgoSafetyLockEnabled_false_nolock2 ==> PASSED
+PASSED                                                                   [ 95%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_orange_lock_OFF_cloud_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:40 INFO     ===> led_array get 1
+2024-08-01 07:03:41 INFO     ### test_orange_lock_OFF_cloud_nolock ==> PASSED
+PASSED                                                                   [ 96%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_orange_lock_OFF_cloud_nolock2 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:43 INFO     ===> led get 1 0
+2024-08-01 07:03:45 INFO     ### test_orange_lock_OFF_cloud_nolock2 ==> PASSED
+PASSED                                                                   [ 97%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_cycle_led_OFF_stopped_nolock 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:03:48 INFO     ===> led get 0 0
+2024-08-01 07:03:49 INFO     ### test_cycle_led_turn_off_0_stopped ==> PASSED
+2024-08-01 07:03:52 INFO     ===> led get 0 1
+2024-08-01 07:03:53 INFO     ### test_cycle_led_turn_off_1_stopped ==> PASSED
+2024-08-01 07:03:56 INFO     ===> led get 0 2
+2024-08-01 07:03:57 INFO     ### test_cycle_led_turn_off_2_stopped ==> PASSED
+2024-08-01 07:04:00 INFO     ===> led get 0 3
+2024-08-01 07:04:01 INFO     ### test_cycle_led_turn_off_3_stopped ==> PASSED
+PASSED                                                                   [ 98%]
+child_lock_B_O2.py::TestChildLock_B_O2::test_set_shadow_dgoSafetyLockEnabled_true_nolock_reset 
+-------------------------------- live log call ---------------------------------
+2024-08-01 07:04:04 INFO     ** device shadow: dgoSafetyLockEnabled is set to True **
+2024-08-01 07:04:04 INFO     ### set_shadow_dgoSafetyLockEnabled_true_nolock_reset ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 91 passed in 1413.44s (0:23:33) ========================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1722490832.json': No such file or directory

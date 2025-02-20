@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 7 items
+
+bat_dgo_resume_lip.py::TestBAT_DGO_HIP_Reset::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:01:42 INFO     dgo manual_stop executed
+2024-07-31 20:01:45 INFO     Current State: IDLE
+2024-07-31 20:01:45 INFO     ===> dgo status
+2024-07-31 20:01:45 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 14%]
+bat_dgo_resume_lip.py::TestBAT_DGO_HIP_Reset::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:01:47 INFO     ===> dgo manual_start
+2024-07-31 20:01:47 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 28%]
+bat_dgo_resume_lip.py::TestBAT_DGO_HIP_Reset::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:01:49 INFO     ===> dgo status
+2024-07-31 20:01:50 INFO        retrying... 1
+2024-07-31 20:01:55 INFO     ===> dgo status
+2024-07-31 20:01:55 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 42%]
+bat_dgo_resume_lip.py::TestBAT_DGO_HIP_Reset::test_controlMCU_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:01:57 INFO     ===> reset
+2024-07-31 20:02:08 ERROR    ConnectionError(command)= reset
+
+2024-07-31 20:02:08 INFO     ### test_controlMCU_reset ==> PASSED
+PASSED                                                                   [ 57%]
+bat_dgo_resume_lip.py::TestBAT_DGO_HIP_Reset::test_dgo_Return_to_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:02:20 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 20:02:20 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 20:02:22 INFO     ===> dgo status
+2024-07-31 20:02:22 INFO     ### test_dgo_Return_to_LIP_State ==> PASSED
+PASSED                                                                   [ 71%]
+bat_dgo_resume_lip.py::TestBAT_DGO_HIP_Reset::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:02:24 INFO     ===> dgo manual_stop
+2024-07-31 20:02:24 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 85%]
+bat_dgo_resume_lip.py::TestBAT_DGO_HIP_Reset::test_dgo_end_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:02:26 INFO     ===> dgo status
+2024-07-31 20:02:30 INFO     ### test_dgo_end_with_IDLE_State ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+============================== 7 passed in 53.12s ==============================

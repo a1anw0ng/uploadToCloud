@@ -1,0 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 13 items
+
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:55:05 INFO     dgo manual_stop executed
+2024-07-31 19:55:09 INFO     Current State: IDLE
+2024-07-31 19:55:09 INFO     ===> dgo status
+2024-07-31 19:55:09 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  7%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:55:11 INFO     ===> dgo manual_start
+2024-07-31 19:55:11 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 15%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:55:13 INFO     ===> dgo status
+2024-07-31 19:55:13 INFO        retrying... 1
+2024-07-31 19:55:38 INFO     ===> dgo status
+2024-07-31 19:55:38 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 23%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_skip_LIP_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:55:40 INFO     ===> dgo stage skip
+2024-07-31 19:55:41 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 30%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_in_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:55:43 INFO     ===> dgo status
+2024-07-31 19:55:44 INFO     ### test_dgo_in_HIP_State ==> PASSED
+PASSED                                                                   [ 38%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_skip_HIP_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:55:46 INFO     ===> dgo stage skip
+2024-07-31 19:55:46 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 46%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_in_Cooldown_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:55:48 INFO     ===> dgo status
+2024-07-31 19:55:49 INFO     ### test_dgo_in_Cooldown_State ==> PASSED
+PASSED                                                                   [ 53%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_skip_Cooldown_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:55:51 INFO     ===> dgo stage skip
+2024-07-31 19:55:51 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 61%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_return_to_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:56:03 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 19:56:03 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:56:05 INFO     ===> dgo status
+2024-07-31 19:56:06 INFO     ### test_dgo_return_to_IDLE_State ==> PASSED
+PASSED                                                                   [ 69%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_status_will_skip_forever 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:56:08 INFO     ===> dgo status
+2024-07-31 19:56:08 INFO     ### test_dgo_status_will_skip_forever ==> PASSED
+PASSED                                                                   [ 76%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_controlMCU_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:56:10 INFO     TS caught Reset
+2024-07-31 19:56:10 INFO     TS self.result:{'timeBegin': 1722480970}
+PASSED                                                                   [ 84%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_wait_time_pause 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:56:22 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 19:56:22 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 92%]
+bat_dgo_vacation_reset.py::TestBAT_DGO_VACATION_RESET::test_dgo_status_will_skip_forever_post_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:56:24 INFO     ===> dgo status
+2024-07-31 19:56:24 INFO     ### test_dgo_status_will_skip_forever_post_reset ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 13 passed in 83.68s (0:01:23) =========================

@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 14 items
+
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:39:02 INFO     dgo manual_stop executed
+2024-07-31 19:39:05 INFO     Current State: IDLE
+2024-07-31 19:39:05 INFO     ===> dgo status
+2024-07-31 19:39:05 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  7%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:39:07 INFO     ===> dgo manual_start
+2024-07-31 19:39:07 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 14%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:39:09 INFO     ===> dgo status
+2024-07-31 19:39:10 INFO        retrying... 1
+2024-07-31 19:39:35 INFO     ===> dgo status
+2024-07-31 19:39:35 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 21%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_dgo_skip_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:39:37 INFO     ===> dgo stage skip
+2024-07-31 19:39:38 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 28%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_dgo_in_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:39:40 INFO     ===> dgo status
+2024-07-31 19:39:40 INFO     ### test_dgo_in_HIP_State ==> PASSED
+PASSED                                                                   [ 35%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_temp_get_3_high 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:39:40 INFO     ===> temp get 3
+2024-07-31 19:39:40 INFO     Temperature value: 37.76399
+2024-07-31 19:39:40 INFO     Heat up for 240s
+2024-07-31 19:43:42 INFO     ** wait_time_pause: 240 seconds **
+2024-07-31 19:43:42 INFO     ### wait_time_pause_high ==> PASSED
+2024-07-31 19:43:44 INFO     ===> temp get 3
+2024-07-31 19:43:44 INFO     ### test_temp_get_3_high ==> PASSED
+PASSED                                                                   [ 42%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_dgo_grinder_stall_set 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:43:46 INFO     ===> grinder stall_set 20 20 20 5000 500 4500 8 3 50 600000
+2024-07-31 19:43:46 INFO     ### test_dgo_grinder_stall_set ==> PASSED
+2024-07-31 19:44:33 INFO     ** wait_time_pause: 45 seconds **
+2024-07-31 19:44:33 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:44:33 INFO     Found credentials in environment variables.
+2024-07-31 19:44:34 INFO     Grinder State: Normal
+2024-07-31 19:44:36 INFO     ===> grinder stall_set 20 20 20 5000 500 4500 8 3 50 600000
+2024-07-31 19:44:36 INFO     ### test_dgo_grinder_stall_set ==> PASSED
+2024-07-31 19:45:23 INFO     ** wait_time_pause: 45 seconds **
+2024-07-31 19:45:23 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:45:23 INFO     Found credentials in environment variables.
+2024-07-31 19:45:23 INFO     Grinder State: Normal
+2024-07-31 19:45:25 INFO     ===> grinder stall_set 20 20 20 5000 500 4500 8 3 50 600000
+2024-07-31 19:45:25 INFO     ### test_dgo_grinder_stall_set ==> PASSED
+2024-07-31 19:46:12 INFO     ** wait_time_pause: 45 seconds **
+2024-07-31 19:46:12 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:46:12 INFO     Found credentials in environment variables.
+2024-07-31 19:46:12 INFO     Grinder State: Normal
+2024-07-31 19:46:14 INFO     ===> grinder stall_set 20 20 20 5000 500 4500 8 3 50 600000
+2024-07-31 19:46:14 INFO     ### test_dgo_grinder_stall_set ==> PASSED
+2024-07-31 19:47:01 INFO     ** wait_time_pause: 45 seconds **
+2024-07-31 19:47:01 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:47:01 INFO     Found credentials in environment variables.
+2024-07-31 19:47:02 INFO     Grinder State: JamWarning
+PASSED                                                                   [ 50%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_orange_lock_ON_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:47:04 INFO     ===> led get 2 0
+2024-07-31 19:47:05 INFO     ### test_orange_lock_ON_HIP ==> PASSED
+PASSED                                                                   [ 57%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_jam_led_on 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:47:08 INFO     ===> led get 0 0
+2024-07-31 19:47:09 INFO     ### test_jam_led_on_0 ==> PASSED
+2024-07-31 19:47:12 INFO     ===> led get 0 1
+2024-07-31 19:47:13 INFO        retrying... 1
+2024-07-31 19:47:14 INFO     ===> led get 0 1
+2024-07-31 19:47:15 INFO        retrying... 2
+2024-07-31 19:47:16 INFO     ===> led get 0 1
+2024-07-31 19:47:17 INFO     ### test_jam_led_on_1 ==> PASSED
+2024-07-31 19:47:20 INFO     ===> led get 0 2
+2024-07-31 19:47:21 INFO     ### test_jam_led_on_2 ==> PASSED
+2024-07-31 19:47:24 INFO     ===> led get 0 3
+2024-07-31 19:47:25 INFO     ### test_jam_led_on_3 ==> PASSED
+PASSED                                                                   [ 64%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_white_lock_ON_HIP 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:47:27 INFO     ===> led get 1 0
+2024-07-31 19:47:28 INFO     ### test_white_lock_ON_HIP ==> PASSED
+PASSED                                                                   [ 71%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:47:30 INFO     ===> dgo manual_stop
+2024-07-31 19:47:30 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 78%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_controlMCU_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:47:32 INFO     ===> reset
+2024-07-31 19:47:44 ERROR    ConnectionError(command)= reset
+
+2024-07-31 19:47:44 INFO     ### test_controlMCU_reset ==> PASSED
+PASSED                                                                   [ 85%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_dgo_wait_time_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:48:01 INFO     ** wait_time_pause: 15 seconds **
+2024-07-31 19:48:01 INFO     ### wait_time_reset ==> PASSED
+PASSED                                                                   [ 92%]
+bat_dgo_grinder_high_temp_jam.py::TestBAT_DGO_GRINDER_HIGH_TEMP_JAM::test_get_shadow_grinderState_jam_normal 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:48:48 INFO     ** wait_time_pause: 45 seconds **
+2024-07-31 19:48:48 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:48:50 INFO     Found credentials in environment variables.
+2024-07-31 19:48:50 INFO     ### get_shadow_grinderState_jam_normal ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 14 passed in 592.99s (0:09:52) ========================

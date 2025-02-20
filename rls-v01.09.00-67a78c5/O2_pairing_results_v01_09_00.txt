@@ -1,0 +1,740 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+config=  <_pytest.config.Config object at 0x7f0f1fb27910>
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.2.1, pluggy-1.5.0
+rootdir: /home/guo3/work22/Oscar-Python-CLI/src/oscar/pairing
+configfile: pytest.ini
+plugins: metadata-3.1.1, json-report-1.5.0, repeat-0.9.3
+collected 104 items
+
+pairing_O2.py::TestPairing::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:39:49 INFO     dgo manual_stop executed
+2024-07-31 16:39:53 INFO     Current State: IDLE
+2024-07-31 16:39:53 INFO     ===> dgo status
+2024-07-31 16:39:53 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  0%]
+pairing_O2.py::TestPairing::test_get_aws_thing_name 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:39:55 INFO     ===> nvs get aws_thing_name
+2024-07-31 16:39:56 INFO     ### test_get_aws_thing_name ==> PASSED
+PASSED                                                                   [  1%]
+pairing_O2.py::TestPairing::test_nvs_set_oscar_is_secure_0 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:39:58 INFO     ===> nvs set oscar_is_secure 0
+2024-07-31 16:39:59 INFO     ### test_nvs_set_oscar_is_secure_0 ==> PASSED
+PASSED                                                                   [  2%]
+pairing_O2.py::TestPairing::test_group_aws_thing_info 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:40:02 INFO     ===> nvs get aws_client_id
+2024-07-31 16:40:03 INFO     ### test_get_aws_client_id ==> PASSED
+2024-07-31 16:40:06 INFO     ===> nvs get aws_port
+2024-07-31 16:40:07 INFO     ### test_get_aws_port ==> PASSED
+2024-07-31 16:40:10 INFO     ===> nvs get aws-root-ca
+2024-07-31 16:40:11 INFO     ### test_get_aws_root_ca ==> PASSED
+2024-07-31 16:40:14 INFO     ===> nvs get certificate
+2024-07-31 16:40:15 INFO     ### test_get_certificate ==> PASSED
+2024-07-31 16:40:18 INFO     ===> nvs get private
+2024-07-31 16:40:19 INFO     ### test_get_private ==> PASSED
+PASSED                                                                   [  3%]
+pairing_O2.py::TestPairing::test_group_nvs_ls_info 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:40:22 INFO     ===> nvs ls
+2024-07-31 16:40:23 INFO     ### test_nvs_ls_serial_number ==> PASSED
+2024-07-31 16:40:26 INFO     ===> nvs ls
+2024-07-31 16:40:27 INFO     ### test_nvs_ls_aws_port ==> PASSED
+2024-07-31 16:40:30 INFO     ===> nvs ls
+2024-07-31 16:40:31 INFO     ### test_nvs_ls_aws-root-ca ==> PASSED
+2024-07-31 16:40:34 INFO     ===> nvs ls
+2024-07-31 16:40:35 INFO     ### test_nvs_ls_certificate ==> PASSED
+2024-07-31 16:40:38 INFO     ===> nvs ls
+2024-07-31 16:40:40 INFO     ### test_nvs_ls_private ==> PASSED
+2024-07-31 16:40:43 INFO     ===> nvs ls
+2024-07-31 16:40:44 INFO     ### test_nvs_ls_aws_endpoint ==> PASSED
+2024-07-31 16:40:47 INFO     ===> nvs ls
+2024-07-31 16:40:48 INFO     ### test_nvs_ls_device_paired ==> PASSED
+PASSED                                                                   [  4%]
+pairing_O2.py::TestPairing::test_wifi_ssid 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:40:50 INFO     ===> nvs get wifi_ssid
+2024-07-31 16:40:51 INFO     ### test_wifi_ssid ==> PASSED
+PASSED                                                                   [  5%]
+pairing_O2.py::TestPairing::test_wifi_password 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:40:53 INFO     ===> nvs get wifi_password
+2024-07-31 16:40:54 INFO     ### test_wifi_password ==> PASSED
+PASSED                                                                   [  6%]
+pairing_O2.py::TestPairing::test_nvs_get_oscar_is_paired 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:40:56 INFO     ===> nvs get oscar_is_paired
+2024-07-31 16:40:57 INFO     ### test_nvs_get_oscar_is_paired ==> PASSED
+PASSED                                                                   [  7%]
+pairing_O2.py::TestPairing::test_nvs_get_oscar_is_secure 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:40:59 INFO     ===> nvs get oscar_is_secure
+2024-07-31 16:41:00 INFO     ### test_nvs_get_oscar_is_secure ==> PASSED
+PASSED                                                                   [  8%]
+pairing_O2.py::TestPairing::test_wifi_get_ip 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:02 INFO     ===> wifi get_ip
+2024-07-31 16:41:03 INFO     ### test_wifi_get_ip ==> PASSED
+PASSED                                                                   [  9%]
+pairing_O2.py::TestPairing::test_ping_device_192_168_0_32 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:05 INFO     ** ping device: 192.168.0.11 **
+2024-07-31 16:41:05 INFO     Response time from 192.168.0.11 is 0.0030264854431152344 ms
+2024-07-31 16:41:05 INFO     ### ping_device_192_168_0_32 ==> PASSED
+PASSED                                                                   [ 10%]
+pairing_O2.py::TestPairing::test_blue_led_turn_off_0 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:07 INFO     ===> led get 0 0
+2024-07-31 16:41:08 INFO     ### test_blue_led_turn_off_0 ==> PASSED
+PASSED                                                                   [ 11%]
+pairing_O2.py::TestPairing::test_blue_led_turn_off_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:10 INFO     ===> led get 0 1
+2024-07-31 16:41:11 INFO     ### test_blue_led_turn_off_1 ==> PASSED
+PASSED                                                                   [ 12%]
+pairing_O2.py::TestPairing::test_blue_led_turn_off_2 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:13 INFO     ===> led get 0 2
+2024-07-31 16:41:14 INFO     ### test_blue_led_turn_off_2 ==> PASSED
+PASSED                                                                   [ 13%]
+pairing_O2.py::TestPairing::test_blue_led_turn_off_3 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:16 INFO     ===> led get 0 3
+2024-07-31 16:41:17 INFO     ### test_blue_led_turn_off_3 ==> PASSED
+PASSED                                                                   [ 14%]
+pairing_O2.py::TestPairing::test_nvs_get_aws_endpoint 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:19 INFO     ===> nvs get aws_endpoint
+2024-07-31 16:41:20 INFO     ### test_nvs_get_aws_endpoint ==> PASSED
+PASSED                                                                   [ 15%]
+pairing_O2.py::TestPairing::test_group_system_info 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:23 INFO     ===> mem
+2024-07-31 16:41:24 INFO     ### test_mem ==> PASSED
+PASSED                                                                   [ 16%]
+pairing_O2.py::TestPairing::test_wifi_ping 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:26 INFO     ===> wifi ping devices.staging.mill.com
+2024-07-31 16:41:41 ERROR    ConnectionError(command)= wifi ping devices.staging.mill.com
+
+2024-07-31 16:41:41 INFO     ### test_wifi_ping ==> PASSED
+PASSED                                                                   [ 17%]
+pairing_O2.py::TestPairing::test_wifi_running_rssi 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:43 INFO     ===> wifi running_rssi
+2024-07-31 16:41:44 INFO     ### test_wifi_running_rssi ==> PASSED
+PASSED                                                                   [ 18%]
+pairing_O2.py::TestPairing::test_ble_deviceAddr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:46 INFO     ===> ble deviceAddr
+2024-07-31 16:41:47 INFO     ### test_ble_deviceAddr ==> PASSED
+PASSED                                                                   [ 19%]
+pairing_O2.py::TestPairing::test_ble_advertisement 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:49 INFO     ===> ble advertisement
+2024-07-31 16:41:50 INFO     ### test_ble_advertisement ==> PASSED
+PASSED                                                                   [ 20%]
+pairing_O2.py::TestPairing::test_get_shadow_online_true 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:52 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-31 16:41:52 INFO     ### get_shadow_online_true ==> PASSED
+PASSED                                                                   [ 21%]
+pairing_O2.py::TestPairing::test_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:54 INFO     ===> fr
+2024-07-31 16:41:56 ERROR    line= E (1312567) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54
+2024-07-31 16:41:56 ERROR    line= E (1312567) tls_freertos: Reading failed, errno= 119
+2024-07-31 16:41:56 ERROR    line= E (1312577) mqtt_helpers: mqtt_loop_keep_alive returned with status = 4.
+2024-07-31 16:41:56 ERROR    line= E (1312577) mqtt_helpers: Network issue, try to disconnect shadow.
+2024-07-31 16:41:56 ERROR    line= E (1312597) transport_base: poll_write select error 0, errno = Success, fd = 54
+2024-07-31 16:41:56 ERROR    line= E (1312617) mqtt_helpers: Failed to send UNSUBSCRIBE packet to broker with error = 3.
+2024-07-31 16:41:56 ERROR    line= E (1312637) jobs_sanford: Failed to unsubscribe to '$aws/things/MG22335A2US0024/jobs/get'
+2024-07-31 16:41:56 ERROR    line= E (1312647) jobs_sanford: Failed to unsubscribe to '$aws/things/MG223ets Jul 29 2019 12:21:46
+2024-07-31 16:41:56 INFO     ### test_fr ==> PASSED
+PASSED                                                                   [ 22%]
+pairing_O2.py::TestPairing::test_capturelog_150 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:41:58 INFO     ===> capturelog 150
+2024-07-31 16:44:29 INFO     ### capturelog_150 ==> PASSED
+PASSED                                                                   [ 23%]
+pairing_O2.py::TestPairing::test_blue_led_turn_on_0 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:31 INFO     ===> led get 0 0
+2024-07-31 16:44:32 INFO     0x0
+2024-07-31 16:44:32 INFO     0x0
+2024-07-31 16:44:32 INFO     ### test_blue_led_turn_on_0 ==> PASSED
+PASSED                                                                   [ 24%]
+pairing_O2.py::TestPairing::test_blue_led_turn_on_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:34 INFO     ===> led get 0 1
+2024-07-31 16:44:35 INFO     0x0
+2024-07-31 16:44:35 INFO     0x0
+2024-07-31 16:44:35 INFO     ### test_blue_led_turn_on_1 ==> PASSED
+PASSED                                                                   [ 25%]
+pairing_O2.py::TestPairing::test_blue_led_turn_on_2 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:37 INFO     ===> led get 0 2
+2024-07-31 16:44:38 INFO     0x0
+2024-07-31 16:44:38 INFO     0x0
+2024-07-31 16:44:38 INFO     ### test_blue_led_turn_on_2 ==> PASSED
+PASSED                                                                   [ 25%]
+pairing_O2.py::TestPairing::test_blue_led_turn_on_3 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:40 INFO     ===> led get 0 3
+2024-07-31 16:44:41 INFO     0x0
+2024-07-31 16:44:41 INFO     0x0
+2024-07-31 16:44:41 INFO     ### test_blue_led_turn_on_3 ==> PASSED
+PASSED                                                                   [ 26%]
+pairing_O2.py::TestPairing::test_oscar_is_secure_after_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:43 INFO     ===> nvs get oscar_is_secure
+2024-07-31 16:44:44 INFO     ### test_oscar_is_secure_after_fr ==> PASSED
+PASSED                                                                   [ 27%]
+pairing_O2.py::TestPairing::test_no_oscar_is_paired 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:46 INFO     ===> nvs get oscar_is_paired
+2024-07-31 16:44:47 INFO     ### test_no_oscar_is_paired ==> PASSED
+PASSED                                                                   [ 28%]
+pairing_O2.py::TestPairing::test_no_wifi_ssid 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:49 INFO     ===> nvs get wifi_ssid
+2024-07-31 16:44:50 INFO     ### test_no_wifi_ssid ==> PASSED
+PASSED                                                                   [ 29%]
+pairing_O2.py::TestPairing::test_no_wifi_password 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:52 INFO     ===> nvs get wifi_password
+2024-07-31 16:44:53 INFO     ### test_no_wifi_password ==> PASSED
+PASSED                                                                   [ 30%]
+pairing_O2.py::TestPairing::test_no_wifi 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:55 INFO     ===> wifi ping devices.staging.mill.com
+2024-07-31 16:44:56 INFO     ### test_no_wifi ==> PASSED
+PASSED                                                                   [ 31%]
+pairing_O2.py::TestPairing::test_no_ip_address 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:44:58 INFO     ===> wifi get_ip
+2024-07-31 16:44:59 ERROR    line= E (183657) wifi: WiFi is not connected.
+2024-07-31 16:44:59 INFO     ### test_no_ip_address ==> PASSED
+PASSED                                                                   [ 32%]
+pairing_O2.py::TestPairing::test_yes_aws_thing_name_after_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:45:01 INFO     ===> nvs get aws_thing_name
+2024-07-31 16:45:02 INFO     ### test_yes_aws_thing_name_after_fr ==> PASSED
+PASSED                                                                   [ 33%]
+pairing_O2.py::TestPairing::test_no_wifi_running_rssi_after_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:45:04 INFO     ===> wifi running_rssi
+2024-07-31 16:45:06 INFO     ### test_no_wifi_running_rssi_after_fr ==> PASSED
+PASSED                                                                   [ 34%]
+pairing_O2.py::TestPairing::test_yes_ble_deviceAddr_after_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:45:08 INFO     ===> ble deviceAddr
+2024-07-31 16:45:09 INFO     ### test_yes_ble_deviceAddr_after_fr ==> PASSED
+PASSED                                                                   [ 35%]
+pairing_O2.py::TestPairing::test_yes_ble_advertisement_after_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:45:11 INFO     ===> ble advertisement
+2024-07-31 16:45:12 INFO     ### test_yes_ble_advertisement_after_fr ==> PASSED
+PASSED                                                                   [ 36%]
+pairing_O2.py::TestPairing::test_group_aws_thing_info_after_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:45:15 INFO     ===> nvs get aws_client_id
+2024-07-31 16:45:16 INFO     ### test_get_aws_client_id ==> PASSED
+2024-07-31 16:45:19 INFO     ===> nvs get aws_port
+2024-07-31 16:45:20 INFO     ### test_get_aws_port ==> PASSED
+2024-07-31 16:45:23 INFO     ===> nvs get aws-root-ca
+2024-07-31 16:45:24 INFO     ### test_get_aws_root_ca ==> PASSED
+2024-07-31 16:45:27 INFO     ===> nvs get certificate
+2024-07-31 16:45:28 INFO     ### test_get_certificate ==> PASSED
+2024-07-31 16:45:31 INFO     ===> nvs get private
+2024-07-31 16:45:32 INFO     ### test_get_private ==> PASSED
+PASSED                                                                   [ 37%]
+pairing_O2.py::TestPairing::test_group_nvs_ls_info_after_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:45:35 INFO     ===> nvs ls
+2024-07-31 16:45:36 INFO     ### test_nvs_ls_serial_number ==> PASSED
+2024-07-31 16:45:39 INFO     ===> nvs ls
+2024-07-31 16:45:40 INFO     ### test_nvs_ls_aws_port ==> PASSED
+2024-07-31 16:45:43 INFO     ===> nvs ls
+2024-07-31 16:45:44 INFO     ### test_nvs_ls_aws-root-ca ==> PASSED
+2024-07-31 16:45:47 INFO     ===> nvs ls
+2024-07-31 16:45:48 INFO     ### test_nvs_ls_certificate ==> PASSED
+2024-07-31 16:45:51 INFO     ===> nvs ls
+2024-07-31 16:45:52 INFO     ### test_nvs_ls_private ==> PASSED
+2024-07-31 16:45:55 INFO     ===> nvs ls
+2024-07-31 16:45:56 INFO     ### test_nvs_ls_aws_endpoint ==> PASSED
+2024-07-31 16:45:59 INFO     ===> nvs ls
+2024-07-31 16:46:01 INFO     ### test_nvs_ls_device_paired ==> PASSED
+PASSED                                                                   [ 38%]
+pairing_O2.py::TestPairing::test_group_system_info_after_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:04 INFO     ===> mem
+2024-07-31 16:46:05 INFO     ### test_mem ==> PASSED
+PASSED                                                                   [ 39%]
+pairing_O2.py::TestPairing::test_get_shadow_online_false_after_fr 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:07 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-31 16:46:07 INFO     ### get_shadow_online_false_after_fr ==> PASSED
+PASSED                                                                   [ 40%]
+pairing_O2.py::TestPairing::test_wifi_setup 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:09 INFO     ===> wifi setup NETGEAR54 rediris762
+2024-07-31 16:46:10 INFO     ### test_wifi_setup ==> PASSED
+PASSED                                                                   [ 41%]
+pairing_O2.py::TestPairing::test_nvs_set_oscar_is_paired_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:12 INFO     ===> nvs set oscar_is_paired 1
+2024-07-31 16:46:13 INFO     ### test_nvs_set_oscar_is_paired_1 ==> PASSED
+PASSED                                                                   [ 42%]
+pairing_O2.py::TestPairing::test_nvs_get_wifi_ssid_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:15 INFO     ===> nvs get wifi_ssid
+2024-07-31 16:46:16 INFO     ### test_nvs_get_wifi_ssid_after_setup ==> PASSED
+PASSED                                                                   [ 43%]
+pairing_O2.py::TestPairing::test_nvs_get_wifi_password_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:18 INFO     ===> nvs get wifi_password
+2024-07-31 16:46:19 INFO     ### test_nvs_get_wifi_password_after_setup ==> PASSED
+PASSED                                                                   [ 44%]
+pairing_O2.py::TestPairing::test_nvs_get_oscar_is_paired_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:21 INFO     ===> nvs get oscar_is_paired
+2024-07-31 16:46:22 INFO     ### test_nvs_get_oscar_is_paired_after_setup ==> PASSED
+PASSED                                                                   [ 45%]
+pairing_O2.py::TestPairing::test_nvs_get_oscar_is_secure_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:24 INFO     ===> nvs get oscar_is_secure
+2024-07-31 16:46:25 INFO     ### test_nvs_get_oscar_is_secure_after_setup ==> PASSED
+PASSED                                                                   [ 46%]
+pairing_O2.py::TestPairing::test_reset 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:27 INFO     ===> reset
+2024-07-31 16:46:30 ERROR    line= E (904) secure_boot: Secure Boot V2 verification failed.
+2024-07-31 16:46:30 ERROR    line= E (910) esp_image: Secure boot signature verification failed
+2024-07-31 16:46:31 INFO     ### test_reset ==> PASSED
+PASSED                                                                   [ 47%]
+pairing_O2.py::TestPairing::test_capturelog_155 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:46:33 INFO     ===> capturelog 155
+2024-07-31 16:49:09 INFO     ### capturelog_155 ==> PASSED
+PASSED                                                                   [ 48%]
+pairing_O2.py::TestPairing::test_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:49:11 INFO     ===> reset 1
+2024-07-31 16:49:15 ERROR    line= E (163097) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163097) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163127) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163147) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163197) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163197) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163207) ipc_utils: ipc read error @ f000000c: ret:-1 read_resp.retval:0
+2024-07-31 16:49:15 ERROR    line= E (163207) ipc_utils: Read register error @ f000000c
+2024-07-31 16:49:15 ERROR    line= E (163237) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163247) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163267) ipc_utils: ipc read error @ f000000c: ret:-201 read_resp.retval:0
+2024-07-31 16:49:15 ERROR    line= E (163267) ipc_utils: Read register error @ f000000c
+2024-07-31 16:49:15 ERROR    line= E (163297) ipc_utils: ipc read error @ f000000c: ret:-201 read_resp.retval:0
+2024-07-31 16:49:15 ERROR    line= E (163297) ipc_utils: Read register error @ f000000c
+2024-07-31 16:49:15 ERROR    line= E (163307) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163317) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163337) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163347) ipc_utils: ipc read error @ f000000c: ret:-201 read_resp.retval:0
+2024-07-31 16:49:15 ERROR    line= E (163357) ipc_utils: Read register error @ f000000c
+2024-07-31 16:49:15 ERROR    line= E (163357) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163407) ipc_utils: ipc read error @ f000000c: ret:-201 read_resp.retval:0
+2024-07-31 16:49:15 ERROR    line= E (163407) ipc_utils: Read register error @ f000000c
+2024-07-31 16:49:15 ERROR    line= E (163427) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163437) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163437) ipc_utils: ipc read error @ f000000c: ret:-201 read_resp.retval:0
+2024-07-31 16:49:15 ERROR    line= E (163447) ipc_utils: Read register error @ f000000c
+2024-07-31 16:49:15 ERROR    line= E (163477) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163487) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163537) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163537) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163567) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163577) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163607) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163617) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163637) is31fl32xxa: is31fl32xxa: write timeout at: 0x6C
+2024-07-31 16:49:15 ERROR    line= E (163647) is31fl32xxa: is31fl32xxa: write error -1 at: 0x6C
+2024-07-31 16:49:15 INFO     ### test_reset_1 ==> PASSED
+PASSED                                                                   [ 49%]
+pairing_O2.py::TestPairing::test_wifi_ssid_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:49:17 INFO     ===> nvs get wifi_ssid
+2024-07-31 16:49:18 INFO     ### test_wifi_ssid_after_reset_1 ==> PASSED
+PASSED                                                                   [ 50%]
+pairing_O2.py::TestPairing::test_wifi_password_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:49:20 INFO     ===> nvs get wifi_password
+2024-07-31 16:49:21 INFO     ### test_wifi_password_after_reset_1 ==> PASSED
+PASSED                                                                   [ 50%]
+pairing_O2.py::TestPairing::test_group_aws_thing_info_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:49:24 INFO     ===> nvs get aws_client_id
+2024-07-31 16:49:25 INFO     ### test_get_aws_client_id ==> PASSED
+2024-07-31 16:49:28 INFO     ===> nvs get aws_port
+2024-07-31 16:49:29 INFO     ### test_get_aws_port ==> PASSED
+2024-07-31 16:49:32 INFO     ===> nvs get aws-root-ca
+2024-07-31 16:49:33 INFO     ### test_get_aws_root_ca ==> PASSED
+2024-07-31 16:49:36 INFO     ===> nvs get certificate
+2024-07-31 16:49:37 INFO     ### test_get_certificate ==> PASSED
+2024-07-31 16:49:40 INFO     ===> nvs get private
+2024-07-31 16:49:41 INFO     ### test_get_private ==> PASSED
+PASSED                                                                   [ 51%]
+pairing_O2.py::TestPairing::test_group_nvs_ls_info_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:49:44 INFO     ===> nvs ls
+2024-07-31 16:49:45 INFO     ### test_nvs_ls_serial_number ==> PASSED
+2024-07-31 16:49:48 INFO     ===> nvs ls
+2024-07-31 16:49:49 INFO     ### test_nvs_ls_aws_port ==> PASSED
+2024-07-31 16:49:52 INFO     ===> nvs ls
+2024-07-31 16:49:54 INFO     ### test_nvs_ls_aws-root-ca ==> PASSED
+2024-07-31 16:49:57 INFO     ===> nvs ls
+2024-07-31 16:49:58 INFO     ### test_nvs_ls_certificate ==> PASSED
+2024-07-31 16:50:01 INFO     ===> nvs ls
+2024-07-31 16:50:02 INFO     ### test_nvs_ls_private ==> PASSED
+2024-07-31 16:50:05 INFO     ===> nvs ls
+2024-07-31 16:50:06 INFO     ### test_nvs_ls_aws_endpoint ==> PASSED
+2024-07-31 16:50:09 INFO     ===> nvs ls
+2024-07-31 16:50:10 INFO     ### test_nvs_ls_device_paired ==> PASSED
+PASSED                                                                   [ 52%]
+pairing_O2.py::TestPairing::test_group_system_info_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:13 INFO     ===> mem
+2024-07-31 16:50:14 INFO     ### test_mem ==> PASSED
+PASSED                                                                   [ 53%]
+pairing_O2.py::TestPairing::test_get_aws_thing_name_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:16 INFO     ===> nvs get aws_thing_name
+2024-07-31 16:50:17 INFO     ### test_get_aws_thing_name_after_reset_1 ==> PASSED
+PASSED                                                                   [ 54%]
+pairing_O2.py::TestPairing::test_nvs_get_oscar_is_paired_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:19 INFO     ===> nvs get oscar_is_paired
+2024-07-31 16:50:20 INFO     ### test_nvs_get_oscar_is_paired_after_reset_1 ==> PASSED
+PASSED                                                                   [ 55%]
+pairing_O2.py::TestPairing::test_nvs_get_oscar_is_secure_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:22 INFO     ===> nvs get oscar_is_secure
+2024-07-31 16:50:23 INFO     ### test_nvs_get_oscar_is_secure_after_reset_1 ==> PASSED
+PASSED                                                                   [ 56%]
+pairing_O2.py::TestPairing::test_wifi_get_ip_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:25 INFO     ===> wifi get_ip
+2024-07-31 16:50:26 INFO     ### test_wifi_get_ip_after_reset_1 ==> PASSED
+PASSED                                                                   [ 57%]
+pairing_O2.py::TestPairing::test_ping_device_IP_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:28 INFO     ** ping device: 192.168.0.11 **
+2024-07-31 16:50:28 INFO     Response time from 192.168.0.11 is 0.09814620018005371 ms
+2024-07-31 16:50:28 INFO     ### ping_device_IP_after_reset_1 ==> PASSED
+PASSED                                                                   [ 58%]
+pairing_O2.py::TestPairing::test_nvs_get_aws_endpoint_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:30 INFO     ===> nvs get aws_endpoint
+2024-07-31 16:50:31 INFO     ### test_nvs_get_aws_endpoint_after_reset_1 ==> PASSED
+PASSED                                                                   [ 59%]
+pairing_O2.py::TestPairing::test_wifi_ping_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:33 INFO     ===> wifi ping devices.staging.mill.com
+2024-07-31 16:50:48 ERROR    ConnectionError(command)= wifi ping devices.staging.mill.com
+
+2024-07-31 16:50:48 INFO     ### test_wifi_ping_after_reset_1 ==> PASSED
+PASSED                                                                   [ 60%]
+pairing_O2.py::TestPairing::test_wifi_running_rssi_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:50 INFO     ===> wifi running_rssi
+2024-07-31 16:50:51 INFO     ### test_wifi_running_rssi_after_reset_1 ==> PASSED
+PASSED                                                                   [ 61%]
+pairing_O2.py::TestPairing::test_ble_deviceAddr_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:53 INFO     ===> ble deviceAddr
+2024-07-31 16:50:54 INFO     ### test_ble_deviceAddr_after_reset_1 ==> PASSED
+PASSED                                                                   [ 62%]
+pairing_O2.py::TestPairing::test_ble_advertisement_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:56 INFO     ===> ble advertisement
+2024-07-31 16:50:57 INFO     ### test_ble_advertisement_after_reset_1 ==> PASSED
+PASSED                                                                   [ 63%]
+pairing_O2.py::TestPairing::test_get_shadow_online_true_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:50:59 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-31 16:51:00 INFO     ### get_shadow_online_true_after_reset_1 ==> PASSED
+PASSED                                                                   [ 64%]
+pairing_O2.py::TestPairing::test_blue_led_turn_off_0_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:51:02 INFO     ===> led get 0 0
+2024-07-31 16:51:03 INFO     ### test_blue_led_turn_off_0_after_reset_1 ==> PASSED
+PASSED                                                                   [ 65%]
+pairing_O2.py::TestPairing::test_blue_led_turn_off_1_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:51:05 INFO     ===> led get 0 1
+2024-07-31 16:51:06 INFO     ### test_blue_led_turn_off_1_after_reset_1 ==> PASSED
+PASSED                                                                   [ 66%]
+pairing_O2.py::TestPairing::test_blue_led_turn_off_2_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:51:08 INFO     ===> led get 0 2
+2024-07-31 16:51:09 INFO     ### test_blue_led_turn_off_2_after_reset_1 ==> PASSED
+PASSED                                                                   [ 67%]
+pairing_O2.py::TestPairing::test_blue_led_turn_off_3_after_reset_1 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:51:11 INFO     ===> led get 0 3
+2024-07-31 16:51:12 INFO     ### test_blue_led_turn_off_3_after_reset_1 ==> PASSED
+PASSED                                                                   [ 68%]
+pairing_O2.py::TestPairing::test_wifi_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:51:14 INFO     ===> wifi stop
+2024-07-31 16:51:15 ERROR    line= E (286387) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54
+2024-07-31 16:51:15 ERROR    line= E (286397) tls_freertos: Reading failed, errno= 119
+2024-07-31 16:51:15 ERROR    line= E (286397) mqtt_helpers: mqtt_loop_keep_alive returned with status = 4.
+2024-07-31 16:51:15 ERROR    line= E (286407) mqtt_helpers: Network issue, try to disconnect shadow.
+2024-07-31 16:51:15 ERROR    line= E (286417) transport_base: poll_write select error 0, errno = Success, fd = 54
+2024-07-31 16:51:15 ERROR    line= E (286427) tls_freertos: Writing failed, errno= 119
+2024-07-31 16:51:15 ERROR    line= E (286437) mqtt_helpers: Failed to send UNSUBSCRIBE packet to broker with error = 3.
+2024-07-31 16:51:15 ERROR    line= E (286437) mqtt_helpers: Failed to send UNSUBSCRIBE packet to broker with error = 3.
+2024-07-31 16:51:15 ERROR    line= E (286457) jobs_sanford: Failed to unsubscribe to '$aws/things/MG22335A2US0024/jobs/get'
+2024-07-31 16:51:15 ERROR    line= E (286487) transport_base: poll_write select error 0, errno = Success, fd = 54
+2024-07-31 16:51:15 ERROR    line= E (286517) mqtt_helpers: Failed to send UNSUBSCRIBE packet to broker with error = 3.
+2024-07-31 16:51:15 ERROR    line= E (286517) mqtt_helpers: Failed to send UNSUBSCRIBE packet to broker with error = 3.
+2024-07-31 16:51:15 ERROR    line= E (286527) mqtt_helpers: Failed to send UNSUBSCRIBE packet to broker with error = 3.
+2024-07-31 16:51:15 ERROR    line= E (286547) shadow_sanford: Error with disconnecting Status Device Shadow
+2024-07-31 16:51:15 INFO     ### test_wifi_stop ==> PASSED
+PASSED                                                                   [ 69%]
+pairing_O2.py::TestPairing::test_wait_time_15s 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:17 INFO     ** wait_time_pause: 60 seconds **
+2024-07-31 16:52:17 INFO     ### wait_time_15s ==> PASSED
+PASSED                                                                   [ 70%]
+pairing_O2.py::TestPairing::test_no_wifi_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:19 INFO     ===> wifi ping devices.staging.mill.com
+2024-07-31 16:52:20 ERROR    line= E (301197) esp-tls: [sock=54] connect() error: Host is unreachable
+2024-07-31 16:52:20 ERROR    line= E (301197) esp-tls: Failed to open new connection
+2024-07-31 16:52:20 ERROR    line= E (301207) transport_base: Failed to open a new connection
+2024-07-31 16:52:20 ERROR    line= E (303997) esp-tls: [sock=54] connect() error: Host is unreachable
+2024-07-31 16:52:20 ERROR    line= E (304007) esp-tls: Failed to open new connection
+2024-07-31 16:52:20 ERROR    line= E (304007) transport_base: Failed to open a new connection
+2024-07-31 16:52:20 ERROR    line= E (322977) esp-tls: couldn't get hostname for :devices.staging.mill.com: getaddrinfo() returns 202, addrinfo=0x0
+2024-07-31 16:52:20 ERROR    line= E (322977) esp-tls: Failed to open new connection
+2024-07-31 16:52:20 ERROR    line= E (322987) transport_base: Failed to open a new connection
+2024-07-31 16:52:20 ERROR    line= E (322987) mqtt_helpers: Connection to the broker failed, all attempts exhausted.
+2024-07-31 16:52:20 ERROR    line= E (322997) mqtt_helpers: Failed to connect to MQTT broker.
+2024-07-31 16:52:20 ERROR    line= E (337667) esp-tls: couldn't get hostname for :devices.staging.mill.com: getaddrinfo() returns 202, addrinfo=0x0
+2024-07-31 16:52:20 ERROR    line= E (337667) esp-tls: Failed to open new connection
+2024-07-31 16:52:20 ERROR    line= E (337677) transport_base: Failed to open a new connection
+2024-07-31 16:52:20 INFO     ### test_no_wifi_after_stop ==> PASSED
+PASSED                                                                   [ 71%]
+pairing_O2.py::TestPairing::test_no_ip_address_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:22 INFO     ===> wifi get_ip
+2024-07-31 16:52:23 ERROR    line= E (354757) wifi: WiFi is not connected.
+2024-07-31 16:52:23 INFO     ### test_no_ip_address_after_stop ==> PASSED
+PASSED                                                                   [ 72%]
+pairing_O2.py::TestPairing::test_nvs_get_wifi_ssid_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:25 INFO     ===> nvs get wifi_ssid
+2024-07-31 16:52:26 INFO     ### test_nvs_get_wifi_ssid_after_stop ==> PASSED
+PASSED                                                                   [ 73%]
+pairing_O2.py::TestPairing::test_nvs_get_wifi_password_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:28 INFO     ===> nvs get wifi_password
+2024-07-31 16:52:29 INFO     ### test_nvs_get_wifi_password_after_stop ==> PASSED
+PASSED                                                                   [ 74%]
+pairing_O2.py::TestPairing::test_nvs_get_oscar_is_paired_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:31 INFO     ===> nvs get oscar_is_paired
+2024-07-31 16:52:32 INFO     ### test_nvs_get_oscar_is_paired_after_stop ==> PASSED
+PASSED                                                                   [ 75%]
+pairing_O2.py::TestPairing::test_yes_aws_thing_name_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:34 INFO     ===> nvs get aws_thing_name
+2024-07-31 16:52:36 INFO     ### test_yes_aws_thing_name_after_stop ==> PASSED
+PASSED                                                                   [ 75%]
+pairing_O2.py::TestPairing::test_no_wifi_running_rssi_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:38 INFO     ===> wifi running_rssi
+2024-07-31 16:52:39 INFO     ### test_no_wifi_running_rssi_after_stop ==> PASSED
+PASSED                                                                   [ 76%]
+pairing_O2.py::TestPairing::test_yes_ble_deviceAddr_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:41 INFO     ===> ble deviceAddr
+2024-07-31 16:52:42 INFO     ### test_yes_ble_deviceAddr_after_stop ==> PASSED
+PASSED                                                                   [ 77%]
+pairing_O2.py::TestPairing::test_yes_ble_advertisement_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:44 INFO     ===> ble advertisement
+2024-07-31 16:52:45 INFO     ### test_yes_ble_advertisement_after_stop ==> PASSED
+PASSED                                                                   [ 78%]
+pairing_O2.py::TestPairing::test_group_aws_thing_info_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:52:48 INFO     ===> nvs get aws_client_id
+2024-07-31 16:52:49 INFO     ### test_get_aws_client_id ==> PASSED
+2024-07-31 16:52:52 INFO     ===> nvs get aws_port
+2024-07-31 16:52:53 INFO     ### test_get_aws_port ==> PASSED
+2024-07-31 16:52:56 INFO     ===> nvs get aws-root-ca
+2024-07-31 16:52:57 INFO     ### test_get_aws_root_ca ==> PASSED
+2024-07-31 16:53:00 INFO     ===> nvs get certificate
+2024-07-31 16:53:01 INFO     ### test_get_certificate ==> PASSED
+2024-07-31 16:53:04 INFO     ===> nvs get private
+2024-07-31 16:53:05 INFO     ### test_get_private ==> PASSED
+PASSED                                                                   [ 79%]
+pairing_O2.py::TestPairing::test_group_nvs_ls_info_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:53:08 INFO     ===> nvs ls
+2024-07-31 16:53:09 INFO     ### test_nvs_ls_serial_number ==> PASSED
+2024-07-31 16:53:12 INFO     ===> nvs ls
+2024-07-31 16:53:13 INFO     ### test_nvs_ls_aws_port ==> PASSED
+2024-07-31 16:53:16 INFO     ===> nvs ls
+2024-07-31 16:53:17 INFO     ### test_nvs_ls_aws-root-ca ==> PASSED
+2024-07-31 16:53:20 INFO     ===> nvs ls
+2024-07-31 16:53:21 INFO     ### test_nvs_ls_certificate ==> PASSED
+2024-07-31 16:53:24 INFO     ===> nvs ls
+2024-07-31 16:53:25 INFO     ### test_nvs_ls_private ==> PASSED
+2024-07-31 16:53:28 INFO     ===> nvs ls
+2024-07-31 16:53:30 INFO     ### test_nvs_ls_aws_endpoint ==> PASSED
+2024-07-31 16:53:33 INFO     ===> nvs ls
+2024-07-31 16:53:34 INFO     ### test_nvs_ls_device_paired ==> PASSED
+PASSED                                                                   [ 80%]
+pairing_O2.py::TestPairing::test_group_system_info_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:53:37 INFO     ===> mem
+2024-07-31 16:53:38 INFO     ### test_mem ==> PASSED
+PASSED                                                                   [ 81%]
+pairing_O2.py::TestPairing::test_get_shadow_online_false_after_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:53:40 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-31 16:53:40 INFO     ### get_shadow_online_false_after_stop ==> PASSED
+PASSED                                                                   [ 82%]
+pairing_O2.py::TestPairing::test_log_2 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:53:42 INFO     ===> log 2
+2024-07-31 16:53:43 INFO     ### test_log_2 ==> PASSED
+PASSED                                                                   [ 83%]
+pairing_O2.py::TestPairing::test_wifi_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:53:45 INFO     ===> wifi start
+2024-07-31 16:53:58 ERROR    ConnectionError(command)= wifi start
+
+2024-07-31 16:54:11 ERROR    ConnectionError(command)= wifi start
+
+2024-07-31 16:54:14 INFO     retries counts: 1
+2024-07-31 16:54:18 INFO     retries counts: 2
+2024-07-31 16:54:22 INFO     retries counts: 3
+2024-07-31 16:54:26 INFO     retries counts: 4
+2024-07-31 16:54:30 INFO     retries counts: 5
+2024-07-31 16:54:31 ERROR    Timeout after 5 retries!
+2024-07-31 16:54:31 INFO     ### test_wifi_start ==> PASSED
+PASSED                                                                   [ 84%]
+pairing_O2.py::TestPairing::test_log_3 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:54:33 INFO     ===> log 3
+2024-07-31 16:54:34 INFO     ### test_log_3 ==> PASSED
+PASSED                                                                   [ 85%]
+pairing_O2.py::TestPairing::test_wifi_get_ip_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:54:36 INFO     ===> wifi get_ip
+2024-07-31 16:54:37 INFO     ### test_wifi_get_ip_after_start ==> PASSED
+PASSED                                                                   [ 86%]
+pairing_O2.py::TestPairing::test_ping_device_192_168_0_32_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:54:39 INFO     ** ping device: 192.168.0.11 **
+2024-07-31 16:54:39 INFO     Response time from 192.168.0.11 is 0.005988359451293945 ms
+2024-07-31 16:54:39 INFO     ### ping_device_192_168_0_32_after_start ==> PASSED
+PASSED                                                                   [ 87%]
+pairing_O2.py::TestPairing::test_nvs_get_aws_endpoint_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:54:41 INFO     ===> nvs get aws_endpoint
+2024-07-31 16:54:42 INFO     ### test_nvs_get_aws_endpoint_after_start ==> PASSED
+PASSED                                                                   [ 88%]
+pairing_O2.py::TestPairing::test_wifi_ping_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:54:44 INFO     ===> wifi ping devices.staging.mill.com
+2024-07-31 16:55:00 ERROR    ConnectionError(command)= wifi ping devices.staging.mill.com
+
+2024-07-31 16:55:00 INFO     ### test_wifi_ping_after_start ==> PASSED
+PASSED                                                                   [ 89%]
+pairing_O2.py::TestPairing::test_wifi_ssid_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:55:02 INFO     ===> nvs get wifi_ssid
+2024-07-31 16:55:03 INFO     ### test_wifi_ssid_after_start ==> PASSED
+PASSED                                                                   [ 90%]
+pairing_O2.py::TestPairing::test_wifi_password_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:55:05 INFO     ===> nvs get wifi_password
+2024-07-31 16:55:06 INFO     ### test_wifi_password_after_start ==> PASSED
+PASSED                                                                   [ 91%]
+pairing_O2.py::TestPairing::test_nvs_get_oscar_is_paired_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:55:08 INFO     ===> nvs get oscar_is_paired
+2024-07-31 16:55:09 INFO     ### test_nvs_get_oscar_is_paired_after_start ==> PASSED
+PASSED                                                                   [ 92%]
+pairing_O2.py::TestPairing::test_nvs_get_oscar_is_secure_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:55:11 INFO     ===> nvs get oscar_is_secure
+2024-07-31 16:55:12 INFO     ### test_nvs_get_oscar_is_secure_after_start ==> PASSED
+PASSED                                                                   [ 93%]
+pairing_O2.py::TestPairing::test_wifi_running_rssi_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:55:14 INFO     ===> wifi running_rssi
+2024-07-31 16:55:15 INFO     ### test_wifi_running_rssi_after_start ==> PASSED
+PASSED                                                                   [ 94%]
+pairing_O2.py::TestPairing::test_ble_deviceAddr_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:55:17 INFO     ===> ble deviceAddr
+2024-07-31 16:55:18 INFO     ### test_ble_deviceAddr_after_start ==> PASSED
+PASSED                                                                   [ 95%]
+pairing_O2.py::TestPairing::test_ble_advertisement_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:55:20 INFO     ===> ble advertisement
+2024-07-31 16:55:22 INFO     ### test_ble_advertisement_after_start ==> PASSED
+PASSED                                                                   [ 96%]
+pairing_O2.py::TestPairing::test_group_aws_thing_info_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:55:25 INFO     ===> nvs get aws_client_id
+2024-07-31 16:55:26 INFO     ### test_get_aws_client_id ==> PASSED
+2024-07-31 16:55:29 INFO     ===> nvs get aws_port
+2024-07-31 16:55:30 INFO     ### test_get_aws_port ==> PASSED
+2024-07-31 16:55:33 INFO     ===> nvs get aws-root-ca
+2024-07-31 16:55:34 INFO     ### test_get_aws_root_ca ==> PASSED
+2024-07-31 16:55:37 INFO     ===> nvs get certificate
+2024-07-31 16:55:38 INFO     ### test_get_certificate ==> PASSED
+2024-07-31 16:55:41 INFO     ===> nvs get private
+2024-07-31 16:55:42 INFO     ### test_get_private ==> PASSED
+PASSED                                                                   [ 97%]
+pairing_O2.py::TestPairing::test_group_nvs_ls_info_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:55:45 INFO     ===> nvs ls
+2024-07-31 16:55:46 INFO     ### test_nvs_ls_serial_number ==> PASSED
+2024-07-31 16:55:49 INFO     ===> nvs ls
+2024-07-31 16:55:50 INFO     ### test_nvs_ls_aws_port ==> PASSED
+2024-07-31 16:55:53 INFO     ===> nvs ls
+2024-07-31 16:55:54 INFO     ### test_nvs_ls_aws-root-ca ==> PASSED
+2024-07-31 16:55:57 INFO     ===> nvs ls
+2024-07-31 16:55:58 INFO     ### test_nvs_ls_certificate ==> PASSED
+2024-07-31 16:56:01 INFO     ===> nvs ls
+2024-07-31 16:56:02 INFO     ### test_nvs_ls_private ==> PASSED
+2024-07-31 16:56:05 INFO     ===> nvs ls
+2024-07-31 16:56:06 INFO     ### test_nvs_ls_aws_endpoint ==> PASSED
+2024-07-31 16:56:09 INFO     ===> nvs ls
+2024-07-31 16:56:10 INFO     ### test_nvs_ls_device_paired ==> PASSED
+PASSED                                                                   [ 98%]
+pairing_O2.py::TestPairing::test_group_system_info_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:56:13 INFO     ===> mem
+2024-07-31 16:56:15 INFO     ### test_mem ==> PASSED
+PASSED                                                                   [ 99%]
+pairing_O2.py::TestPairing::test_get_shadow_online_true_after_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 16:56:17 INFO     Found credentials in shared credentials file: ~/.aws/credentials
+2024-07-31 16:56:17 INFO     ### get_shadow_online_true_after_start ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 104 passed in 997.89s (0:16:37) ========================

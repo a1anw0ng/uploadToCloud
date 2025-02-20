@@ -1,0 +1,34 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 4 items
+
+bat_dgo_bucket_fullness_low.py::TestBAT_DGO_BUCKET_FULLNESS_LOW::test_mass_clear 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:37 INFO     ===> mass clear
+2024-07-31 19:54:38 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [ 25%]
+bat_dgo_bucket_fullness_low.py::TestBAT_DGO_BUCKET_FULLNESS_LOW::test_inject_500g 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:40 INFO     ===> mass inject 500
+2024-07-31 19:54:40 INFO     ### test_inject_500g ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_bucket_fullness_low.py::TestBAT_DGO_BUCKET_FULLNESS_LOW::test_mass_500g 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:42 INFO     ===> mass get -d
+2024-07-31 19:54:42 INFO     ### test_mass_500g ==> PASSED
+PASSED                                                                   [ 75%]
+bat_dgo_bucket_fullness_low.py::TestBAT_DGO_BUCKET_FULLNESS_LOW::test_get_shadow_bucketFullness_Low 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:54:44 INFO     Found credentials in environment variables.
+2024-07-31 19:54:45 INFO     ### get_shadow_bucketFullness_Low ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+============================== 4 passed in 9.61s ===============================

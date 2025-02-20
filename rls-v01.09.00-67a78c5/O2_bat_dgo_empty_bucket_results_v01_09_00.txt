@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: metadata-3.1.1, json-report-1.5.0, repeat-0.9.3
+collected 9 items
+
+bat_dgo_empty_bucket.py::TestBAT_DGO_EMPTY_BUCKET::test_mass_clear 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:41:12 INFO     ===> mass clear
+2024-08-01 05:41:12 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [ 11%]
+bat_dgo_empty_bucket.py::TestBAT_DGO_EMPTY_BUCKET::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:41:17 INFO     dgo manual_stop executed
+2024-08-01 05:41:21 INFO     Current State: IDLE
+2024-08-01 05:41:21 INFO     ===> dgo status
+2024-08-01 05:41:21 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 22%]
+bat_dgo_empty_bucket.py::TestBAT_DGO_EMPTY_BUCKET::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:41:23 INFO     ===> dgo manual_start
+2024-08-01 05:41:23 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 33%]
+bat_dgo_empty_bucket.py::TestBAT_DGO_EMPTY_BUCKET::test_dgo_skip_stage 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:41:25 INFO     ===> dgo stage skip
+2024-08-01 05:41:27 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 44%]
+bat_dgo_empty_bucket.py::TestBAT_DGO_EMPTY_BUCKET::test_dgo_status_HIP_state 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:41:29 INFO     ===> dgo status
+2024-08-01 05:41:29 INFO     ### test_dgo_status_HIP_state ==> PASSED
+PASSED                                                                   [ 55%]
+bat_dgo_empty_bucket.py::TestBAT_DGO_EMPTY_BUCKET::test_running_2_5_hrs_in_hipstate 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:46:32 INFO     ** wait_time_pause: 300 seconds **
+2024-08-01 05:46:32 INFO     ### wait_time_300s ==> PASSED
+2024-08-01 05:46:35 INFO     ===> dgo status
+2024-08-01 05:46:35 INFO     ### test_dgo_status_300 ==> PASSED
+2024-08-01 05:56:38 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 05:56:38 INFO     ### wait_time_600s ==> PASSED
+2024-08-01 05:56:41 INFO     ===> dgo status
+2024-08-01 05:56:41 INFO     ### test_dgo_status_900 ==> PASSED
+2024-08-01 06:06:44 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 06:06:44 INFO     ### wait_time_1500s ==> PASSED
+2024-08-01 06:06:47 INFO     ===> dgo status
+2024-08-01 06:06:48 INFO     ### test_dgo_status_1500 ==> PASSED
+2024-08-01 06:16:51 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 06:16:51 INFO     ### wait_time_2100s ==> PASSED
+2024-08-01 06:16:54 INFO     ===> dgo status
+2024-08-01 06:16:54 INFO     ### test_dgo_status_2100 ==> PASSED
+2024-08-01 06:26:57 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 06:26:57 INFO     ### wait_time_2600s ==> PASSED
+2024-08-01 06:27:00 INFO     ===> dgo status
+2024-08-01 06:27:00 INFO     ### test_dgo_status_2600 ==> PASSED
+2024-08-01 06:37:03 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 06:37:03 INFO     ### wait_time_3100s ==> PASSED
+2024-08-01 06:37:06 INFO     ===> dgo status
+2024-08-01 06:37:07 INFO     ### test_dgo_status_3100 ==> PASSED
+2024-08-01 06:47:10 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 06:47:10 INFO     ### wait_time_3700s ==> PASSED
+2024-08-01 06:47:13 INFO     ===> dgo status
+2024-08-01 06:47:13 INFO     ### test_dgo_status_3700 ==> PASSED
+2024-08-01 06:57:16 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 06:57:16 INFO     ### wait_time_4300s ==> PASSED
+2024-08-01 06:57:19 INFO     ===> dgo status
+2024-08-01 06:57:19 INFO     ### test_dgo_status_4300 ==> PASSED
+2024-08-01 07:07:22 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 07:07:22 INFO     ### wait_time_4900s ==> PASSED
+2024-08-01 07:07:26 INFO     ===> dgo status
+2024-08-01 07:07:26 INFO     ### test_dgo_status_4900 ==> PASSED
+2024-08-01 07:17:29 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 07:17:29 INFO     ### wait_time_5500s ==> PASSED
+2024-08-01 07:17:32 INFO     ===> dgo status
+2024-08-01 07:17:32 INFO     ### test_dgo_status_5500 ==> PASSED
+2024-08-01 07:27:35 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 07:27:35 INFO     ### wait_time_6100s ==> PASSED
+2024-08-01 07:27:38 INFO     ===> dgo status
+2024-08-01 07:27:38 INFO     ### test_dgo_status_6100 ==> PASSED
+2024-08-01 07:37:41 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 07:37:42 INFO     ### wait_time_6700s ==> PASSED
+2024-08-01 07:37:45 INFO     ===> dgo status
+2024-08-01 07:37:45 INFO     ### test_dgo_status_6700 ==> PASSED
+2024-08-01 07:47:48 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 07:47:48 INFO     ### wait_time_7300s ==> PASSED
+2024-08-01 07:47:51 INFO     ===> dgo status
+2024-08-01 07:47:51 INFO     ### test_dgo_status_7300 ==> PASSED
+2024-08-01 07:57:54 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 07:57:54 INFO     ### wait_time_7900s ==> PASSED
+2024-08-01 07:57:57 INFO     ===> dgo status
+2024-08-01 07:57:57 INFO     ### test_dgo_status_7900 ==> PASSED
+2024-08-01 08:08:01 INFO     ** wait_time_pause: 600 seconds **
+2024-08-01 08:08:01 INFO     ### wait_time_8500s ==> PASSED
+2024-08-01 08:08:04 INFO     ===> dgo status
+2024-08-01 08:08:04 INFO     ### test_dgo_status_8500 ==> PASSED
+2024-08-01 08:12:47 INFO     ** wait_time_pause: 280 seconds **
+2024-08-01 08:12:47 INFO     ### wait_time_8800s ==> PASSED
+PASSED                                                                   [ 66%]
+bat_dgo_empty_bucket.py::TestBAT_DGO_EMPTY_BUCKET::test_dgo_status_COOLDOWN_state 
+-------------------------------- live log call ---------------------------------
+2024-08-01 08:12:49 INFO     ===> dgo status
+2024-08-01 08:12:49 INFO     ### test_dgo_status_COOLDOWN_state ==> PASSED
+PASSED                                                                   [ 77%]
+bat_dgo_empty_bucket.py::TestBAT_DGO_EMPTY_BUCKET::test_dgo_status_COOLDOWN_stage_remaining 
+-------------------------------- live log call ---------------------------------
+2024-08-01 08:12:51 INFO     ===> dgo status
+2024-08-01 08:12:51 INFO     ### test_dgo_status_COOLDOWN_stage_remaining ==> PASSED
+PASSED                                                                   [ 88%]
+bat_dgo_empty_bucket.py::TestBAT_DGO_EMPTY_BUCKET::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-08-01 08:12:53 INFO     ===> dgo manual_stop
+2024-08-01 08:12:53 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 9 passed in 9104.18s (2:31:44) ========================

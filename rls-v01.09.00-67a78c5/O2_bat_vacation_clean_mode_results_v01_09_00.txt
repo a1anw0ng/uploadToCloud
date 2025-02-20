@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 8 items
+
+bat_vacation_clean_mode.py::Test_DGO_Vacation_Clean_Mode::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:49:12 INFO     dgo manual_stop executed
+2024-07-31 19:49:15 INFO     Current State: IDLE
+2024-07-31 19:49:15 INFO     ===> dgo status
+2024-07-31 19:49:15 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 12%]
+bat_vacation_clean_mode.py::Test_DGO_Vacation_Clean_Mode::test_mass_clear 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:49:17 INFO     ===> mass clear
+2024-07-31 19:49:18 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [ 25%]
+bat_vacation_clean_mode.py::Test_DGO_Vacation_Clean_Mode::test_dgo_push_next_cycle_start_5day 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:49:20 INFO     ===> dgo run_in_d 5
+2024-07-31 19:49:20 INFO     ### test_dgo_push_next_cycle_start_5day ==> PASSED
+PASSED                                                                   [ 37%]
+bat_vacation_clean_mode.py::Test_DGO_Vacation_Clean_Mode::test_dgo_select_vacation_mode_clean 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:49:22 INFO     ===> vacation sel 0
+2024-07-31 19:49:23 INFO     ### test_dgo_select_vacation_mode_clean ==> PASSED
+PASSED                                                                   [ 50%]
+bat_vacation_clean_mode.py::Test_DGO_Vacation_Clean_Mode::test_mass_inject_80g 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:49:26 INFO     ===> mass inject 80
+2024-07-31 19:49:26 INFO     ### test_mass_inject_80g ==> PASSED
+PASSED                                                                   [ 62%]
+bat_vacation_clean_mode.py::Test_DGO_Vacation_Clean_Mode::test_verify_vacation_mode_remained 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:49:28 INFO     ===> dgo status
+2024-07-31 19:49:29 INFO     ### test_verify_vacation_mode_remained ==> PASSED
+PASSED                                                                   [ 75%]
+bat_vacation_clean_mode.py::Test_DGO_Vacation_Clean_Mode::test_mass_inject_120g 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:49:31 INFO     ===> mass inject 120
+2024-07-31 19:49:31 INFO     ### test_mass_inject_120g ==> PASSED
+PASSED                                                                   [ 87%]
+bat_vacation_clean_mode.py::Test_DGO_Vacation_Clean_Mode::test_verify_vacation_mode_cancelled 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:49:33 INFO     ===> dgo status
+2024-07-31 19:49:33 INFO     ### test_verify_vacation_mode_cancelled ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+============================== 8 passed in 26.46s ==============================

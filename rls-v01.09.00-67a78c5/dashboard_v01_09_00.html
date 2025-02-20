@@ -1,0 +1,2565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Automation Test Report</title>
+<style>
+        html, body {
+            height: 100%; /* Ensures the html and body take full viewport height */
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-size: 100% 100px, 100% 100%; /* Image height fixed to 200px and gradient covers the rest */
+            background-repeat: no-repeat;
+            background-position: bottom, top;
+            background-attachment: fixed;
+        }
+        body.style1 {
+            background-image: url('../asset/background.png'), linear-gradient(to bottom, lightyellow, lightgreen 90%);
+        }
+        body.style2 {
+            background-image: url('../asset/background.png'), linear-gradient(to bottom, lightyellow, rgb(238, 144, 149) 90%);
+        }
+        .header {
+            text-align: center;
+            padding: 2px;
+        }
+        .header img {
+            width: 100px;
+            height: auto;
+        }
+        /* Rest of your CSS */
+
+        .centered-text {
+            text-align: center; /* Align text to the left within the container */
+            margin-top: 3px; /* Spacing above the text */
+            font-size: 22px; /* Larger font size */
+        }
+
+        /* Updated CSS for the table with margins */
+        .report-table {
+            width: 80%; /* Set a specific width for the table */
+            border-collapse: collapse;
+            margin-top: 20px; /* Space above the table */
+            margin-left: auto; /* Left margin auto for centering */
+            margin-right: auto; /* Right margin auto for centering */
+            background-color: transparent; /* Make table background transparent */
+        }
+        .report-table th, .report-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            /* background-color: #f9f9f9; */
+            /* background-color: transparent;  Make cell backgrounds transparent */
+        }
+        .report-table th {
+            background-color: #4CAF50; /* Dark green for headers */
+            color: white; /* White text for headers */
+            /* background-color: transparent;  Make header background transparent */
+        }
+        .report-table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Slightly darker grey for even rows */
+            /* background-color: #f9f9f9; */
+            /* background-color: transparent;  Make even row backgrounds transparent */
+        }
+        .report-table tr:nth-child(odd) {
+            background-color: #e8e8e8; /* Slightly darker gray for odd rows */
+        }
+        .passed {
+            color: green; /* Green text for passed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; 
+        }
+        .failed {
+            color: red; /* Red text for failed values */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; /* Larger font size */
+        }
+        .subheading {
+            font-size: 35px; /* Larger font size for the subheading */
+        }
+        .inline-details {
+            display: inline-block;
+            margin-right: 20px; /* Spacing between the elements */
+        }
+        .total-passed {
+        color: green;
+        }
+
+        .total-failed {
+            color: red;
+        }
+        #randomImage {
+            position: absolute;
+            width: 150px; /* New width for the image */
+            height: auto; /* Height will scale automatically */
+        }
+        .content-container {
+            /* max-height: 1000px;  Set the maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            margin-bottom: 2px; /* Add some space below the container */
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        .jira-blink-link {
+            margin-bottom: 1px; /* Space between links */
+            color: red;
+            font-style: italic;
+            font-weight: bold;
+            animation: blink 1s linear infinite;
+        }
+        .jira-link {
+            margin-bottom: 1px; /* Space between links */
+            color: red;
+            font-style: italic;
+        }
+        .diagram-text {
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+        }
+        #table_o1 th, #table_o1 td, #table_o2 th, #table_o2 td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="style1">
+<div class="header">
+<img alt="Logo" src="../asset/logo.png"/>
+<h1>Automation Test Report</h1>
+<h3>Build Date: <span id="id_built_date_o1" style="font-style: italic;">{{Build_Date}}</span> </h3>
+</div>
+<img alt="Magnifying Glass" id="randomImage" src="../asset/magnify_classes.png"/>
+<div class="centered-text">
+<div class="info-container"></div>
+<span class="inline-details"><strong>Template:</strong> <span id="id_template_o1" style="font-style: italic;"></span></span>
+<span class="inline-details"><strong>Build:</strong> <span id="id_build_o1" style="font-style: italic;"></span> </span>
+<span class="inline-details"><strong>Code:</strong> <span id="id_code_o1" style="font-style: italic;"></span> </span>
+</div>
+<!--
+
+    <div style="height: 20px;"></div>
+    <div class="content-container">
+        <div class="centered-text">
+            <h2 class="subheading">O1</h2>
+            <span class="inline-details"><strong>Prod:</strong> <span style="font-style: italic;" id="id_prod_o1"></span></span>
+            <span class="inline-details"><strong>Ext. FT:</strong> <span style="font-style: italic;" id="id_ext_ft_o1"></span></span>
+            <span class="inline-details"><strong>Int. FT:</strong> <span style="font-style: italic;" id="id_int_ft_o1"></span></span>
+        </div>  
+
+        
+        
+        <table id="table_o1" class="report-table">
+            <tr>
+                <th style="text-align: center;">Test Suite</th>
+                <th style="text-align: center;">Test Cases</th>
+                <th style="text-align: center;">Passed</th>
+                <th style="text-align: center;">Failed</th>
+                <th style="text-align: center;">Execution Time</th>
+                <th style="text-align: center;">Repeats</th>
+                <th style="text-align: center;">Jira/Blocker</th>
+                <th style="text-align: center;">Detail Test Result</th> 
+                <th style="text-align: center;">Detail Test Cases</th>
+            </tr>
+            <tr>
+                <td>OTA_SELF</td>
+                <td id="id_ota_self_tests_o1"></td>
+                <td class="passed" id="id_ota_self_passed_o1"></td>
+                <td class="failed" id="id_ota_self_failed_o1"></td>
+                <td id="id_ota_self_exectime_o1"></td>
+                <td id="id_ota_self_repeats_o1"></td>
+                <td id="id_ota_self_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>OTA_PROD_UPGRADE</td>
+                <td id="id_ota_prod_tests_o1"></td>
+                <td class="passed" id="id_ota_prod_passed_o1"></td>
+                <td class="failed" id="id_ota_prod_failed_o1"></td>
+                <td id="id_ota_prod_exectime_o1"></td>
+                <td id="id_ota_prod_repeats_o1"></td>
+                <td id="id_ota_prod_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>OTA_EXT_FT_UPGRADE</td>
+                <td id="id_ota_ext_tests_o1"></td>
+                <td class="passed" id="id_ota_ext_passed_o1"></td>
+                <td class="failed" id="id_ota_ext_failed_o1"></td>
+                <td id="id_ota_ext_exectime_o1"></td>
+                <td id="id_ota_ext_repeats_o1"></td>
+                <td id="id_ota_ext_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>OTA_INT_FT_UPGRADE</td>
+                <td id="id_ota_int_tests_o1"></td>
+                <td class="passed" id="id_ota_int_passed_o1"></td>
+                <td class="failed" id="id_ota_int_failed_o1"></td>
+                <td id="id_ota_int_exectime_o1"></td>
+                <td id="id_ota_int_repeats_o1"></td>
+                <td id="id_ota_int_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>POWER_DURING_OTA</td>
+                <td id="id_ota_power_tests_o1"></td>
+                <td class="passed" id="id_ota_power_passed_o1"></td>
+                <td class="failed" id="id_ota_power_failed_o1"></td>
+                <td id="id_ota_power_exectime_o1"></td>
+                <td id="id_ota_power_repeats_o1"></td>
+                <td id="id_ota_power_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_IDLE_OP_PR</td>
+                <td id="id_dgo_idle_op_tests_o1"></td>
+                <td class="passed" id="id_dgo_idle_op_passed_o1"></td>
+                <td class="failed" id="id_dgo_idle_op_failed_o1"></td>
+                <td id="id_dgo_idle_op_exectime_o1"></td>
+                <td id="id_dgo_idle_op_repeats_o1"></td>
+                <td id="id_dgo_idle_op_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_LIP_OP_PR</td>
+                <td id="id_dgo_lip_op_tests_o1"></td>
+                <td class="passed" id="id_dgo_lip_op_passed_o1"></td>
+                <td class="failed" id="id_dgo_lip_op_failed_o1"></td>
+                <td id="id_dgo_lip_op_exectime_o1"></td>
+                <td id="id_dgo_lip_op_repeats_o1"></td>
+                <td id="id_dgo_lip_op_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_HIP_OP_PR</td>
+                <td id="id_dgo_hip_op_tests_o1"></td>
+                <td class="passed" id="id_dgo_hip_op_passed_o1"></td>
+                <td class="failed" id="id_dgo_hip_op_failed_o1"></td>
+                <td id="id_dgo_hip_op_exectime_o1"></td>
+                <td id="id_dgo_hip_op_repeats_o1"></td>
+                <td id="id_dgo_hip_op_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_COOLDOWN_OP_PR</td>
+                <td id="id_dgo_cooldown_op_tests_o1"></td>
+                <td class="passed" id="id_dgo_cooldown_op_passed_o1"></td>
+                <td class="failed" id="id_dgo_cooldown_op_failed_o1"></td>
+                <td id="id_dgo_cooldown_op_exectime_o1"></td>
+                <td id="id_dgo_cooldown_op_repeats_o1"></td>
+                <td id="id_dgo_cooldown_op_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_FLUFF_OP_PR</td>
+                <td id="id_dgo_fluff_op_tests_o1"></td>
+                <td class="passed" id="id_dgo_fluff_op_passed_o1"></td>
+                <td class="failed" id="id_dgo_fluff_op_failed_o1"></td>
+                <td id="id_dgo_fluff_op_exectime_o1"></td>
+                <td id="id_dgo_fluff_op_repeats_o1"></td>
+                <td id="id_dgo_fluff_op_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_IDLE_ADD_MASS</td>
+                <td id="id_dgo_idle_mass_tests_o1"></td>
+                <td class="passed" id="id_dgo_idle_mass_passed_o1"></td>
+                <td class="failed" id="id_dgo_idle_mass_failed_o1"></td>
+                <td id="id_dgo_idle_mass_exectime_o1"></td>
+                <td id="id_dgo_idle_mass_repeats_o1"></td>
+                <td id="id_dgo_idle_mass_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_LIP_ADD_MASS</td>
+                <td id="id_dgo_lip_mass_tests_o1"></td>
+                <td class="passed" id="id_dgo_lip_mass_passed_o1"></td>
+                <td class="failed" id="id_dgo_lip_mass_failed_o1"></td>
+                <td id="id_dgo_lip_mass_exectime_o1"></td>
+                <td id="id_dgo_lip_mass_repeats_o1"></td>
+                <td id="id_dgo_lip_mass_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_HIP_ADD_MASS</td>
+                <td id="id_dgo_hip_mass_tests_o1"></td>
+                <td class="passed" id="id_dgo_hip_mass_passed_o1"></td>
+                <td class="failed" id="id_dgo_hip_mass_failed_o1"></td>
+                <td id="id_dgo_hip_mass_exectime_o1"></td>
+                <td id="id_dgo_hip_mass_repeats_o1"></td>
+                <td id="id_dgo_hip_mass_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_COOLDOWN_ADD_MASS</td>
+                <td id="id_dgo_cooldown_mass_tests_o1"></td>
+                <td class="passed" id="id_dgo_cooldown_mass_passed_o1"></td>
+                <td class="failed" id="id_dgo_cooldown_mass_failed_o1"></td>
+                <td id="id_dgo_cooldown_mass_exectime_o1"></td>
+                <td id="id_dgo_cooldown_mass_repeats_o1"></td>
+                <td id="id_dgo_cooldown_mass_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>DGO_FLUFF_ADD_MASS</td>
+                <td id="id_dgo_fluff_mass_tests_o1"></td>
+                <td class="passed" id="id_dgo_fluff_mass_passed_o1"></td>
+                <td class="failed" id="id_dgo_fluff_mass_failed_o1"></td>
+                <td id="id_dgo_fluff_mass_exectime_o1"></td>
+                <td id="id_dgo_fluff_mass_repeats_o1"></td>
+                <td id="id_dgo_fluff_mass_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>SAFETY_TEST</td>
+                <td id="id_safety_tests_o1"></td>
+                <td class="passed" id="id_safety_passed_o1"></td>
+                <td class="failed" id="id_safety_failed_o1"></td>
+                <td id="id_safety_exectime_o1"></td>
+                <td id="id_safety_repeats_o1"></td>
+                <td id="id_safety_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>PAIRING_WITHOUT_BLE</td>
+                <td id="id_pairing_without_ble_tests_o1"></td>
+                <td class="passed" id="id_pairing_without_ble_passed_o1"></td>
+                <td class="failed" id="id_pairing_without_ble_failed_o1"></td>
+                <td id="id_pairing_without_ble_exectime_o1"></td>
+                <td id="id_pairing_without_ble_repeats_o1"></td>
+                <td id="id_pairing_without_ble_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>LID_OPEN_CLOSE</td>
+                <td id="id_lid_open_tests_o1"></td>
+                <td class="passed" id="id_lid_open_passed_o1"></td>
+                <td class="failed" id="id_lid_open_failed_o1"></td>
+                <td id="id_lid_open_exectime_o1"></td>
+                <td id="id_lid_open_repeats_o1"></td>
+                <td id="id_lid_open_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>START_VIA_BIN_STRESS_A</td>
+                <td id="id_start_bin_stress_tests_o1"></td>
+                <td class="passed" id="id_start_bin_stress_passed_o1"></td>
+                <td class="failed" id="id_start_bin_stress_failed_o1"></td>
+                <td id="id_start_bin_stress_exectime_o1"></td>
+                <td id="id_start_bin_stress_repeats_o1"></td>
+                <td id="id_start_bin_stress_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>START_VIA_BIN_B</td>
+                <td id="id_start_bin_tests_o1"></td>
+                <td class="passed" id="id_start_bin_passed_o1"></td>
+                <td class="failed" id="id_start_bin_failed_o1"></td>
+                <td id="id_start_bin_exectime_o1"></td>
+                <td id="id_start_bin_repeats_o1"></td>
+                <td id="id_start_bin_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>EEPROM_STRESS_TEST</td>
+                <td id="id_eeprom_tests_o1"></td>
+                <td class="passed" id="id_eeprom_passed_o1"></td>
+                <td class="failed" id="id_eeprom_failed_o1"></td>
+                <td id="id_eeprom_exectime_o1"></td>
+                <td id="id_eeprom_repeats_o1"></td>
+                <td id="id_eeprom_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>CHILD_LOCK_STRESS_TEST</td>
+                <td id="id_child_lock_stress_tests_o1"></td>
+                <td class="passed" id="id_child_lock_stress_passed_o1"></td>
+                <td class="failed" id="id_child_lock_stress_failed_o1"></td>
+                <td id="id_child_lock_stress_exectime_o1"></td>
+                <td id="id_child_lock_stress_repeats_o1"></td>
+                <td id="id_child_lock_stress_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+            <tr>
+                <td>CHILD_LOCK_TEST</td>
+                <td id="id_child_lock_tests_o1"></td>
+                <td class="passed" id="id_child_lock_passed_o1"></td>
+                <td class="failed" id="id_child_lock_failed_o1"></td>
+                <td id="id_child_lock_exectime_o1"></td>
+                <td id="id_child_lock_repeats_o1"></td>
+                <td id="id_child_lock_jira_o1"></td>
+                <td><a href="">Result Link</a></td> 
+                <td><a href="">Test Cases</a></td> 
+            </tr>
+        </table>
+        <div id="summary" class="centered-text">
+            <span class="inline-details">
+                <strong class="total-passed">Total Passed:</strong> <span id="totalPassed_o1" class="total-passed">0</span>
+            </span>
+            <span class="inline-details">
+                <strong class="total-failed">Total Failed:</strong> <span id="totalFailed_o1" class="total-failed">0</span>
+            </span>
+        </div>
+
+        -->
+<div class="centered-text">
+<h2 class="subheading">O2</h2>
+<span class="inline-details"><strong>Prod:</strong> <span id="id_prod_o2" style="font-style: italic;"></span></span>
+<span class="inline-details"><strong>Ext. FT:</strong> <span id="id_ext_ft_o2" style="font-style: italic;"></span></span>
+<span class="inline-details"><strong>Int. FT:</strong> <span id="id_int_ft_o2" style="font-style: italic;"></span></span>
+</div>
+<table class="report-table" id="table_o2">
+<tr>
+<th style="text-align: center;">Test Suite</th>
+<th style="text-align: center;">Test Cases</th>
+<th style="text-align: center;">Passed</th>
+<th style="text-align: center;">Failed</th>
+<th style="text-align: center;">Execution Time</th>
+<th style="text-align: center;">Repeats</th>
+<th style="text-align: center;">Jira/Blocker</th>
+<th style="text-align: center;">Detail Test Result</th>
+<th style="text-align: center;">Detail Test Cases</th>
+</tr>
+<tr>
+<td>OTA_SELF</td>
+<td id="id_ota_self_tests_o2"></td>
+<td class="passed" id="id_ota_self_passed_o2"></td>
+<td class="failed" id="id_ota_self_failed_o2"></td>
+<td id="id_ota_self_exectime_o2"></td>
+<td id="id_ota_self_repeats_o2"></td>
+<td id="id_ota_self_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>OTA_PROD_UPGRADE</td>
+<td id="id_ota_prod_tests_o2"></td>
+<td class="passed" id="id_ota_prod_passed_o2"></td>
+<td class="failed" id="id_ota_prod_failed_o2"></td>
+<td id="id_ota_prod_exectime_o2"></td>
+<td id="id_ota_prod_repeats_o2"></td>
+<td id="id_ota_prod_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>OTA_EXT_FT_UPGRADE</td>
+<td id="id_ota_ext_tests_o2"></td>
+<td class="passed" id="id_ota_ext_passed_o2"></td>
+<td class="failed" id="id_ota_ext_failed_o2"></td>
+<td id="id_ota_ext_exectime_o2"></td>
+<td id="id_ota_ext_repeats_o2"></td>
+<td id="id_ota_ext_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>OTA_INT_FT_UPGRADE</td>
+<td id="id_ota_int_tests_o2"></td>
+<td class="passed" id="id_ota_int_passed_o2"></td>
+<td class="failed" id="id_ota_int_failed_o2"></td>
+<td id="id_ota_int_exectime_o2"></td>
+<td id="id_ota_int_repeats_o2"></td>
+<td id="id_ota_int_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>POWER_DURING_OTA</td>
+<td id="id_ota_power_tests_o2"></td>
+<td class="passed" id="id_ota_power_passed_o2"></td>
+<td class="failed" id="id_ota_power_failed_o2"></td>
+<td id="id_ota_power_exectime_o2"></td>
+<td id="id_ota_power_repeats_o2"></td>
+<td id="id_ota_power_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_IDLE_OP_PR</td>
+<td id="id_dgo_idle_op_tests_o2"></td>
+<td class="passed" id="id_dgo_idle_op_passed_o2"></td>
+<td class="failed" id="id_dgo_idle_op_failed_o2"></td>
+<td id="id_dgo_idle_op_exectime_o2"></td>
+<td id="id_dgo_idle_op_repeats_o2"></td>
+<td id="id_dgo_idle_op_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_LIP_OP_PR</td>
+<td id="id_dgo_lip_op_tests_o2"></td>
+<td class="passed" id="id_dgo_lip_op_passed_o2"></td>
+<td class="failed" id="id_dgo_lip_op_failed_o2"></td>
+<td id="id_dgo_lip_op_exectime_o2"></td>
+<td id="id_dgo_lip_op_repeats_o2"></td>
+<td id="id_dgo_lip_op_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_HIP_OP_PR</td>
+<td id="id_dgo_hip_op_tests_o2"></td>
+<td class="passed" id="id_dgo_hip_op_passed_o2"></td>
+<td class="failed" id="id_dgo_hip_op_failed_o2"></td>
+<td id="id_dgo_hip_op_exectime_o2"></td>
+<td id="id_dgo_hip_op_repeats_o2"></td>
+<td id="id_dgo_hip_op_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_COOLDOWN_OP_PR</td>
+<td id="id_dgo_cooldown_op_tests_o2"></td>
+<td class="passed" id="id_dgo_cooldown_op_passed_o2"></td>
+<td class="failed" id="id_dgo_cooldown_op_failed_o2"></td>
+<td id="id_dgo_cooldown_op_exectime_o2"></td>
+<td id="id_dgo_cooldown_op_repeats_o2"></td>
+<td id="id_dgo_cooldown_op_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_FLUFF_OP_PR</td>
+<td id="id_dgo_fluff_op_tests_o2"></td>
+<td class="passed" id="id_dgo_fluff_op_passed_o2"></td>
+<td class="failed" id="id_dgo_fluff_op_failed_o2"></td>
+<td id="id_dgo_fluff_op_exectime_o2"></td>
+<td id="id_dgo_fluff_op_repeats_o2"></td>
+<td id="id_dgo_fluff_op_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_IDLE_ADD_MASS</td>
+<td id="id_dgo_idle_mass_tests_o2"></td>
+<td class="passed" id="id_dgo_idle_mass_passed_o2"></td>
+<td class="failed" id="id_dgo_idle_mass_failed_o2"></td>
+<td id="id_dgo_idle_mass_exectime_o2"></td>
+<td id="id_dgo_idle_mass_repeats_o2"></td>
+<td id="id_dgo_idle_mass_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_LIP_ADD_MASS</td>
+<td id="id_dgo_lip_mass_tests_o2"></td>
+<td class="passed" id="id_dgo_lip_mass_passed_o2"></td>
+<td class="failed" id="id_dgo_lip_mass_failed_o2"></td>
+<td id="id_dgo_lip_mass_exectime_o2"></td>
+<td id="id_dgo_lip_mass_repeats_o2"></td>
+<td id="id_dgo_lip_mass_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_HIP_ADD_MASS</td>
+<td id="id_dgo_hip_mass_tests_o2"></td>
+<td class="passed" id="id_dgo_hip_mass_passed_o2"></td>
+<td class="failed" id="id_dgo_hip_mass_failed_o2"></td>
+<td id="id_dgo_hip_mass_exectime_o2"></td>
+<td id="id_dgo_hip_mass_repeats_o2"></td>
+<td id="id_dgo_hip_mass_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_COOLDOWN_ADD_MASS</td>
+<td id="id_dgo_cooldown_mass_tests_o2"></td>
+<td class="passed" id="id_dgo_cooldown_mass_passed_o2"></td>
+<td class="failed" id="id_dgo_cooldown_mass_failed_o2"></td>
+<td id="id_dgo_cooldown_mass_exectime_o2"></td>
+<td id="id_dgo_cooldown_mass_repeats_o2"></td>
+<td id="id_dgo_cooldown_mass_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>DGO_FLUFF_ADD_MASS</td>
+<td id="id_dgo_fluff_mass_tests_o2"></td>
+<td class="passed" id="id_dgo_fluff_mass_passed_o2"></td>
+<td class="failed" id="id_dgo_fluff_mass_failed_o2"></td>
+<td id="id_dgo_fluff_mass_exectime_o2"></td>
+<td id="id_dgo_fluff_mass_repeats_o2"></td>
+<td id="id_dgo_fluff_mass_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>SAFETY_TEST</td>
+<td id="id_safety_tests_o2"></td>
+<td class="passed" id="id_safety_passed_o2"></td>
+<td class="failed" id="id_safety_failed_o2"></td>
+<td id="id_safety_exectime_o2"></td>
+<td id="id_safety_repeats_o2"></td>
+<td id="id_safety_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>PAIRING_WITHOUT_BLE</td>
+<td id="id_pairing_without_ble_tests_o2"></td>
+<td class="passed" id="id_pairing_without_ble_passed_o2"></td>
+<td class="failed" id="id_pairing_without_ble_failed_o2"></td>
+<td id="id_pairing_without_ble_exectime_o2"></td>
+<td id="id_pairing_without_ble_repeats_o2"></td>
+<td id="id_pairing_without_ble_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>START_VIA_BIN_STRESS_A</td>
+<td id="id_start_bin_stress_tests_o2"></td>
+<td class="passed" id="id_start_bin_stress_passed_o2"></td>
+<td class="failed" id="id_start_bin_stress_failed_o2"></td>
+<td id="id_start_bin_stress_exectime_o2"></td>
+<td id="id_start_bin_stress_repeats_o2"></td>
+<td id="id_start_bin_stress_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>START_VIA_BIN_B</td>
+<td id="id_start_bin_tests_o2"></td>
+<td class="passed" id="id_start_bin_passed_o2"></td>
+<td class="failed" id="id_start_bin_failed_o2"></td>
+<td id="id_start_bin_exectime_o2"></td>
+<td id="id_start_bin_repeats_o2"></td>
+<td id="id_start_bin_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>EEPROM_STRESS_TEST</td>
+<td id="id_eeprom_tests_o2"></td>
+<td class="passed" id="id_eeprom_passed_o2"></td>
+<td class="failed" id="id_eeprom_failed_o2"></td>
+<td id="id_eeprom_exectime_o2"></td>
+<td id="id_eeprom_repeats_o2"></td>
+<td id="id_eeprom_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>CHILD_LOCK_STRESS_TEST</td>
+<td id="id_child_lock_stress_tests_o2"></td>
+<td class="passed" id="id_child_lock_stress_passed_o2"></td>
+<td class="failed" id="id_child_lock_stress_failed_o2"></td>
+<td id="id_child_lock_stress_exectime_o2"></td>
+<td id="id_child_lock_stress_repeats_o2"></td>
+<td id="id_child_lock_stress_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>CHILD_LOCK_TEST</td>
+<td id="id_child_lock_tests_o2"></td>
+<td class="passed" id="id_child_lock_passed_o2"></td>
+<td class="failed" id="id_child_lock_failed_o2"></td>
+<td id="id_child_lock_exectime_o2"></td>
+<td id="id_child_lock_repeats_o2"></td>
+<td id="id_child_lock_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BOOT_CYCLE_STRESS_TEST</td>
+<td id="id_boot_cycle_stress_tests_o2"></td>
+<td class="passed" id="id_boot_cycle_stress_passed_o2"></td>
+<td class="failed" id="id_boot_cycle_stress_failed_o2"></td>
+<td id="id_boot_cycle_stress_exectime_o2"></td>
+<td id="id_boot_cycle_stress_repeats_o2"></td>
+<td id="id_boot_cycle_stress_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_ADD_MASS_HIP_TEST</td>
+<td id="id_bat_d_a_m_h_tests_o2"></td>
+<td class="passed" id="id_bat_d_a_m_h_passed_o2"></td>
+<td class="failed" id="id_bat_d_a_m_h_failed_o2"></td>
+<td id="id_bat_d_a_m_h_exectime_o2"></td>
+<td id="id_bat_d_a_m_h_repeats_o2"></td>
+<td id="id_bat_d_a_m_h_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_RESET_HIP_TEST</td>
+<td id="id_bat_d_r_h_tests_o2"></td>
+<td class="passed" id="id_bat_d_r_h_passed_o2"></td>
+<td class="failed" id="id_bat_d_r_h_failed_o2"></td>
+<td id="id_bat_d_r_h_exectime_o2"></td>
+<td id="id_bat_d_r_h_repeats_o2"></td>
+<td id="id_bat_d_r_h_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_SHT40_CALIBRATION_TEST</td>
+<td id="id_bat_d_s_c_tests_o2"></td>
+<td class="passed" id="id_bat_d_s_c_passed_o2"></td>
+<td class="failed" id="id_bat_d_s_c_failed_o2"></td>
+<td id="id_bat_d_s_c_exectime_o2"></td>
+<td id="id_bat_d_s_c_repeats_o2"></td>
+<td id="id_bat_d_s_c_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_SHT40_CAL_SKIP_WHEN_HOT_TEST</td>
+<td id="id_bat_d_s_c_s_w_h_tests_o2"></td>
+<td class="passed" id="id_bat_d_s_c_s_w_h_passed_o2"></td>
+<td class="failed" id="id_bat_d_s_c_s_w_h_failed_o2"></td>
+<td id="id_bat_d_s_c_s_w_h_exectime_o2"></td>
+<td id="id_bat_d_s_c_s_w_h_repeats_o2"></td>
+<td id="id_bat_d_s_c_s_w_h_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_START_STOP_NO_VACATION_TEST</td>
+<td id="id_bat_d_s_s_n_v_tests_o2"></td>
+<td class="passed" id="id_bat_d_s_s_n_v_passed_o2"></td>
+<td class="failed" id="id_bat_d_s_s_n_v_failed_o2"></td>
+<td id="id_bat_d_s_s_n_v_exectime_o2"></td>
+<td id="id_bat_d_s_s_n_v_repeats_o2"></td>
+<td id="id_bat_d_s_s_n_v_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>SMOKE_PAIRING_TEST</td>
+<td id="id_smoke_pairing_tests_o2"></td>
+<td class="passed" id="id_smoke_pairing_passed_o2"></td>
+<td class="failed" id="id_smoke_pairing_failed_o2"></td>
+<td id="id_smoke_pairing_exectime_o2"></td>
+<td id="id_smoke_pairing_repeats_o2"></td>
+<td id="id_smoke_pairing_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_JAM_ERROR_TEST</td>
+<td id="id_bat_d_j_e_tests_o2"></td>
+<td class="passed" id="id_bat_d_j_e_passed_o2"></td>
+<td class="failed" id="id_bat_d_j_e_failed_o2"></td>
+<td id="id_bat_d_j_e_exectime_o2"></td>
+<td id="id_bat_d_j_e_repeats_o2"></td>
+<td id="id_bat_d_j_e_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_JAM_INACTIVE_TEST</td>
+<td id="id_bat_d_j_i_tests_o2"></td>
+<td class="passed" id="id_bat_d_j_i_passed_o2"></td>
+<td class="failed" id="id_bat_d_j_i_failed_o2"></td>
+<td id="id_bat_d_j_i_exectime_o2"></td>
+<td id="id_bat_d_j_i_repeats_o2"></td>
+<td id="id_bat_d_j_i_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_HIP_MOISTURE_FOOD_ADD_TEST</td>
+<td id="id_bat_d_h_m_f_a_tests_o2"></td>
+<td class="passed" id="id_bat_d_h_m_f_a_passed_o2"></td>
+<td class="failed" id="id_bat_d_h_m_f_a_failed_o2"></td>
+<td id="id_bat_d_h_m_f_a_exectime_o2"></td>
+<td id="id_bat_d_h_m_f_a_repeats_o2"></td>
+<td id="id_bat_d_h_m_f_a_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_HEAT_WARNING_STATUS_TEST</td>
+<td id="id_bat_d_h_w_s_tests_o2"></td>
+<td class="passed" id="id_bat_d_h_w_s_passed_o2"></td>
+<td class="failed" id="id_bat_d_h_w_s_failed_o2"></td>
+<td id="id_bat_d_h_w_s_exectime_o2"></td>
+<td id="id_bat_d_h_w_s_repeats_o2"></td>
+<td id="id_bat_d_h_w_s_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_DGO_EMPTY_BUCKET_TEST</td>
+<td id="id_bat_d_e_b_tests_o2"></td>
+<td class="passed" id="id_bat_d_e_b_passed_o2"></td>
+<td class="failed" id="id_bat_d_e_b_failed_o2"></td>
+<td id="id_bat_d_e_b_exectime_o2"></td>
+<td id="id_bat_d_e_b_repeats_o2"></td>
+<td id="id_bat_d_e_b_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_COOLDOWN_TEMP_TEST</td>
+<td id="id_bat_cooldown_temp_tests_o2"></td>
+<td class="passed" id="id_bat_cooldown_temp_passed_o2"></td>
+<td class="failed" id="id_bat_cooldown_temp_failed_o2"></td>
+<td id="id_bat_cooldown_temp_exectime_o2"></td>
+<td id="id_bat_cooldown_temp_repeats_o2"></td>
+<td id="id_bat_cooldown_temp_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_HEAT_LED_TEST</td>
+<td id="id_bat_heat_led_tests_o2"></td>
+<td class="passed" id="id_bat_heat_led_passed_o2"></td>
+<td class="failed" id="id_bat_heat_led_failed_o2"></td>
+<td id="id_bat_heat_led_exectime_o2"></td>
+<td id="id_bat_heat_led_repeats_o2"></td>
+<td id="id_bat_heat_led_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_PREMATURE_MASS_NO_RESET_TEST</td>
+<td id="id_bat_premature_mass_no_reset_tests_o2"></td>
+<td class="passed" id="id_bat_premature_mass_no_reset_passed_o2"></td>
+<td class="failed" id="id_bat_premature_mass_no_reset_failed_o2"></td>
+<td id="id_bat_premature_mass_no_reset_exectime_o2"></td>
+<td id="id_bat_premature_mass_no_reset_repeats_o2"></td>
+<td id="id_bat_premature_mass_no_reset_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>BAT_LOCKED_WHEN_HOT_SHADOWS_TEST</td>
+<td id="id_bat_locked_when_hot_shadows_tests_o2"></td>
+<td class="passed" id="id_bat_locked_when_hot_shadows_passed_o2"></td>
+<td class="failed" id="id_bat_locked_when_hot_shadows_failed_o2"></td>
+<td id="id_bat_locked_when_hot_shadows_exectime_o2"></td>
+<td id="id_bat_locked_when_hot_shadows_repeats_o2"></td>
+<td id="id_bat_locked_when_hot_shadows_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>SMOKE_DGO_INACTIVE_TEST</td>
+<td id="id_smoke_dgo_inactive_tests_o2"></td>
+<td class="passed" id="id_smoke_dgo_inactive_passed_o2"></td>
+<td class="failed" id="id_smoke_dgo_inactive_failed_o2"></td>
+<td id="id_smoke_dgo_inactive_exectime_o2"></td>
+<td id="id_smoke_dgo_inactive_repeats_o2"></td>
+<td id="id_smoke_dgo_inactive_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+<tr>
+<td>SMOKE_TEST_LID_TEST</td>
+<td id="id_smoke_test_lid_tests_o2"></td>
+<td class="passed" id="id_smoke_test_lid_passed_o2"></td>
+<td class="failed" id="id_smoke_test_lid_failed_o2"></td>
+<td id="id_smoke_test_lid_exectime_o2"></td>
+<td id="id_smoke_test_lid_repeats_o2"></td>
+<td id="id_smoke_test_lid_jira_o2"></td>
+<td><a href="">Result Link</a></td>
+<td><a href="">Test Cases</a></td>
+</tr>
+</table>
+<div class="centered-text" id="summary">
+<span class="inline-details">
+<strong class="total-passed">Total Passed:</strong> <span class="total-passed" id="totalPassed_o2">0</span>
+</span>
+<span class="inline-details">
+<strong class="total-failed">Total Failed:</strong> <span class="total-failed" id="totalFailed_o2">0</span>
+</span>
+</div>
+<script>
+        function adjustTableHeight() {
+            const fixedDistanceFromBottom = 330; 
+            const viewportHeight = window.innerHeight;
+            const contentAboveTable = document.querySelector('.header'); 
+            const contentAboveTableHeight = contentAboveTable ? contentAboveTable.offsetHeight : 0;
+            const newMaxHeight = viewportHeight - contentAboveTableHeight - fixedDistanceFromBottom;
+
+            const contentContainer = document.querySelector('.content-container');
+            if (contentContainer) {
+                contentContainer.style.maxHeight = `${newMaxHeight}px`;
+            }
+        }
+        adjustTableHeight();
+        window.addEventListener('resize', adjustTableHeight);
+
+        function updatePassedDisplay(v, id) {
+            document.getElementById(id).textContent = v;
+        }
+        function updateValue(v, id, idx=0) {
+            if (idx == 0) {
+                document.getElementById(id).textContent = v;
+            } else {
+                let resultLinkCell = document.getElementById(id).parentNode.cells[idx];
+                let resultLink = resultLinkCell.getElementsByTagName('a')[0];
+                resultLink.href = v;
+            }
+        }
+        function updateDisplay(fieldId, fieldV, idx=0) {
+            if (idx == 0) {
+                if (typeof fieldV !== 'undefined') { 
+                    updateValue(fieldV, fieldId);
+                } else {
+                    updateValue('', fieldId);
+                }
+            } else {
+                updateValue(fieldV, fieldId, idx);
+            }
+
+        }
+        function displayJiraLinks(containerId, getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag) {
+            let jiras = [getJIRA1]; 
+            if (getJIRA1Flag) {
+                updateJiraBlinksLinks(containerId, jiras)
+            } else {
+                updateJiraLinks(containerId, jiras)
+            }
+            jiras = [getJIRA2]; 
+            if (getJIRA2Flag) {
+                updateJiraBlinksLinks(containerId, jiras)
+            } else {
+                updateJiraLinks(containerId, jiras)
+            }
+            jiras = [getJIRA3]; 
+            if (getJIRA3Flag) {
+                updateJiraBlinksLinks(containerId, jiras)
+            } else {
+                updateJiraLinks(containerId, jiras)
+            }
+        }
+
+        function updateJiraLinks(containerId, jiraTickets) {
+            const jiraBaseUrl = 'https://chewielabs.atlassian.net/browse/';
+            const jiraLinksContainer = document.getElementById(containerId);
+
+            if (jiraLinksContainer) {
+                jiraTickets.forEach(ticket => {
+                    const link = document.createElement('a');
+                    link.href = jiraBaseUrl + ticket;
+                    link.textContent = ticket;
+                    link.target = '_blank';
+                    link.className = 'jira-link'; // Add a class for styling
+                    jiraLinksContainer.appendChild(link);
+                    jiraLinksContainer.appendChild(document.createTextNode(' ')); // Space between links
+                });
+            }
+        }
+        function updateJiraBlinksLinks(containerId, jiraTickets) {
+            const jiraBaseUrl = 'https://chewielabs.atlassian.net/browse/';
+            const jiraLinksContainer = document.getElementById(containerId);
+
+            if (jiraLinksContainer) {
+                jiraTickets.forEach(ticket => {
+                    const link = document.createElement('a');
+                    link.href = jiraBaseUrl + ticket;
+                    link.textContent = ticket;
+                    link.target = '_blank';
+                    link.className = 'jira-blink-link'; // Add a class for styling
+                    jiraLinksContainer.appendChild(link);
+                    jiraLinksContainer.appendChild(document.createTextNode(' ')); // Space between links
+                });
+            }
+        }
+
+        let getValue = null
+        let getID = null
+        let getJIRA1 = null
+        let getJIRA1Flag = null
+        let getJIRA2 = null
+        let getJIRA2Flag = null
+        let getJIRA3 = null
+        let getJIRA3Flag = null
+
+        getValue = "7_31_2024" 
+        updateDisplay('id_built_date_o1', getValue)
+        getValue = "rls-v01_09_00-67a78c5" 
+        updateDisplay('id_template_o1', getValue)
+        getValue = "rls-v01.09.00-67a78c5" 
+        updateDisplay('id_build_o1', getValue)
+        getValue = "Kruper" 
+        updateDisplay('id_code_o1', getValue)
+
+        if (0) {
+            getValue = O1_PROD 
+            updateDisplay('id_prod_o1', getValue)
+            getValue = O1_EXT_FT 
+            updateDisplay('id_ext_ft_o1', getValue)
+            getValue = O1_INT_FT 
+            updateDisplay('id_int_ft_o1', getValue)
+            if (O1SELFSWITCH) {
+                getValue = O1_OTA_SELF_PASSED
+                updateDisplay('id_ota_self_passed_o1', getValue)
+                getValue = O1_OTA_SELF_FAILED 
+                updateDisplay('id_ota_self_failed_o1', getValue)
+                getValue = O1_OTA_SELF_TESTS;
+                updateDisplay('id_ota_self_tests_o1', getValue)    
+                getValue = O1_OTA_SELF_EXECTIME
+                updateDisplay('id_ota_self_exectime_o1', getValue)  
+                getValue = O1_OTA_SELF_REPEATS;
+                updateDisplay('id_ota_self_repeats_o1', getValue) 
+                getJIRA1 = O1_OTA_SELF_JIRA1
+                getJIRA1Flag = O1_OTA_SELF_JIRA1_FLAG
+                getJIRA2 = O1_OTA_SELF_JIRA2
+                getJIRA2Flag = O1_OTA_SELF_JIRA2_FLAG
+                getJIRA3 = O1_OTA_SELF_JIRA3
+                getJIRA3Flag = O1_OTA_SELF_JIRA3_FLAG
+                displayJiraLinks('id_ota_self_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_OTA_SELF_RESULT_LINK 
+                updateDisplay('id_ota_self_passed_o1', getValue, 7)
+                getValue = O1_OTA_SELF_TCASE_LINK 
+                updateDisplay('id_ota_self_passed_o1', getValue, 8)
+            }
+            if (O1PRODSWITCH) {
+                getValue = O1_OTA_PROD_PASSED;
+                updateDisplay('id_ota_prod_passed_o1', getValue) 
+                getValue = O1_OTA_PROD_FAILED;
+                updateDisplay('id_ota_prod_failed_o1', getValue) 
+                getValue = O1_OTA_PROD_TESTS;
+                updateDisplay('id_ota_prod_tests_o1', getValue)         
+                getValue = O1_OTA_PROD_EXECTIME;
+                updateDisplay('id_ota_prod_exectime_o1', getValue) 
+                getValue = O1_OTA_PROD_REPEATS;
+                updateDisplay('id_ota_prod_repeats_o1', getValue) 
+                getJIRA1 = O1_OTA_PROD_JIRA1
+                getJIRA1Flag = O1_OTA_PROD_JIRA1_FLAG
+                getJIRA2 = O1_OTA_PROD_JIRA2
+                getJIRA2Flag = O1_OTA_PROD_JIRA2_FLAG
+                getJIRA3 = O1_OTA_PROD_JIRA3
+                getJIRA3Flag = O1_OTA_PROD_JIRA3_FLAG
+                displayJiraLinks('id_ota_prod_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_OTA_PROD_RESULT_LINK 
+                updateDisplay('id_ota_prod_passed_o1', getValue, 7)
+                getValue = O1_OTA_PROD_TCASE_LINK 
+                updateDisplay('id_ota_prod_passed_o1', getValue, 8)
+            }
+            if (O1EXTSWITCH) {
+                getValue = O1_OTA_EXT_PASSED;
+                updateDisplay('id_ota_ext_passed_o1', getValue)     
+                getValue = O1_OTA_EXT_FAILED;
+                updateDisplay('id_ota_ext_failed_o1', getValue) 
+                getValue = O1_OTA_EXT_TESTS;
+                updateDisplay('id_ota_ext_tests_o1', getValue) 
+                getValue = O1_OTA_EXT_EXECTIME;
+                updateDisplay('id_ota_ext_exectime_o1', getValue) 
+                getValue = O1_OTA_EXT_REPEATS;
+                updateDisplay('id_ota_ext_repeats_o1', getValue) 
+                getJIRA1 = O1_OTA_EXT_JIRA1
+                getJIRA1Flag = O1_OTA_EXT_JIRA1_FLAG
+                getJIRA2 = O1_OTA_EXT_JIRA2
+                getJIRA2Flag = O1_OTA_EXT_JIRA2_FLAG
+                getJIRA3 = O1_OTA_EXT_JIRA3
+                getJIRA3Flag = O1_OTA_EXT_JIRA3_FLAG
+                displayJiraLinks('id_ota_ext_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_OTA_EXT_RESULT_LINK 
+                updateDisplay('id_ota_ext_passed_o1', getValue, 7)
+                getValue = O1_OTA_EXT_TCASE_LINK 
+                updateDisplay('id_ota_ext_passed_o1', getValue, 8)
+            }
+            if (O1INTSWITCH) {
+                getValue = O1_OTA_INT_PASSED;
+                updateDisplay('id_ota_int_passed_o1', getValue) 
+                getValue = O1_OTA_INT_FAILED;
+                updateDisplay('id_ota_int_failed_o1', getValue) 
+                getValue = O1_OTA_INT_TESTS;
+                updateDisplay('id_ota_int_tests_o1', getValue) 
+                getValue = O1_OTA_INT_EXECTIME;
+                updateDisplay('id_ota_int_exectime_o1', getValue) 
+                getValue = O1_OTA_INT_REPEATS;
+                updateDisplay('id_ota_int_repeats_o1', getValue) 
+                getJIRA1 = O1_OTA_INT_JIRA1
+                getJIRA1Flag = O1_OTA_INT_JIRA1_FLAG
+                getJIRA2 = O1_OTA_INT_JIRA2
+                getJIRA2Flag = O1_OTA_INT_JIRA2_FLAG
+                getJIRA3 = O1_OTA_INT_JIRA3
+                getJIRA3Flag = O1_OTA_INT_JIRA3_FLAG
+                displayJiraLinks('id_ota_int_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_OTA_INT_RESULT_LINK 
+                updateDisplay('id_ota_int_jira_o1', getValue, 7)
+                getValue = O1_OTA_INT_TCASE_LINK 
+                updateDisplay('id_ota_int_jira_o1', getValue, 8)
+            }
+            if (O1POWERSWITCH) {
+                getValue = O1_OTA_POWER_PASSED;
+                updateDisplay('id_ota_power_passed_o1', getValue) 
+                getValue = O1_OTA_POWER_FAILED;
+                updateDisplay('id_ota_power_failed_o1', getValue) 
+                getValue = O1_OTA_POWER_TESTS;
+                updateDisplay('id_ota_power_tests_o1', getValue) 
+                getValue = O1_OTA_POWER_EXECTIME;
+                updateDisplay('id_ota_power_exectime_o1', getValue) 
+                getValue = O1_OTA_POWER_REPEATS;
+                updateDisplay('id_ota_power_repeats_o1', getValue) 
+                getJIRA1 = O1_OTA_POWER_JIRA1
+                getJIRA1Flag = O1_OTA_POWER_JIRA1_FLAG
+                getJIRA2 = O1_OTA_POWER_JIRA2
+                getJIRA2Flag = O1_OTA_POWER_JIRA2_FLAG
+                getJIRA3 = O1_OTA_POWER_JIRA3
+                getJIRA3Flag = O1_OTA_POWER_JIRA3_FLAG
+                displayJiraLinks('id_ota_power_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_OTA_POWER_RESULT_LINK 
+                updateDisplay('id_ota_power_jira_o1', getValue, 7)
+                getValue = O1_OTA_POWER_TCASE_LINK 
+                updateDisplay('id_ota_power_jira_o1', getValue, 8)
+            }
+            if (O1IDLEOPSWITCH) {
+                getValue = O1_DGO_IDLE_OP_PASSED;
+                updateDisplay('id_dgo_idle_op_passed_o1', getValue) 
+                getValue = O1_DGO_IDLE_OP_FAILED;
+                updateDisplay('id_dgo_idle_op_failed_o1', getValue) 
+                getValue = O1_DGO_IDLE_OP_TESTS;
+                updateDisplay('id_dgo_idle_op_tests_o1', getValue) 
+                getValue = O1_DGO_IDLE_OP_EXECTIME;
+                updateDisplay('id_dgo_idle_op_exectime_o1', getValue) 
+                getValue = O1_DGO_IDLE_OP_REPEATS;
+                updateDisplay('id_dgo_idle_op_repeats_o1', getValue) 
+                getJIRA1 = O1_DGO_IDLE_OP_JIRA1
+                getJIRA1Flag = O1_DGO_IDLE_OP_JIRA1_FLAG
+                getJIRA2 = O1_DGO_IDLE_OP_JIRA2
+                getJIRA2Flag = O1_DGO_IDLE_OP_JIRA2_FLAG
+                getJIRA3 = O1_DGO_IDLE_OP_JIRA3
+                getJIRA3Flag = O1_DGO_IDLE_OP_JIRA3_FLAG
+                displayJiraLinks('id_dgo_idle_op_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_IDLE_OP_RESULT_LINK 
+                updateDisplay('id_dgo_idle_op_jira_o1', getValue, 7)
+                getValue = O1_DGO_IDLE_OP_TCASE_LINK 
+                updateDisplay('id_dgo_idle_op_jira_o1', getValue, 8)
+            }
+            if (O1LIPOPSWITCH) {
+                getValue = O1_DGO_LIP_OP_PASSED;
+                updateDisplay('id_dgo_lip_op_passed_o1', getValue) 
+                getValue = O1_DGO_LIP_OP_FAILED;
+                updateDisplay('id_dgo_lip_op_failed_o1', getValue) 
+                getValue = O1_DGO_LIP_OP_TESTS;
+                updateDisplay('id_dgo_lip_op_tests_o1', getValue) 
+                getValue = O1_DGO_LIP_OP_EXECTIME;
+                updateDisplay('id_dgo_lip_op_exectime_o1', getValue) 
+                getValue = O1_DGO_LIP_OP_REPEATS;
+                updateDisplay('id_dgo_lip_op_repeats_o1', getValue) 
+                getJIRA1 = O1_DGO_LIP_OP_JIRA1
+                getJIRA1Flag = O1_DGO_LIP_OP_JIRA1_FLAG
+                getJIRA2 = O1_DGO_LIP_OP_JIRA2
+                getJIRA2Flag = O1_DGO_LIP_OP_JIRA2_FLAG
+                getJIRA3 = O1_DGO_LIP_OP_JIRA3
+                getJIRA3Flag = O1_DGO_LIP_OP_JIRA3_FLAG
+                displayJiraLinks('id_dgo_lip_op_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_LIP_OP_RESULT_LINK 
+                updateDisplay('id_dgo_lip_op_jira_o1', getValue, 7)
+                getValue = O1_DGO_LIP_OP_TCASE_LINK 
+                updateDisplay('id_dgo_lip_op_jira_o1', getValue, 8)
+            }
+            if (O1HIPOPSWITCH) {
+                getValue = O1_DGO_HIP_OP_PASSED;
+                updateDisplay('id_dgo_hip_op_passed_o1', getValue) 
+                getValue = O1_DGO_HIP_OP_FAILED;
+                updateDisplay('id_dgo_hip_op_failed_o1', getValue) 
+                getValue = O1_DGO_HIP_OP_TESTS;
+                updateDisplay('id_dgo_hip_op_tests_o1', getValue) 
+                getValue = O1_DGO_HIP_OP_EXECTIME;
+                updateDisplay('id_dgo_hip_op_exectime_o1', getValue) 
+                getValue = O1_DGO_HIP_OP_REPEATS;
+                updateDisplay('id_dgo_hip_op_repeats_o1', getValue) 
+                getJIRA1 = O1_DGO_HIP_OP_JIRA1
+                getJIRA1Flag = O1_DGO_HIP_OP_JIRA1_FLAG
+                getJIRA2 = O1_DGO_HIP_OP_JIRA2
+                getJIRA2Flag = O1_DGO_HIP_OP_JIRA2_FLAG
+                getJIRA3 = O1_DGO_HIP_OP_JIRA3
+                getJIRA3Flag = O1_DGO_HIP_OP_JIRA3_FLAG
+                displayJiraLinks('id_dgo_hip_op_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_HIP_OP_RESULT_LINK 
+                updateDisplay('id_dgo_hip_op_jira_o1', getValue, 7)
+                getValue = O1_DGO_HIP_OP_TCASE_LINK 
+                updateDisplay('id_dgo_hip_op_jira_o1', getValue, 8)
+            }
+            if (O1COOLOPSWITCH) {
+                getValue = O1_DGO_COOLDOWN_OP_PASSED;
+                updateDisplay('id_dgo_cooldown_op_passed_o1', getValue)
+                getValue = O1_DGO_COOLDOWN_OP_FAILED;
+                updateDisplay('id_dgo_cooldown_op_failed_o1', getValue)
+                getValue = O1_DGO_COOLDOWN_OP_TESTS;
+                updateDisplay('id_dgo_cooldown_op_tests_o1', getValue)
+                getValue = O1_DGO_COOLDOWN_OP_EXECTIME;
+                updateDisplay('id_dgo_cooldown_op_exectime_o1', getValue)
+                getValue = O1_DGO_COOLDOWN_OP_REPEATS;
+                updateDisplay('id_dgo_cooldown_op_repeats_o1', getValue)
+                getJIRA1 = O1_DGO_COOLDOWN_OP_JIRA1
+                getJIRA1Flag = O1_DGO_COOLDOWN_OP_JIRA1_FLAG
+                getJIRA2 = O1_DGO_COOLDOWN_OP_JIRA2
+                getJIRA2Flag = O1_DGO_COOLDOWN_OP_JIRA2_FLAG
+                getJIRA3 = O1_DGO_COOLDOWN_OP_JIRA3
+                getJIRA3Flag = O1_DGO_COOLDOWN_OP_JIRA3_FLAG
+                displayJiraLinks('id_dgo_cooldown_op_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_COOLDOWN_OP_RESULT_LINK 
+                updateDisplay('id_dgo_cooldown_op_jira_o1', getValue, 7)
+                getValue = O1_DGO_COOLDOWN_OP_TCASE_LINK 
+                updateDisplay('id_dgo_cooldown_op_jira_o1', getValue, 8)
+            }
+            if (O1FLUFFOPSWITCH) {
+                getValue = O1_DGO_FLUFF_OP_PASSED;
+                updateDisplay('id_dgo_fluff_op_passed_o1', getValue)
+                getValue = O1_DGO_FLUFF_OP_FAILED;
+                updateDisplay('id_dgo_fluff_op_failed_o1', getValue)
+                getValue = O1_DGO_FLUFF_OP_TESTS;
+                updateDisplay('id_dgo_fluff_op_tests_o1', getValue)
+                getValue = O1_DGO_FLUFF_OP_EXECTIME;
+                updateDisplay('id_dgo_fluff_op_exectime_o1', getValue)
+                getValue = O1_DGO_FLUFF_OP_REPEATS;
+                updateDisplay('id_dgo_fluff_op_repeats_o1', getValue)
+                getJIRA1 = O1_DGO_FLUFF_OP_JIRA1
+                getJIRA1Flag = O1_DGO_FLUFF_OP_JIRA1_FLAG
+                getJIRA2 = O1_DGO_FLUFF_OP_JIRA2
+                getJIRA2Flag = O1_DGO_FLUFF_OP_JIRA2_FLAG
+                getJIRA3 = O1_DGO_FLUFF_OP_JIRA3
+                getJIRA3Flag = O1_DGO_FLUFF_OP_JIRA3_FLAG
+                displayJiraLinks('id_dgo_fluff_op_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_FLUFF_OP_RESULT_LINK 
+                updateDisplay('id_dgo_fluff_op_jira_o1', getValue, 7)
+                getValue = O1_DGO_FLUFF_OP_TCASE_LINK 
+                updateDisplay('id_dgo_fluff_op_jira_o1', getValue, 8)
+            }
+            if (O1IDLEMASSSWITCH) {
+                getValue = O1_DGO_IDLE_MASS_PASSED;
+                updateDisplay('id_dgo_idle_mass_passed_o1', getValue)
+                getValue = O1_DGO_IDLE_MASS_FAILED;
+                updateDisplay('id_dgo_idle_mass_failed_o1', getValue)
+                getValue = O1_DGO_IDLE_MASS_TESTS;
+                updateDisplay('id_dgo_idle_mass_tests_o1', getValue)
+                getValue = O1_DGO_IDLE_MASS_EXECTIME;
+                updateDisplay('id_dgo_idle_mass_exectime_o1', getValue)
+                getValue = O1_DGO_IDLE_MASS_REPEATS;
+                updateDisplay('id_dgo_idle_mass_repeats_o1', getValue)
+                getJIRA1 = O1_DGO_IDLE_MASS_JIRA1
+                getJIRA1Flag = O1_DGO_IDLE_MASS_JIRA1_FLAG
+                getJIRA2 = O1_DGO_IDLE_MASS_JIRA2
+                getJIRA2Flag = O1_DGO_IDLE_MASS_JIRA2_FLAG
+                getJIRA3 = O1_DGO_IDLE_MASS_JIRA3
+                getJIRA3Flag = O1_DGO_IDLE_MASS_JIRA3_FLAG
+                displayJiraLinks('id_dgo_idle_mass_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_IDLE_MASS_RESULT_LINK 
+                updateDisplay('id_dgo_idle_mass_jira_o1', getValue, 7)
+                getValue = O1_DGO_IDLE_MASS_TCASE_LINK
+                updateDisplay('id_dgo_idle_mass_jira_o1', getValue, 8)
+            }
+            if (O1LIPMASSSWITCH) {
+                getValue = O1_DGO_LIP_MASS_PASSED;
+                updateDisplay('id_dgo_lip_mass_passed_o1', getValue)
+                getValue = O1_DGO_LIP_MASS_FAILED;
+                updateDisplay('id_dgo_lip_mass_failed_o1', getValue)
+                getValue = O1_DGO_LIP_MASS_TESTS;
+                updateDisplay('id_dgo_lip_mass_tests_o1', getValue)
+                getValue = O1_DGO_LIP_MASS_EXECTIME;
+                updateDisplay('id_dgo_lip_mass_exectime_o1', getValue)
+                getValue = O1_DGO_LIP_MASS_REPEATS;
+                updateDisplay('id_dgo_lip_mass_repeats_o1', getValue)
+                getJIRA1 = O1_DGO_LIP_MASS_JIRA1
+                getJIRA1Flag = O1_DGO_LIP_MASS_JIRA1_FLAG
+                getJIRA2 = O1_DGO_LIP_MASS_JIRA2
+                getJIRA2Flag = O1_DGO_LIP_MASS_JIRA2_FLAG
+                getJIRA3 = O1_DGO_LIP_MASS_JIRA3
+                getJIRA3Flag = O1_DGO_LIP_MASS_JIRA3_FLAG
+                displayJiraLinks('id_dgo_lip_mass_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_LIP_MASS_RESULT_LINK 
+                updateDisplay('id_dgo_lip_mass_jira_o1', getValue, 7)
+                getValue = O1_DGO_LIP_MASS_TCASE_LINK 
+                updateDisplay('id_dgo_lip_mass_jira_o1', getValue, 8)
+            }
+            if (O1HIPMASSSWITCH) {
+                getValue = O1_DGO_HIP_MASS_PASSED;
+                updateDisplay('id_dgo_hip_mass_passed_o1', getValue)
+                getValue = O1_DGO_HIP_MASS_FAILED;
+                updateDisplay('id_dgo_hip_mass_failed_o1', getValue)
+                getValue = O1_DGO_HIP_MASS_TESTS;
+                updateDisplay('id_dgo_hip_mass_tests_o1', getValue)
+                getValue = O1_DGO_HIP_MASS_EXECTIME;
+                updateDisplay('id_dgo_hip_mass_exectime_o1', getValue)
+                getValue = O1_DGO_HIP_MASS_REPEATS;
+                updateDisplay('id_dgo_hip_mass_repeats_o1', getValue)
+                getJIRA1 = O1_DGO_HIP_MASS_JIRA1
+                getJIRA1Flag = O1_DGO_HIP_MASS_JIRA1_FLAG
+                getJIRA2 = O1_DGO_HIP_MASS_JIRA2
+                getJIRA2Flag = O1_DGO_HIP_MASS_JIRA2_FLAG
+                getJIRA3 = O1_DGO_HIP_MASS_JIRA3
+                getJIRA3Flag = O1_DGO_HIP_MASS_JIRA3_FLAG
+                displayJiraLinks('id_dgo_hip_mass_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_HIP_MASS_RESULT_LINK 
+                updateDisplay('id_dgo_hip_mass_jira_o1', getValue, 7)
+                getValue = O1_DGO_HIP_MASS_TCASE_LINK 
+                updateDisplay('id_dgo_hip_mass_jira_o1', getValue, 8)
+            }
+            if (O1COOLMASSSWITCH) {
+                getValue = O1_DGO_COOLDOWN_MASS_PASSED;
+                updateDisplay('id_dgo_cooldown_mass_passed_o1', getValue)
+                getValue = O1_DGO_COOLDOWN_MASS_FAILED;
+                updateDisplay('id_dgo_cooldown_mass_failed_o1', getValue)
+                getValue = O1_DGO_COOLDOWN_MASS_TESTS;
+                updateDisplay('id_dgo_cooldown_mass_tests_o1', getValue)
+                getValue = O1_DGO_COOLDOWN_MASS_EXECTIME;
+                updateDisplay('id_dgo_cooldown_mass_exectime_o1', getValue)
+                getValue = O1_DGO_COOLDOWN_MASS_REPEATS;
+                updateDisplay('id_dgo_cooldown_mass_repeats_o1', getValue)
+                getJIRA1 = O1_DGO_COOLDOWN_MASS_JIRA1
+                getJIRA1Flag = O1_DGO_COOLDOWN_MASS_JIRA1_FLAG
+                getJIRA2 = O1_DGO_COOLDOWN_MASS_JIRA2
+                getJIRA2Flag = O1_DGO_COOLDOWN_MASS_JIRA2_FLAG
+                getJIRA3 = O1_DGO_COOLDOWN_MASS_JIRA3
+                getJIRA3Flag = O1_DGO_COOLDOWN_MASS_JIRA3_FLAG
+                displayJiraLinks('id_dgo_cooldown_mass_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_COOLDOWN_MASS_RESULT_LINK 
+                updateDisplay('id_dgo_cooldown_mass_jira_o1', getValue, 7)
+                getValue = O1_DGO_COOLDOWN_MASS_TCASE_LINK 
+                updateDisplay('id_dgo_cooldown_mass_jira_o1', getValue, 8)
+            }
+            if (O1FLUFFMASSSWITCH) {
+                getValue = O1_DGO_FLUFF_MASS_PASSED;
+                updateDisplay('id_dgo_fluff_mass_passed_o1', getValue)
+                getValue = O1_DGO_FLUFF_MASS_FAILED;
+                updateDisplay('id_dgo_fluff_mass_failed_o1', getValue)
+                getValue = O1_DGO_FLUFF_MASS_TESTS;
+                updateDisplay('id_dgo_fluff_mass_tests_o1', getValue)
+                getValue = O1_DGO_FLUFF_MASS_EXECTIME;
+                updateDisplay('id_dgo_fluff_mass_exectime_o1', getValue)
+                getValue = O1_DGO_FLUFF_MASS_REPEATS;
+                updateDisplay('id_dgo_fluff_mass_repeats_o1', getValue)
+                getJIRA1 = O1_DGO_FLUFF_MASS_JIRA1
+                getJIRA1Flag = O1_DGO_FLUFF_MASS_JIRA1_FLAG
+                getJIRA2 = O1_DGO_FLUFF_MASS_JIRA2
+                getJIRA2Flag = O1_DGO_FLUFF_MASS_JIRA2_FLAG
+                getJIRA3 = O1_DGO_FLUFF_MASS_JIRA3
+                getJIRA3Flag = O1_DGO_FLUFF_MASS_JIRA3_FLAG
+                displayJiraLinks('id_dgo_fluff_mass_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_DGO_FLUFF_MASS_RESULT_LINK 
+                updateDisplay('id_dgo_fluff_mass_jira_o1', getValue, 7)
+                getValue = O1_DGO_FLUFF_MASS_TCASE_LINK 
+                updateDisplay('id_dgo_fluff_mass_jira_o1', getValue, 8)
+            }
+            if (O1SAFETYSWITCH) {
+                getValue = O1_SAFETY_PASSED;
+                updateDisplay('id_safety_passed_o1', getValue)
+                getValue = O1_SAFETY_FAILED;
+                updateDisplay('id_safety_failed_o1', getValue)
+                getValue = O1_SAFETY_TESTS;
+                updateDisplay('id_safety_tests_o1', getValue)
+                getValue = O1_SAFETY_EXECTIME;
+                updateDisplay('id_safety_exectime_o1', getValue)
+                getValue = O1_SAFETY_REPEATS;
+                updateDisplay('id_safety_repeats_o1', getValue)
+                getJIRA1 = O1_SAFETY_JIRA1
+                getJIRA1Flag = O1_SAFETY_JIRA1_FLAG
+                getJIRA2 = O1_SAFETY_JIRA2
+                getJIRA2Flag = O1_SAFETY_JIRA2_FLAG
+                getJIRA3 = O1_SAFETY_JIRA3
+                getJIRA3Flag = O1_SAFETY_JIRA3_FLAG
+                displayJiraLinks('id_safety_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_SAFETY_RESULT_LINK 
+                updateDisplay('id_safety_jira_o1', getValue, 7)
+                getValue = O1_SAFETY_TCASE_LINK 
+                updateDisplay('id_safety_jira_o1', getValue, 8)
+            }
+            if (O1PAIRINGSWITCH) {
+                getValue = O1_PAIRING_WITHOUT_BLE_PASSED;
+                updateDisplay('id_pairing_without_ble_passed_o1', getValue)
+                getValue = O1_PAIRING_WITHOUT_BLE_FAILED;
+                updateDisplay('id_pairing_without_ble_failed_o1', getValue)
+                getValue = O1_PAIRING_WITHOUT_BLE_TESTS;
+                updateDisplay('id_pairing_without_ble_tests_o1', getValue)
+                getValue = O1_PAIRING_WITHOUT_BLE_EXECTIME;
+                updateDisplay('id_pairing_without_ble_exectime_o1', getValue)
+                getValue = O1_PAIRING_WITHOUT_BLE_REPEATS;
+                updateDisplay('id_pairing_without_ble_repeats_o1', getValue)
+                getJIRA1 = O1_PAIRING_WITHOUT_BLE_JIRA1
+                getJIRA1Flag = O1_PAIRING_WITHOUT_BLE_JIRA1_FLAG
+                getJIRA2 = O1_PAIRING_WITHOUT_BLE_JIRA2
+                getJIRA2Flag = O1_PAIRING_WITHOUT_BLE_JIRA2_FLAG
+                getJIRA3 = O1_PAIRING_WITHOUT_BLE_JIRA3
+                getJIRA3Flag = O1_PAIRING_WITHOUT_BLE_JIRA3_FLAG
+                displayJiraLinks('id_pairing_without_ble_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_PAIRING_WITHOUT_BLE_RESULT_LINK 
+                updateDisplay('id_pairing_without_ble_jira_o1', getValue, 7)
+                getValue = O1_PAIRING_WITHOUT_BLE_TCASE_LINK 
+                updateDisplay('id_pairing_without_ble_jira_o1', getValue, 8)
+            }
+            if (O1LIDSWITCH) {
+                getValue = O1_LID_OPEN_PASSED;
+                updateDisplay('id_lid_open_passed_o1', getValue)
+                getValue = O1_LID_OPEN_FAILED;
+                updateDisplay('id_lid_open_failed_o1', getValue)
+                getValue = O1_LID_OPEN_TESTS;
+                updateDisplay('id_lid_open_tests_o1', getValue)
+                getValue = O1_LID_OPEN_EXECTIME;
+                updateDisplay('id_lid_open_exectime_o1', getValue)
+                getValue = O1_LID_OPEN_REPEATS;
+                updateDisplay('id_lid_open_repeats_o1', getValue)
+                getJIRA1 = O1_LID_OPEN_JIRA1
+                getJIRA1Flag = O1_LID_OPEN_JIRA1_FLAG
+                getJIRA2 = O1_LID_OPEN_JIRA2
+                getJIRA2Flag = O1_LID_OPEN_JIRA2_FLAG
+                getJIRA3 = O1_LID_OPEN_JIRA3
+                getJIRA3Flag = O1_LID_OPEN_JIRA3_FLAG
+                displayJiraLinks('id_lid_open_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_LID_OPEN_RESULT_LINK 
+                updateDisplay('id_lid_open_jira_o1', getValue, 7)
+                getValue = O1_LID_OPEN_TCASE_LINK 
+                updateDisplay('id_lid_open_jira_o1', getValue, 8)
+            }
+            if (O1STARTASWITCH) {
+                getValue = O1_START_BIN_STRESS_PASSED;
+                updateDisplay('id_start_bin_stress_passed_o1', getValue)
+                getValue = O1_START_BIN_STRESS_FAILED;
+                updateDisplay('id_start_bin_stress_failed_o1', getValue)
+                getValue = O1_START_BIN_STRESS_TESTS;
+                updateDisplay('id_start_bin_stress_tests_o1', getValue)
+                getValue = O1_START_BIN_STRESS_EXECTIME;
+                updateDisplay('id_start_bin_stress_exectime_o1', getValue)
+                getValue = O1_START_BIN_STRESS_REPEATS;
+                updateDisplay('id_start_bin_stress_repeats_o1', getValue)
+                getJIRA1 = O1_START_BIN_STRESS_JIRA1
+                getJIRA1Flag = O1_START_BIN_STRESS_JIRA1_FLAG
+                getJIRA2 = O1_START_BIN_STRESS_JIRA2
+                getJIRA2Flag = O1_START_BIN_STRESS_JIRA2_FLAG
+                getJIRA3 = O1_START_BIN_STRESS_JIRA3
+                getJIRA3Flag = O1_START_BIN_STRESS_JIRA3_FLAG
+                displayJiraLinks('id_start_bin_stress_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_START_BIN_STRESS_RESULT_LINK 
+                updateDisplay('id_start_bin_stress_jira_o1', getValue, 7)
+                getValue = O1_START_BIN_STRESS_TCASE_LINK 
+                updateDisplay('id_start_bin_stress_jira_o1', getValue, 8)
+            }
+            if (O1STARTBSWITCH) {
+                getValue = O1_START_BIN_PASSED;
+                updateDisplay('id_start_bin_passed_o1', getValue)
+                getValue = O1_START_BIN_FAILED;
+                updateDisplay('id_start_bin_failed_o1', getValue)
+                getValue = O1_START_BIN_TESTS;
+                updateDisplay('id_start_bin_tests_o1', getValue)
+                getValue = O1_START_BIN_EXECTIME;
+                updateDisplay('id_start_bin_exectime_o1', getValue)
+                getValue = O1_START_BIN_REPEATS;
+                updateDisplay('id_start_bin_repeats_o1', getValue)
+                getJIRA1 = O1_START_BIN_JIRA1
+                getJIRA1Flag = O1_START_BIN_JIRA1_FLAG
+                getJIRA2 = O1_START_BIN_JIRA2
+                getJIRA2Flag = O1_START_BIN_JIRA2_FLAG
+                getJIRA3 = O1_START_BIN_JIRA3
+                getJIRA3Flag = O1_START_BIN_JIRA3_FLAG
+                displayJiraLinks('id_start_bin_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_START_BIN_RESULT_LINK 
+                updateDisplay('id_start_bin_jira_o1', getValue, 7)
+                getValue = O1_START_BIN_TCASE_LINK 
+                updateDisplay('id_start_bin_jira_o1', getValue, 8)
+            }
+            if (O1EEPROMSWITCH) {
+                getValue = O1_EEPROM_PASSED;
+                updateDisplay('id_eeprom_passed_o1', getValue)
+                getValue = O1_EEPROM_FAILED;
+                updateDisplay('id_eeprom_failed_o1', getValue)
+                getValue = O1_EEPROM_TESTS;
+                updateDisplay('id_eeprom_tests_o1', getValue)
+                getValue = O1_EEPROM_EXECTIME;
+                updateDisplay('id_eeprom_exectime_o1', getValue)
+                getValue = O1_EEPROM_REPEATS;
+                updateDisplay('id_eeprom_repeats_o1', getValue)
+                getJIRA1 = O1_EEPROM_JIRA1
+                getJIRA1Flag = O1_EEPROM_JIRA1_FLAG
+                getJIRA2 = O1_EEPROM_JIRA2
+                getJIRA2Flag = O1_EEPROM_JIRA2_FLAG
+                getJIRA3 = O1_EEPROM_JIRA3
+                getJIRA3Flag = O1_EEPROM_JIRA3_FLAG
+                displayJiraLinks('id_eeprom_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_EEPROM_RESULT_LINK 
+                updateDisplay('id_eeprom_jira_o1', getValue, 7)
+                getValue = O1_EEPROM_TCASE_LINK 
+                updateDisplay('id_eeprom_jira_o1', getValue, 8)
+            }
+            if (O1CHILDASWITCH) {
+                getValue = O1_CHILD_LOCK_STRESS_PASSED;
+                updateDisplay('id_child_lock_stress_passed_o1', getValue)
+                getValue = O1_CHILD_LOCK_STRESS_FAILED;
+                updateDisplay('id_child_lock_stress_failed_o1', getValue)
+                getValue = O1_CHILD_LOCK_STRESS_TESTS;
+                updateDisplay('id_child_lock_stress_tests_o1', getValue)
+                getValue = O1_CHILD_LOCK_STRESS_EXECTIME;
+                updateDisplay('id_child_lock_stress_exectime_o1', getValue)
+                getValue = O1_CHILD_LOCK_STRESS_REPEATS;
+                updateDisplay('id_child_lock_stress_repeats_o1', getValue)
+                getJIRA1 = O1_CHILD_LOCK_STRESS_JIRA1
+                getJIRA1Flag = O1_CHILD_LOCK_STRESS_JIRA1_FLAG
+                getJIRA2 = O1_CHILD_LOCK_STRESS_JIRA2
+                getJIRA2Flag = O1_CHILD_LOCK_STRESS_JIRA2_FLAG
+                getJIRA3 = O1_CHILD_LOCK_STRESS_JIRA3
+                getJIRA3Flag = O1_CHILD_LOCK_STRESS_JIRA3_FLAG
+                displayJiraLinks('id_child_lock_stress_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_CHILD_LOCK_STRESS_RESULT_LINK 
+                updateDisplay('id_child_lock_stress_jira_o1', getValue, 7)
+                getValue = O1_CHILD_LOCK_STRESS_TCASE_LINK 
+                updateDisplay('id_child_lock_stress_jira_o1', getValue, 8)
+            }
+            if (O1CHILDBSWITCH) {
+                getValue = O1_CHILD_LOCK_PASSED;
+                updateDisplay('id_child_lock_passed_o1', getValue)
+                getValue = O1_CHILD_LOCK_FAILED;
+                updateDisplay('id_child_lock_failed_o1', getValue)
+                getValue = O1_CHILD_LOCK_TESTS;
+                updateDisplay('id_child_lock_tests_o1', getValue)
+                getValue = O1_CHILD_LOCK_EXECTIME;
+                updateDisplay('id_child_lock_exectime_o1', getValue)
+                getValue = O1_CHILD_LOCK_REPEATS;
+                updateDisplay('id_child_lock_repeats_o1', getValue)
+                getJIRA1 = O1_CHILD_LOCK_JIRA1
+                getJIRA1Flag = O1_CHILD_LOCK_JIRA1_FLAG
+                getJIRA2 = O1_CHILD_LOCK_JIRA2
+                getJIRA2Flag = O1_CHILD_LOCK_JIRA2_FLAG
+                getJIRA3 = O1_CHILD_LOCK_JIRA3
+                getJIRA3Flag = O1_CHILD_LOCK_JIRA3_FLAG
+                displayJiraLinks('id_child_lock_jira_o1', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = O1_CHILD_LOCK_RESULT_LINK 
+                updateDisplay('id_child_lock_jira_o1', getValue, 7)
+                getValue = O1_CHILD_LOCK_TCASE_LINK 
+                updateDisplay('id_child_lock_jira_o1', getValue, 8)
+            }
+        }
+
+        if (1) {
+            getValue = "rls-v01_07_11-f7e96df" 
+            updateDisplay('id_prod_o2', getValue)
+            getValue = "rls-v01_08_04-5df38aa" 
+            updateDisplay('id_ext_ft_o2', getValue)
+            getValue = "rls-v01_08_04-5df38aa" 
+            updateDisplay('id_int_ft_o2', getValue)
+
+            if (1) {
+                getValue = 1
+                updateDisplay('id_ota_self_passed_o2', getValue)
+                getValue = 0 
+                updateDisplay('id_ota_self_failed_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_ota_self_tests_o2', getValue)    
+                getValue = "~2hrs"
+                updateDisplay('id_ota_self_exectime_o2', getValue)  
+                getValue = 30;
+                updateDisplay('id_ota_self_repeats_o2', getValue) 
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_ota_self_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_ota_self_results_v01_09_00.txt" 
+                updateDisplay('id_ota_self_passed_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/ota/run_ota_3D.py" 
+                updateDisplay('id_ota_self_passed_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 2;
+                updateDisplay('id_ota_prod_passed_o2', getValue) 
+                getValue = 0;
+                updateDisplay('id_ota_prod_failed_o2', getValue) 
+                getValue = 2;
+                updateDisplay('id_ota_prod_tests_o2', getValue)         
+                getValue = "~4hrs";
+                updateDisplay('id_ota_prod_exectime_o2', getValue) 
+                getValue = 30;
+                updateDisplay('id_ota_prod_repeats_o2', getValue) 
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_ota_prod_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_ota_prod_upgrade_results_v01_09_00.txt" 
+                updateDisplay('id_ota_prod_passed_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/ota/run_ota_3D.py" 
+                updateDisplay('id_ota_prod_passed_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 2;
+                updateDisplay('id_ota_ext_passed_o2', getValue)     
+                getValue = 0;
+                updateDisplay('id_ota_ext_failed_o2', getValue) 
+                getValue = 2;
+                updateDisplay('id_ota_ext_tests_o2', getValue) 
+                getValue = "~3.5hrs";
+                updateDisplay('id_ota_ext_exectime_o2', getValue) 
+                getValue = 30;
+                updateDisplay('id_ota_ext_repeats_o2', getValue) 
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_ota_ext_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_ota_ext_upgrade_results_v01_09_00.txt" 
+                updateDisplay('id_ota_ext_passed_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/ota/run_ota_3D.py" 
+                updateDisplay('id_ota_ext_passed_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 2;
+                updateDisplay('id_ota_int_passed_o2', getValue) 
+                getValue = 0;
+                updateDisplay('id_ota_int_failed_o2', getValue) 
+                getValue = 2;
+                updateDisplay('id_ota_int_tests_o2', getValue) 
+                getValue = "~3.5hrs";
+                updateDisplay('id_ota_int_exectime_o2', getValue) 
+                getValue = 30;
+                updateDisplay('id_ota_int_repeats_o2', getValue) 
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_ota_int_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_ota_int_upgrade_results_v01_09_00.txt" 
+                updateDisplay('id_ota_int_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/ota/run_ota_3D.py" 
+                updateDisplay('id_ota_int_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 20;
+                updateDisplay('id_ota_power_passed_o2', getValue) 
+                getValue = 0;
+                updateDisplay('id_ota_power_failed_o2', getValue) 
+                getValue = 20;
+                updateDisplay('id_ota_power_tests_o2', getValue) 
+                getValue = "~2hrs";
+                updateDisplay('id_ota_power_exectime_o2', getValue) 
+                getValue = 1;
+                updateDisplay('id_ota_power_repeats_o2', getValue) 
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_ota_power_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_ota_power_results_v01_09_00.txt" 
+                updateDisplay('id_ota_power_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/ota/testsuites/ota_power_cycles.json" 
+                updateDisplay('id_ota_power_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 26;
+                updateDisplay('id_dgo_idle_op_passed_o2', getValue) 
+                getValue = 0;
+                updateDisplay('id_dgo_idle_op_failed_o2', getValue) 
+                getValue = 26;
+                updateDisplay('id_dgo_idle_op_tests_o2', getValue) 
+                getValue = "~0.5hrs";
+                updateDisplay('id_dgo_idle_op_exectime_o2', getValue) 
+                getValue = 1;
+                updateDisplay('id_dgo_idle_op_repeats_o2', getValue) 
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_idle_op_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_idle_op_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_idle_op_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_testsuite_IDLE_5hr_O2.json" 
+                updateDisplay('id_dgo_idle_op_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 28;
+                updateDisplay('id_dgo_lip_op_passed_o2', getValue) 
+                getValue = 0;
+                updateDisplay('id_dgo_lip_op_failed_o2', getValue) 
+                getValue = 28;
+                updateDisplay('id_dgo_lip_op_tests_o2', getValue) 
+                getValue = "~0.5hrs";
+                updateDisplay('id_dgo_lip_op_exectime_o2', getValue) 
+                getValue = 1;
+                updateDisplay('id_dgo_lip_op_repeats_o2', getValue) 
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_lip_op_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_lip_op_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_lip_op_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_testsuite_LIP_5hr_O2.json" 
+                updateDisplay('id_dgo_lip_op_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 35;
+                updateDisplay('id_dgo_hip_op_passed_o2', getValue) 
+                getValue = 0;
+                updateDisplay('id_dgo_hip_op_failed_o2', getValue) 
+                getValue = 35;
+                updateDisplay('id_dgo_hip_op_tests_o2', getValue) 
+                getValue = "~0.5hrs";
+                updateDisplay('id_dgo_hip_op_exectime_o2', getValue) 
+                getValue = 1;
+                updateDisplay('id_dgo_hip_op_repeats_o2', getValue) 
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_hip_op_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_hip_op_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_hip_op_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_testsuite_HIP_5hr_O2.json" 
+                updateDisplay('id_dgo_hip_op_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 28;
+                updateDisplay('id_dgo_cooldown_op_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_dgo_cooldown_op_failed_o2', getValue)
+                getValue = 28;
+                updateDisplay('id_dgo_cooldown_op_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_dgo_cooldown_op_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_dgo_cooldown_op_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_cooldown_op_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_cooldown_op_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_cooldown_op_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_testsuite_COOLDOWN_5hr_O2.json" 
+                updateDisplay('id_dgo_cooldown_op_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 50;
+                updateDisplay('id_dgo_fluff_op_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_dgo_fluff_op_failed_o2', getValue)
+                getValue = 50;
+                updateDisplay('id_dgo_fluff_op_tests_o2', getValue)
+                getValue = "~1hrs";
+                updateDisplay('id_dgo_fluff_op_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_dgo_fluff_op_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_fluff_op_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_fluff_op_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_fluff_op_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_testsuite_FLUFF_5hr_O2.json"
+                updateDisplay('id_dgo_fluff_op_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 15;
+                updateDisplay('id_dgo_idle_mass_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_dgo_idle_mass_failed_o2', getValue)
+                getValue = 15;
+                updateDisplay('id_dgo_idle_mass_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_dgo_idle_mass_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_dgo_idle_mass_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_idle_mass_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_idle_mass_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_idle_mass_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_mass_add_5hr_min_runtime_IDLE_O2.json" 
+                updateDisplay('id_dgo_idle_mass_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 15;
+                updateDisplay('id_dgo_lip_mass_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_dgo_lip_mass_failed_o2', getValue)
+                getValue = 15;
+                updateDisplay('id_dgo_lip_mass_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_dgo_lip_mass_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_dgo_lip_mass_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_lip_mass_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_lip_mass_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_lip_mass_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_mass_add_5hr_min_runtime_LIP_O2.json" 
+                updateDisplay('id_dgo_lip_mass_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 15;
+                updateDisplay('id_dgo_hip_mass_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_dgo_hip_mass_failed_o2', getValue)
+                getValue = 15;
+                updateDisplay('id_dgo_hip_mass_tests_o2', getValue)
+                getValue = "~1hrs";
+                updateDisplay('id_dgo_hip_mass_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_dgo_hip_mass_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_hip_mass_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_hip_mass_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_hip_mass_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_mass_add_5hr_min_runtime_HIP_O2.json" 
+                updateDisplay('id_dgo_hip_mass_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 15;
+                updateDisplay('id_dgo_cooldown_mass_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_dgo_cooldown_mass_failed_o2', getValue)
+                getValue = 15;
+                updateDisplay('id_dgo_cooldown_mass_tests_o2', getValue)
+                getValue = "~1hrs";
+                updateDisplay('id_dgo_cooldown_mass_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_dgo_cooldown_mass_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_cooldown_mass_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_cooldown_mass_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_cooldown_mass_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_mass_add_5hr_min_runtime_COOLDOWN_O2.json" 
+                updateDisplay('id_dgo_cooldown_mass_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 15;
+                updateDisplay('id_dgo_fluff_mass_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_dgo_fluff_mass_failed_o2', getValue)
+                getValue = 15;
+                updateDisplay('id_dgo_fluff_mass_tests_o2', getValue)
+                getValue = "~1.5hrs";
+                updateDisplay('id_dgo_fluff_mass_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_dgo_fluff_mass_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_dgo_fluff_mass_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_dgo_fluff_mass_results_v01_09_00.txt" 
+                updateDisplay('id_dgo_fluff_mass_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_mass_add_5hr_min_runtime_FLUFF_O2.json" 
+                updateDisplay('id_dgo_fluff_mass_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 0;
+                updateDisplay('id_safety_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_safety_failed_o2', getValue)
+                getValue = 42;
+                updateDisplay('id_safety_tests_o2', getValue)
+                getValue = "0";
+                updateDisplay('id_safety_exectime_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_safety_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_safety_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "" 
+                updateDisplay('id_safety_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/safety_test_O2.json" 
+                updateDisplay('id_safety_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 104;
+                updateDisplay('id_pairing_without_ble_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_pairing_without_ble_failed_o2', getValue)
+                getValue = 104;
+                updateDisplay('id_pairing_without_ble_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_pairing_without_ble_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_pairing_without_ble_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_pairing_without_ble_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_pairing_results_v01_09_00.txt" 
+                updateDisplay('id_pairing_without_ble_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/pairing/testsuites/pairing_O2.json" 
+                updateDisplay('id_pairing_without_ble_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 21;
+                updateDisplay('id_start_bin_stress_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_start_bin_stress_failed_o2', getValue)
+                getValue = 21;
+                updateDisplay('id_start_bin_stress_tests_o2', getValue)
+                getValue = "~1.5hrs";
+                updateDisplay('id_start_bin_stress_exectime_o2', getValue)
+                getValue = 30;
+                updateDisplay('id_start_bin_stress_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_start_bin_stress_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_start_via_bin_A_stress_results_v01_09_00.txt" 
+                updateDisplay('id_start_bin_stress_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_start_via_bin_stress_A_O2.json" 
+                updateDisplay('id_start_bin_stress_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 46;
+                updateDisplay('id_start_bin_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_start_bin_failed_o2', getValue)
+                getValue = 46;
+                updateDisplay('id_start_bin_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_start_bin_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_start_bin_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_start_bin_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_start_via_bin_B_results_v01_09_00.txt" 
+                updateDisplay('id_start_bin_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_start_via_bin_B_O2.json" 
+                updateDisplay('id_start_bin_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 8;
+                updateDisplay('id_eeprom_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_eeprom_failed_o2', getValue)
+                getValue = 8;
+                updateDisplay('id_eeprom_tests_o2', getValue)
+                getValue = "~1hrs";
+                updateDisplay('id_eeprom_exectime_o2', getValue)
+                getValue = 100;
+                updateDisplay('id_eeprom_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_eeprom_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_eeprom_stress_results_v01_09_00.txt" 
+                updateDisplay('id_eeprom_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/eeprom_stress_test.json" 
+                updateDisplay('id_eeprom_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 19;
+                updateDisplay('id_child_lock_stress_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_child_lock_stress_failed_o2', getValue)
+                getValue = 19;
+                updateDisplay('id_child_lock_stress_tests_o2', getValue)
+                getValue = "~1hrs";
+                updateDisplay('id_child_lock_stress_exectime_o2', getValue)
+                getValue = 30;
+                updateDisplay('id_child_lock_stress_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_child_lock_stress_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_child_lock_A_stress_results_v01_09_00.txt" 
+                updateDisplay('id_child_lock_stress_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/child_lock_stress_A_O2.json" 
+                updateDisplay('id_child_lock_stress_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 91;
+                updateDisplay('id_child_lock_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_child_lock_failed_o2', getValue)
+                getValue = 91;
+                updateDisplay('id_child_lock_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_child_lock_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_child_lock_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_child_lock_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_child_lock_B_results_v01_09_00.txt" 
+                updateDisplay('id_child_lock_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/child_lock_B_O2.json" 
+                updateDisplay('id_child_lock_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 17;
+                updateDisplay('id_boot_cycle_stress_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_boot_cycle_stress_failed_o2', getValue)
+                getValue = 17;
+                updateDisplay('id_boot_cycle_stress_tests_o2', getValue)
+                getValue = "~5hrs";
+                updateDisplay('id_boot_cycle_stress_exectime_o2', getValue)
+                getValue = 30;
+                updateDisplay('id_boot_cycle_stress_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_boot_cycle_stress_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_boot_cycle_A_stress_results_v01_09_00.txt" 
+                updateDisplay('id_boot_cycle_stress_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/more/testsuites/dgo_test_boot_cycle.json" 
+                updateDisplay('id_boot_cycle_stress_jira_o2', getValue, 8)
+            }
+
+
+
+
+
+
+            if (1) {
+                getValue = 9;
+                updateDisplay('id_bat_d_a_m_h_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_a_m_h_failed_o2', getValue)
+                getValue = 9;
+                updateDisplay('id_bat_d_a_m_h_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_d_a_m_h_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_a_m_h_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_a_m_h_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_add_mass_hip_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_a_m_h_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_add_mass_hip.json" 
+                updateDisplay('id_bat_d_a_m_h_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 9;
+                updateDisplay('id_bat_d_r_h_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_r_h_failed_o2', getValue)
+                getValue = 9;
+                updateDisplay('id_bat_d_r_h_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_d_r_h_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_r_h_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_r_h_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_reset_hip_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_r_h_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_reset_hip.json" 
+                updateDisplay('id_bat_d_r_h_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 12;
+                updateDisplay('id_bat_d_s_c_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_s_c_failed_o2', getValue)
+                getValue = 12;
+                updateDisplay('id_bat_d_s_c_tests_o2', getValue)
+                getValue = "~1.5hrs";
+                updateDisplay('id_bat_d_s_c_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_s_c_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_s_c_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_sht40_calibration_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_s_c_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_sht40_calibration.json" 
+                updateDisplay('id_bat_d_s_c_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 9;
+                updateDisplay('id_bat_d_s_c_s_w_h_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_s_c_s_w_h_failed_o2', getValue)
+                getValue = 9;
+                updateDisplay('id_bat_d_s_c_s_w_h_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_d_s_c_s_w_h_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_s_c_s_w_h_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_s_c_s_w_h_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_sht40_cal_skip_when_hot_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_s_c_s_w_h_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_sht40_cal_skip_when_hot.json" 
+                updateDisplay('id_bat_d_s_c_s_w_h_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 8;
+                updateDisplay('id_bat_d_s_s_n_v_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_s_s_n_v_failed_o2', getValue)
+                getValue = 8;
+                updateDisplay('id_bat_d_s_s_n_v_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_d_s_s_n_v_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_s_s_n_v_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_s_s_n_v_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_start_stop_no_vacation_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_s_s_n_v_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_start_stop_no_vacation.json" 
+                updateDisplay('id_bat_d_s_s_n_v_jira_o2', getValue, 8)
+            }
+
+
+            if (1) {
+                getValue = 11;
+                updateDisplay('id_smoke_pairing_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_smoke_pairing_failed_o2', getValue)
+                getValue = 11;
+                updateDisplay('id_smoke_pairing_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_smoke_pairing_exectime_o2', getValue)
+                getValue = 3;
+                updateDisplay('id_smoke_pairing_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_smoke_pairing_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_smoke_pairing_results_v01_09_00.txt" 
+                updateDisplay('id_smoke_pairing_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/pairing/testsuites/wifi_test_O2_automation.json" 
+                updateDisplay('id_smoke_pairing_jira_o2', getValue, 8)
+            }
+
+            if (1) {
+                getValue = 9;
+                updateDisplay('id_bat_d_j_e_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_j_e_failed_o2', getValue)
+                getValue = 9;
+                updateDisplay('id_bat_d_j_e_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_d_j_e_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_j_e_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_j_e_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_jam_error_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_j_e_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_jam_error.json" 
+                updateDisplay('id_bat_d_j_e_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 12;
+                updateDisplay('id_bat_d_j_i_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_j_i_failed_o2', getValue)
+                getValue = 12;
+                updateDisplay('id_bat_d_j_i_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_d_j_i_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_j_i_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_j_i_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_jam_inactive_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_j_i_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_jam_inactive.json" 
+                updateDisplay('id_bat_d_j_i_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 10;
+                updateDisplay('id_bat_d_h_m_f_a_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_h_m_f_a_failed_o2', getValue)
+                getValue = 10;
+                updateDisplay('id_bat_d_h_m_f_a_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_d_h_m_f_a_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_h_m_f_a_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_h_m_f_a_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_hip_moisture_food_add_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_h_m_f_a_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_hip_moisture_food_add.json" 
+                updateDisplay('id_bat_d_h_m_f_a_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 8;
+                updateDisplay('id_bat_d_h_w_s_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_h_w_s_failed_o2', getValue)
+                getValue = 8;
+                updateDisplay('id_bat_d_h_w_s_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_d_h_w_s_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_h_w_s_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_h_w_s_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_heat_warning_status_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_h_w_s_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_heat_warning_status.json" 
+                updateDisplay('id_bat_d_h_w_s_jira_o2', getValue, 8)
+            }
+            if (1) {
+                getValue = 9;
+                updateDisplay('id_bat_d_e_b_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_d_e_b_failed_o2', getValue)
+                getValue = 9;
+                updateDisplay('id_bat_d_e_b_tests_o2', getValue)
+                getValue = "~3hrs";
+                updateDisplay('id_bat_d_e_b_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_d_e_b_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_d_e_b_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_dgo_empty_bucket_results_v01_09_00.txt" 
+                updateDisplay('id_bat_d_e_b_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_empty_bucket.json" 
+                updateDisplay('id_bat_d_e_b_jira_o2', getValue, 8)
+            }
+
+
+            if (1) {
+                getValue = 13;
+                updateDisplay('id_bat_cooldown_temp_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_cooldown_temp_failed_o2', getValue)
+                getValue = 13;
+                updateDisplay('id_bat_cooldown_temp_tests_o2', getValue)
+                getValue = "~1.5hrs";
+                updateDisplay('id_bat_cooldown_temp_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_cooldown_temp_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_cooldown_temp_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_cooldown_temp_results_v01_09_00.txt" 
+                updateDisplay('id_bat_cooldown_temp_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_cooldown_temp.json" 
+                updateDisplay('id_bat_cooldown_temp_jira_o2', getValue, 8)
+            }
+
+            if (1) {
+                getValue = 22;
+                updateDisplay('id_bat_heat_led_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_heat_led_failed_o2', getValue)
+                getValue = 22;
+                updateDisplay('id_bat_heat_led_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_heat_led_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_heat_led_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_heat_led_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_heat_led_results_v01_09_00.txt" 
+                updateDisplay('id_bat_heat_led_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_heat_led.json" 
+                updateDisplay('id_bat_heat_led_jira_o2', getValue, 8)
+            }
+
+            if (1) {
+                getValue = 8;
+                updateDisplay('id_bat_premature_mass_no_reset_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_premature_mass_no_reset_failed_o2', getValue)
+                getValue = 8;
+                updateDisplay('id_bat_premature_mass_no_reset_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_premature_mass_no_reset_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_premature_mass_no_reset_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_premature_mass_no_reset_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_premature_mass_no_reset_results_v01_09_00.txt" 
+                updateDisplay('id_bat_premature_mass_no_reset_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_premature_mass_no_reset.json" 
+                updateDisplay('id_bat_premature_mass_no_reset_jira_o2', getValue, 8)
+            }
+
+            if (1) {
+                getValue = 11;
+                updateDisplay('id_bat_locked_when_hot_shadows_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_bat_locked_when_hot_shadows_failed_o2', getValue)
+                getValue = 11;
+                updateDisplay('id_bat_locked_when_hot_shadows_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_bat_locked_when_hot_shadows_exectime_o2', getValue)
+                getValue = 1;
+                updateDisplay('id_bat_locked_when_hot_shadows_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_bat_locked_when_hot_shadows_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_bat_locked_when_hot_shadows_results_v01_09_00.txt" 
+                updateDisplay('id_bat_locked_when_hot_shadows_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/bat_dgo_locked_when_hot_shadows.json" 
+                updateDisplay('id_bat_locked_when_hot_shadows_jira_o2', getValue, 8)
+            }
+
+            if (1) {
+                getValue = 8;
+                updateDisplay('id_smoke_dgo_inactive_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_smoke_dgo_inactive_failed_o2', getValue)
+                getValue = 8;
+                updateDisplay('id_smoke_dgo_inactive_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_smoke_dgo_inactive_exectime_o2', getValue)
+                getValue = 3;
+                updateDisplay('id_smoke_dgo_inactive_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_smoke_dgo_inactive_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_smoke_dgo_inactive_results_v01_09_00.txt" 
+                updateDisplay('id_smoke_dgo_inactive_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/dgo_inactive.json" 
+                updateDisplay('id_smoke_dgo_inactive_jira_o2', getValue, 8)
+            }
+
+            if (1) {
+                getValue = 18;
+                updateDisplay('id_smoke_test_lid_passed_o2', getValue)
+                getValue = 0;
+                updateDisplay('id_smoke_test_lid_failed_o2', getValue)
+                getValue = 18;
+                updateDisplay('id_smoke_test_lid_tests_o2', getValue)
+                getValue = "~0.5hrs";
+                updateDisplay('id_smoke_test_lid_exectime_o2', getValue)
+                getValue = 3;
+                updateDisplay('id_smoke_test_lid_repeats_o2', getValue)
+                getJIRA1 = ""
+                getJIRA1Flag = 0
+                getJIRA2 = ""
+                getJIRA2Flag = 0
+                getJIRA3 = ""
+                getJIRA3Flag = 0
+                displayJiraLinks('id_smoke_test_lid_jira_o2', getJIRA1, getJIRA2, getJIRA3, getJIRA1Flag, getJIRA2Flag, getJIRA3Flag)
+                getValue = "./O2_smoke_test_lid_results_v01_09_00.txt" 
+                updateDisplay('id_smoke_test_lid_jira_o2', getValue, 7)
+                getValue = "https://github.com/chewielabs/Oscar-Python-CLI/blob/main/src/oscar/dgo/testsuites/lid_lock_smoke.json" 
+                updateDisplay('id_smoke_test_lid_jira_o2', getValue, 8)
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        function moveImageToRandomLocation() {
+            let randomImage = document.getElementById('randomImage');
+            let maxX = document.documentElement.clientWidth - randomImage.offsetWidth;
+            let maxY = document.documentElement.clientHeight - randomImage.offsetHeight;
+            let randomX = Math.floor(Math.random() * maxX);
+            let randomY = Math.floor(Math.random() * maxY);
+            randomImage.style.left = randomX + 'px';
+            randomImage.style.top = randomY + 'px';
+        }
+        setInterval(moveImageToRandomLocation, 3000);
+
+        function calculateSummary_O1() {
+            let passedCells = document.querySelectorAll('#table_o1.report-table .passed');
+            let failedCells = document.querySelectorAll('#table_o1.report-table .failed');
+            let totalPassed = 0, totalFailed = 0;
+
+            passedCells.forEach(function(cell) {
+                totalPassed += parseInt(cell.textContent) || 0;
+            });
+
+            failedCells.forEach(function(cell) {
+                totalFailed += parseInt(cell.textContent) || 0;
+            });
+
+            document.getElementById('totalPassed_o1').textContent = totalPassed;
+            document.getElementById('totalFailed_o1').textContent = totalFailed;
+        }
+
+        function calculateSummary_O2() {
+            let passedCells = document.querySelectorAll('#table_o2.report-table .passed');
+            let failedCells = document.querySelectorAll('#table_o2.report-table .failed');
+            let totalPassed = 0, totalFailed = 0;
+
+            passedCells.forEach(function(cell) {
+                totalPassed += parseInt(cell.textContent) || 0;
+            });
+
+            failedCells.forEach(function(cell) {
+                totalFailed += parseInt(cell.textContent) || 0;
+            });
+            document.getElementById('totalPassed_o2').textContent = totalPassed;
+            document.getElementById('totalFailed_o2').textContent = totalFailed;
+        }
+
+        window.onload = function() {
+            if (0 && 1) {
+                calculateSummary_O1();
+                calculateSummary_O2();
+            } else if (0) 
+                calculateSummary_O1();
+            else if (1) 
+                calculateSummary_O2();
+        };
+
+    </script>
+<div class="background-strip"></div>
+</body>
+</html>

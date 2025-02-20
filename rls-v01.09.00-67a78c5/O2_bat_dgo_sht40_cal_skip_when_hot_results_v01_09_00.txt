@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 9 items
+
+bat_dgo_sht40_cal_skip_when_hot.py::TestBAT_DGO_SHT40_CAL_SKIP_WHEN_HOT::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:15:52 INFO     dgo manual_stop executed
+2024-07-31 20:15:55 INFO     Current State: IDLE
+2024-07-31 20:15:55 INFO     ===> dgo status
+2024-07-31 20:15:55 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 11%]
+bat_dgo_sht40_cal_skip_when_hot.py::TestBAT_DGO_SHT40_CAL_SKIP_WHEN_HOT::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:15:57 INFO     ===> dgo manual_start
+2024-07-31 20:15:57 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 22%]
+bat_dgo_sht40_cal_skip_when_hot.py::TestBAT_DGO_SHT40_CAL_SKIP_WHEN_HOT::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:15:59 INFO     ===> dgo status
+2024-07-31 20:15:59 INFO        retrying... 1
+2024-07-31 20:16:24 INFO     ===> dgo status
+2024-07-31 20:16:24 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 33%]
+bat_dgo_sht40_cal_skip_when_hot.py::TestBAT_DGO_SHT40_CAL_SKIP_WHEN_HOT::test_dgo_skip_stage 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:16:26 INFO     ===> dgo stage skip
+2024-07-31 20:16:28 INFO     ### test_dgo_skip_stage ==> PASSED
+PASSED                                                                   [ 44%]
+bat_dgo_sht40_cal_skip_when_hot.py::TestBAT_DGO_SHT40_CAL_SKIP_WHEN_HOT::test_dgo_in_HIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:16:30 INFO     ===> dgo status
+2024-07-31 20:16:30 INFO     ### test_dgo_in_HIP_State ==> PASSED
+2024-07-31 20:21:32 INFO     ** wait_time_pause: 300 seconds **
+2024-07-31 20:21:32 INFO     ### wait_time_pause ==> PASSED
+PASSED                                                                   [ 55%]
+bat_dgo_sht40_cal_skip_when_hot.py::TestBAT_DGO_SHT40_CAL_SKIP_WHEN_HOT::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:21:34 INFO     ===> dgo manual_stop
+2024-07-31 20:21:34 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 66%]
+bat_dgo_sht40_cal_skip_when_hot.py::TestBAT_DGO_SHT40_CAL_SKIP_WHEN_HOT::test_dgo_return_to_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:21:46 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 20:21:46 INFO     ### wait_time_pause_10 ==> PASSED
+2024-07-31 20:21:48 INFO     ===> dgo status
+2024-07-31 20:21:48 INFO     ### test_dgo_return_to_IDLE_State ==> PASSED
+PASSED                                                                   [ 77%]
+bat_dgo_sht40_cal_skip_when_hot.py::TestBAT_DGO_SHT40_CAL_SKIP_WHEN_HOT::test_dgo_manual_restart 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:21:50 INFO     ===> dgo manual_start
+2024-07-31 20:21:50 INFO     ### test_dgo_manual_restart ==> PASSED
+PASSED                                                                   [ 88%]
+bat_dgo_sht40_cal_skip_when_hot.py::TestBAT_DGO_SHT40_CAL_SKIP_WHEN_HOT::test_sht40_calibration_disabled 
+-------------------------------- live log call ---------------------------------
+2024-07-31 20:21:52 INFO     ===> dgo status
+2024-07-31 20:21:52 INFO     ### test_sht40_calibration_disabled ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 9 passed in 365.85s (0:06:05) =========================

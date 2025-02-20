@@ -1,0 +1,154 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: metadata-3.1.1, json-report-1.5.0, repeat-0.9.3
+collected 12 items
+
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 04:25:24 INFO     dgo manual_stop executed
+2024-08-01 04:25:28 INFO     Current State: IDLE
+2024-08-01 04:25:28 INFO     ===> dgo status
+2024-08-01 04:25:28 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  8%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_fan_0_set_40 
+-------------------------------- live log call ---------------------------------
+2024-08-01 04:25:30 INFO     ===> fan set 0 40
+2024-08-01 04:25:30 INFO     ### test_fan_0_set_40 ==> PASSED
+PASSED                                                                   [ 16%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_fan_1_set_70 
+-------------------------------- live log call ---------------------------------
+2024-08-01 04:25:32 INFO     ===> fan set 1 70
+2024-08-01 04:25:32 INFO     ### test_fan_1_set_70 ==> PASSED
+PASSED                                                                   [ 25%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_temp_get_3_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-08-01 04:25:34 INFO     ===> temp get 3
+2024-08-01 04:25:34 INFO        retrying... 1
+2024-08-01 04:27:34 INFO     ===> temp get 3
+2024-08-01 04:27:34 INFO        retrying... 2
+2024-08-01 04:29:34 INFO     ===> temp get 3
+2024-08-01 04:29:35 INFO        retrying... 3
+2024-08-01 04:31:35 INFO     ===> temp get 3
+2024-08-01 04:31:35 INFO        retrying... 4
+2024-08-01 04:33:35 INFO     ===> temp get 3
+2024-08-01 04:33:35 INFO        retrying... 5
+2024-08-01 04:35:35 INFO     ===> temp get 3
+2024-08-01 04:35:35 INFO        retrying... 6
+2024-08-01 04:37:35 INFO     ===> temp get 3
+2024-08-01 04:37:35 INFO        retrying... 7
+2024-08-01 04:39:35 INFO     ===> temp get 3
+2024-08-01 04:39:36 INFO        retrying... 8
+2024-08-01 04:41:36 INFO     ===> temp get 3
+2024-08-01 04:41:36 INFO        retrying... 9
+2024-08-01 04:43:36 INFO     ===> temp get 3
+2024-08-01 04:43:36 INFO        retrying... 10
+2024-08-01 04:45:36 INFO     ===> temp get 3
+2024-08-01 04:45:36 INFO        retrying... 11
+2024-08-01 04:47:36 INFO     ===> temp get 3
+2024-08-01 04:47:36 INFO        retrying... 12
+2024-08-01 04:49:36 INFO     ===> temp get 3
+2024-08-01 04:49:37 INFO        retrying... 13
+2024-08-01 04:51:37 INFO     ===> temp get 3
+2024-08-01 04:51:37 INFO        retrying... 14
+2024-08-01 04:53:37 INFO     ===> temp get 3
+2024-08-01 04:53:37 INFO        retrying... 15
+2024-08-01 04:55:37 INFO     ===> temp get 3
+2024-08-01 04:55:37 INFO        retrying... 16
+2024-08-01 04:57:37 INFO     ===> temp get 3
+2024-08-01 04:57:38 INFO        retrying... 17
+2024-08-01 04:59:38 INFO     ===> temp get 3
+2024-08-01 04:59:38 INFO        retrying... 18
+2024-08-01 05:01:38 INFO     ===> temp get 3
+2024-08-01 05:01:38 INFO        retrying... 19
+2024-08-01 05:03:38 INFO     ===> temp get 3
+2024-08-01 05:03:38 INFO        retrying... 20
+2024-08-01 05:05:38 INFO     ===> temp get 3
+2024-08-01 05:05:38 INFO        retrying... 21
+2024-08-01 05:07:38 INFO     ===> temp get 3
+2024-08-01 05:07:39 INFO        retrying... 22
+2024-08-01 05:09:39 INFO     ===> temp get 3
+2024-08-01 05:09:39 INFO        retrying... 23
+2024-08-01 05:11:39 INFO     ===> temp get 3
+2024-08-01 05:11:39 INFO        retrying... 24
+2024-08-01 05:13:39 INFO     ===> temp get 3
+2024-08-01 05:13:39 INFO        retrying... 25
+2024-08-01 05:15:39 INFO     ===> temp get 3
+2024-08-01 05:15:39 INFO        retrying... 26
+2024-08-01 05:17:39 INFO     ===> temp get 3
+2024-08-01 05:17:40 INFO        retrying... 27
+2024-08-01 05:19:40 INFO     ===> temp get 3
+2024-08-01 05:19:40 INFO        retrying... 28
+2024-08-01 05:21:40 INFO     ===> temp get 3
+2024-08-01 05:21:40 INFO        retrying... 29
+2024-08-01 05:23:40 INFO     ===> temp get 3
+2024-08-01 05:23:40 INFO        retrying... 30
+2024-08-01 05:25:40 INFO     ===> temp get 3
+2024-08-01 05:25:41 INFO        retrying... 31
+2024-08-01 05:27:41 INFO     ===> temp get 3
+2024-08-01 05:27:41 INFO        retrying... 32
+2024-08-01 05:29:41 INFO     ===> temp get 3
+2024-08-01 05:29:41 INFO        retrying... 33
+2024-08-01 05:31:41 INFO     ===> temp get 3
+2024-08-01 05:31:41 INFO        retrying... 34
+2024-08-01 05:33:41 INFO     ===> temp get 3
+2024-08-01 05:33:41 INFO        retrying... 35
+2024-08-01 05:35:42 INFO     ===> temp get 3
+2024-08-01 05:35:42 INFO        retrying... 36
+2024-08-01 05:37:42 INFO     ===> temp get 3
+2024-08-01 05:37:42 INFO        retrying... 37
+2024-08-01 05:39:42 INFO     ===> temp get 3
+2024-08-01 05:39:42 INFO     ### test_temp_get_3_IDLE ==> PASSED
+PASSED                                                                   [ 33%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_fan_0_set_15 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:39:44 INFO     ===> fan set 0 15
+2024-08-01 05:39:44 INFO     ### test_fan_0_set_15 ==> PASSED
+PASSED                                                                   [ 41%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_fan_1_set_0 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:39:46 INFO     ===> fan set 1 0
+2024-08-01 05:39:46 INFO     ### test_fan_1_set_0 ==> PASSED
+PASSED                                                                   [ 50%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:39:48 INFO     ===> dgo manual_start
+2024-08-01 05:39:48 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 58%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:39:50 INFO     ===> dgo status
+2024-08-01 05:39:51 INFO        retrying... 1
+2024-08-01 05:40:16 INFO     ===> dgo status
+2024-08-01 05:40:16 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 66%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_sht40_heater_enabled_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:40:18 INFO     ===> dgo status
+2024-08-01 05:40:18 INFO     ### test_sht40_heater_enabled_in_LIP_State ==> PASSED
+PASSED                                                                   [ 75%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:40:20 INFO     ===> dgo manual_stop
+2024-08-01 05:40:20 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 83%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_dgo_return_to_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:40:32 INFO     ** wait_time_pause: 10 seconds **
+2024-08-01 05:40:32 INFO     ### wait_time_pause ==> PASSED
+2024-08-01 05:40:34 INFO     ===> dgo status
+2024-08-01 05:40:34 INFO     ### test_dgo_return_to_IDLE_State ==> PASSED
+PASSED                                                                   [ 91%]
+bat_dgo_sht40_calibration.py::TestBAT_DGO_SHT40_CALIBRATION::test_sht40_heater_disabled_after_cancel 
+-------------------------------- live log call ---------------------------------
+2024-08-01 05:40:36 INFO     ===> dgo status
+2024-08-01 05:40:37 INFO     ### test_sht40_heater_disabled_after_cancel ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 12 passed in 4517.63s (1:15:17) ========================

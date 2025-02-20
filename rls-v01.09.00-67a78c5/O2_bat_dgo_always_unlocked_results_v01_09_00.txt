@@ -1,0 +1,96 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 15 items
+
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_dgo_Start_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:07 INFO     dgo manual_stop executed
+2024-07-31 19:32:10 INFO     Current State: IDLE
+2024-07-31 19:32:10 INFO     ===> dgo status
+2024-07-31 19:32:10 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+PASSED                                                                   [  6%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_set_shadow_childLockEnabled_false 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:12 INFO     Found credentials in environment variables.
+2024-07-31 19:32:14 INFO     ** device shadow: childLockEnabled is set to False **
+2024-07-31 19:32:14 INFO     ### set_shadow_childLockEnabled_false ==> PASSED
+PASSED                                                                   [ 13%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_set_shadow_dgoSafetyLockEnabled_false 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:17 INFO     ** device shadow: dgoSafetyLockEnabled is set to False **
+2024-07-31 19:32:17 INFO     ### set_shadow_dgoSafetyLockEnabled_false ==> PASSED
+PASSED                                                                   [ 20%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_get_shadow_childLockEnabled_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:19 INFO     Found credentials in environment variables.
+2024-07-31 19:32:19 INFO     ### get_shadow_childLockEnabled_false_cloud ==> PASSED
+PASSED                                                                   [ 26%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_get_shadow_dgoSafetyLockEnabled_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:21 INFO     Found credentials in environment variables.
+2024-07-31 19:32:21 INFO     ### get_shadow_dgoSafetyLockEnabled_false_cloud ==> PASSED
+PASSED                                                                   [ 33%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_get_shadow_lidLockState_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:23 INFO     Found credentials in environment variables.
+2024-07-31 19:32:24 INFO     ### get_shadow_lidLockState_false_cloud ==> PASSED
+PASSED                                                                   [ 40%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_get_shadow_childLock_false_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:26 INFO     Found credentials in environment variables.
+2024-07-31 19:32:26 INFO     ### get_shadow_childLock_false_cloud ==> PASSED
+PASSED                                                                   [ 46%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_dgo_manual_start 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:28 INFO     ===> dgo manual_start
+2024-07-31 19:32:28 INFO     ### test_dgo_manual_start ==> PASSED
+PASSED                                                                   [ 53%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_dgo_in_LIP_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:30 INFO     ===> dgo status
+2024-07-31 19:32:30 INFO        retrying... 1
+2024-07-31 19:32:55 INFO     ===> dgo status
+2024-07-31 19:32:56 INFO     ### test_dgo_in_LIP_State ==> PASSED
+PASSED                                                                   [ 60%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_white_lock_OFF_LIP 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:32:58 INFO     ===> led get 1 0
+2024-07-31 19:32:59 INFO     ### test_white_lock_OFF_LIP ==> PASSED
+PASSED                                                                   [ 66%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_lid_lock_state_unlocked 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:33:01 INFO     ===> lid_lock get 0
+2024-07-31 19:33:01 INFO     ### test_lid_lock_state_unlocked ==> PASSED
+PASSED                                                                   [ 73%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_dgo_manual_stop 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:33:03 INFO     ===> dgo manual_stop
+2024-07-31 19:33:03 INFO     ### test_dgo_manual_stop ==> PASSED
+PASSED                                                                   [ 80%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_dgo_end_with_IDLE_State 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:33:15 INFO     ** wait_time_pause: 10 seconds **
+2024-07-31 19:33:15 INFO     ### wait_time_pause ==> PASSED
+2024-07-31 19:33:17 INFO     ===> dgo status
+2024-07-31 19:33:17 INFO     ### test_dgo_end_with_IDLE_State ==> PASSED
+PASSED                                                                   [ 86%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_set_shadow_dgoSafetyLockEnabled_true 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:33:20 INFO     ** device shadow: dgoSafetyLockEnabled is set to True **
+2024-07-31 19:33:20 INFO     ### set_shadow_dgoSafetyLockEnabled_true ==> PASSED
+PASSED                                                                   [ 93%]
+bat_dgo_always_unlocked.py::TestBAT_DGO_ALWAYS_UNLOCKED::test_get_shadow_dgoSafetyLockEnabled_true_cloud 
+-------------------------------- live log call ---------------------------------
+2024-07-31 19:33:22 INFO     Found credentials in environment variables.
+2024-07-31 19:33:22 INFO     ### get_shadow_dgoSafetyLockEnabled_true_cloud ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 15 passed in 80.66s (0:01:20) =========================

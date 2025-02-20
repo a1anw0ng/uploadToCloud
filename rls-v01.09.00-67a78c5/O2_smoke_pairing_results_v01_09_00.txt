@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+config=  <_pytest.config.Config object at 0x7f806e7fa0>
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/pairing
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 11 items
+
+wifi_test_O2_automation.py::TestPairing::test_fr 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:51:41 INFO     ===> fr
+2024-08-01 03:51:43 ERROR    line= E (398286) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54
+2024-08-01 03:51:43 ERROR    line= E (398286) tls_freertos: Reading failed, errno= 119
+2024-08-01 03:51:43 ERROR    line= E (398306) transport_base: poll_read select error 0, errno = Success, fd = 54
+2024-08-01 03:51:43 ERROR    line= E (398316) mqtt_helpers: mqtt_loop_keep_alive returned with status = 4.
+2024-08-01 03:51:43 ERROR    line= E (398326) mqtt_helpers: Network issue, try to disconnect shadow.
+2024-08-01 03:51:43 ERROR    line= E (398336) transport_base: poll_write select error 0, errno = Success, fd = 54
+2024-08-01 03:51:43 INFO     ### test_fr ==> PASSED
+PASSED                                                                   [  9%]
+wifi_test_O2_automation.py::TestPairing::test_get_aws_thing_name 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:51:45 INFO     ===> nvs get aws_thing_name
+2024-08-01 03:51:46 INFO     ### test_get_aws_thing_name ==> PASSED
+PASSED                                                                   [ 18%]
+wifi_test_O2_automation.py::TestPairing::test_group_nvs_ls_info 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:51:49 INFO     ===> nvs ls
+2024-08-01 03:51:50 INFO     ### test_nvs_ls_serial_number ==> PASSED
+2024-08-01 03:51:53 INFO     ===> nvs ls
+2024-08-01 03:51:54 INFO     ### test_nvs_ls_aws_port ==> PASSED
+2024-08-01 03:51:57 INFO     ===> nvs ls
+2024-08-01 03:51:58 INFO     ### test_nvs_ls_aws-root-ca ==> PASSED
+2024-08-01 03:52:01 INFO     ===> nvs ls
+2024-08-01 03:52:02 INFO     ### test_nvs_ls_certificate ==> PASSED
+2024-08-01 03:52:05 INFO     ===> nvs ls
+2024-08-01 03:52:07 INFO     ### test_nvs_ls_private ==> PASSED
+PASSED                                                                   [ 27%]
+wifi_test_O2_automation.py::TestPairing::test_wifi_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:52:09 INFO     ===> wifi setup CheWiFi thingsarehappening
+2024-08-01 03:52:10 INFO     ### test_wifi_setup ==> PASSED
+PASSED                                                                   [ 36%]
+wifi_test_O2_automation.py::TestPairing::test_nvs_get_wifi_ssid_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:52:12 INFO     ===> nvs get wifi_ssid
+2024-08-01 03:52:13 INFO     ### test_nvs_get_wifi_ssid_after_setup ==> PASSED
+PASSED                                                                   [ 45%]
+wifi_test_O2_automation.py::TestPairing::test_nvs_get_wifi_password_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:52:15 INFO     ===> nvs get wifi_password
+2024-08-01 03:52:16 INFO     ### test_nvs_get_wifi_password_after_setup ==> PASSED
+PASSED                                                                   [ 54%]
+wifi_test_O2_automation.py::TestPairing::test_nvs_set_oscar_is_paired_1 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:52:18 INFO     ===> nvs set oscar_is_paired 1
+2024-08-01 03:52:19 INFO     ### test_nvs_set_oscar_is_paired_1 ==> PASSED
+PASSED                                                                   [ 63%]
+wifi_test_O2_automation.py::TestPairing::test_reset 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:52:21 INFO     ===> reset
+2024-08-01 03:52:24 ERROR    line= E (878) secure_boot_v2: Secure Boot V2 verification failed.
+2024-08-01 03:52:24 ERROR    line= E (884) esp_image: Secure boot signature verification failed
+2024-08-01 03:52:24 INFO     ### test_reset ==> PASSED
+PASSED                                                                   [ 72%]
+wifi_test_O2_automation.py::TestPairing::test_wait_time_45s 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:53:11 INFO     ** wait_time_pause: 45 seconds **
+2024-08-01 03:53:11 INFO     ### wait_time_45s ==> PASSED
+PASSED                                                                   [ 81%]
+wifi_test_O2_automation.py::TestPairing::test_wifi_ping 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:53:13 INFO     ===> wifi ping devices.staging.mill.com
+2024-08-01 03:53:28 ERROR    ConnectionError(command)= wifi ping devices.staging.mill.com
+
+2024-08-01 03:53:28 INFO     ### test_wifi_ping ==> PASSED
+PASSED                                                                   [ 90%]
+wifi_test_O2_automation.py::TestPairing::test_get_shadow_online_true 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:53:30 INFO     Found credentials in environment variables.
+2024-08-01 03:53:30 INFO     ### get_shadow_online_true ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 11 passed in 111.34s (0:01:51) ========================
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 2 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+config=  <_pytest.config.Config object at 0x7fa3378fa0>
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/pairing
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 11 items
+
+wifi_test_O2_automation.py::TestPairing::test_fr 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:53:37 INFO     ===> fr
+2024-08-01 03:53:38 ERROR    line= E (75973) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54
+2024-08-01 03:53:38 ERROR    line= E (75983) tls_freertos: Reading failed, errno= 119
+2024-08-01 03:53:38 ERROR    line= E (75983) mqtt_helpers: mqtt_loop_keep_alive returned with status = 4.
+2024-08-01 03:53:38 ERROR    line= E (75993) mqtt_helpers: Network issue, try to disconnect shadow.
+2024-08-01 03:53:38 ERROR    line= E (76003) transport_base: poll_write select error 0, errno = Success, fd = 54
+2024-08-01 03:53:38 ERROR    line= E (76023) mqtt_helpers: Failed to send UNSUBSCRIBE packet to broker with error = 3.
+2024-08-01 03:53:38 ERROR    line= E (76043) jobs_sanford: Failed to unsubscribe to '$aws/things/MG32401A2US100199/jobs/get'
+2024-08-01 03:53:38 ERROR    line= E (76053)ets Jul 29 2019 12:21:46
+2024-08-01 03:53:38 INFO     ### test_fr ==> PASSED
+PASSED                                                                   [  9%]
+wifi_test_O2_automation.py::TestPairing::test_get_aws_thing_name 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:53:40 INFO     ===> nvs get aws_thing_name
+2024-08-01 03:53:47 INFO     ### test_get_aws_thing_name ==> PASSED
+PASSED                                                                   [ 18%]
+wifi_test_O2_automation.py::TestPairing::test_group_nvs_ls_info 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:53:50 INFO     ===> nvs ls
+2024-08-01 03:53:51 INFO     ### test_nvs_ls_serial_number ==> PASSED
+2024-08-01 03:53:54 INFO     ===> nvs ls
+2024-08-01 03:53:55 INFO     ### test_nvs_ls_aws_port ==> PASSED
+2024-08-01 03:53:58 INFO     ===> nvs ls
+2024-08-01 03:53:59 INFO     ### test_nvs_ls_aws-root-ca ==> PASSED
+2024-08-01 03:54:02 INFO     ===> nvs ls
+2024-08-01 03:54:03 INFO     ### test_nvs_ls_certificate ==> PASSED
+2024-08-01 03:54:06 INFO     ===> nvs ls
+2024-08-01 03:54:07 INFO     ### test_nvs_ls_private ==> PASSED
+PASSED                                                                   [ 27%]
+wifi_test_O2_automation.py::TestPairing::test_wifi_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:54:09 INFO     ===> wifi setup CheWiFi thingsarehappening
+2024-08-01 03:54:10 INFO     ### test_wifi_setup ==> PASSED
+PASSED                                                                   [ 36%]
+wifi_test_O2_automation.py::TestPairing::test_nvs_get_wifi_ssid_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:54:13 INFO     ===> nvs get wifi_ssid
+2024-08-01 03:54:14 INFO     ### test_nvs_get_wifi_ssid_after_setup ==> PASSED
+PASSED                                                                   [ 45%]
+wifi_test_O2_automation.py::TestPairing::test_nvs_get_wifi_password_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:54:16 INFO     ===> nvs get wifi_password
+2024-08-01 03:54:17 INFO     ### test_nvs_get_wifi_password_after_setup ==> PASSED
+PASSED                                                                   [ 54%]
+wifi_test_O2_automation.py::TestPairing::test_nvs_set_oscar_is_paired_1 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:54:19 INFO     ===> nvs set oscar_is_paired 1
+2024-08-01 03:54:20 INFO     ### test_nvs_set_oscar_is_paired_1 ==> PASSED
+PASSED                                                                   [ 63%]
+wifi_test_O2_automation.py::TestPairing::test_reset 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:54:22 INFO     ===> reset
+2024-08-01 03:54:25 ERROR    line= E (878) secure_boot_v2: Secure Boot V2 verification failed.
+2024-08-01 03:54:25 ERROR    line= E (884) esp_image: Secure boot signature verification failed
+2024-08-01 03:54:25 INFO     ### test_reset ==> PASSED
+PASSED                                                                   [ 72%]
+wifi_test_O2_automation.py::TestPairing::test_wait_time_45s 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:55:12 INFO     ** wait_time_pause: 45 seconds **
+2024-08-01 03:55:12 INFO     ### wait_time_45s ==> PASSED
+PASSED                                                                   [ 81%]
+wifi_test_O2_automation.py::TestPairing::test_wifi_ping 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:55:14 INFO     ===> wifi ping devices.staging.mill.com
+2024-08-01 03:55:29 ERROR    ConnectionError(command)= wifi ping devices.staging.mill.com
+
+2024-08-01 03:55:29 INFO     ### test_wifi_ping ==> PASSED
+PASSED                                                                   [ 90%]
+wifi_test_O2_automation.py::TestPairing::test_get_shadow_online_true 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:55:31 INFO     Found credentials in environment variables.
+2024-08-01 03:55:31 INFO     ### get_shadow_online_true ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 11 passed in 116.89s (0:01:56) ========================
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 3 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+config=  <_pytest.config.Config object at 0x7fbb817fa0>
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/pi/actions-runner/_work/Oscar-Python-CLI/Oscar-Python-CLI/src/oscar/pairing
+configfile: pytest.ini
+plugins: repeat-0.9.3, json-report-1.5.0, metadata-3.1.1
+collected 11 items
+
+wifi_test_O2_automation.py::TestPairing::test_fr 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:55:38 INFO     ===> fr
+2024-08-01 03:55:39 ERROR    line= E (75983) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54
+2024-08-01 03:55:39 ERROR    line= E (75993) tls_freertos: Reading failed, errno= 119
+2024-08-01 03:55:39 ERROR    line= E (75993) mqtt_helpers: mqtt_loop_keep_alive returned with status = 4.
+2024-08-01 03:55:39 ERROR    line= E (76003) mqtt_helpers: Network issue, try to disconnect shadow.
+2024-08-01 03:55:39 ERROR    line= E (76013) transport_base: poll_write select error 0, errno = Success, fd = 54
+2024-08-01 03:55:39 ERROR    line= E (76033) tls_freertos: Writing failed, errno= 119
+2024-08-01 03:55:39 ERROR    line= E (76063) jobs_sanford: Failed to unsubscribe to '$aws/things/MG32401A2US100199/jobs/get'
+2024-08-01 03:55:39 ERROR    line= E (76063) jobs_saets Jul 29 2019 12:21:46
+2024-08-01 03:55:39 INFO     ### test_fr ==> PASSED
+PASSED                                                                   [  9%]
+wifi_test_O2_automation.py::TestPairing::test_get_aws_thing_name 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:55:41 INFO     ===> nvs get aws_thing_name
+2024-08-01 03:55:42 INFO     ### test_get_aws_thing_name ==> PASSED
+PASSED                                                                   [ 18%]
+wifi_test_O2_automation.py::TestPairing::test_group_nvs_ls_info 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:55:45 INFO     ===> nvs ls
+2024-08-01 03:55:46 INFO     ### test_nvs_ls_serial_number ==> PASSED
+2024-08-01 03:55:49 INFO     ===> nvs ls
+2024-08-01 03:55:50 INFO     ### test_nvs_ls_aws_port ==> PASSED
+2024-08-01 03:55:53 INFO     ===> nvs ls
+2024-08-01 03:55:54 INFO     ### test_nvs_ls_aws-root-ca ==> PASSED
+2024-08-01 03:55:58 INFO     ===> nvs ls
+2024-08-01 03:55:59 INFO     ### test_nvs_ls_certificate ==> PASSED
+2024-08-01 03:56:02 INFO     ===> nvs ls
+2024-08-01 03:56:03 INFO     ### test_nvs_ls_private ==> PASSED
+PASSED                                                                   [ 27%]
+wifi_test_O2_automation.py::TestPairing::test_wifi_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:56:05 INFO     ===> wifi setup CheWiFi thingsarehappening
+2024-08-01 03:56:06 INFO     ### test_wifi_setup ==> PASSED
+PASSED                                                                   [ 36%]
+wifi_test_O2_automation.py::TestPairing::test_nvs_get_wifi_ssid_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:56:08 INFO     ===> nvs get wifi_ssid
+2024-08-01 03:56:09 INFO     ### test_nvs_get_wifi_ssid_after_setup ==> PASSED
+PASSED                                                                   [ 45%]
+wifi_test_O2_automation.py::TestPairing::test_nvs_get_wifi_password_after_setup 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:56:11 INFO     ===> nvs get wifi_password
+2024-08-01 03:56:12 INFO     ### test_nvs_get_wifi_password_after_setup ==> PASSED
+PASSED                                                                   [ 54%]
+wifi_test_O2_automation.py::TestPairing::test_nvs_set_oscar_is_paired_1 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:56:14 INFO     ===> nvs set oscar_is_paired 1
+2024-08-01 03:56:15 INFO     ### test_nvs_set_oscar_is_paired_1 ==> PASSED
+PASSED                                                                   [ 63%]
+wifi_test_O2_automation.py::TestPairing::test_reset 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:56:17 INFO     ===> reset
+2024-08-01 03:56:20 ERROR    line= E (878) secure_boot_v2: Secure Boot V2 verification failed.
+2024-08-01 03:56:20 ERROR    line= E (884) esp_image: Secure boot signature verification failed
+2024-08-01 03:56:20 INFO     ### test_reset ==> PASSED
+PASSED                                                                   [ 72%]
+wifi_test_O2_automation.py::TestPairing::test_wait_time_45s 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:57:07 INFO     ** wait_time_pause: 45 seconds **
+2024-08-01 03:57:07 INFO     ### wait_time_45s ==> PASSED
+PASSED                                                                   [ 81%]
+wifi_test_O2_automation.py::TestPairing::test_wifi_ping 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:57:09 INFO     ===> wifi ping devices.staging.mill.com
+2024-08-01 03:57:24 ERROR    ConnectionError(command)= wifi ping devices.staging.mill.com
+
+2024-08-01 03:57:24 INFO     ### test_wifi_ping ==> PASSED
+PASSED                                                                   [ 90%]
+wifi_test_O2_automation.py::TestPairing::test_get_shadow_online_true 
+-------------------------------- live log call ---------------------------------
+2024-08-01 03:57:26 INFO     Found credentials in environment variables.
+2024-08-01 03:57:27 INFO     ### get_shadow_online_true ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================== 11 passed in 111.26s (0:01:51) ========================

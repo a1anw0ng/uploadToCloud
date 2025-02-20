@@ -1,0 +1,878 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 15 items
+
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_0_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 00:29:11 INFO     ===> lid inject 0
+2024-08-02 00:29:11 ERROR    line= E power_control: Unknown power ID: 0
+2024-08-02 00:29:11 INFO     ### test_lid_inject_0 ==> PASSED
+2024-08-02 00:29:14 INFO     ===> lid inject 1
+2024-08-02 00:29:17 INFO     retries counts: 1
+2024-08-02 00:29:20 INFO     retries counts: 2
+2024-08-02 00:29:23 INFO     retries counts: 3
+2024-08-02 00:29:26 INFO     retries counts: 4
+2024-08-02 00:29:29 INFO     retries counts: 5
+2024-08-02 00:29:29 ERROR    Timeout after 5 retries!
+2024-08-02 00:29:29 INFO     ### test_lid_inject_1 ==> PASSED
+2024-08-02 00:29:35 INFO     dgo manual_stop executed
+2024-08-02 00:29:39 INFO     Current State: IDLE
+2024-08-02 00:29:44 INFO     dgo manual_start executed
+2024-08-02 00:29:55 INFO     Current State: LIP
+2024-08-02 00:30:04 INFO     dgo stage skip executed HIP
+2024-08-02 00:30:07 INFO     Current State: HIP
+2024-08-02 00:30:42 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 00:31:15 INFO     Current State: COOLDOWN
+2024-08-02 00:31:18 INFO     ===> dgo status
+2024-08-02 00:31:18 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 00:31:21 INFO     ===> mass clear
+2024-08-02 00:31:22 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 00:31:25 INFO     ===> mass get
+2024-08-02 00:31:25 INFO     ### test_mass_get ==> PASSED
+2024-08-02 00:31:28 INFO     ===> mass inject 0
+2024-08-02 00:31:28 INFO     ### test_mass_inject_0 ==> PASSED
+2024-08-02 00:31:31 INFO     ===> mass get
+2024-08-02 00:31:31 INFO     ### test_mass_get_0 ==> PASSED
+2024-08-02 00:31:35 INFO     ===> dgo status
+2024-08-02 00:31:35 INFO     ### test_dgo_status_0 ==> PASSED
+2024-08-02 00:31:41 INFO     Current State: COOLDOWN
+2024-08-02 00:31:44 INFO     dgo manual_stop executed
+2024-08-02 00:31:52 INFO     Current State: IDLE
+2024-08-02 00:31:56 INFO     Current State: IDLE
+2024-08-02 00:31:56 INFO     dgo manual_start executed
+2024-08-02 00:32:09 INFO     Current State: LIP
+2024-08-02 00:32:13 INFO     dgo stage skip executed HIP
+2024-08-02 00:32:21 INFO     Current State: HIP
+2024-08-02 00:32:24 INFO     ===> dgo status
+2024-08-02 00:32:24 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 00:32:27 INFO     ===> mass get
+2024-08-02 00:32:27 INFO     ### test_mass_get_0_HIP ==> PASSED
+2024-08-02 00:32:31 INFO     ===> dgo status
+2024-08-02 00:32:31 INFO     ### test_dgo_status_0_HIP ==> PASSED
+2024-08-02 00:32:34 INFO     ===> dgo stage hip_trans
+2024-08-02 00:32:34 INFO     ### test_hip_trans_region_0_HIP ==> PASSED
+2024-08-02 00:32:37 INFO     ===> mass get
+2024-08-02 00:32:37 INFO     ### test_mass_get_0_HIP_trans ==> PASSED
+2024-08-02 00:32:40 INFO     ===> dgo status
+2024-08-02 00:32:40 INFO     ### test_dgo_status_0_HIP_trans ==> PASSED
+PASSED                                                                   [  6%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_100_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 00:32:46 INFO     dgo manual_stop executed
+2024-08-02 00:32:49 INFO     Current State: IDLE
+2024-08-02 00:32:54 INFO     dgo manual_start executed
+2024-08-02 00:33:06 INFO     Current State: LIP
+2024-08-02 00:33:15 INFO     dgo stage skip executed HIP
+2024-08-02 00:33:18 INFO     Current State: HIP
+2024-08-02 00:33:52 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 00:34:26 INFO     Current State: COOLDOWN
+2024-08-02 00:34:29 INFO     ===> dgo status
+2024-08-02 00:34:29 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 00:34:32 INFO     ===> mass clear
+2024-08-02 00:34:32 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 00:34:35 INFO     ===> mass get
+2024-08-02 00:34:35 INFO     ### test_mass_get ==> PASSED
+2024-08-02 00:34:38 INFO     ===> mass inject 50
+2024-08-02 00:34:39 INFO     ### test_mass_inject_50 ==> PASSED
+2024-08-02 00:34:42 INFO     ===> mass get
+2024-08-02 00:34:42 INFO     ### test_mass_get_50 ==> PASSED
+2024-08-02 00:34:45 INFO     ===> dgo status
+2024-08-02 00:34:46 INFO     ### test_dgo_status_50 ==> PASSED
+2024-08-02 00:34:49 INFO     ===> mass inject 50
+2024-08-02 00:34:49 INFO     ### test_mass_inject_50 ==> PASSED
+2024-08-02 00:34:52 INFO     ===> mass get
+2024-08-02 00:34:52 INFO     ### test_mass_get_100 ==> PASSED
+2024-08-02 00:34:55 INFO     ===> dgo status
+2024-08-02 00:34:56 INFO     ### test_dgo_status_100 ==> PASSED
+2024-08-02 00:35:02 INFO     Current State: COOLDOWN
+2024-08-02 00:35:05 INFO     dgo manual_stop executed
+2024-08-02 00:35:13 INFO     Current State: IDLE
+2024-08-02 00:35:16 INFO     Current State: IDLE
+2024-08-02 00:35:16 INFO     dgo manual_start executed
+2024-08-02 00:35:30 INFO     Current State: LIP
+2024-08-02 00:35:34 INFO     dgo stage skip executed HIP
+2024-08-02 00:35:42 INFO     Current State: HIP
+2024-08-02 00:35:45 INFO     ===> dgo status
+2024-08-02 00:35:45 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 00:35:48 INFO     ===> mass get
+2024-08-02 00:35:48 INFO     ### test_mass_get_100_HIP ==> PASSED
+2024-08-02 00:35:51 INFO     ===> dgo status
+2024-08-02 00:35:51 INFO     ### test_dgo_status_100_HIP ==> PASSED
+2024-08-02 00:35:54 INFO     ===> dgo stage hip_trans
+2024-08-02 00:35:55 INFO     ### test_hip_trans_region_100_HIP ==> PASSED
+2024-08-02 00:35:58 INFO     ===> mass get
+2024-08-02 00:35:58 INFO     ### test_mass_get_100_HIP_trans ==> PASSED
+2024-08-02 00:36:01 INFO     ===> dgo status
+2024-08-02 00:36:01 INFO     ### test_dgo_status_100_HIP_trans ==> PASSED
+PASSED                                                                   [ 13%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_1lb_450_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 00:36:07 INFO     dgo manual_stop executed
+2024-08-02 00:36:10 INFO     Current State: IDLE
+2024-08-02 00:36:15 INFO     dgo manual_start executed
+2024-08-02 00:36:26 INFO     Current State: LIP
+2024-08-02 00:36:36 INFO     dgo stage skip executed HIP
+2024-08-02 00:36:39 INFO     Current State: HIP
+2024-08-02 00:37:13 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 00:37:46 INFO     Current State: COOLDOWN
+2024-08-02 00:37:49 INFO     ===> dgo status
+2024-08-02 00:37:49 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 00:37:52 INFO     ===> mass clear
+2024-08-02 00:37:53 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 00:37:56 INFO     ===> mass get
+2024-08-02 00:37:56 INFO     ### test_mass_get ==> PASSED
+2024-08-02 00:37:59 INFO     ===> mass inject 200
+2024-08-02 00:38:00 INFO     ### test_mass_inject_200 ==> PASSED
+2024-08-02 00:38:03 INFO     ===> mass get
+2024-08-02 00:38:03 INFO     ### test_mass_get_200 ==> PASSED
+2024-08-02 00:38:06 INFO     ===> dgo status
+2024-08-02 00:38:06 INFO     ### test_dgo_status_200 ==> PASSED
+2024-08-02 00:38:09 INFO     ===> mass inject 100
+2024-08-02 00:38:10 INFO     ### test_mass_inject_100 ==> PASSED
+2024-08-02 00:38:13 INFO     ===> mass get
+2024-08-02 00:38:13 INFO     ### test_mass_get_300 ==> PASSED
+2024-08-02 00:38:16 INFO     ===> dgo status
+2024-08-02 00:38:16 INFO     ### test_dgo_status_300 ==> PASSED
+2024-08-02 00:38:19 INFO     ===> mass inject 150
+2024-08-02 00:38:20 INFO     ### test_mass_inject_150 ==> PASSED
+2024-08-02 00:38:23 INFO     ===> mass get
+2024-08-02 00:38:23 INFO     ### test_mass_get_450 ==> PASSED
+2024-08-02 00:38:26 INFO     ===> dgo status
+2024-08-02 00:38:26 INFO     ### test_dgo_status_450 ==> PASSED
+2024-08-02 00:38:33 INFO     Current State: COOLDOWN
+2024-08-02 00:38:36 INFO     dgo manual_stop executed
+2024-08-02 00:38:44 INFO     Current State: IDLE
+2024-08-02 00:38:47 INFO     Current State: IDLE
+2024-08-02 00:38:47 INFO     dgo manual_start executed
+2024-08-02 00:39:00 INFO     Current State: LIP
+2024-08-02 00:39:05 INFO     dgo stage skip executed HIP
+2024-08-02 00:39:13 INFO     Current State: HIP
+2024-08-02 00:39:16 INFO     ===> dgo status
+2024-08-02 00:39:16 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 00:39:19 INFO     ===> mass get
+2024-08-02 00:39:19 INFO     ### test_mass_get_450_HIP ==> PASSED
+2024-08-02 00:39:22 INFO     ===> dgo status
+2024-08-02 00:39:22 INFO     ### test_dgo_status_450_HIP ==> PASSED
+2024-08-02 00:39:25 INFO     ===> dgo stage hip_trans
+2024-08-02 00:39:25 INFO     ### test_hip_trans_region_450_HIP ==> PASSED
+2024-08-02 00:39:28 INFO     ===> mass get
+2024-08-02 00:39:28 INFO     ### test_mass_get_450_HIP_trans ==> PASSED
+2024-08-02 00:39:31 INFO     ===> dgo status
+2024-08-02 00:39:32 INFO     ### test_dgo_status_450_HIP_trans ==> PASSED
+PASSED                                                                   [ 20%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_2lb_900_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 00:39:38 INFO     dgo manual_stop executed
+2024-08-02 00:39:41 INFO     Current State: IDLE
+2024-08-02 00:39:46 INFO     dgo manual_start executed
+2024-08-02 00:39:57 INFO     Current State: LIP
+2024-08-02 00:40:06 INFO     dgo stage skip executed HIP
+2024-08-02 00:40:10 INFO     Current State: HIP
+2024-08-02 00:40:44 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 00:41:17 INFO     Current State: COOLDOWN
+2024-08-02 00:41:20 INFO     ===> dgo status
+2024-08-02 00:41:20 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 00:41:23 INFO     ===> mass clear
+2024-08-02 00:41:24 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 00:41:27 INFO     ===> mass get
+2024-08-02 00:41:27 INFO     ### test_mass_get ==> PASSED
+2024-08-02 00:41:30 INFO     ===> mass inject 900
+2024-08-02 00:41:31 INFO     ### test_mass_inject_900 ==> PASSED
+2024-08-02 00:41:34 INFO     ===> mass get
+2024-08-02 00:41:34 INFO     ### test_mass_get_900 ==> PASSED
+2024-08-02 00:41:37 INFO     ===> dgo status
+2024-08-02 00:41:38 INFO     ### test_dgo_status_900 ==> PASSED
+2024-08-02 00:41:44 INFO     Current State: COOLDOWN
+2024-08-02 00:41:47 INFO     dgo manual_stop executed
+2024-08-02 00:41:55 INFO     Current State: IDLE
+2024-08-02 00:41:58 INFO     Current State: IDLE
+2024-08-02 00:41:58 INFO     dgo manual_start executed
+2024-08-02 00:42:12 INFO     Current State: LIP
+2024-08-02 00:42:16 INFO     dgo stage skip executed HIP
+2024-08-02 00:42:24 INFO     Current State: HIP
+2024-08-02 00:42:27 INFO     ===> dgo status
+2024-08-02 00:42:27 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 00:42:30 INFO     ===> mass get
+2024-08-02 00:42:30 INFO     ### test_mass_get_900_HIP ==> PASSED
+2024-08-02 00:42:33 INFO     ===> dgo status
+2024-08-02 00:42:33 INFO     ### test_dgo_status_900_HIP ==> PASSED
+2024-08-02 00:42:36 INFO     ===> dgo stage hip_trans
+2024-08-02 00:42:36 INFO     ### test_hip_trans_region_900_HIP ==> PASSED
+2024-08-02 00:42:39 INFO     ===> mass get
+2024-08-02 00:42:40 INFO     ### test_mass_get_900_HIP_trans ==> PASSED
+2024-08-02 00:42:43 INFO     ===> dgo status
+2024-08-02 00:42:43 INFO     ### test_dgo_status_900_HIP_trans ==> PASSED
+PASSED                                                                   [ 26%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_3lb_1370_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 00:42:49 INFO     dgo manual_stop executed
+2024-08-02 00:42:52 INFO     Current State: IDLE
+2024-08-02 00:42:57 INFO     dgo manual_start executed
+2024-08-02 00:43:08 INFO     Current State: LIP
+2024-08-02 00:43:18 INFO     dgo stage skip executed HIP
+2024-08-02 00:43:21 INFO     Current State: HIP
+2024-08-02 00:43:55 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 00:44:28 INFO     Current State: COOLDOWN
+2024-08-02 00:44:31 INFO     ===> dgo status
+2024-08-02 00:44:31 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 00:44:34 INFO     ===> mass clear
+2024-08-02 00:44:35 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 00:44:38 INFO     ===> mass get
+2024-08-02 00:44:38 INFO     ### test_mass_get ==> PASSED
+2024-08-02 00:44:41 INFO     ===> mass inject 10
+2024-08-02 00:44:42 INFO     ### test_mass_inject_10 ==> PASSED
+2024-08-02 00:44:45 INFO     ===> mass get
+2024-08-02 00:44:45 INFO     ### test_mass_get_10 ==> PASSED
+2024-08-02 00:44:48 INFO     ===> dgo status
+2024-08-02 00:44:48 INFO     ### test_dgo_status_10 ==> PASSED
+2024-08-02 00:44:51 INFO     ===> mass inject 1000
+2024-08-02 00:44:52 INFO     ### test_mass_inject_1000 ==> PASSED
+2024-08-02 00:44:55 INFO     ===> mass get
+2024-08-02 00:44:55 INFO     ### test_mass_get_1010 ==> PASSED
+2024-08-02 00:44:58 INFO     ===> dgo status
+2024-08-02 00:44:58 INFO     ### test_dgo_status_1010 ==> PASSED
+2024-08-02 00:45:01 INFO     ===> mass inject 300
+2024-08-02 00:45:02 INFO     ### test_mass_inject_300 ==> PASSED
+2024-08-02 00:45:05 INFO     ===> mass get
+2024-08-02 00:45:05 INFO     ### test_mass_get_1310 ==> PASSED
+2024-08-02 00:45:08 INFO     ===> dgo status
+2024-08-02 00:45:08 INFO     ### test_dgo_status_1310 ==> PASSED
+2024-08-02 00:45:11 INFO     ===> mass inject 60
+2024-08-02 00:45:12 INFO     ### test_mass_inject_60 ==> PASSED
+2024-08-02 00:45:15 INFO     ===> mass get
+2024-08-02 00:45:15 INFO     ### test_mass_get_1370 ==> PASSED
+2024-08-02 00:45:18 INFO     ===> dgo status
+2024-08-02 00:45:18 INFO     ### test_dgo_status_1370 ==> PASSED
+2024-08-02 00:45:25 INFO     Current State: COOLDOWN
+2024-08-02 00:45:28 INFO     dgo manual_stop executed
+2024-08-02 00:45:36 INFO     Current State: IDLE
+2024-08-02 00:45:39 INFO     Current State: IDLE
+2024-08-02 00:45:39 INFO     dgo manual_start executed
+2024-08-02 00:45:52 INFO     Current State: LIP
+2024-08-02 00:45:57 INFO     dgo stage skip executed HIP
+2024-08-02 00:46:05 INFO     Current State: HIP
+2024-08-02 00:46:08 INFO     ===> dgo status
+2024-08-02 00:46:08 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 00:46:11 INFO     ===> mass get
+2024-08-02 00:46:11 INFO     ### test_mass_get_1370_HIP ==> PASSED
+2024-08-02 00:46:14 INFO     ===> dgo status
+2024-08-02 00:46:14 INFO     ### test_dgo_status_1370_HIP ==> PASSED
+2024-08-02 00:46:17 INFO     ===> dgo stage hip_trans
+2024-08-02 00:46:17 INFO     ### test_hip_trans_region_1370_HIP ==> PASSED
+2024-08-02 00:46:20 INFO     ===> mass get
+2024-08-02 00:46:21 INFO     ### test_mass_get_1370_HIP_trans ==> PASSED
+2024-08-02 00:46:24 INFO     ===> dgo status
+2024-08-02 00:46:24 INFO     ### test_dgo_status_1370_HIP_trans ==> PASSED
+PASSED                                                                   [ 33%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_4lb_1816_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 00:46:30 INFO     dgo manual_stop executed
+2024-08-02 00:46:33 INFO     Current State: IDLE
+2024-08-02 00:46:38 INFO     dgo manual_start executed
+2024-08-02 00:46:49 INFO     Current State: LIP
+2024-08-02 00:46:59 INFO     dgo stage skip executed HIP
+2024-08-02 00:47:02 INFO     Current State: HIP
+2024-08-02 00:47:36 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 00:48:09 INFO     Current State: COOLDOWN
+2024-08-02 00:48:12 INFO     ===> dgo status
+2024-08-02 00:48:12 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 00:48:15 INFO     ===> mass clear
+2024-08-02 00:48:16 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 00:48:19 INFO     ===> mass get
+2024-08-02 00:48:19 INFO     ### test_mass_get ==> PASSED
+2024-08-02 00:48:22 INFO     ===> mass inject 1816
+2024-08-02 00:48:23 INFO     ### test_mass_inject_1816 ==> PASSED
+2024-08-02 00:48:26 INFO     ===> mass get
+2024-08-02 00:48:26 INFO     ### test_mass_get_1816 ==> PASSED
+2024-08-02 00:48:29 INFO     ===> dgo status
+2024-08-02 00:48:29 INFO     ### test_dgo_status_1816 ==> PASSED
+2024-08-02 00:48:35 INFO     Current State: COOLDOWN
+2024-08-02 00:48:38 INFO     dgo manual_stop executed
+2024-08-02 00:48:47 INFO     Current State: IDLE
+2024-08-02 00:48:50 INFO     Current State: IDLE
+2024-08-02 00:48:50 INFO     dgo manual_start executed
+2024-08-02 00:49:03 INFO     Current State: LIP
+2024-08-02 00:49:07 INFO     dgo stage skip executed HIP
+2024-08-02 00:49:16 INFO     Current State: HIP
+2024-08-02 00:49:19 INFO     ===> dgo status
+2024-08-02 00:49:19 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 00:49:22 INFO     ===> mass get
+2024-08-02 00:49:22 INFO     ### test_mass_get_1816_HIP ==> PASSED
+2024-08-02 00:49:25 INFO     ===> dgo status
+2024-08-02 00:49:25 INFO     ### test_dgo_status_1816_HIP ==> PASSED
+2024-08-02 00:49:28 INFO     ===> dgo stage hip_trans
+2024-08-02 00:49:28 INFO     ### test_hip_trans_region_1816_HIP ==> PASSED
+2024-08-02 00:49:31 INFO     ===> mass get
+2024-08-02 00:49:31 INFO     ### test_mass_get_1816_HIP_trans ==> PASSED
+2024-08-02 00:49:34 INFO     ===> dgo status
+2024-08-02 00:49:34 INFO     ### test_dgo_status_1816_HIP_trans ==> PASSED
+PASSED                                                                   [ 40%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_5lb_2270_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 00:49:40 INFO     dgo manual_stop executed
+2024-08-02 00:49:44 INFO     Current State: IDLE
+2024-08-02 00:49:49 INFO     dgo manual_start executed
+2024-08-02 00:50:00 INFO     Current State: LIP
+2024-08-02 00:50:09 INFO     dgo stage skip executed HIP
+2024-08-02 00:50:12 INFO     Current State: HIP
+2024-08-02 00:50:47 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 00:51:20 INFO     Current State: COOLDOWN
+2024-08-02 00:51:23 INFO     ===> dgo status
+2024-08-02 00:51:23 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 00:51:26 INFO     ===> mass clear
+2024-08-02 00:51:27 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 00:51:30 INFO     ===> mass get
+2024-08-02 00:51:30 INFO     ### test_mass_get ==> PASSED
+2024-08-02 00:51:33 INFO     ===> mass inject 80
+2024-08-02 00:51:34 INFO     ### test_mass_inject_80 ==> PASSED
+2024-08-02 00:51:37 INFO     ===> mass get
+2024-08-02 00:51:37 INFO     ### test_mass_get_80_HIP ==> PASSED
+2024-08-02 00:51:40 INFO     ===> dgo status
+2024-08-02 00:51:40 INFO     ### test_dgo_status_80 ==> PASSED
+2024-08-02 00:51:43 INFO     ===> mass inject 300
+2024-08-02 00:51:44 INFO     ### test_mass_inject_300 ==> PASSED
+2024-08-02 00:51:47 INFO     ===> mass get
+2024-08-02 00:51:47 INFO     ### test_mass_get_380_HIP ==> PASSED
+2024-08-02 00:51:50 INFO     ===> dgo status
+2024-08-02 00:51:50 INFO     ### test_dgo_status_380 ==> PASSED
+2024-08-02 00:51:53 INFO     ===> mass inject 550
+2024-08-02 00:51:54 INFO     ### test_mass_inject_550 ==> PASSED
+2024-08-02 00:51:57 INFO     ===> mass get
+2024-08-02 00:51:57 INFO     ### test_mass_get_930_HIP ==> PASSED
+2024-08-02 00:52:00 INFO     ===> dgo status
+2024-08-02 00:52:00 INFO     ### test_dgo_status_930 ==> PASSED
+2024-08-02 00:52:03 INFO     ===> mass inject 400
+2024-08-02 00:52:04 INFO     ### test_mass_inject_400 ==> PASSED
+2024-08-02 00:52:07 INFO     ===> mass get
+2024-08-02 00:52:07 INFO     ### test_mass_get_1330_HIP ==> PASSED
+2024-08-02 00:52:10 INFO     ===> dgo status
+2024-08-02 00:52:11 INFO     ### test_dgo_status_1330 ==> PASSED
+2024-08-02 00:52:14 INFO     ===> mass inject 940
+2024-08-02 00:52:14 INFO     ### test_mass_inject_940 ==> PASSED
+2024-08-02 00:52:17 INFO     ===> mass get
+2024-08-02 00:52:17 INFO     ### test_mass_get_2270 ==> PASSED
+2024-08-02 00:52:20 INFO     ===> dgo status
+2024-08-02 00:52:21 INFO     ### test_dgo_status_2270 ==> PASSED
+2024-08-02 00:52:27 INFO     Current State: COOLDOWN
+2024-08-02 00:52:30 INFO     dgo manual_stop executed
+2024-08-02 00:52:38 INFO     Current State: IDLE
+2024-08-02 00:52:41 INFO     Current State: IDLE
+2024-08-02 00:52:41 INFO     dgo manual_start executed
+2024-08-02 00:52:55 INFO     Current State: LIP
+2024-08-02 00:52:59 INFO     dgo stage skip executed HIP
+2024-08-02 00:53:07 INFO     Current State: HIP
+2024-08-02 00:53:10 INFO     ===> dgo status
+2024-08-02 00:53:10 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 00:53:13 INFO     ===> mass get
+2024-08-02 00:53:13 INFO     ### test_mass_get_2270_HIP ==> PASSED
+2024-08-02 00:53:16 INFO     ===> dgo status
+2024-08-02 00:53:17 INFO     ### test_dgo_status_2270_HIP ==> PASSED
+2024-08-02 00:53:20 INFO     ===> dgo stage hip_trans
+2024-08-02 00:53:20 INFO     ### test_hip_trans_region_2270_HIP ==> PASSED
+2024-08-02 00:53:23 INFO     ===> mass get
+2024-08-02 00:53:23 INFO     ### test_mass_get_2270_HIP_trans ==> PASSED
+2024-08-02 00:53:26 INFO     ===> dgo status
+2024-08-02 00:53:26 INFO     ### test_dgo_status_2270_HIP_trans ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_6lb_2724_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 00:53:32 INFO     dgo manual_stop executed
+2024-08-02 00:53:35 INFO     Current State: IDLE
+2024-08-02 00:53:40 INFO     dgo manual_start executed
+2024-08-02 00:53:52 INFO     Current State: LIP
+2024-08-02 00:54:01 INFO     dgo stage skip executed HIP
+2024-08-02 00:54:04 INFO     Current State: HIP
+2024-08-02 00:54:38 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 00:55:11 INFO     Current State: COOLDOWN
+2024-08-02 00:55:15 INFO     ===> dgo status
+2024-08-02 00:55:15 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 00:55:18 INFO     ===> mass clear
+2024-08-02 00:55:18 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 00:55:21 INFO     ===> mass get
+2024-08-02 00:55:22 INFO     ### test_mass_get ==> PASSED
+2024-08-02 00:55:25 INFO     ===> mass inject 1900
+2024-08-02 00:55:26 INFO     ### test_mass_inject_1900 ==> PASSED
+2024-08-02 00:55:29 INFO     ===> mass get
+2024-08-02 00:55:29 INFO     ### test_mass_get_1900_HIP ==> PASSED
+2024-08-02 00:55:32 INFO     ===> dgo status
+2024-08-02 00:55:32 INFO     ### test_dgo_status_1900 ==> PASSED
+2024-08-02 00:55:35 INFO     ===> mass inject 824
+2024-08-02 00:55:36 INFO     ### test_mass_inject_824 ==> PASSED
+2024-08-02 00:55:39 INFO     ===> mass get
+2024-08-02 00:55:39 INFO     ### test_mass_get_2724 ==> PASSED
+2024-08-02 00:55:42 INFO     ===> dgo status
+2024-08-02 00:55:42 INFO     ### test_dgo_status_2724 ==> PASSED
+2024-08-02 00:55:48 INFO     Current State: COOLDOWN
+2024-08-02 00:55:51 INFO     dgo manual_stop executed
+2024-08-02 00:55:59 INFO     Current State: IDLE
+2024-08-02 00:56:03 INFO     Current State: IDLE
+2024-08-02 00:56:03 INFO     dgo manual_start executed
+2024-08-02 00:56:16 INFO     Current State: LIP
+2024-08-02 00:56:20 INFO     dgo stage skip executed HIP
+2024-08-02 00:56:28 INFO     Current State: HIP
+2024-08-02 00:56:31 INFO     ===> dgo status
+2024-08-02 00:56:32 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 00:56:35 INFO     ===> mass get
+2024-08-02 00:56:35 INFO     ### test_mass_get_2724_HIP ==> PASSED
+2024-08-02 00:56:38 INFO     ===> dgo status
+2024-08-02 00:56:38 INFO     ### test_dgo_status_2724_HIP ==> PASSED
+2024-08-02 00:56:41 INFO     ===> dgo stage hip_trans
+2024-08-02 00:56:41 INFO     ### test_hip_trans_region_2724_HIP ==> PASSED
+2024-08-02 00:56:44 INFO     ===> mass get
+2024-08-02 00:56:44 INFO     ### test_mass_get_2724_HIP_trans ==> PASSED
+2024-08-02 00:56:47 INFO     ===> dgo status
+2024-08-02 00:56:47 INFO     ### test_dgo_status_2724_HIP_trans ==> PASSED
+PASSED                                                                   [ 53%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_7lb_3178_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 00:56:53 INFO     dgo manual_stop executed
+2024-08-02 00:56:56 INFO     Current State: IDLE
+2024-08-02 00:57:02 INFO     dgo manual_start executed
+2024-08-02 00:57:13 INFO     Current State: LIP
+2024-08-02 00:57:22 INFO     dgo stage skip executed HIP
+2024-08-02 00:57:25 INFO     Current State: HIP
+2024-08-02 00:57:59 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 00:58:33 INFO     Current State: COOLDOWN
+2024-08-02 00:58:36 INFO     ===> dgo status
+2024-08-02 00:58:36 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 00:58:39 INFO     ===> mass clear
+2024-08-02 00:58:40 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 00:58:43 INFO     ===> mass get
+2024-08-02 00:58:43 INFO     ### test_mass_get ==> PASSED
+2024-08-02 00:58:46 INFO     ===> mass inject 1500
+2024-08-02 00:58:47 INFO     ### test_mass_inject_1500 ==> PASSED
+2024-08-02 00:58:50 INFO     ===> mass get
+2024-08-02 00:58:50 INFO     ### test_mass_get_1500_HIP ==> PASSED
+2024-08-02 00:58:53 INFO     ===> dgo status
+2024-08-02 00:58:53 INFO     ### test_dgo_status_1500 ==> PASSED
+2024-08-02 00:58:56 INFO     ===> mass inject 950
+2024-08-02 00:58:57 INFO     ### test_mass_inject_950 ==> PASSED
+2024-08-02 00:59:00 INFO     ===> mass get
+2024-08-02 00:59:00 INFO     ### test_mass_get_2450_HIP ==> PASSED
+2024-08-02 00:59:03 INFO     ===> dgo status
+2024-08-02 00:59:03 INFO     ### test_dgo_status_2450 ==> PASSED
+2024-08-02 00:59:06 INFO     ===> mass inject 728
+2024-08-02 00:59:07 INFO     ### test_mass_inject_728 ==> PASSED
+2024-08-02 00:59:10 INFO     ===> mass get
+2024-08-02 00:59:10 INFO     ### test_mass_get_3178 ==> PASSED
+2024-08-02 00:59:13 INFO     ===> dgo status
+2024-08-02 00:59:13 INFO     ### test_dgo_status_3178 ==> PASSED
+2024-08-02 00:59:19 INFO     Current State: COOLDOWN
+2024-08-02 00:59:22 INFO     dgo manual_stop executed
+2024-08-02 00:59:31 INFO     Current State: IDLE
+2024-08-02 00:59:34 INFO     Current State: IDLE
+2024-08-02 00:59:34 INFO     dgo manual_start executed
+2024-08-02 00:59:47 INFO     Current State: LIP
+2024-08-02 00:59:51 INFO     dgo stage skip executed HIP
+2024-08-02 00:59:59 INFO     Current State: HIP
+2024-08-02 01:00:02 INFO     ===> dgo status
+2024-08-02 01:00:03 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 01:00:06 INFO     ===> mass get
+2024-08-02 01:00:06 INFO     ### test_mass_get_3178_HIP ==> PASSED
+2024-08-02 01:00:09 INFO     ===> dgo status
+2024-08-02 01:00:09 INFO     ### test_dgo_status_3178_HIP ==> PASSED
+2024-08-02 01:00:12 INFO     ===> dgo stage hip_trans
+2024-08-02 01:00:12 INFO     ### test_hip_trans_region_3178_HIP ==> PASSED
+2024-08-02 01:00:15 INFO     ===> mass get
+2024-08-02 01:00:15 INFO     ### test_mass_get_3178_HIP_trans ==> PASSED
+2024-08-02 01:00:18 INFO     ===> dgo status
+2024-08-02 01:00:18 INFO     ### test_dgo_status_3178_HIP_trans ==> PASSED
+PASSED                                                                   [ 60%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_7_5lb_3405_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 01:00:24 INFO     dgo manual_stop executed
+2024-08-02 01:00:28 INFO     Current State: IDLE
+2024-08-02 01:00:33 INFO     dgo manual_start executed
+2024-08-02 01:00:44 INFO     Current State: LIP
+2024-08-02 01:00:53 INFO     dgo stage skip executed HIP
+2024-08-02 01:00:56 INFO     Current State: HIP
+2024-08-02 01:01:31 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 01:02:04 INFO     Current State: COOLDOWN
+2024-08-02 01:02:07 INFO     ===> dgo status
+2024-08-02 01:02:07 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 01:02:10 INFO     ===> mass clear
+2024-08-02 01:02:11 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 01:02:14 INFO     ===> mass get
+2024-08-02 01:02:14 INFO     ### test_mass_get ==> PASSED
+2024-08-02 01:02:17 INFO     ===> mass inject 8
+2024-08-02 01:02:18 INFO     ### test_mass_inject_8 ==> PASSED
+2024-08-02 01:02:21 INFO     ===> mass get
+2024-08-02 01:02:21 INFO     ### test_mass_get_8_HIP ==> PASSED
+2024-08-02 01:02:24 INFO     ===> dgo status
+2024-08-02 01:02:24 INFO     ### test_dgo_status_8 ==> PASSED
+2024-08-02 01:02:27 INFO     ===> mass inject 2500
+2024-08-02 01:02:28 INFO     ### test_mass_inject_2500 ==> PASSED
+2024-08-02 01:02:31 INFO     ===> mass get
+2024-08-02 01:02:31 INFO     ### test_mass_get_2508_HIP ==> PASSED
+2024-08-02 01:02:34 INFO     ===> dgo status
+2024-08-02 01:02:34 INFO     ### test_dgo_status_2508 ==> PASSED
+2024-08-02 01:02:37 INFO     ===> mass inject 0
+2024-08-02 01:02:38 INFO     ### test_mass_inject_0 ==> PASSED
+2024-08-02 01:02:41 INFO     ===> mass get
+2024-08-02 01:02:41 INFO     ### test_mass_get_2508_HIP ==> PASSED
+2024-08-02 01:02:44 INFO     ===> dgo status
+2024-08-02 01:02:44 INFO     ### test_dgo_status_2508 ==> PASSED
+2024-08-02 01:02:47 INFO     ===> mass inject 897
+2024-08-02 01:02:48 INFO     ### test_mass_inject_897 ==> PASSED
+2024-08-02 01:02:51 INFO     ===> mass get
+2024-08-02 01:02:51 INFO     ### test_mass_get_3405 ==> PASSED
+2024-08-02 01:02:54 INFO     ===> dgo status
+2024-08-02 01:02:54 INFO     ### test_dgo_status_3405 ==> PASSED
+2024-08-02 01:03:00 INFO     Current State: COOLDOWN
+2024-08-02 01:03:04 INFO     dgo manual_stop executed
+2024-08-02 01:03:12 INFO     Current State: IDLE
+2024-08-02 01:03:15 INFO     Current State: IDLE
+2024-08-02 01:03:15 INFO     dgo manual_start executed
+2024-08-02 01:03:28 INFO     Current State: LIP
+2024-08-02 01:03:32 INFO     dgo stage skip executed HIP
+2024-08-02 01:03:41 INFO     Current State: HIP
+2024-08-02 01:03:44 INFO     ===> dgo status
+2024-08-02 01:03:44 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 01:03:47 INFO     ===> mass get
+2024-08-02 01:03:47 INFO     ### test_mass_get_3405_HIP ==> PASSED
+2024-08-02 01:03:50 INFO     ===> dgo status
+2024-08-02 01:03:50 INFO     ### test_dgo_status_3405_HIP ==> PASSED
+2024-08-02 01:03:53 INFO     ===> dgo stage hip_trans
+2024-08-02 01:03:53 INFO     ### test_hip_trans_region_3405_HIP ==> PASSED
+2024-08-02 01:03:56 INFO     ===> mass get
+2024-08-02 01:03:56 INFO     ### test_mass_get_3405_HIP_trans ==> PASSED
+2024-08-02 01:03:59 INFO     ===> dgo status
+2024-08-02 01:04:00 INFO     ### test_dgo_status_3405_HIP_trans ==> PASSED
+PASSED                                                                   [ 66%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_8lb_3632_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 01:04:06 INFO     dgo manual_stop executed
+2024-08-02 01:04:09 INFO     Current State: IDLE
+2024-08-02 01:04:14 INFO     dgo manual_start executed
+2024-08-02 01:04:25 INFO     Current State: LIP
+2024-08-02 01:04:34 INFO     dgo stage skip executed HIP
+2024-08-02 01:04:38 INFO     Current State: HIP
+2024-08-02 01:05:12 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 01:05:45 INFO     Current State: COOLDOWN
+2024-08-02 01:05:48 INFO     ===> dgo status
+2024-08-02 01:05:48 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 01:05:51 INFO     ===> mass clear
+2024-08-02 01:05:52 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 01:05:55 INFO     ===> mass get
+2024-08-02 01:05:55 INFO     ### test_mass_get ==> PASSED
+2024-08-02 01:05:58 INFO     ===> mass inject 32
+2024-08-02 01:05:59 INFO     ### test_mass_inject_32 ==> PASSED
+2024-08-02 01:06:02 INFO     ===> mass get
+2024-08-02 01:06:02 INFO     ### test_mass_get_32_HIP ==> PASSED
+2024-08-02 01:06:05 INFO     ===> dgo status
+2024-08-02 01:06:05 INFO     ### test_dgo_status_32 ==> PASSED
+2024-08-02 01:06:08 INFO     ===> mass inject 3600
+2024-08-02 01:06:09 INFO     ### test_mass_inject_3600 ==> PASSED
+2024-08-02 01:06:12 INFO     ===> mass get
+2024-08-02 01:06:12 INFO     ### test_mass_get_3632 ==> PASSED
+2024-08-02 01:06:15 INFO     ===> dgo status
+2024-08-02 01:06:15 INFO     ### test_dgo_status_3632 ==> PASSED
+2024-08-02 01:06:22 INFO     Current State: COOLDOWN
+2024-08-02 01:06:25 INFO     dgo manual_stop executed
+2024-08-02 01:06:33 INFO     Current State: IDLE
+2024-08-02 01:06:36 INFO     Current State: IDLE
+2024-08-02 01:06:36 INFO     dgo manual_start executed
+2024-08-02 01:06:49 INFO     Current State: LIP
+2024-08-02 01:06:54 INFO     dgo stage skip executed HIP
+2024-08-02 01:07:02 INFO     Current State: HIP
+2024-08-02 01:07:05 INFO     ===> dgo status
+2024-08-02 01:07:05 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 01:07:08 INFO     ===> mass get
+2024-08-02 01:07:08 INFO     ### test_mass_get_3632_HIP ==> PASSED
+2024-08-02 01:07:11 INFO     ===> dgo status
+2024-08-02 01:07:11 INFO     ### test_dgo_status_3632_HIP ==> PASSED
+2024-08-02 01:07:14 INFO     ===> dgo stage hip_trans
+2024-08-02 01:07:14 INFO     ### test_hip_trans_region_3632_HIP ==> PASSED
+2024-08-02 01:07:17 INFO     ===> mass get
+2024-08-02 01:07:17 INFO     ### test_mass_get_3632_HIP_trans ==> PASSED
+2024-08-02 01:07:20 INFO     ===> dgo status
+2024-08-02 01:07:21 INFO     ### test_dgo_status_3632_HIP_trans ==> PASSED
+PASSED                                                                   [ 73%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_11lb_5000_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 01:07:27 INFO     dgo manual_stop executed
+2024-08-02 01:07:30 INFO     Current State: IDLE
+2024-08-02 01:07:35 INFO     dgo manual_start executed
+2024-08-02 01:07:46 INFO     Current State: LIP
+2024-08-02 01:07:56 INFO     dgo stage skip executed HIP
+2024-08-02 01:07:59 INFO     Current State: HIP
+2024-08-02 01:08:33 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 01:09:06 INFO     Current State: COOLDOWN
+2024-08-02 01:09:09 INFO     ===> dgo status
+2024-08-02 01:09:09 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 01:09:12 INFO     ===> mass clear
+2024-08-02 01:09:13 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 01:09:16 INFO     ===> mass get
+2024-08-02 01:09:16 INFO     ### test_mass_get ==> PASSED
+2024-08-02 01:09:19 INFO     ===> mass inject 5000
+2024-08-02 01:09:20 INFO     ### test_mass_inject_5000 ==> PASSED
+2024-08-02 01:09:23 INFO     ===> mass get
+2024-08-02 01:09:23 INFO     ### test_mass_get_5000 ==> PASSED
+2024-08-02 01:09:26 INFO     ===> dgo status
+2024-08-02 01:09:26 INFO     ### test_dgo_status_5000 ==> PASSED
+2024-08-02 01:09:32 INFO     Current State: COOLDOWN
+2024-08-02 01:09:35 INFO     dgo manual_stop executed
+2024-08-02 01:09:44 INFO     Current State: IDLE
+2024-08-02 01:09:47 INFO     Current State: IDLE
+2024-08-02 01:09:47 INFO     dgo manual_start executed
+2024-08-02 01:10:00 INFO     Current State: LIP
+2024-08-02 01:10:04 INFO     dgo stage skip executed HIP
+2024-08-02 01:10:12 INFO     Current State: HIP
+2024-08-02 01:10:15 INFO     ===> dgo status
+2024-08-02 01:10:16 INFO     ### test_dgo_jump_fromCOOLDOWNtoHIP ==> PASSED
+2024-08-02 01:10:19 INFO     ===> mass get
+2024-08-02 01:10:19 INFO     ### test_mass_get_5000_HIP ==> PASSED
+2024-08-02 01:10:22 INFO     ===> dgo status
+2024-08-02 01:10:22 INFO     ### test_dgo_status_5000_HIP ==> PASSED
+2024-08-02 01:10:25 INFO     ===> dgo stage hip_trans
+2024-08-02 01:10:25 INFO     ### test_hip_trans_region_5000_HIP ==> PASSED
+2024-08-02 01:10:28 INFO     ===> mass get
+2024-08-02 01:10:28 INFO     ### test_mass_get_5000_HIP_trans ==> PASSED
+2024-08-02 01:10:31 INFO     ===> dgo status
+2024-08-02 01:10:31 INFO     ### test_dgo_status_5000_HIP_trans ==> PASSED
+PASSED                                                                   [ 80%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_5lb_M_2300_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 01:10:37 INFO     dgo manual_stop executed
+2024-08-02 01:10:41 INFO     Current State: IDLE
+2024-08-02 01:10:46 INFO     dgo manual_start executed
+2024-08-02 01:10:57 INFO     Current State: LIP
+2024-08-02 01:11:06 INFO     dgo stage skip executed HIP
+2024-08-02 01:11:09 INFO     Current State: HIP
+2024-08-02 01:11:44 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 01:12:17 INFO     Current State: COOLDOWN
+2024-08-02 01:12:20 INFO     ===> dgo status
+2024-08-02 01:12:20 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 01:12:23 INFO     ===> mass clear
+2024-08-02 01:12:24 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 01:12:27 INFO     ===> mass get
+2024-08-02 01:12:27 INFO     ### test_mass_get ==> PASSED
+2024-08-02 01:12:30 INFO     ===> mass inject 1500
+2024-08-02 01:12:31 INFO     ### test_mass_inject_1500_COOLDOWN ==> PASSED
+2024-08-02 01:12:34 INFO     ===> mass get
+2024-08-02 01:12:34 INFO     ### test_mass_get_1500_COOLDOWN ==> PASSED
+2024-08-02 01:12:37 INFO     ===> dgo status
+2024-08-02 01:12:37 INFO     ### test_dgo_status_1500_COOLDOWN ==> PASSED
+2024-08-02 01:12:43 INFO     Current State: COOLDOWN
+2024-08-02 01:12:47 INFO     dgo manual_stop executed
+2024-08-02 01:12:55 INFO     Current State: IDLE
+2024-08-02 01:13:00 INFO     ===> dgo status
+2024-08-02 01:13:00 INFO     ### test_dgo_jump_fromCOOLDOWNtoIDLE ==> PASSED
+2024-08-02 01:13:03 INFO     ===> mass get
+2024-08-02 01:13:03 INFO     ### test_mass_get_1500_IDLE ==> PASSED
+2024-08-02 01:13:06 INFO     ===> dgo status
+2024-08-02 01:13:06 INFO     ### test_dgo_status_1500_IDLE ==> PASSED
+2024-08-02 01:13:09 INFO     ===> mass inject 0
+2024-08-02 01:13:10 INFO     ### test_mass_inject_0_IDLE ==> PASSED
+2024-08-02 01:13:13 INFO     ===> mass get
+2024-08-02 01:13:13 INFO     ### test_mass_get_1500_IDLE ==> PASSED
+2024-08-02 01:13:16 INFO     ===> dgo status
+2024-08-02 01:13:16 INFO     ### test_dgo_status_1500_IDLE ==> PASSED
+2024-08-02 01:13:22 INFO     Current State: IDLE
+2024-08-02 01:13:22 INFO     dgo manual_start executed
+2024-08-02 01:13:31 INFO     Current State: LIP
+2024-08-02 01:13:34 INFO     ===> dgo status
+2024-08-02 01:13:34 INFO     ### test_dgo_jump_fromIDLEtoLIP ==> PASSED
+2024-08-02 01:13:37 INFO     ===> mass get
+2024-08-02 01:13:37 INFO     ### test_mass_get_1500_LIP ==> PASSED
+2024-08-02 01:13:40 INFO     ===> dgo status
+2024-08-02 01:13:40 INFO     ### test_dgo_status_1500_LIP ==> PASSED
+2024-08-02 01:13:43 INFO     ===> mass inject 800
+2024-08-02 01:13:44 INFO     ### test_mass_inject_800_LIP ==> PASSED
+2024-08-02 01:13:47 INFO     ===> mass get
+2024-08-02 01:13:47 INFO     ### test_mass_get_2300_LIP ==> PASSED
+2024-08-02 01:13:50 INFO     ===> dgo status
+2024-08-02 01:13:51 INFO     ### test_dgo_status_2300_LIP ==> PASSED
+2024-08-02 01:13:57 INFO     Current State: LIP
+2024-08-02 01:14:01 INFO     dgo stage skip executed HIP
+2024-08-02 01:14:09 INFO     Current State: HIP
+2024-08-02 01:14:12 INFO     ===> dgo status
+2024-08-02 01:14:12 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+2024-08-02 01:14:15 INFO     ===> mass get
+2024-08-02 01:14:15 INFO     ### test_mass_get_2300_HIP ==> PASSED
+2024-08-02 01:14:18 INFO     ===> dgo status
+2024-08-02 01:14:19 INFO     ### test_dgo_status_2300_HIP ==> PASSED
+2024-08-02 01:14:22 INFO     ===> dgo stage hip_trans
+2024-08-02 01:14:22 INFO     ### test_hip_trans_region_2300_HIP ==> PASSED
+2024-08-02 01:14:25 INFO     ===> mass get
+2024-08-02 01:14:25 INFO     ### test_mass_get_2300_HIP_trans ==> PASSED
+2024-08-02 01:14:28 INFO     ===> dgo status
+2024-08-02 01:14:28 INFO     ### test_dgo_status_2300_HIP_trans ==> PASSED
+PASSED                                                                   [ 86%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_7lb_M_3300_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 01:14:34 INFO     dgo manual_stop executed
+2024-08-02 01:14:37 INFO     Current State: IDLE
+2024-08-02 01:14:42 INFO     dgo manual_start executed
+2024-08-02 01:14:54 INFO     Current State: LIP
+2024-08-02 01:15:03 INFO     dgo stage skip executed HIP
+2024-08-02 01:15:06 INFO     Current State: HIP
+2024-08-02 01:15:40 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 01:16:13 INFO     Current State: COOLDOWN
+2024-08-02 01:16:16 INFO     ===> dgo status
+2024-08-02 01:16:16 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 01:16:20 INFO     ===> mass clear
+2024-08-02 01:16:20 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 01:16:23 INFO     ===> mass get
+2024-08-02 01:16:24 INFO     ### test_mass_get ==> PASSED
+2024-08-02 01:16:27 INFO     ===> mass inject 1500
+2024-08-02 01:16:27 INFO     ### test_mass_inject_1500_COOLDOWN ==> PASSED
+2024-08-02 01:16:30 INFO     ===> mass get
+2024-08-02 01:16:30 INFO     ### test_mass_get_1500_COOLDOWN ==> PASSED
+2024-08-02 01:16:33 INFO     ===> dgo status
+2024-08-02 01:16:34 INFO     ### test_dgo_status_1500_COOLDOWN ==> PASSED
+2024-08-02 01:16:37 INFO     ===> mass inject 400
+2024-08-02 01:16:37 INFO     ### test_mass_inject_400_COOLDOWN ==> PASSED
+2024-08-02 01:16:40 INFO     ===> mass get
+2024-08-02 01:16:40 INFO     ### test_mass_get_1900_COOLDOWN ==> PASSED
+2024-08-02 01:16:43 INFO     ===> dgo status
+2024-08-02 01:16:44 INFO     ### test_dgo_status_1900_COOLDOWN ==> PASSED
+2024-08-02 01:16:50 INFO     Current State: COOLDOWN
+2024-08-02 01:16:53 INFO     dgo manual_stop executed
+2024-08-02 01:17:01 INFO     Current State: IDLE
+2024-08-02 01:17:06 INFO     ===> dgo status
+2024-08-02 01:17:06 INFO     ### test_dgo_jump_fromCOOLDOWNtoIDLE ==> PASSED
+2024-08-02 01:17:09 INFO     ===> mass get
+2024-08-02 01:17:09 INFO     ### test_mass_get_1900_IDLE ==> PASSED
+2024-08-02 01:17:13 INFO     ===> dgo status
+2024-08-02 01:17:13 INFO     ### test_dgo_status_1900_IDLE ==> PASSED
+2024-08-02 01:17:16 INFO     ===> mass inject 800
+2024-08-02 01:17:16 INFO     ### test_mass_inject_800_IDLE ==> PASSED
+2024-08-02 01:17:19 INFO     ===> mass get
+2024-08-02 01:17:20 INFO     ### test_mass_get_2700_IDLE ==> PASSED
+2024-08-02 01:17:23 INFO     ===> dgo status
+2024-08-02 01:17:23 INFO     ### test_dgo_status_2700_IDLE ==> PASSED
+2024-08-02 01:17:29 INFO     Current State: IDLE
+2024-08-02 01:17:29 INFO     dgo manual_start executed
+2024-08-02 01:17:37 INFO     Current State: LIP
+2024-08-02 01:17:40 INFO     ===> dgo status
+2024-08-02 01:17:41 INFO     ### test_dgo_jump_fromIDLEtoLIP ==> PASSED
+2024-08-02 01:17:44 INFO     ===> mass get
+2024-08-02 01:17:44 INFO     ### test_mass_get_2700_LIP ==> PASSED
+2024-08-02 01:17:47 INFO     ===> dgo status
+2024-08-02 01:17:47 INFO     ### test_dgo_status_2700_LIP ==> PASSED
+2024-08-02 01:17:50 INFO     ===> mass inject 299
+2024-08-02 01:17:51 INFO     ### test_mass_inject_299_LIP ==> PASSED
+2024-08-02 01:17:54 INFO     ===> mass get
+2024-08-02 01:17:54 INFO     ### test_mass_get_2999_LIP ==> PASSED
+2024-08-02 01:17:57 INFO     ===> dgo status
+2024-08-02 01:17:57 INFO     ### test_dgo_status_2999_LIP ==> PASSED
+2024-08-02 01:18:03 INFO     Current State: LIP
+2024-08-02 01:18:07 INFO     dgo stage skip executed HIP
+2024-08-02 01:18:16 INFO     Current State: HIP
+2024-08-02 01:18:19 INFO     ===> dgo status
+2024-08-02 01:18:19 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+2024-08-02 01:18:22 INFO     ===> mass get
+2024-08-02 01:18:22 INFO     ### test_mass_get_2999_HIP ==> PASSED
+2024-08-02 01:18:25 INFO     ===> dgo status
+2024-08-02 01:18:25 INFO     ### test_dgo_status_2999_HIP ==> PASSED
+2024-08-02 01:18:28 INFO     ===> mass inject 301
+2024-08-02 01:18:29 INFO     ### test_mass_inject_301_HIP ==> PASSED
+2024-08-02 01:18:32 INFO     ===> mass get
+2024-08-02 01:18:32 INFO     ### test_mass_get_3300_HIP ==> PASSED
+2024-08-02 01:18:35 INFO     ===> dgo status
+2024-08-02 01:18:35 INFO     ### test_dgo_status_3300_HIP ==> PASSED
+2024-08-02 01:18:38 INFO     ===> dgo stage hip_trans
+2024-08-02 01:18:38 INFO     ### test_hip_trans_region_3300_HIP ==> PASSED
+2024-08-02 01:18:41 INFO     ===> mass get
+2024-08-02 01:18:42 INFO     ### test_mass_get_3300_HIP_trans ==> PASSED
+2024-08-02 01:18:45 INFO     ===> dgo status
+2024-08-02 01:18:45 INFO     ### test_dgo_status_3300_HIP_trans ==> PASSED
+PASSED                                                                   [ 93%]
+dgo_mass_add_5hr_min_runtime_COOLDOWN.py::TestMass5HrMinRuntimeCOOLDOWN::test_group_mass_add_3lb_M_1300_From_COOLDOWN 
+-------------------------------- live log call ---------------------------------
+2024-08-02 01:18:51 INFO     dgo manual_stop executed
+2024-08-02 01:18:54 INFO     Current State: IDLE
+2024-08-02 01:18:59 INFO     dgo manual_start executed
+2024-08-02 01:19:10 INFO     Current State: LIP
+2024-08-02 01:19:20 INFO     dgo stage skip executed HIP
+2024-08-02 01:19:23 INFO     Current State: HIP
+2024-08-02 01:19:57 INFO     dgo stage skip executed COOLDOWN
+2024-08-02 01:20:30 INFO     Current State: COOLDOWN
+2024-08-02 01:20:33 INFO     ===> dgo status
+2024-08-02 01:20:33 INFO     ### test_dgo_Start_with_COOLDOWN_State ==> PASSED
+2024-08-02 01:20:36 INFO     ===> mass clear
+2024-08-02 01:20:37 INFO     ### test_mass_clear ==> PASSED
+2024-08-02 01:20:40 INFO     ===> mass get
+2024-08-02 01:20:40 INFO     ### test_mass_get ==> PASSED
+2024-08-02 01:20:43 INFO     ===> mass inject 500
+2024-08-02 01:20:44 INFO     ### test_mass_inject_500_COOLDOWN ==> PASSED
+2024-08-02 01:20:47 INFO     ===> mass get
+2024-08-02 01:20:47 INFO     ### test_mass_get_500_COOLDOWN ==> PASSED
+2024-08-02 01:20:50 INFO     ===> dgo status
+2024-08-02 01:20:50 INFO     ### test_dgo_status_500_COOLDOWN ==> PASSED
+2024-08-02 01:20:56 INFO     Current State: COOLDOWN
+2024-08-02 01:20:59 INFO     dgo manual_stop executed
+2024-08-02 01:21:08 INFO     Current State: IDLE
+2024-08-02 01:21:13 INFO     ===> dgo status
+2024-08-02 01:21:13 INFO     ### test_dgo_jump_fromCOOLDOWNtoIDLE ==> PASSED
+2024-08-02 01:21:16 INFO     ===> mass get
+2024-08-02 01:21:16 INFO     ### test_mass_get_500_IDLE ==> PASSED
+2024-08-02 01:21:19 INFO     ===> dgo status
+2024-08-02 01:21:19 INFO     ### test_dgo_status_500_IDLE ==> PASSED
+2024-08-02 01:21:22 INFO     ===> mass inject 320
+2024-08-02 01:21:23 INFO     ### test_mass_inject_320_IDLE ==> PASSED
+2024-08-02 01:21:26 INFO     ===> mass get
+2024-08-02 01:21:26 INFO     ### test_mass_get_820_IDLE ==> PASSED
+2024-08-02 01:21:29 INFO     ===> dgo status
+2024-08-02 01:21:29 INFO     ### test_dgo_status_820_IDLE ==> PASSED
+2024-08-02 01:21:36 INFO     Current State: IDLE
+2024-08-02 01:21:36 INFO     dgo manual_start executed
+2024-08-02 01:21:44 INFO     Current State: LIP
+2024-08-02 01:21:47 INFO     ===> dgo status
+2024-08-02 01:21:47 INFO     ### test_dgo_jump_fromIDLEtoLIP ==> PASSED
+2024-08-02 01:21:50 INFO     ===> mass get
+2024-08-02 01:21:50 INFO     ### test_mass_get_820_LIP ==> PASSED
+2024-08-02 01:21:53 INFO     ===> dgo status
+2024-08-02 01:21:53 INFO     ### test_dgo_status_820_LIP ==> PASSED
+2024-08-02 01:21:56 INFO     ===> mass inject 0
+2024-08-02 01:21:57 INFO     ### test_mass_inject_0_LIP ==> PASSED
+2024-08-02 01:22:00 INFO     ===> mass get
+2024-08-02 01:22:00 INFO     ### test_mass_get_820_LIP ==> PASSED
+2024-08-02 01:22:03 INFO     ===> dgo status
+2024-08-02 01:22:03 INFO     ### test_dgo_status_820_LIP ==> PASSED
+2024-08-02 01:22:10 INFO     Current State: LIP
+2024-08-02 01:22:14 INFO     dgo stage skip executed HIP
+2024-08-02 01:22:22 INFO     Current State: HIP
+2024-08-02 01:22:25 INFO     ===> dgo status
+2024-08-02 01:22:25 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+2024-08-02 01:22:28 INFO     ===> mass get
+2024-08-02 01:22:28 INFO     ### test_mass_get_820_HIP ==> PASSED
+2024-08-02 01:22:31 INFO     ===> dgo status
+2024-08-02 01:22:31 INFO     ### test_dgo_status_820_HIP ==> PASSED
+2024-08-02 01:22:34 INFO     ===> mass inject 100
+2024-08-02 01:22:35 INFO     ### test_mass_inject_100_HIP ==> PASSED
+2024-08-02 01:22:38 INFO     ===> mass get
+2024-08-02 01:22:38 INFO     ### test_mass_get_920_HIP ==> PASSED
+2024-08-02 01:22:41 INFO     ===> dgo status
+2024-08-02 01:22:42 INFO     ### test_dgo_status_920_HIP ==> PASSED
+2024-08-02 01:22:45 INFO     ===> mass inject 380
+2024-08-02 01:22:45 INFO     ### test_mass_inject_380_HIP ==> PASSED
+2024-08-02 01:22:48 INFO     ===> mass get
+2024-08-02 01:22:48 INFO     ### test_mass_get_1300_HIP ==> PASSED
+2024-08-02 01:22:51 INFO     ===> dgo status
+2024-08-02 01:22:52 INFO     ### test_dgo_status_1300_HIP ==> PASSED
+2024-08-02 01:22:55 INFO     ===> dgo stage hip_trans
+2024-08-02 01:22:55 INFO     ### test_hip_trans_region_1300_HIP ==> PASSED
+2024-08-02 01:22:58 INFO     ===> mass get
+2024-08-02 01:22:58 INFO     ### test_mass_get_1300_HIP_trans ==> PASSED
+2024-08-02 01:23:01 INFO     ===> dgo status
+2024-08-02 01:23:01 INFO     ### test_dgo_status_1300_HIP_trans ==> PASSED
+2024-08-02 01:23:07 INFO     dgo manual_stop executed
+2024-08-02 01:23:10 INFO     Current State: IDLE
+2024-08-02 01:23:10 INFO     ===> dgo status
+2024-08-02 01:23:11 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-08-02 01:23:14 INFO     ===> mass clear
+2024-08-02 01:23:15 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [100%]
+
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+======================= 15 passed in 3250.56s (0:54:10) ========================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1722554945.json': No such file or directory

@@ -1,0 +1,1151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+RUN COUNT: 1 times
+%%%%%%%%%%%%%%%%%%%%%%%%%
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/pi/Oscar-Python-CLI/src/oscar/dgo
+configfile: pytest.ini
+plugins: json-report-1.5.0, metadata-3.1.1, repeat-0.9.3
+collected 15 items
+
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_0_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:22:05 INFO     ===> lid inject 0
+2024-07-31 23:22:05 ERROR    line= E power_control: Unknown power ID: 0
+2024-07-31 23:22:05 INFO     ### test_lid_inject_0 ==> PASSED
+2024-07-31 23:22:08 INFO     ===> lid inject 1
+2024-07-31 23:22:11 INFO     retries counts: 1
+2024-07-31 23:22:14 INFO     retries counts: 2
+2024-07-31 23:22:17 INFO     retries counts: 3
+2024-07-31 23:22:20 INFO     retries counts: 4
+2024-07-31 23:22:23 INFO     retries counts: 5
+2024-07-31 23:22:23 ERROR    Timeout after 5 retries!
+2024-07-31 23:22:23 INFO     ### test_lid_inject_1 ==> PASSED
+2024-07-31 23:22:30 INFO     dgo manual_stop executed
+2024-07-31 23:22:33 INFO     Current State: IDLE
+2024-07-31 23:22:33 INFO     ===> dgo status
+2024-07-31 23:22:33 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:22:36 INFO     ===> mass clear
+2024-07-31 23:22:37 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:22:40 INFO     ===> mass get
+2024-07-31 23:22:40 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:22:43 INFO     ===> mass inject 0
+2024-07-31 23:22:43 INFO     ### test_mass_inject_0 ==> PASSED
+2024-07-31 23:22:46 INFO     ===> mass get
+2024-07-31 23:22:46 INFO     ### test_mass_get_0 ==> PASSED
+2024-07-31 23:22:49 INFO     ===> dgo status
+2024-07-31 23:22:50 INFO     ### test_dgo_status_0 ==> PASSED
+2024-07-31 23:22:56 INFO     Current State: IDLE
+2024-07-31 23:22:56 INFO     dgo manual_start executed
+2024-07-31 23:23:09 INFO     Current State: LIP
+2024-07-31 23:23:13 INFO     dgo stage skip executed HIP
+2024-07-31 23:23:22 INFO     Current State: HIP
+2024-07-31 23:23:25 INFO     ===> dgo status
+2024-07-31 23:23:25 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:23:28 INFO     ===> mass get
+2024-07-31 23:23:28 INFO     ### test_mass_get_0_HIP ==> PASSED
+2024-07-31 23:23:31 INFO     ===> dgo status
+2024-07-31 23:23:31 INFO     ### test_dgo_status_0_HIP ==> PASSED
+2024-07-31 23:23:34 INFO     ===> dgo stage hip_trans
+2024-07-31 23:23:34 INFO     ### test_hip_trans_region_0_HIP ==> PASSED
+2024-07-31 23:23:37 INFO     ===> mass get
+2024-07-31 23:23:37 INFO     ### test_mass_get_0_HIP_trans ==> PASSED
+2024-07-31 23:23:40 INFO     ===> dgo status
+2024-07-31 23:23:41 INFO     ### test_dgo_status_0_HIP_trans ==> PASSED
+PASSED                                                                   [  6%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_100_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:23:47 INFO     dgo manual_stop executed
+2024-07-31 23:23:50 INFO     Current State: IDLE
+2024-07-31 23:23:50 INFO     ===> dgo status
+2024-07-31 23:23:50 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:23:53 INFO     ===> mass clear
+2024-07-31 23:23:54 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:23:57 INFO     ===> mass get
+2024-07-31 23:23:57 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:24:00 INFO     ===> mass inject 50
+2024-07-31 23:24:00 INFO     ### test_mass_inject_50 ==> PASSED
+2024-07-31 23:24:03 INFO     ===> mass get
+2024-07-31 23:24:04 INFO     ### test_mass_get_50 ==> PASSED
+2024-07-31 23:24:07 INFO     ===> dgo status
+2024-07-31 23:24:07 INFO     ### test_dgo_status_50 ==> PASSED
+2024-07-31 23:24:10 INFO     ===> mass inject 50
+2024-07-31 23:24:11 INFO     ### test_mass_inject_50 ==> PASSED
+2024-07-31 23:24:14 INFO     ===> mass get
+2024-07-31 23:24:14 INFO     ### test_mass_get_100 ==> PASSED
+2024-07-31 23:24:17 INFO     ===> dgo status
+2024-07-31 23:24:17 INFO     ### test_dgo_status_100 ==> PASSED
+2024-07-31 23:24:23 INFO     Current State: IDLE
+2024-07-31 23:24:23 INFO     dgo manual_start executed
+2024-07-31 23:24:37 INFO     Current State: LIP
+2024-07-31 23:24:41 INFO     dgo stage skip executed HIP
+2024-07-31 23:24:49 INFO     Current State: HIP
+2024-07-31 23:24:52 INFO     ===> dgo status
+2024-07-31 23:24:52 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:24:55 INFO     ===> mass get
+2024-07-31 23:24:55 INFO     ### test_mass_get_100_HIP ==> PASSED
+2024-07-31 23:24:58 INFO     ===> dgo status
+2024-07-31 23:24:59 INFO     ### test_dgo_status_100_HIP ==> PASSED
+2024-07-31 23:25:02 INFO     ===> dgo stage hip_trans
+2024-07-31 23:25:02 INFO     ### test_hip_trans_region_100_HIP ==> PASSED
+2024-07-31 23:25:05 INFO     ===> mass get
+2024-07-31 23:25:05 INFO     ### test_mass_get_100_HIP_trans ==> PASSED
+2024-07-31 23:25:08 INFO     ===> dgo status
+2024-07-31 23:25:08 INFO     ### test_dgo_status_100_HIP_trans ==> PASSED
+PASSED                                                                   [ 13%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_m_1d1lb_489_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:25:14 INFO     dgo manual_stop executed
+2024-07-31 23:25:17 INFO     Current State: IDLE
+2024-07-31 23:25:17 INFO     ===> dgo status
+2024-07-31 23:25:17 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:25:20 INFO     ===> mass clear
+2024-07-31 23:25:21 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:25:24 INFO     ===> mass get
+2024-07-31 23:25:24 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:25:27 INFO     ===> mass inject 200
+2024-07-31 23:25:28 INFO     ### test_mass_inject_200 ==> PASSED
+2024-07-31 23:25:31 INFO     ===> mass get
+2024-07-31 23:25:31 INFO     ### test_mass_get_200 ==> PASSED
+2024-07-31 23:25:34 INFO     ===> dgo status
+2024-07-31 23:25:34 INFO     ### test_dgo_status_200 ==> PASSED
+2024-07-31 23:25:37 INFO     ===> mass inject 100
+2024-07-31 23:25:38 INFO     ### test_mass_inject_100 ==> PASSED
+2024-07-31 23:25:41 INFO     ===> mass get
+2024-07-31 23:25:41 INFO     ### test_mass_get_300 ==> PASSED
+2024-07-31 23:25:44 INFO     ===> dgo status
+2024-07-31 23:25:44 INFO     ### test_dgo_status_300 ==> PASSED
+2024-07-31 23:25:47 INFO     ===> mass inject 189
+2024-07-31 23:25:48 INFO     ### test_mass_inject_189 ==> PASSED
+2024-07-31 23:25:51 INFO     ===> mass get
+2024-07-31 23:25:51 INFO     ### test_mass_get_489 ==> PASSED
+2024-07-31 23:25:54 INFO     ===> dgo status
+2024-07-31 23:25:54 INFO     ### test_dgo_status_489 ==> PASSED
+2024-07-31 23:26:01 INFO     Current State: IDLE
+2024-07-31 23:26:01 INFO     dgo manual_start executed
+2024-07-31 23:26:14 INFO     Current State: LIP
+2024-07-31 23:26:18 INFO     dgo stage skip executed HIP
+2024-07-31 23:26:26 INFO     Current State: HIP
+2024-07-31 23:26:29 INFO     ===> dgo status
+2024-07-31 23:26:30 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:26:33 INFO     ===> mass get
+2024-07-31 23:26:33 INFO     ### test_mass_get_489_HIP ==> PASSED
+2024-07-31 23:26:36 INFO     ===> dgo status
+2024-07-31 23:26:36 INFO     ### test_dgo_status_489_HIP ==> PASSED
+2024-07-31 23:26:39 INFO     ===> dgo stage hip_trans
+2024-07-31 23:26:39 INFO     ### test_hip_trans_region_489_HIP ==> PASSED
+2024-07-31 23:26:42 INFO     ===> mass get
+2024-07-31 23:26:42 INFO     ### test_mass_get_489_HIP_trans ==> PASSED
+2024-07-31 23:26:45 INFO     ===> dgo status
+2024-07-31 23:26:45 INFO     ### test_dgo_status_489_HIP_trans ==> PASSED
+PASSED                                                                   [ 20%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_2d2lb_998_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:26:51 INFO     dgo manual_stop executed
+2024-07-31 23:26:54 INFO     Current State: IDLE
+2024-07-31 23:26:54 INFO     ===> dgo status
+2024-07-31 23:26:55 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:26:58 INFO     ===> mass clear
+2024-07-31 23:26:58 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:27:01 INFO     ===> mass get
+2024-07-31 23:27:01 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:27:04 INFO     ===> mass inject 998
+2024-07-31 23:27:05 INFO     ### test_mass_inject_998 ==> PASSED
+2024-07-31 23:27:08 INFO     ===> mass get
+2024-07-31 23:27:08 INFO     ### test_mass_get_998 ==> PASSED
+2024-07-31 23:27:11 INFO     ===> dgo status
+2024-07-31 23:27:11 INFO     ### test_dgo_status_998 ==> PASSED
+2024-07-31 23:27:18 INFO     Current State: IDLE
+2024-07-31 23:27:18 INFO     dgo manual_start executed
+2024-07-31 23:27:31 INFO     Current State: LIP
+2024-07-31 23:27:35 INFO     dgo stage skip executed HIP
+2024-07-31 23:27:43 INFO     Current State: HIP
+2024-07-31 23:27:46 INFO     ===> dgo status
+2024-07-31 23:27:47 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:27:50 INFO     ===> mass get
+2024-07-31 23:27:50 INFO     ### test_mass_get_998_HIP ==> PASSED
+2024-07-31 23:27:53 INFO     ===> dgo status
+2024-07-31 23:27:53 INFO     ### test_dgo_status_998_HIP ==> PASSED
+2024-07-31 23:27:56 INFO     ===> dgo stage hip_trans
+2024-07-31 23:27:56 INFO     ### test_hip_trans_region_998_HIP ==> PASSED
+2024-07-31 23:27:59 INFO     ===> mass get
+2024-07-31 23:27:59 INFO     ### test_mass_get_998_HIP_trans ==> PASSED
+2024-07-31 23:28:02 INFO     ===> dgo status
+2024-07-31 23:28:02 INFO     ### test_dgo_status_998_HIP_trans ==> PASSED
+PASSED                                                                   [ 26%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_m_3d4lb_1565_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:28:08 INFO     dgo manual_stop executed
+2024-07-31 23:28:12 INFO     Current State: IDLE
+2024-07-31 23:28:12 INFO     ===> dgo status
+2024-07-31 23:28:12 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:28:15 INFO     ===> mass clear
+2024-07-31 23:28:16 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:28:19 INFO     ===> mass get
+2024-07-31 23:28:19 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:28:22 INFO     ===> mass inject 10
+2024-07-31 23:28:22 INFO     ### test_mass_inject_10 ==> PASSED
+2024-07-31 23:28:25 INFO     ===> mass get
+2024-07-31 23:28:25 INFO     ### test_mass_get_10 ==> PASSED
+2024-07-31 23:28:29 INFO     ===> dgo status
+2024-07-31 23:28:29 INFO     ### test_dgo_status_10 ==> PASSED
+2024-07-31 23:28:32 INFO     ===> mass inject 1000
+2024-07-31 23:28:32 INFO     ### test_mass_inject_1000 ==> PASSED
+2024-07-31 23:28:36 INFO     ===> mass get
+2024-07-31 23:28:36 INFO     ### test_mass_get_1010 ==> PASSED
+2024-07-31 23:28:39 INFO     ===> dgo status
+2024-07-31 23:28:39 INFO     ### test_dgo_status_1010 ==> PASSED
+2024-07-31 23:28:42 INFO     ===> mass inject 300
+2024-07-31 23:28:43 INFO     ### test_mass_inject_300 ==> PASSED
+2024-07-31 23:28:46 INFO     ===> mass get
+2024-07-31 23:28:46 INFO     ### test_mass_get_1310 ==> PASSED
+2024-07-31 23:28:49 INFO     ===> dgo status
+2024-07-31 23:28:49 INFO     ### test_dgo_status_1310 ==> PASSED
+2024-07-31 23:28:52 INFO     ===> mass inject 255
+2024-07-31 23:28:53 INFO     ### test_mass_inject_255 ==> PASSED
+2024-07-31 23:28:56 INFO     ===> mass get
+2024-07-31 23:28:56 INFO     ### test_mass_get_1565 ==> PASSED
+2024-07-31 23:28:59 INFO     ===> dgo status
+2024-07-31 23:28:59 INFO     ### test_dgo_status_1565 ==> PASSED
+2024-07-31 23:29:05 INFO     Current State: IDLE
+2024-07-31 23:29:05 INFO     dgo manual_start executed
+2024-07-31 23:29:19 INFO     Current State: LIP
+2024-07-31 23:29:23 INFO     dgo stage skip executed HIP
+2024-07-31 23:29:31 INFO     Current State: HIP
+2024-07-31 23:29:34 INFO     ===> dgo status
+2024-07-31 23:29:34 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:29:37 INFO     ===> mass get
+2024-07-31 23:29:37 INFO     ### test_mass_get_1565_HIP ==> PASSED
+2024-07-31 23:29:40 INFO     ===> dgo status
+2024-07-31 23:29:40 INFO     ### test_dgo_status_1565_HIP ==> PASSED
+2024-07-31 23:29:44 INFO     ===> dgo stage hip_trans
+2024-07-31 23:29:44 INFO     ### test_hip_trans_region_1565_HIP ==> PASSED
+2024-07-31 23:29:47 INFO     ===> mass get
+2024-07-31 23:29:47 INFO     ### test_mass_get_1565_HIP_trans ==> PASSED
+2024-07-31 23:29:50 INFO     ===> dgo status
+2024-07-31 23:29:50 INFO     ### test_dgo_status_1565_HIP_trans ==> PASSED
+PASSED                                                                   [ 33%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_4d4lb_2016_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:29:56 INFO     dgo manual_stop executed
+2024-07-31 23:29:59 INFO     Current State: IDLE
+2024-07-31 23:29:59 INFO     ===> dgo status
+2024-07-31 23:29:59 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:30:02 INFO     ===> mass clear
+2024-07-31 23:30:03 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:30:06 INFO     ===> mass get
+2024-07-31 23:30:06 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:30:09 INFO     ===> mass inject 2016
+2024-07-31 23:30:10 INFO     ### test_mass_inject_2016 ==> PASSED
+2024-07-31 23:30:13 INFO     ===> mass get
+2024-07-31 23:30:13 INFO     ### test_mass_get_2016 ==> PASSED
+2024-07-31 23:30:16 INFO     ===> dgo status
+2024-07-31 23:30:16 INFO     ### test_dgo_status_2016 ==> PASSED
+2024-07-31 23:30:22 INFO     Current State: IDLE
+2024-07-31 23:30:23 INFO     dgo manual_start executed
+2024-07-31 23:30:36 INFO     Current State: LIP
+2024-07-31 23:30:40 INFO     dgo stage skip executed HIP
+2024-07-31 23:30:48 INFO     Current State: HIP
+2024-07-31 23:30:51 INFO     ===> dgo status
+2024-07-31 23:30:51 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:30:54 INFO     ===> mass get
+2024-07-31 23:30:54 INFO     ### test_mass_get_2016_HIP ==> PASSED
+2024-07-31 23:30:57 INFO     ===> dgo status
+2024-07-31 23:30:58 INFO     ### test_dgo_status_2016_HIP ==> PASSED
+2024-07-31 23:31:01 INFO     ===> dgo stage hip_trans
+2024-07-31 23:31:01 INFO     ### test_hip_trans_region_2016_HIP ==> PASSED
+2024-07-31 23:31:04 INFO     ===> mass get
+2024-07-31 23:31:04 INFO     ### test_mass_get_2016_HIP_trans ==> PASSED
+2024-07-31 23:31:07 INFO     ===> dgo status
+2024-07-31 23:31:07 INFO     ### test_dgo_status_2016_HIP_trans ==> PASSED
+PASSED                                                                   [ 40%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_5d4lb_2470_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:31:13 INFO     dgo manual_stop executed
+2024-07-31 23:31:16 INFO     Current State: IDLE
+2024-07-31 23:31:16 INFO     ===> dgo status
+2024-07-31 23:31:17 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:31:20 INFO     ===> mass clear
+2024-07-31 23:31:20 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:31:23 INFO     ===> mass get
+2024-07-31 23:31:23 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:31:26 INFO     ===> mass inject 80
+2024-07-31 23:31:27 INFO     ### test_mass_inject_80 ==> PASSED
+2024-07-31 23:31:30 INFO     ===> mass get
+2024-07-31 23:31:30 INFO     ### test_mass_get_80_HIP ==> PASSED
+2024-07-31 23:31:33 INFO     ===> dgo status
+2024-07-31 23:31:33 INFO     ### test_dgo_status_80 ==> PASSED
+2024-07-31 23:31:37 INFO     ===> mass inject 300
+2024-07-31 23:31:37 INFO     ### test_mass_inject_300 ==> PASSED
+2024-07-31 23:31:40 INFO     ===> mass get
+2024-07-31 23:31:40 INFO     ### test_mass_get_380_HIP ==> PASSED
+2024-07-31 23:31:43 INFO     ===> dgo status
+2024-07-31 23:31:44 INFO     ### test_dgo_status_380 ==> PASSED
+2024-07-31 23:31:47 INFO     ===> mass inject 550
+2024-07-31 23:31:47 INFO     ### test_mass_inject_550 ==> PASSED
+2024-07-31 23:31:50 INFO     ===> mass get
+2024-07-31 23:31:50 INFO     ### test_mass_get_930_HIP ==> PASSED
+2024-07-31 23:31:53 INFO     ===> dgo status
+2024-07-31 23:31:54 INFO     ### test_dgo_status_930 ==> PASSED
+2024-07-31 23:31:57 INFO     ===> mass inject 400
+2024-07-31 23:31:57 INFO     ### test_mass_inject_400 ==> PASSED
+2024-07-31 23:32:00 INFO     ===> mass get
+2024-07-31 23:32:00 INFO     ### test_mass_get_1330_HIP ==> PASSED
+2024-07-31 23:32:03 INFO     ===> dgo status
+2024-07-31 23:32:04 INFO     ### test_dgo_status_1330 ==> PASSED
+2024-07-31 23:32:07 INFO     ===> mass inject 1140
+2024-07-31 23:32:08 INFO     ### test_mass_inject_1140 ==> PASSED
+2024-07-31 23:32:11 INFO     ===> mass get
+2024-07-31 23:32:11 INFO     ### test_mass_get_2470 ==> PASSED
+2024-07-31 23:32:14 INFO     ===> dgo status
+2024-07-31 23:32:14 INFO     ### test_dgo_status_2470 ==> PASSED
+2024-07-31 23:32:20 INFO     Current State: IDLE
+2024-07-31 23:32:20 INFO     dgo manual_start executed
+2024-07-31 23:32:33 INFO     Current State: LIP
+2024-07-31 23:32:38 INFO     dgo stage skip executed HIP
+2024-07-31 23:32:46 INFO     Current State: HIP
+2024-07-31 23:32:49 INFO     ===> dgo status
+2024-07-31 23:32:49 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:32:52 INFO     ===> mass get
+2024-07-31 23:32:52 INFO     ### test_mass_get_2470_HIP ==> PASSED
+2024-07-31 23:32:55 INFO     ===> dgo status
+2024-07-31 23:32:55 INFO     ### test_dgo_status_2470_HIP ==> PASSED
+2024-07-31 23:32:58 INFO     ===> dgo stage hip_trans
+2024-07-31 23:32:58 INFO     ### test_hip_trans_region_2470_HIP ==> PASSED
+2024-07-31 23:33:01 INFO     ===> mass get
+2024-07-31 23:33:01 INFO     ### test_mass_get_2470_HIP_trans ==> PASSED
+2024-07-31 23:33:05 INFO     ===> dgo status
+2024-07-31 23:33:05 INFO     ### test_dgo_status_2470_HIP_trans ==> PASSED
+PASSED                                                                   [ 46%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_m_6d2lb_2825_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:33:11 INFO     dgo manual_stop executed
+2024-07-31 23:33:14 INFO     Current State: IDLE
+2024-07-31 23:33:14 INFO     ===> dgo status
+2024-07-31 23:33:14 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:33:17 INFO     ===> mass clear
+2024-07-31 23:33:18 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:33:21 INFO     ===> mass get
+2024-07-31 23:33:21 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:33:24 INFO     ===> mass inject 1900
+2024-07-31 23:33:25 INFO     ### test_mass_inject_1900 ==> PASSED
+2024-07-31 23:33:28 INFO     ===> mass get
+2024-07-31 23:33:28 INFO     ### test_mass_get_1900_HIP ==> PASSED
+2024-07-31 23:33:31 INFO     ===> dgo status
+2024-07-31 23:33:31 INFO     ### test_dgo_status_1900 ==> PASSED
+2024-07-31 23:33:34 INFO     ===> mass inject 925
+2024-07-31 23:33:35 INFO     ### test_mass_inject_925 ==> PASSED
+2024-07-31 23:33:38 INFO     ===> mass get
+2024-07-31 23:33:38 INFO     ### test_mass_get_2825 ==> PASSED
+2024-07-31 23:33:41 INFO     ===> dgo status
+2024-07-31 23:33:41 INFO     ### test_dgo_status_2825 ==> PASSED
+2024-07-31 23:33:47 INFO     Current State: IDLE
+2024-07-31 23:33:47 INFO     dgo manual_start executed
+2024-07-31 23:34:01 INFO     Current State: LIP
+2024-07-31 23:34:05 INFO     dgo stage skip executed HIP
+2024-07-31 23:34:13 INFO     Current State: HIP
+2024-07-31 23:34:16 INFO     ===> dgo status
+2024-07-31 23:34:16 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:34:19 INFO     ===> mass get
+2024-07-31 23:34:19 INFO     ### test_mass_get_2825_HIP ==> PASSED
+2024-07-31 23:34:22 INFO     ===> dgo status
+2024-07-31 23:34:23 INFO     ### test_dgo_status_2825_HIP ==> PASSED
+2024-07-31 23:34:26 INFO     ===> dgo stage hip_trans
+2024-07-31 23:34:26 INFO     ### test_hip_trans_region_2825_HIP ==> PASSED
+2024-07-31 23:34:29 INFO     ===> mass get
+2024-07-31 23:34:29 INFO     ### test_mass_get_2825_HIP_trans ==> PASSED
+2024-07-31 23:34:32 INFO     ===> dgo status
+2024-07-31 23:34:32 INFO     ### test_dgo_status_2825_HIP_trans ==> PASSED
+PASSED                                                                   [ 53%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_7d3lb_3314_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:34:38 INFO     dgo manual_stop executed
+2024-07-31 23:34:41 INFO     Current State: IDLE
+2024-07-31 23:34:41 INFO     ===> dgo status
+2024-07-31 23:34:41 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:34:44 INFO     ===> mass clear
+2024-07-31 23:34:45 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:34:48 INFO     ===> mass get
+2024-07-31 23:34:48 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:34:51 INFO     ===> mass inject 1500
+2024-07-31 23:34:56 INFO     ### test_mass_inject_1500 ==> PASSED
+2024-07-31 23:34:59 INFO     ===> mass get
+2024-07-31 23:34:59 INFO     ??? test_mass_get_1500_HIP ==> FAILED
+FAILED                                                                   [ 60%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_7_5lb_3405_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:35:06 INFO     dgo manual_stop executed
+2024-07-31 23:35:09 INFO     Current State: IDLE
+2024-07-31 23:35:09 INFO     ===> dgo status
+2024-07-31 23:35:09 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:35:12 INFO     ===> mass clear
+2024-07-31 23:35:13 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:35:16 INFO     ===> mass get
+2024-07-31 23:35:16 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:35:19 INFO     ===> mass inject 8
+2024-07-31 23:35:20 INFO     ### test_mass_inject_8 ==> PASSED
+2024-07-31 23:35:23 INFO     ===> mass get
+2024-07-31 23:35:23 INFO     ### test_mass_get_8_HIP ==> PASSED
+2024-07-31 23:35:26 INFO     ===> dgo status
+2024-07-31 23:35:26 INFO     ### test_dgo_status_8 ==> PASSED
+2024-07-31 23:35:29 INFO     ===> mass inject 2500
+2024-07-31 23:35:30 INFO     ### test_mass_inject_2500 ==> PASSED
+2024-07-31 23:35:33 INFO     ===> mass get
+2024-07-31 23:35:33 INFO     ### test_mass_get_2508_HIP ==> PASSED
+2024-07-31 23:35:36 INFO     ===> dgo status
+2024-07-31 23:35:37 INFO     ### test_dgo_status_2508 ==> PASSED
+2024-07-31 23:35:40 INFO     ===> mass inject 0
+2024-07-31 23:35:40 INFO     ### test_mass_inject_0 ==> PASSED
+2024-07-31 23:35:43 INFO     ===> mass get
+2024-07-31 23:35:43 INFO     ### test_mass_get_2508_HIP ==> PASSED
+2024-07-31 23:35:46 INFO     ===> dgo status
+2024-07-31 23:35:46 INFO     ### test_dgo_status_2508 ==> PASSED
+2024-07-31 23:35:49 INFO     ===> mass inject 897
+2024-07-31 23:35:50 INFO     ### test_mass_inject_897 ==> PASSED
+2024-07-31 23:35:53 INFO     ===> mass get
+2024-07-31 23:35:53 INFO     ### test_mass_get_3405 ==> PASSED
+2024-07-31 23:35:56 INFO     ===> dgo status
+2024-07-31 23:35:56 INFO     ### test_dgo_status_3405 ==> PASSED
+2024-07-31 23:36:03 INFO     Current State: IDLE
+2024-07-31 23:36:03 INFO     dgo manual_start executed
+2024-07-31 23:36:16 INFO     Current State: LIP
+2024-07-31 23:36:20 INFO     dgo stage skip executed HIP
+2024-07-31 23:36:28 INFO     Current State: HIP
+2024-07-31 23:36:31 INFO     ===> dgo status
+2024-07-31 23:36:32 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:36:35 INFO     ===> mass get
+2024-07-31 23:36:35 INFO     ### test_mass_get_3405_HIP ==> PASSED
+2024-07-31 23:36:38 INFO     ===> dgo status
+2024-07-31 23:36:38 INFO     ### test_dgo_status_3405_HIP ==> PASSED
+2024-07-31 23:36:41 INFO     ===> dgo stage hip_trans
+2024-07-31 23:36:41 INFO     ### test_hip_trans_region_3405_HIP ==> PASSED
+2024-07-31 23:36:44 INFO     ===> mass get
+2024-07-31 23:36:44 INFO     ### test_mass_get_3405_HIP_trans ==> PASSED
+2024-07-31 23:36:47 INFO     ===> dgo status
+2024-07-31 23:36:47 INFO     ### test_dgo_status_3405_HIP_trans ==> PASSED
+PASSED                                                                   [ 66%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_8lb_3632_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:36:53 INFO     dgo manual_stop executed
+2024-07-31 23:36:57 INFO     Current State: IDLE
+2024-07-31 23:36:57 INFO     ===> dgo status
+2024-07-31 23:36:57 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:37:00 INFO     ===> mass clear
+2024-07-31 23:37:01 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:37:04 INFO     ===> mass get
+2024-07-31 23:37:04 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:37:07 INFO     ===> mass inject 32
+2024-07-31 23:37:07 INFO     ### test_mass_inject_32 ==> PASSED
+2024-07-31 23:37:10 INFO     ===> mass get
+2024-07-31 23:37:10 INFO     ### test_mass_get_32_HIP ==> PASSED
+2024-07-31 23:37:13 INFO     ===> dgo status
+2024-07-31 23:37:14 INFO     ### test_dgo_status_32 ==> PASSED
+2024-07-31 23:37:17 INFO     ===> mass inject 3600
+2024-07-31 23:37:17 INFO     ### test_mass_inject_3600 ==> PASSED
+2024-07-31 23:37:20 INFO     ===> mass get
+2024-07-31 23:37:20 INFO     ### test_mass_get_3632 ==> PASSED
+2024-07-31 23:37:23 INFO     ===> dgo status
+2024-07-31 23:37:24 INFO     ### test_dgo_status_3632 ==> PASSED
+2024-07-31 23:37:30 INFO     Current State: IDLE
+2024-07-31 23:37:30 INFO     dgo manual_start executed
+2024-07-31 23:37:43 INFO     Current State: LIP
+2024-07-31 23:37:47 INFO     dgo stage skip executed HIP
+2024-07-31 23:37:56 INFO     Current State: HIP
+2024-07-31 23:37:59 INFO     ===> dgo status
+2024-07-31 23:37:59 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:38:02 INFO     ===> mass get
+2024-07-31 23:38:02 INFO     ### test_mass_get_3632_HIP ==> PASSED
+2024-07-31 23:38:05 INFO     ===> dgo status
+2024-07-31 23:38:05 INFO     ### test_dgo_status_3632_HIP ==> PASSED
+2024-07-31 23:38:08 INFO     ===> dgo stage hip_trans
+2024-07-31 23:38:08 INFO     ### test_hip_trans_region_3632_HIP ==> PASSED
+2024-07-31 23:38:11 INFO     ===> mass get
+2024-07-31 23:38:11 INFO     ### test_mass_get_3632_HIP_trans ==> PASSED
+2024-07-31 23:38:14 INFO     ===> dgo status
+2024-07-31 23:38:14 INFO     ### test_dgo_status_3632_HIP_trans ==> PASSED
+PASSED                                                                   [ 73%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_11lb_5800_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:38:21 INFO     dgo manual_stop executed
+2024-07-31 23:38:24 INFO     Current State: IDLE
+2024-07-31 23:38:24 INFO     ===> dgo status
+2024-07-31 23:38:24 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:38:27 INFO     ===> mass clear
+2024-07-31 23:38:28 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:38:31 INFO     ===> mass get
+2024-07-31 23:38:31 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:38:34 INFO     ===> mass inject 5800
+2024-07-31 23:38:35 INFO     ### test_mass_inject_5800 ==> PASSED
+2024-07-31 23:38:38 INFO     ===> mass get
+2024-07-31 23:38:38 INFO     ### test_mass_get_5800 ==> PASSED
+2024-07-31 23:38:41 INFO     ===> dgo status
+2024-07-31 23:38:41 INFO     ### test_dgo_status_5800 ==> PASSED
+2024-07-31 23:38:47 INFO     Current State: IDLE
+2024-07-31 23:38:47 INFO     dgo manual_start executed
+2024-07-31 23:39:01 INFO     Current State: LIP
+2024-07-31 23:39:05 INFO     dgo stage skip executed HIP
+2024-07-31 23:39:13 INFO     Current State: HIP
+2024-07-31 23:39:16 INFO     ===> dgo status
+2024-07-31 23:39:16 INFO     ### test_dgo_jump_fromIDLEtoHIP ==> PASSED
+2024-07-31 23:39:19 INFO     ===> mass get
+2024-07-31 23:39:19 INFO     ### test_mass_get_5800_HIP ==> PASSED
+2024-07-31 23:39:22 INFO     ===> dgo status
+2024-07-31 23:39:23 INFO     ### test_dgo_status_5800_HIP ==> PASSED
+2024-07-31 23:39:26 INFO     ===> dgo stage hip_trans
+2024-07-31 23:39:26 INFO     ### test_hip_trans_region_5800_HIP ==> PASSED
+2024-07-31 23:39:29 INFO     ===> mass get
+2024-07-31 23:39:29 INFO     ### test_mass_get_5800_HIP_trans ==> PASSED
+2024-07-31 23:39:32 INFO     ===> dgo status
+2024-07-31 23:39:32 INFO     ### test_dgo_status_5800_HIP_trans ==> PASSED
+PASSED                                                                   [ 80%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_5d2lb_M_2388_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:39:38 INFO     dgo manual_stop executed
+2024-07-31 23:39:41 INFO     Current State: IDLE
+2024-07-31 23:39:41 INFO     ===> dgo status
+2024-07-31 23:39:41 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:39:44 INFO     ===> mass clear
+2024-07-31 23:39:45 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:39:48 INFO     ===> mass get
+2024-07-31 23:39:48 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:39:51 INFO     ===> mass inject 1500
+2024-07-31 23:39:52 INFO     ### test_mass_inject_1500 ==> PASSED
+2024-07-31 23:39:55 INFO     ===> mass get
+2024-07-31 23:39:55 INFO     ### test_mass_get_1500_HIP ==> PASSED
+2024-07-31 23:39:58 INFO     ===> dgo status
+2024-07-31 23:39:59 INFO     ### test_dgo_status_1500 ==> PASSED
+2024-07-31 23:40:05 INFO     Current State: IDLE
+2024-07-31 23:40:05 INFO     dgo manual_start executed
+2024-07-31 23:40:13 INFO     Current State: LIP
+2024-07-31 23:40:16 INFO     ===> dgo status
+2024-07-31 23:40:16 INFO     ### test_dgo_jump_fromIDLEtoLIP ==> PASSED
+2024-07-31 23:40:19 INFO     ===> mass get
+2024-07-31 23:40:19 INFO     ### test_mass_get_1500_HIP ==> PASSED
+2024-07-31 23:40:22 INFO     ===> dgo status
+2024-07-31 23:40:23 INFO     ### test_dgo_status_1500_HIP ==> PASSED
+2024-07-31 23:40:26 INFO     ===> mass inject 888
+2024-07-31 23:40:27 INFO     ### test_mass_inject_888 ==> PASSED
+2024-07-31 23:40:30 INFO     ===> mass get
+2024-07-31 23:40:30 INFO     ### test_mass_get_2388 ==> PASSED
+2024-07-31 23:40:33 INFO     ===> dgo status
+2024-07-31 23:40:33 INFO     ### test_dgo_status_2388 ==> PASSED
+2024-07-31 23:40:39 INFO     Current State: LIP
+2024-07-31 23:40:43 INFO     dgo stage skip executed HIP
+2024-07-31 23:40:51 INFO     Current State: HIP
+2024-07-31 23:40:54 INFO     ===> dgo status
+2024-07-31 23:40:54 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+2024-07-31 23:40:58 INFO     ===> mass get
+2024-07-31 23:40:58 INFO     ### test_mass_get_2388_HIP ==> PASSED
+2024-07-31 23:41:01 INFO     ===> dgo status
+2024-07-31 23:41:01 INFO     ### test_dgo_status_2388_HIP ==> PASSED
+2024-07-31 23:41:04 INFO     ===> dgo stage hip_trans
+2024-07-31 23:41:04 INFO     ### test_hip_trans_region_2388_HIP ==> PASSED
+2024-07-31 23:41:07 INFO     ===> mass get
+2024-07-31 23:41:07 INFO     ### test_mass_get_2388_HIP_trans ==> PASSED
+2024-07-31 23:41:10 INFO     ===> dgo status
+2024-07-31 23:41:10 INFO     ### test_dgo_status_2388_HIP_trans ==> PASSED
+PASSED                                                                   [ 86%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_7d4lb_M_3388_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:41:16 INFO     dgo manual_stop executed
+2024-07-31 23:41:19 INFO     Current State: IDLE
+2024-07-31 23:41:19 INFO     ===> dgo status
+2024-07-31 23:41:20 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:41:23 INFO     ===> mass clear
+2024-07-31 23:41:23 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:41:26 INFO     ===> mass get
+2024-07-31 23:41:26 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:41:30 INFO     ===> mass inject 1500
+2024-07-31 23:41:30 INFO     ### test_mass_inject_1500 ==> PASSED
+2024-07-31 23:41:33 INFO     ===> mass get
+2024-07-31 23:41:33 INFO     ### test_mass_get_1500_HIP ==> PASSED
+2024-07-31 23:41:36 INFO     ===> dgo status
+2024-07-31 23:41:37 INFO     ### test_dgo_status_1500 ==> PASSED
+2024-07-31 23:41:40 INFO     ===> mass inject 400
+2024-07-31 23:41:40 INFO     ### test_mass_inject_400 ==> PASSED
+2024-07-31 23:41:43 INFO     ===> mass get
+2024-07-31 23:41:43 INFO     ### test_mass_get_1900_HIP ==> PASSED
+2024-07-31 23:41:46 INFO     ===> dgo status
+2024-07-31 23:41:47 INFO     ### test_dgo_status_1900 ==> PASSED
+2024-07-31 23:41:53 INFO     Current State: IDLE
+2024-07-31 23:41:53 INFO     dgo manual_start executed
+2024-07-31 23:42:01 INFO     Current State: LIP
+2024-07-31 23:42:04 INFO     ===> dgo status
+2024-07-31 23:42:04 INFO     ### test_dgo_jump_fromIDLEtoLIP ==> PASSED
+2024-07-31 23:42:07 INFO     ===> mass get
+2024-07-31 23:42:07 INFO     ### test_mass_get_1900_HIP ==> PASSED
+2024-07-31 23:42:10 INFO     ===> dgo status
+2024-07-31 23:42:11 INFO     ### test_dgo_status_1900_HIP ==> PASSED
+2024-07-31 23:42:14 INFO     ===> mass inject 800
+2024-07-31 23:42:15 INFO     ### test_mass_inject_800 ==> PASSED
+2024-07-31 23:42:18 INFO     ===> mass get
+2024-07-31 23:42:18 INFO     ### test_mass_get_2700 ==> PASSED
+2024-07-31 23:42:21 INFO     ===> dgo status
+2024-07-31 23:42:21 INFO     ### test_dgo_status_2700 ==> PASSED
+2024-07-31 23:42:24 INFO     ===> mass inject 299
+2024-07-31 23:42:25 INFO     ### test_mass_inject_299 ==> PASSED
+2024-07-31 23:42:28 INFO     ===> mass get
+2024-07-31 23:42:28 INFO     ### test_mass_get_2999 ==> PASSED
+2024-07-31 23:42:31 INFO     ===> dgo status
+2024-07-31 23:42:31 INFO     ### test_dgo_status_2999 ==> PASSED
+2024-07-31 23:42:37 INFO     Current State: LIP
+2024-07-31 23:42:41 INFO     dgo stage skip executed HIP
+2024-07-31 23:42:50 INFO     Current State: HIP
+2024-07-31 23:42:53 INFO     ===> dgo status
+2024-07-31 23:42:53 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+2024-07-31 23:42:56 INFO     ===> mass get
+2024-07-31 23:42:56 INFO     ### test_mass_get_2999_HIP ==> PASSED
+2024-07-31 23:42:59 INFO     ===> dgo status
+2024-07-31 23:42:59 INFO     ### test_dgo_status_2999_HIP ==> PASSED
+2024-07-31 23:43:02 INFO     ===> mass inject 389
+2024-07-31 23:43:03 INFO     ### test_mass_inject_389 ==> PASSED
+2024-07-31 23:43:06 INFO     ===> mass get
+2024-07-31 23:43:06 INFO     ### test_mass_get_3388 ==> PASSED
+2024-07-31 23:43:09 INFO     ===> dgo status
+2024-07-31 23:43:09 INFO     ### test_dgo_status_3388_HIP ==> PASSED
+2024-07-31 23:43:12 INFO     ===> dgo stage hip_trans
+2024-07-31 23:43:12 INFO     ### test_hip_trans_region_3388_HIP ==> PASSED
+2024-07-31 23:43:16 INFO     ===> mass get
+2024-07-31 23:43:16 INFO     ### test_mass_get_3388_HIP_trans ==> PASSED
+2024-07-31 23:43:19 INFO     ===> dgo status
+2024-07-31 23:43:19 INFO     ### test_dgo_status_3388_HIP_trans ==> PASSED
+PASSED                                                                   [ 93%]
+dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_3d1lb_M_1388_From_IDLE 
+-------------------------------- live log call ---------------------------------
+2024-07-31 23:43:25 INFO     dgo manual_stop executed
+2024-07-31 23:43:28 INFO     Current State: IDLE
+2024-07-31 23:43:28 INFO     ===> dgo status
+2024-07-31 23:43:28 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:43:31 INFO     ===> mass clear
+2024-07-31 23:43:32 INFO     ### test_mass_clear ==> PASSED
+2024-07-31 23:43:35 INFO     ===> mass get
+2024-07-31 23:43:35 INFO     ### test_mass_get ==> PASSED
+2024-07-31 23:43:38 INFO     ===> mass inject 500
+2024-07-31 23:43:39 INFO     ### test_mass_inject_500 ==> PASSED
+2024-07-31 23:43:42 INFO     ===> mass get
+2024-07-31 23:43:42 INFO     ### test_mass_get_500_HIP ==> PASSED
+2024-07-31 23:43:45 INFO     ===> dgo status
+2024-07-31 23:43:45 INFO     ### test_dgo_status_500 ==> PASSED
+2024-07-31 23:43:52 INFO     Current State: IDLE
+2024-07-31 23:43:52 INFO     dgo manual_start executed
+2024-07-31 23:44:00 INFO     Current State: LIP
+2024-07-31 23:44:03 INFO     ===> dgo status
+2024-07-31 23:44:03 INFO     ### test_dgo_jump_fromIDLEtoLIP ==> PASSED
+2024-07-31 23:44:06 INFO     ===> mass get
+2024-07-31 23:44:06 INFO     ### test_mass_get_500_HIP ==> PASSED
+2024-07-31 23:44:09 INFO     ===> dgo status
+2024-07-31 23:44:10 INFO     ### test_dgo_status_500_HIP ==> PASSED
+2024-07-31 23:44:13 INFO     ===> mass inject 320
+2024-07-31 23:44:13 INFO     ### test_mass_inject_320 ==> PASSED
+2024-07-31 23:44:16 INFO     ===> mass get
+2024-07-31 23:44:17 INFO     ### test_mass_get_820 ==> PASSED
+2024-07-31 23:44:20 INFO     ===> dgo status
+2024-07-31 23:44:20 INFO     ### test_dgo_status_820 ==> PASSED
+2024-07-31 23:44:26 INFO     Current State: LIP
+2024-07-31 23:44:30 INFO     dgo stage skip executed HIP
+2024-07-31 23:44:38 INFO     Current State: HIP
+2024-07-31 23:44:41 INFO     ===> dgo status
+2024-07-31 23:44:41 INFO     ### test_dgo_jump_fromLIPtoHIP ==> PASSED
+2024-07-31 23:44:44 INFO     ===> mass get
+2024-07-31 23:44:45 INFO     ### test_mass_get_820_HIP ==> PASSED
+2024-07-31 23:44:48 INFO     ===> dgo status
+2024-07-31 23:44:48 INFO     ### test_dgo_status_820_HIP ==> PASSED
+2024-07-31 23:44:51 INFO     ===> mass inject 100
+2024-07-31 23:44:51 INFO     ### test_mass_inject_100 ==> PASSED
+2024-07-31 23:44:55 INFO     ===> mass get
+2024-07-31 23:44:55 INFO     ### test_mass_get_920 ==> PASSED
+2024-07-31 23:44:58 INFO     ===> dgo status
+2024-07-31 23:44:58 INFO     ### test_dgo_status_920_HIP ==> PASSED
+2024-07-31 23:45:01 INFO     ===> mass inject 468
+2024-07-31 23:45:02 INFO     ### test_mass_inject_468 ==> PASSED
+2024-07-31 23:45:05 INFO     ===> mass get
+2024-07-31 23:45:05 INFO     ### test_mass_get_1388 ==> PASSED
+2024-07-31 23:45:08 INFO     ===> dgo status
+2024-07-31 23:45:08 INFO     ### test_dgo_status_1388_HIP ==> PASSED
+2024-07-31 23:45:11 INFO     ===> dgo stage hip_trans
+2024-07-31 23:45:11 INFO     ### test_hip_trans_region_1388_HIP ==> PASSED
+2024-07-31 23:45:14 INFO     ===> mass get
+2024-07-31 23:45:14 INFO     ### test_mass_get_1388_HIP_trans ==> PASSED
+2024-07-31 23:45:17 INFO     ===> dgo status
+2024-07-31 23:45:17 INFO     ### test_dgo_status_1388_HIP_trans ==> PASSED
+2024-07-31 23:45:23 INFO     dgo manual_stop executed
+2024-07-31 23:45:27 INFO     Current State: IDLE
+2024-07-31 23:45:27 INFO     ===> dgo status
+2024-07-31 23:45:27 INFO     ### test_dgo_Start_with_IDLE_State ==> PASSED
+2024-07-31 23:45:30 INFO     ===> mass clear
+2024-07-31 23:45:31 INFO     ### test_mass_clear ==> PASSED
+PASSED                                                                   [100%]
+
+=================================== FAILURES ===================================
+______ TestMass5hrMinRuntimeIDLE.test_group_mass_add_7d3lb_3314_From_IDLE ______
+
+self = <dgo.dgo_mass_add_5hr_min_runtime_IDLE.TestMass5hrMinRuntimeIDLE object at 0x7fa5749940>
+dgo = <libs.SetupDGO.setupDgo object at 0x7fa57514c0>
+log = <Logger dgo (DEBUG)>
+testsuite = [{'group': [{'command': 'lid inject 0', 'picktopone': True, 'testcase': 'test_lid_inject_0', 'verify': []}, {'command'...', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, ...], 'groupname': 'test_group_mass_add_4d4lb_2016_From_IDLE'}, ...]
+
+    def test_group_mass_add_7d3lb_3314_From_IDLE(self, dgo, log, testsuite):
+        testGroup = "test_group_mass_add_7d3lb_3314_From_IDLE"
+>       self._run_testcase(dgo, log, testsuite, None, testGroup)
+
+dgo_mass_add_5hr_min_runtime_IDLE.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+BasePytest.py:12: in _run_testcase
+    libs.basePytestEx._run_testcaseNext(self, dgo, log, testsuite, v['testcase'], testGrp)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <dgo.dgo_mass_add_5hr_min_runtime_IDLE.TestMass5hrMinRuntimeIDLE object at 0x7fa5749940>
+dgo = <libs.SetupDGO.setupDgo object at 0x7fa57514c0>
+log = <Logger dgo (DEBUG)>
+testsuite = [{'group': [{'command': 'lid inject 0', 'picktopone': True, 'testcase': 'test_lid_inject_0', 'verify': []}, {'command'...', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, ...], 'groupname': 'test_group_mass_add_4d4lb_2016_From_IDLE'}, ...]
+testCase = 'test_mass_get_1500_HIP'
+testGrp = 'test_group_mass_add_7d3lb_3314_From_IDLE'
+
+    def _run_testcaseNext(self, dgo, log, testsuite, testCase, testGrp=None):
+        time.sleep(2)
+        self.result = {}
+        myConf = self._getMyConf(testsuite, testCase, testGrp)
+        current_GMT = time.gmtime()
+        timeBegin = calendar.timegm(current_GMT)
+        self.result["timeBegin"] = timeBegin
+        log.debug("BBB %s ", testCase)
+    
+        if myConf.__contains__("retryCount") and myConf.__contains__("retryPeriod"):
+            count = 0
+            for i in range(myConf["retryCount"]+1):
+                count += 1
+                selectData = self._executeCommand(testsuite, testCase, dgo, log, testGrp)
+                self.result["test"] = testCase
+    
+                if testCase.startswith('get_shadow_'):
+                    if self._performDSVerifies(testsuite, testCase, selectData, log, testGrp):
+                        log.info("### %s ==> %s", testCase, result.passed)
+                        self.result["result"] = result.passed
+                        assert True
+                        break
+                    else:
+                        if count <= myConf["retryCount"]:
+                            log.info("   retrying... %s", count)
+                            self.result["retry"] = count
+                            time.sleep(myConf["retryPeriod"] / myConf["retryCount"])
+                        else:
+                            log.info("??? timeout... %s ==> %s", testCase, result.failed)
+                            self.result["result"] = result.timeouted
+                            dgo.summaries["tests"].append(self.result)
+                            assert False
+                else:
+                    if self._performVerifies(testsuite, testCase, selectData, log, testGrp):
+                        log.info("### %s ==> %s", testCase, result.passed)
+                        self.result["result"] = result.passed
+                        assert True
+                        break
+                    else:
+                        if count <= myConf["retryCount"]:
+                            log.info("   retrying... %s", count)
+                            self.result["retry"] = count
+                            time.sleep(myConf["retryPeriod"] / myConf["retryCount"])
+                        else:
+                            log.info("??? timeout... %s ==> %s", testCase, result.failed)
+                            self.result["result"] = result.timeouted
+                            dgo.summaries["tests"].append(self.result)
+                            assert False
+        else:
+            if myConf.__contains__("threads") and myConf.__contains__("mt_commands"):
+                myConf = self._getMyConf(testsuite, testCase, testGrp)
+                threads = []
+                lock = threading.Lock()
+                for i in range(1, myConf["threads"] + 1):
+                    threadName = "thread-" + str(i)
+                    threads.append(myThread(i, threadName, lock, dgo, log, testsuite, testCase))
+                    threads[-1].start()
+                    log.info("started: %s", threads[-1])
+    
+                for t in threads:
+                    t.join()
+                log.info("%s exit!", testCase)
+                return
+    
+            selectData = self._executeCommand(testsuite, testCase, dgo, log, testGrp)
+            self.result["test"] = testCase
+            if testCase == "test_dgo_power_cycle" or testCase == "wait_time_pause" or testCase.startswith('set_shadow_') or testCase.startswith('wait_time_'):
+                log.info("### %s ==> %s", testCase, result.passed)
+                self.result["result"] = result.passed
+                assert True
+                return
+    
+            elif testCase.startswith('ping_device_'):
+                if self._performShellVerifies(testsuite, testCase, selectData, log, testGrp):
+                    log.info("### %s ==> %s", testCase, result.passed)
+                    self.result["result"] = result.passed
+                    assert True
+                else:
+                    log.info("??? %s ==> %s", testCase, result.failed)
+                    self.result["result"] = result.failed
+                    dgo.summaries["tests"].append(self.result)
+                    assert False
+                dgo.summaries["tests"].append(self.result)
+                return
+    
+            elif testCase.startswith('run_ota_'):
+                if self._performOTAVerifies(testsuite, testCase, selectData, log, testGrp):
+                    log.info("### %s ==> %s", testCase, result.passed)
+                    self.result["result"] = result.passed
+                    assert True
+                else:
+                    log.info("??? %s ==> %s", testCase, result.failed)
+                    self.result["result"] = result.failed
+                    dgo.summaries["tests"].append(self.result)
+                    assert False
+                dgo.summaries["tests"].append(self.result)
+                return
+    
+    
+            elif testCase.startswith('get_shadow_'):
+                if self._performDSVerifies(testsuite, testCase, selectData, log, testGrp):
+                    log.info("### %s ==> %s", testCase, result.passed)
+                    self.result["result"] = result.passed
+                    assert True
+                else:
+                    log.info("??? %s ==> %s", testCase, result.failed)
+                    self.result["result"] = result.failed
+                    dgo.summaries["tests"].append(self.result)
+                    assert False
+                dgo.summaries["tests"].append(self.result)
+                return
+    
+    
+            if self._performVerifies(testsuite, testCase, selectData, log, testGrp):
+                log.info("### %s ==> %s", testCase, result.passed)
+                self.result["result"] = result.passed
+                assert True
+            else:
+                log.info("??? %s ==> %s", testCase, result.failed)
+                self.result["result"] = result.failed
+                dgo.summaries["tests"].append(self.result)
+>               assert False
+E               AssertionError
+
+../libs/BasePytestEx.py:219: AssertionError
+------------------------------ Captured log call -------------------------------
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    dgo:BasePytest.py:8 AAA test_group_mass_add_7d3lb_3314_From_IDLE 
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}
+DEBUG    dgo:BasePytestEx.py:105 BBB test_dgo_Start_with_IDLE_State 
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}
+DEBUG    root:SetupDGO.py:40 cmd info: dgo manual_stop
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 dgo manual_stop
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "dgo manual_stop"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I dgo         manual_stop       msg:"Done"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I dgo         manual_stop       msg:"Done"', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 55
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'dgo', 'manual_stop', 'msg:"Done"'], ['#']]
+DEBUG    root:SetupDGO.py:166 retLst= ['I', 'dgo', 'manual_stop', 'msg:"Done"']
+INFO     root:SetupDGO.py:345 dgo manual_stop executed
+DEBUG    root:SetupDGO.py:40 cmd info: dgo status
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 dgo status
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "dgo status"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I dgo         status            state:"IDLE" upcoming cycle:"D&G" upcoming stage:"LIP" time to next cycle:"T02:45:19"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            epoch:"2024-08-01T04:29:41.446"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cur_time_utc:"2024-08-01T04:29:41"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T21:29:41" time_offset:-25200
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            end_time_utc:"2024-08-01T07:15:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-01T00:15:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cycle_start_utc:"2024-08-01T03:44:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T20:44:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cycle_remain_s:"T00:00:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_start_utc:"2024-08-01T03:59:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T20:59:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_end_utc:"2024-08-01T06:29:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T23:29:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            mandatory_stage_end_utc:"2024-08-01T06:29:30"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T23:29:30"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_remain_s:"T00:00:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            dgo_inactive_reasons:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            unprocessed_mass_next_cycle_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            total_mass_added_since_stage_start_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            accu_mass_time_ext_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            total_mass_add_hip_extend_s:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_reached_min_dur:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            will_skip_next_cycle:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_reached_exit_condition:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_check_exit_cond:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_storage:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_sht40_heater.val:0 sw_counter_sht40_heater.en:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_skip_count:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            today_idx (epoch):19935 today_idx (week):6
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            planned_skip_until_idx:19935
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            real_skip_until_idx:19936
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I dgo         status            state:"IDLE" upcoming cycle:"D&G" upcoming stage:"LIP" time to next cycle:"T02:45:19"', '\x00I dgo         status            epoch:"2024-08-01T04:29:41.446"', '\x00I dgo         status            cur_time_utc:"2024-08-01T04:29:41"', '\x00I dgo         status            LOCAL:"2024-07-31T21:29:41" time_offset:-25200', '\x00I dgo         status            end_time_utc:"2024-08-01T07:15:00"', '\x00I dgo         status            LOCAL:"2024-08-01T00:15:00"', '\x00I dgo         status            cycle_start_utc:"2024-08-01T03:44:29"', '\x00I dgo         status            LOCAL:"2024-07-31T20:44:29"', '\x00I dgo         status            cycle_remain_s:"T00:00:00"', '\x00I dgo         status            stage_start_utc:"2024-08-01T03:59:29"', '\x00I dgo         status            LOCAL:"2024-07-31T20:59:29"', '\x00I dgo         status            stage_end_utc:"2024-08-01T06:29:29"', '\x00I dgo         status            LOCAL:"2024-07-31T23:29:29"', '\x00I dgo         status            mandatory_stage_end_utc:"2024-08-01T06:29:30"', '\x00I dgo         status            LOCAL:"2024-07-31T23:29:30"', '\x00I dgo         status            stage_remain_s:"T00:00:00"', '\x00I dgo         status            dgo_inactive_reasons:0x00000000', '\x00I dgo         status            unprocessed_mass_next_cycle_g:0', '\x00I dgo         status            total_mass_added_since_stage_start_g:0', '\x00I dgo         status            accu_mass_time_ext_g:0', '\x00I dgo         status            total_mass_add_hip_extend_s:0', '\x00I dgo         status            stage_reached_min_dur:"no"', '\x00I dgo         status            will_skip_next_cycle:"no"', '\x00I dgo         status            stage_reached_exit_condition:"no"', '\x00I dgo         status            sw_counter_check_exit_cond:0', '\x00I dgo         status            sw_counter_storage:0', '\x00I dgo         status            sw_counter_sht40_heater.val:0 sw_counter_sht40_heater.en:0', '\x00I dgo         status            sw_counter_skip_count:0', '\x00I dgo         status            today_idx (epoch):19935 today_idx (week):6', '\x00I dgo         status            planned_skip_until_idx:19935', '\x00I dgo         status            real_skip_until_idx:19936', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 2275
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T02:45:19"'], ['I', 'dgo', 'status', 'epoch:"2024-08-01T04:29:41.446"'], ['I', 'dgo', 'status', 'cur_time_utc:"2024-08-01T04:29:41"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T21:29:41"', 'time_offset:-25200'], ['I', 'dgo', 'status', 'end_time_utc:"2024-08-01T07:15:00"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-01T00:15:00"'], ['I', 'dgo', 'status', 'cycle_start_utc:"2024-08-01T03:44:29"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T20:44:29"'], ['I', 'dgo', 'status', 'cycle_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'stage_start_utc:"2024-08-01T03:59:29"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T20:59:29"'], ['I', 'dgo', 'status', 'stage_end_utc:"2024-08-01T06:29:29"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T23:29:29"'], ['I', 'dgo', 'status', 'mandatory_stage_end_utc:"2024-08-01T06:29:30"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T23:29:30"'], ['I', 'dgo', 'status', 'stage_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'dgo_inactive_reasons:0x00000000'], ['I', 'dgo', 'status', 'unprocessed_mass_next_cycle_g:0'], ['I', 'dgo', 'status', 'total_mass_added_since_stage_start_g:0'], ['I', 'dgo', 'status', 'accu_mass_time_ext_g:0'], ['I', 'dgo', 'status', 'total_mass_add_hip_extend_s:0'], ['I', 'dgo', 'status', 'stage_reached_min_dur:"no"'], ['I', 'dgo', 'status', 'will_skip_next_cycle:"no"'], ['I', 'dgo', 'status', 'stage_reached_exit_condition:"no"'], ['I', 'dgo', 'status', 'sw_counter_check_exit_cond:0'], ['I', 'dgo', 'status', 'sw_counter_storage:0'], ['I', 'dgo', 'status', 'sw_counter_sht40_heater.val:0', 'sw_counter_sht40_heater.en:0'], ['I', 'dgo', 'status', 'sw_counter_skip_count:0'], ['I', 'dgo', 'status', 'today_idx', '(epoch):19935', 'today_idx', '(week):6'], ['I', 'dgo', 'status', 'planned_skip_until_idx:19935'], ['I', 'dgo', 'status', 'real_skip_until_idx:19936'], ['#']]
+DEBUG    root:SetupDGO.py:166 retLst= ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T02:45:19"']
+INFO     root:SetupDGO.py:217 Current State: IDLE
+INFO     dgo:BasePytestEx.py:330 ===> dgo status
+DEBUG    root:SetupDGO.py:40 cmd info: dgo status
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 dgo status
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "dgo status"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I dgo         status            state:"IDLE" upcoming cycle:"D&G" upcoming stage:"LIP" time to next cycle:"T02:45:16"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            epoch:"2024-08-01T04:29:44.663"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cur_time_utc:"2024-08-01T04:29:44"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T21:29:44" time_offset:-25200
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            end_time_utc:"2024-08-01T07:15:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-08-01T00:15:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cycle_start_utc:"2024-08-01T03:44:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T20:44:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            cycle_remain_s:"T00:00:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_start_utc:"2024-08-01T03:59:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T20:59:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_end_utc:"2024-08-01T06:29:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T23:29:29"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            mandatory_stage_end_utc:"2024-08-01T06:29:30"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            LOCAL:"2024-07-31T23:29:30"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_remain_s:"T00:00:00"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            dgo_inactive_reasons:0x00000000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            unprocessed_mass_next_cycle_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            total_mass_added_since_stage_start_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            accu_mass_time_ext_g:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            total_mass_add_hip_extend_s:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_reached_min_dur:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            will_skip_next_cycle:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            stage_reached_exit_condition:"no"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_check_exit_cond:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_storage:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_sht40_heater.val:0 sw_counter_sht40_heater.en:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            sw_counter_skip_count:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            today_idx (epoch):19935 today_idx (week):6
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            planned_skip_until_idx:19935
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I dgo         status            real_skip_until_idx:19936
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I dgo         status            state:"IDLE" upcoming cycle:"D&G" upcoming stage:"LIP" time to next cycle:"T02:45:16"', '\x00I dgo         status            epoch:"2024-08-01T04:29:44.663"', '\x00I dgo         status            cur_time_utc:"2024-08-01T04:29:44"', '\x00I dgo         status            LOCAL:"2024-07-31T21:29:44" time_offset:-25200', '\x00I dgo         status            end_time_utc:"2024-08-01T07:15:00"', '\x00I dgo         status            LOCAL:"2024-08-01T00:15:00"', '\x00I dgo         status            cycle_start_utc:"2024-08-01T03:44:29"', '\x00I dgo         status            LOCAL:"2024-07-31T20:44:29"', '\x00I dgo         status            cycle_remain_s:"T00:00:00"', '\x00I dgo         status            stage_start_utc:"2024-08-01T03:59:29"', '\x00I dgo         status            LOCAL:"2024-07-31T20:59:29"', '\x00I dgo         status            stage_end_utc:"2024-08-01T06:29:29"', '\x00I dgo         status            LOCAL:"2024-07-31T23:29:29"', '\x00I dgo         status            mandatory_stage_end_utc:"2024-08-01T06:29:30"', '\x00I dgo         status            LOCAL:"2024-07-31T23:29:30"', '\x00I dgo         status            stage_remain_s:"T00:00:00"', '\x00I dgo         status            dgo_inactive_reasons:0x00000000', '\x00I dgo         status            unprocessed_mass_next_cycle_g:0', '\x00I dgo         status            total_mass_added_since_stage_start_g:0', '\x00I dgo         status            accu_mass_time_ext_g:0', '\x00I dgo         status            total_mass_add_hip_extend_s:0', '\x00I dgo         status            stage_reached_min_dur:"no"', '\x00I dgo         status            will_skip_next_cycle:"no"', '\x00I dgo         status            stage_reached_exit_condition:"no"', '\x00I dgo         status            sw_counter_check_exit_cond:0', '\x00I dgo         status            sw_counter_storage:0', '\x00I dgo         status            sw_counter_sht40_heater.val:0 sw_counter_sht40_heater.en:0', '\x00I dgo         status            sw_counter_skip_count:0', '\x00I dgo         status            today_idx (epoch):19935 today_idx (week):6', '\x00I dgo         status            planned_skip_until_idx:19935', '\x00I dgo         status            real_skip_until_idx:19936', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 2275
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T02:45:16"'], ['I', 'dgo', 'status', 'epoch:"2024-08-01T04:29:44.663"'], ['I', 'dgo', 'status', 'cur_time_utc:"2024-08-01T04:29:44"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T21:29:44"', 'time_offset:-25200'], ['I', 'dgo', 'status', 'end_time_utc:"2024-08-01T07:15:00"'], ['I', 'dgo', 'status', 'LOCAL:"2024-08-01T00:15:00"'], ['I', 'dgo', 'status', 'cycle_start_utc:"2024-08-01T03:44:29"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T20:44:29"'], ['I', 'dgo', 'status', 'cycle_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'stage_start_utc:"2024-08-01T03:59:29"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T20:59:29"'], ['I', 'dgo', 'status', 'stage_end_utc:"2024-08-01T06:29:29"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T23:29:29"'], ['I', 'dgo', 'status', 'mandatory_stage_end_utc:"2024-08-01T06:29:30"'], ['I', 'dgo', 'status', 'LOCAL:"2024-07-31T23:29:30"'], ['I', 'dgo', 'status', 'stage_remain_s:"T00:00:00"'], ['I', 'dgo', 'status', 'dgo_inactive_reasons:0x00000000'], ['I', 'dgo', 'status', 'unprocessed_mass_next_cycle_g:0'], ['I', 'dgo', 'status', 'total_mass_added_since_stage_start_g:0'], ['I', 'dgo', 'status', 'accu_mass_time_ext_g:0'], ['I', 'dgo', 'status', 'total_mass_add_hip_extend_s:0'], ['I', 'dgo', 'status', 'stage_reached_min_dur:"no"'], ['I', 'dgo', 'status', 'will_skip_next_cycle:"no"'], ['I', 'dgo', 'status', 'stage_reached_exit_condition:"no"'], ['I', 'dgo', 'status', 'sw_counter_check_exit_cond:0'], ['I', 'dgo', 'status', 'sw_counter_storage:0'], ['I', 'dgo', 'status', 'sw_counter_sht40_heater.val:0', 'sw_counter_sht40_heater.en:0'], ['I', 'dgo', 'status', 'sw_counter_skip_count:0'], ['I', 'dgo', 'status', 'today_idx', '(epoch):19935', 'today_idx', '(week):6'], ['I', 'dgo', 'status', 'planned_skip_until_idx:19935'], ['I', 'dgo', 'status', 'real_skip_until_idx:19936'], ['#']]
+DEBUG    root:SetupDGO.py:166 retLst= ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T02:45:16"']
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}
+DEBUG    dgo:BasePytestEx.py:819 selectData info: ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T02:45:16"']
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T02:45:16"']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'dgo', 'status', 'state:"IDLE"', 'upcoming', 'cycle:"D&G"', 'upcoming', 'stage:"LIP"', 'time', 'to', 'next', 'cycle:"T02:45:16"']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= state:"IDLE"
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= state:"IDLE"
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= upcoming
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= upcoming
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= stage:"LIP"
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= stage:"LIP"
+DEBUG    dgo:BasePytestEx.py:839 ret info: [True]
+INFO     dgo:BasePytestEx.py:212 ### test_dgo_Start_with_IDLE_State ==> PASSED
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}
+DEBUG    dgo:BasePytestEx.py:105 BBB test_mass_clear 
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}
+INFO     dgo:BasePytestEx.py:538 ===> mass clear
+DEBUG    root:SetupDGO.py:40 cmd info: mass clear
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 mass clear
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "mass clear"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I Bucket fullness: 0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I main_app    receive           event_id:0x000b0006 event_time_ms:1595413 now_ms:1595413
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Bucket emptied update days to skip
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Planned days to skip: 3. Current planned_skip_until_day_idx_epoch 19935
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Updated planned_skip_until_day_idx_epoch 19938
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Schedule next cycle, time_offset: -25200
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I cycle_stopped_incomplete 1. honor_starting_window 0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I DGO: No cycle to enter, eval next cycle start time
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I today idx (epoch) 19935, planned skip till day idx (epoch) 19938, real skip till day idx (epoch) 19936, cur_time_local_spm 77387
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Get sec hdl. Today idx (week) 6, start with day idx (epoch): 19938, (week) 2. Real skip till day idx 19936
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Checking target_day_idx 2, days_in_future 3
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I This day is enabled by user ~~
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I cur_spm 77387, target_spm 900, days_in_future 2, del 9913
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I sec_to_next_cycle 182713
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I i: 0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I ----- Updated real skip till day idx 19938, planned skip till day idx 19938
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I today_epoch 19935 real skip_until_idx 19938
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Is D&G going to run in less than 24h? 0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I DGO: Started sw_counter: cycle_skip_count
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Skip update counter target 9913
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I --- idx 3, final res 182713
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I (kv)store1 1722669300
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Staying in IDLE now: 1722486587 until 1722669300
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I +++ Will enter scheduled cycle D&G (0x3) in 182713 sec
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I today_epoch 19935 real skip_until_idx 19938
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I Is D&G going to run in less than 24h? 0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I .. Will skip next D&G cycle ..
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I Bucket fullness: 0', '\x00I main_app    receive           event_id:0x000b0006 event_time_ms:1595413 now_ms:1595413', '\x00I Bucket emptied update days to skip', '\x00I Planned days to skip: 3. Current planned_skip_until_day_idx_epoch 19935', '\x00I Updated planned_skip_until_day_idx_epoch 19938', '\x00I Schedule next cycle, time_offset: -25200', '\x00I cycle_stopped_incomplete 1. honor_starting_window 0', '\x00I DGO: No cycle to enter, eval next cycle start time', '\x00I today idx (epoch) 19935, planned skip till day idx (epoch) 19938, real skip till day idx (epoch) 19936, cur_time_local_spm 77387', '\x00I Get sec hdl. Today idx (week) 6, start with day idx (epoch): 19938, (week) 2. Real skip till day idx 19936', '\x00I Checking target_day_idx 2, days_in_future 3', '\x00I This day is enabled by user ~~', '\x00I cur_spm 77387, target_spm 900, days_in_future 2, del 9913', '\x00I sec_to_next_cycle 182713', '\x00I i: 0', '\x00I ----- Updated real skip till day idx 19938, planned skip till day idx 19938', '\x00I today_epoch 19935 real skip_until_idx 19938', '\x00I Is D&G going to run in less than 24h? 0', '\x00I DGO: Started sw_counter: cycle_skip_count', '\x00I Skip update counter target 9913', '\x00I --- idx 3, final res 182713', '\x00I (kv)store1 1722669300', '\x00I Staying in IDLE now: 1722486587 until 1722669300', '\x00I +++ Will enter scheduled cycle D&G (0x3) in 182713 sec', '\x00I today_epoch 19935 real skip_until_idx 19938', '\x00I Is D&G going to run in less than 24h? 0', '\x00I .. Will skip next D&G cycle ..', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 1554
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'Bucket', 'fullness:', '0'], ['I', 'main_app', 'receive', 'event_id:0x000b0006', 'event_time_ms:1595413', 'now_ms:1595413'], ['I', 'Bucket', 'emptied', 'update', 'days', 'to', 'skip'], ['I', 'Planned', 'days', 'to', 'skip:', '3.', 'Current', 'planned_skip_until_day_idx_epoch', '19935'], ['I', 'Updated', 'planned_skip_until_day_idx_epoch', '19938'], ['I', 'Schedule', 'next', 'cycle,', 'time_offset:', '-25200'], ['I', 'cycle_stopped_incomplete', '1.', 'honor_starting_window', '0'], ['I', 'DGO:', 'No', 'cycle', 'to', 'enter,', 'eval', 'next', 'cycle', 'start', 'time'], ['I', 'today', 'idx', '(epoch)', '19935,', 'planned', 'skip', 'till', 'day', 'idx', '(epoch)', '19938,', 'real', 'skip', 'till', 'day', 'idx', '(epoch)', '19936,', 'cur_time_local_spm', '77387'], ['I', 'Get', 'sec', 'hdl.', 'Today', 'idx', '(week)', '6,', 'start', 'with', 'day', 'idx', '(epoch):', '19938,', '(week)', '2.', 'Real', 'skip', 'till', 'day', 'idx', '19936'], ['I', 'Checking', 'target_day_idx', '2,', 'days_in_future', '3'], ['I', 'This', 'day', 'is', 'enabled', 'by', 'user', '~~'], ['I', 'cur_spm', '77387,', 'target_spm', '900,', 'days_in_future', '2,', 'del', '9913'], ['I', 'sec_to_next_cycle', '182713'], ['I', 'i:', '0'], ['I', '-----', 'Updated', 'real', 'skip', 'till', 'day', 'idx', '19938,', 'planned', 'skip', 'till', 'day', 'idx', '19938'], ['I', 'today_epoch', '19935', 'real', 'skip_until_idx', '19938'], ['I', 'Is', 'D&G', 'going', 'to', 'run', 'in', 'less', 'than', '24h?', '0'], ['I', 'DGO:', 'Started', 'sw_counter:', 'cycle_skip_count'], ['I', 'Skip', 'update', 'counter', 'target', '9913'], ['I', '---', 'idx', '3,', 'final', 'res', '182713'], ['I', '(kv)store1', '1722669300'], ['I', 'Staying', 'in', 'IDLE', 'now:', '1722486587', 'until', '1722669300'], ['I', '+++', 'Will', 'enter', 'scheduled', 'cycle', 'D&G', '(0x3)', 'in', '182713', 'sec'], ['I', 'today_epoch', '19935', 'real', 'skip_until_idx', '19938'], ['I', 'Is', 'D&G', 'going', 'to', 'run', 'in', 'less', 'than', '24h?', '0'], ['I', '..', 'Will', 'skip', 'next', 'D&G', 'cycle', '..'], ['#']]
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}
+DEBUG    dgo:BasePytestEx.py:551 pickCount info= 1
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}
+DEBUG    dgo:BasePytestEx.py:594 contrData info: [['I', 'Bucket', 'fullness:', '0'], ['I', 'main_app', 'receive', 'event_id:0x000b0006', 'event_time_ms:1595413', 'now_ms:1595413'], ['I', 'Bucket', 'emptied', 'update', 'days', 'to', 'skip'], ['I', 'Planned', 'days', 'to', 'skip:', '3.', 'Current', 'planned_skip_until_day_idx_epoch', '19935'], ['I', 'Updated', 'planned_skip_until_day_idx_epoch', '19938'], ['I', 'Schedule', 'next', 'cycle,', 'time_offset:', '-25200'], ['I', 'cycle_stopped_incomplete', '1.', 'honor_starting_window', '0'], ['I', 'DGO:', 'No', 'cycle', 'to', 'enter,', 'eval', 'next', 'cycle', 'start', 'time'], ['I', 'today', 'idx', '(epoch)', '19935,', 'planned', 'skip', 'till', 'day', 'idx', '(epoch)', '19938,', 'real', 'skip', 'till', 'day', 'idx', '(epoch)', '19936,', 'cur_time_local_spm', '77387'], ['I', 'Get', 'sec', 'hdl.', 'Today', 'idx', '(week)', '6,', 'start', 'with', 'day', 'idx', '(epoch):', '19938,', '(week)', '2.', 'Real', 'skip', 'till', 'day', 'idx', '19936'], ['I', 'Checking', 'target_day_idx', '2,', 'days_in_future', '3'], ['I', 'This', 'day', 'is', 'enabled', 'by', 'user', '~~'], ['I', 'cur_spm', '77387,', 'target_spm', '900,', 'days_in_future', '2,', 'del', '9913'], ['I', 'sec_to_next_cycle', '182713'], ['I', 'i:', '0'], ['I', '-----', 'Updated', 'real', 'skip', 'till', 'day', 'idx', '19938,', 'planned', 'skip', 'till', 'day', 'idx', '19938'], ['I', 'today_epoch', '19935', 'real', 'skip_until_idx', '19938'], ['I', 'Is', 'D&G', 'going', 'to', 'run', 'in', 'less', 'than', '24h?', '0'], ['I', 'DGO:', 'Started', 'sw_counter:', 'cycle_skip_count'], ['I', 'Skip', 'update', 'counter', 'target', '9913'], ['I', '---', 'idx', '3,', 'final', 'res', '182713'], ['I', '(kv)store1', '1722669300'], ['I', 'Staying', 'in', 'IDLE', 'now:', '1722486587', 'until', '1722669300'], ['I', '+++', 'Will', 'enter', 'scheduled', 'cycle', 'D&G', '(0x3)', 'in', '182713', 'sec'], ['I', 'today_epoch', '19935', 'real', 'skip_until_idx', '19938'], ['I', 'Is', 'D&G', 'going', 'to', 'run', 'in', 'less', 'than', '24h?', '0'], ['I', '..', 'Will', 'skip', 'next', 'D&G', 'cycle', '..'], ['#']]
+DEBUG    dgo:BasePytestEx.py:596 pickedLst info: [['I', 'Bucket', 'fullness:', '0']]
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}
+DEBUG    dgo:BasePytestEx.py:727 noduplicate performed
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'Bucket', 'fullness:', '0']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'Bucket', 'fullness:', '0']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'Bucket', 'fullness:', '0']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= fullness:
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= fullness:
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= 0
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= 0
+DEBUG    dgo:BasePytestEx.py:839 ret info: [True]
+INFO     dgo:BasePytestEx.py:212 ### test_mass_clear ==> PASSED
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}
+DEBUG    dgo:BasePytestEx.py:105 BBB test_mass_get 
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}
+INFO     dgo:BasePytestEx.py:538 ===> mass get
+DEBUG    root:SetupDGO.py:40 cmd info: mass get
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 mass get
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "mass get"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I mass        get               unprocessed_mass_g:0 mass_in_bucket:0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I mass        get               unprocessed_mass_g:0 mass_in_bucket:0', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 82
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'mass', 'get', 'unprocessed_mass_g:0', 'mass_in_bucket:0'], ['#']]
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}
+DEBUG    dgo:BasePytestEx.py:551 pickCount info= 1
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}
+DEBUG    dgo:BasePytestEx.py:594 contrData info: [['I', 'mass', 'get', 'unprocessed_mass_g:0', 'mass_in_bucket:0'], ['#']]
+DEBUG    dgo:BasePytestEx.py:596 pickedLst info: [['I', 'mass', 'get', 'unprocessed_mass_g:0', 'mass_in_bucket:0']]
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}
+DEBUG    dgo:BasePytestEx.py:727 noduplicate performed
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'mass', 'get', 'unprocessed_mass_g:0', 'mass_in_bucket:0']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'mass', 'get', 'unprocessed_mass_g:0', 'mass_in_bucket:0']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'mass', 'get', 'unprocessed_mass_g:0', 'mass_in_bucket:0']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= unprocessed_mass_g:0
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= unprocessed_mass_g:0
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= mass_in_bucket:0
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= mass_in_bucket:0
+DEBUG    dgo:BasePytestEx.py:839 ret info: [True]
+INFO     dgo:BasePytestEx.py:212 ### test_mass_get ==> PASSED
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:105 BBB test_mass_inject_1500 
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}
+INFO     dgo:BasePytestEx.py:538 ===> mass inject 1500
+DEBUG    root:SetupDGO.py:40 cmd info: mass inject 1500
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I Reassigning buffer 150
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  mass inject 1500
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: " mass inject 1500"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I Reassigning buffer 150
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  I main_app    receive           event_id:"LOAD_CELL_MASS_CHANGED" mass_change:1500 event_time_ms:1602880 now_ms:1602880
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 mass inject 1500
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "mass inject 1500"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I main_app    receive           event_id:"LOAD_CELL_MASS_CHANGED" mass_change:1500 event_time_ms:1607221 now_ms:1607221
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I Reassigning buffer 150', 'I Reassigning buffer 150', '\x00I main_app    receive           event_id:"LOAD_CELL_MASS_CHANGED" mass_change:1500 event_time_ms:1602880 now_ms:1602880', '\x00#', 'I main_app    receive           event_id:"LOAD_CELL_MASS_CHANGED" mass_change:1500 event_time_ms:1607221 now_ms:1607221', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 324
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'Reassigning', 'buffer', '150'], ['I', 'Reassigning', 'buffer', '150'], ['I', 'main_app', 'receive', 'event_id:"LOAD_CELL_MASS_CHANGED"', 'mass_change:1500', 'event_time_ms:1602880', 'now_ms:1602880'], ['#'], ['I', 'main_app', 'receive', 'event_id:"LOAD_CELL_MASS_CHANGED"', 'mass_change:1500', 'event_time_ms:1607221', 'now_ms:1607221'], ['#']]
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:551 pickCount info= 1
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:594 contrData info: [['I', 'Reassigning', 'buffer', '150'], ['I', 'Reassigning', 'buffer', '150'], ['I', 'main_app', 'receive', 'event_id:"LOAD_CELL_MASS_CHANGED"', 'mass_change:1500', 'event_time_ms:1602880', 'now_ms:1602880'], ['#'], ['I', 'main_app', 'receive', 'event_id:"LOAD_CELL_MASS_CHANGED"', 'mass_change:1500', 'event_time_ms:1607221', 'now_ms:1607221'], ['#']]
+DEBUG    dgo:BasePytestEx.py:596 pickedLst info: [['I', 'main_app', 'receive', 'event_id:"LOAD_CELL_MASS_CHANGED"', 'mass_change:1500', 'event_time_ms:1602880', 'now_ms:1602880'], ['I', 'main_app', 'receive', 'event_id:"LOAD_CELL_MASS_CHANGED"', 'mass_change:1500', 'event_time_ms:1607221', 'now_ms:1607221']]
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:790 picktopone performed
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'main_app', 'receive', 'event_id:"LOAD_CELL_MASS_CHANGED"', 'mass_change:1500', 'event_time_ms:1602880', 'now_ms:1602880']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'main_app', 'receive', 'event_id:"LOAD_CELL_MASS_CHANGED"', 'mass_change:1500', 'event_time_ms:1602880', 'now_ms:1602880']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'main_app', 'receive', 'event_id:"LOAD_CELL_MASS_CHANGED"', 'mass_change:1500', 'event_time_ms:1602880', 'now_ms:1602880']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= event_id:"LOAD_CELL_MASS_CHANGED"
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= event_id:"LOAD_CELL_MASS_CHANGED"
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= mass_change:1500
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= mass_change:1500
+DEBUG    dgo:BasePytestEx.py:839 ret info: [True]
+INFO     dgo:BasePytestEx.py:212 ### test_mass_inject_1500 ==> PASSED
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:105 BBB test_mass_get_1500_HIP 
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}
+INFO     dgo:BasePytestEx.py:538 ===> mass get
+DEBUG    root:SetupDGO.py:40 cmd info: mass get
+DEBUG    root:SetupDGO.py:41 espORsam info: False
+DEBUG    root:BaseSetup.py:396 targetPort: /dev/ttyUSB0
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 mass get
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:314 Echo: "mass get"
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297 I mass        get               unprocessed_mass_g:3000 mass_in_bucket:3000
+DEBUG    oscar.device_interface_v2:device_interface_v2.py:297  #
+DEBUG    root:SetupDGO.py:68 retList= ['I mass        get               unprocessed_mass_g:3000 mass_in_bucket:3000', '\x00#']
+DEBUG    root:SetupDGO.py:111 retList Len= 88
+DEBUG    root:SetupDGO.py:148 retList= [['I', 'mass', 'get', 'unprocessed_mass_g:3000', 'mass_in_bucket:3000'], ['#']]
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:551 pickCount info= 1
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:594 contrData info: [['I', 'mass', 'get', 'unprocessed_mass_g:3000', 'mass_in_bucket:3000'], ['#']]
+DEBUG    dgo:BasePytestEx.py:596 pickedLst info: [['I', 'mass', 'get', 'unprocessed_mass_g:3000', 'mass_in_bucket:3000']]
+DEBUG    root:BasePytestEx.py:321 myGrp= [{'testcase': 'test_dgo_Start_with_IDLE_State', 'command': 'dgo status', 'verify': [['state:"IDLE"', 3], ['upcoming', 6], ['stage:"LIP"', 7]]}, {'testcase': 'test_mass_clear', 'command': 'mass clear', 'noduplicate': True, 'pickline': 'Bucket fullness', 'verify': [['fullness:', 2], ['0', 3]]}, {'testcase': 'test_mass_get', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:0', 3], ['mass_in_bucket:0', 4]]}, {'testcase': 'test_mass_inject_1500', 'command': 'mass inject 1500', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:1500', 4]]}, {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}, {'testcase': 'test_dgo_status_1500', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_950', 'command': 'mass inject 950', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:950', 4]]}, {'testcase': 'test_mass_get_2450_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:2450', 3], ['mass_in_bucket:2450', 4]]}, {'testcase': 'test_dgo_status_2450', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_mass_inject_864', 'command': 'mass inject 864', 'pickline': 'LOAD_CELL_MASS_CHANGED', 'picktopone': True, 'verify': [['event_id:"LOAD_CELL_MASS_CHANGED"', 3], ['mass_change:864', 4]]}, {'testcase': 'test_mass_get_3314', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'verify': [['stage_remain_s:"T00:00:00"', 3]]}, {'testcase': 'test_dgo_jump_fromIDLEtoHIP', 'command': 'dgo status', 'linecount': 1, 'verify': [['state:"ACTIVE"', 3], ['cycle:"D&G"', 4], ['stage:"HIP"', 5]]}, {'testcase': 'test_mass_get_3314_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP', 'command': 'dgo status', 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T02:28:00', 'max': 'T02:30:00'}, 3]]}, {'testcase': 'test_hip_trans_region_3314_HIP', 'command': 'dgo stage hip_trans', 'pickline': 'trans', 'noduplicate': True, 'verify': [['skip', 2], ['into', 3], ['trans', 4]]}, {'testcase': 'test_mass_get_3314_HIP_trans', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:3314', 3], ['mass_in_bucket:3314', 4]]}, {'testcase': 'test_dgo_status_3314_HIP_trans', 'command': 'dgo status', 'linecount': 1, 'pickline': 'stage_remain_s', 'picktopone': True, 'verify': [[{'item': 'stage_remain_s', 'type': 'shortDate', 'min': 'T01:59:30', 'max': 'T02:00:00'}, 3]]}]
+DEBUG    root:BasePytestEx.py:303 myConf= {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:727 noduplicate performed
+DEBUG    dgo:BasePytestEx.py:819 selectData info: [['I', 'mass', 'get', 'unprocessed_mass_g:3000', 'mass_in_bucket:3000']]
+DEBUG    dgo:BasePytestEx.py:820 verifyCount info: 1
+DEBUG    dgo:BasePytestEx.py:821 dataCount info: 1
+DEBUG    dgo:BasePytestEx.py:1026 selectData info: ['I', 'mass', 'get', 'unprocessed_mass_g:3000', 'mass_in_bucket:3000']
+DEBUG    dgo:BasePytestEx.py:1027 myConf info: {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:1005 selectData info: ['I', 'mass', 'get', 'unprocessed_mass_g:3000', 'mass_in_bucket:3000']
+DEBUG    dgo:BasePytestEx.py:1006 myConf info: {'testcase': 'test_mass_get_1500_HIP', 'command': 'mass get', 'pickline': 'unprocessed_mass_g', 'noduplicate': True, 'verify': [['unprocessed_mass_g:1500', 3], ['mass_in_bucket:1500', 4]]}
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= unprocessed_mass_g:3000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= unprocessed_mass_g:1500
+DEBUG    dgo:BasePytestEx.py:849 selectItem info= mass_in_bucket:3000
+DEBUG    dgo:BasePytestEx.py:850 verifyItem info= mass_in_bucket:1500
+DEBUG    dgo:BasePytestEx.py:839 ret info: [False]
+INFO     dgo:BasePytestEx.py:216 ??? test_mass_get_1500_HIP ==> FAILED
+--------------------------------- JSON report ----------------------------------
+report saved to: ./report.json
+=========================== short test summary info ============================
+FAILED dgo_mass_add_5hr_min_runtime_IDLE.py::TestMass5hrMinRuntimeIDLE::test_group_mass_add_7d3lb_3314_From_IDLE
+================== 1 failed, 14 passed in 1411.59s (0:23:31) ===================
+mv: cannot move './report.json' to '/home/pi/Oscar-Python-CLI/src/oscar/dgo/pylog/dgo_pytest_1722464520.json': No such file or directory
